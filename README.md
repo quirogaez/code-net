@@ -13,7 +13,7 @@ Bienvenido al repositorio de **Proyecto FinalGen**, una red social para programa
 
 ## Instalación
 
-1. Clona este repositorio: `git clone https://github.com/tuusuario/finalProjectGen.git`
+1. Clona este repositorio: `git clone https://github.com/quirogaez/finalProjectGen.git`
 2. Entra al directorio del proyecto: `cd finalProjectGen`
 3. Instala las dependencias del servidor: `npm install`
 4. Entra al directorio del cliente: `cd client`
