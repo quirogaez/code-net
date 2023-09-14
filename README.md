@@ -14,7 +14,7 @@ Bienvenido al repositorio de **Code | NET**, una red social para programadores d
 ## Instalación
 
 1. Clona este repositorio: `git clone https://github.com/quirogaez/code-net.git`
-2. Entra al directorio del proyecto: `cd finalProjectGen`
+2. Entra al directorio del proyecto: `cd code-net`
 3. Instala las dependencias del servidor: `npm install`
 4. Entra al directorio del cliente: `cd client`
 5. Instala las dependencias del cliente: `npm install`
