@@ -1,7 +1,7 @@
-# FinalProjectGen
-# Proyecto FinalGen
+# Code| NET
+# Proyecto Final
 
-Bienvenido al repositorio de **Proyecto FinalGen**, una red social para programadores donde puedes conectar, colaborar y compartir conocimientos relacionados con el mundo de la programación.
+Bienvenido al repositorio de **Code | NET**, una red social para programadores donde puedes conectar, colaborar y compartir conocimientos relacionados con el mundo de la programación.
 
 ## Tecnologías Utilizadas
 
@@ -13,7 +13,7 @@ Bienvenido al repositorio de **Proyecto FinalGen**, una red social para programa
 
 ## Instalación
 
-1. Clona este repositorio: `git clone https://github.com/quirogaez/finalProjectGen.git`
+1. Clona este repositorio: `git clone https://github.com/quirogaez/code-net.git`
 2. Entra al directorio del proyecto: `cd finalProjectGen`
 3. Instala las dependencias del servidor: `npm install`
 4. Entra al directorio del cliente: `cd client`
