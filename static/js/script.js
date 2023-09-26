@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const profileCarousel = document.querySelector(".carousel_profile");
     let profileImg = [
-      "./fotos/foto1.png",
-      "./fotos/foto2.png",
-      "./fotos/foto3.png",
-      "./fotos/foto4.png",
-      "./fotos/foto5.png",
-      "./fotos/foto6.png",
+      "./static/img/foto1.png",
+      "./static/img/foto2.png",
+      "./static/img/foto3.png",
+      "./static/img/foto4.png",
+      "./static/img/foto5.png",
+      "./static/img/foto6.png",
     ];
     const numProfile = profileImg.length;
     const profilePerPage = 3;
