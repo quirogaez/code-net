@@ -1,0 +1,1050 @@
+/* Definimos la familia de letras */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;1,100&display=swap");
+
+/* root colors */
+
+:root {
+  --primary--color: #00ffe0;
+  --second--color: #801bea;
+  --white--color: white;
+  --black--color: black;
+  --background--footer: #b9b9b9;
+  --text--primary: #565656;/* Definimos la familia de letras */
+  @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;1,100&display=swap");
+  
+  /* root colors */
+  
+  :root {
+    --primary--color: #00ffe0;
+    --second--color: #801bea;
+    --white--color: white;
+    --black--color: black;
+    --background--footer: #b9b9b9;
+    --text--primary: #565656;
+  }
+  
+  /* definition Universal */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .fondo {
+    background-image: url(../img/fondo.svg);
+    background-repeat: no-repeat;
+    background-position: 10% 20%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    opacity: 0.03;
+    z-index: -1;
+  }
+  
+  /* homepage */
+  .homepage {
+    display: flex;
+  }
+  
+  .homepage--info {
+    display: grid;
+    padding: 48px;
+    padding-bottom: 80px;
+  }
+  
+  .img__content {
+    width: auto;
+    height: auto;
+  }
+  
+  .img__logo {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .title--home {
+    width: auto;
+    height: auto;
+    justify-content: left;
+    color: var(--text--primary);
+  }
+  
+  .title--home h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: justify;
+  }
+  
+  .title--home p {
+    font-size: 15px;
+    line-height: 30px;
+    text-align: justify;
+  }
+  
+  /* Info users */
+  .info--users {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding-right: 30px;
+    text-shadow: 3px 3px 10px var(--second--color);
+    justify-content: space-evenly;
+  }
+  
+  .info--users ul {
+    list-style-type: none;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .number--users {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 7px;
+  }
+  
+  /* buttons homepage */
+  .buttons--home {
+    display: flex;
+    padding: 30px;
+    width: auto;
+    height: auto;
+    justify-content: space-around;
+  }
+  
+  .button__logIn {
+    padding: 10px 25px;
+    background-color: var(--primary--color);
+    border-radius: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--second--color);
+    font-size: 15px;
+  }
+  .button__logIn:hover {
+    box-shadow: 1px 1px 15px var(--second--color);
+  }
+  
+  .button__singUp {
+    padding: 10px 25px;
+    background-color: transparent;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: var(--second--color);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--second--color);
+    font-size: 15px;
+  }
+  .button__singUp:hover {
+    /* background-color: rgba(13, 185, 177, 0.082); */
+    box-shadow: 1px 1px 15px var(--second--color);
+  }
+  
+  .carousel--homepage {
+    padding-top: 70px;
+  }
+  /*hasta aca son las cosas del padre lo que viene ya es de la configuracion del carousel como tal es posible que si cambian las cosas del padre ya el carousel no quede igual si algo me avisan*/
+  .carousel_profile {
+    display: flex;
+    padding: 30px;
+    overflow: hidden;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .profile {
+    flex: 1;
+    text-align: center;
+    width: 325px;
+  }
+  
+  .profile img {
+    /*max-width: 90%;*/
+    border-radius: 20%;
+    height: 300px;
+    width: 250px;
+  }
+  
+  .carousel_profile > div:nth-child(2) {
+    position: absolute;
+    left: 0;
+    margin: auto;
+    right: 0;
+    margin-top: -10px;
+    transition: transform 0.5s ease; 
+  }
+  
+  .scroll-icon {
+    box-sizing: border-box;
+    border: solid 4px #000;
+    display: block;
+    position: absolute;
+    left: 95%;
+    bottom: 65px;
+    height: 48px;
+    width: 32px;
+    border-radius: 32px;
+    opacity: 0.25;
+  }
+  
+  .scroll-icon::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    border-radius: 100%;
+    animation: mouse 3s infinite;
+  }
+  
+  @keyframes mouse {
+    0% {
+      transform: none;
+      opacity: 1;
+    }
+  
+    40% {
+      transform: translateY(16px);
+    }
+  
+    80% {
+      transform: translateY(16px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(16px);
+      opacity: 0;
+    }
+  }
+  
+  /* About Us Carousel */
+  .carousel__fixed h3 {
+    text-align: right;
+  }
+  .carousel__fixed div img {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  
+  .carousel__item {
+    display: flex;
+    align-items: center;
+  }
+  .carousel-leftSide {
+    text-align: center;
+  }
+  
+  .carousel__leftSide--modifier {
+    text-align: center;
+  }
+  
+  .carousel__rightSide {
+    text-align: center;
+  }
+  
+  .carousel__rightSide > div {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .carousel__tittle {
+    font-size: 2.5rem;
+    text-align: right;
+  }
+  
+  .carousel__tittle--modifier {
+    font-size: 1.5rem;
+    text-align: right;
+  }
+  
+  .carousel__tittle--logo {
+    letter-spacing: 0.1em;
+  }
+  
+  .carousel__text {
+    font-size: 1rem;
+    text-align: right;
+  }
+  
+  .carousel__img {
+    height: 100vh;
+    text-align: center;
+  }
+  
+  /* footer section */
+  .footer {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 50px;
+    margin: 0;
+    color: var(--white--color);
+    bottom: 0;
+    /* Cambiado de top a bottom para fijar el footer en la parte inferior */
+    left: 0;
+  }
+  
+  .footer--content {
+    width: 100vw;
+    padding-top: 15px;
+    background-color: var(--background--footer);
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .container--footer {
+    display: flex;
+  }
+  
+  .container--footer h2 {
+    font-size: 12px;
+    font-family: "Ralawey", sans-serif;
+    color: var(--text--primary);
+  }
+  
+  .icon-copyright {
+    font-size: 15px;
+    padding: 0 10px;
+    color: var(--text--primary);
+  }
+  
+  /* footer section */
+  .footer {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 50px;
+    margin: 0;
+    color: var(--white--color);
+    bottom: 0;
+    /* Cambiado de top a bottom para fijar el footer en la parte inferior */
+    left: 0;
+  }
+  
+  .footer--content {
+    width: 100vw;
+    padding-top: 15px;
+    background-color: var(--background--footer);
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .container--footer h2 {
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    color: var(--text--primary);
+  }
+  
+  .icon-copyright {
+    font-size: 15px;
+    padding: 0 10px;
+    color: var(--text--primary);
+  }
+  
+  /* Media Query para tabletas (768px de ancho o menos) */
+  @media screen and (max-width: 768px) {
+    /* homepage section */
+    .homepage {
+      display: flex;
+     /* width: 100vw;*/
+      text-align: center;
+      flex-wrap: wrap;
+    }
+  
+    .homepage--info {
+     padding: 25px;
+      /* Reducir el relleno en tabletas */
+      order: 2;
+      flex: 1;
+    }
+  
+    .buttons--home{
+      padding: 0;
+      justify-content: space-around;
+    }
+    .carousel--homepage {
+      flex: 1;
+    }
+  
+    .button__logIn,
+    .button__singUp {
+      font-size: 14px;
+     /* padding: 5px, 10px;*/
+      /* Reducir el tamaño de fuente en tabletas */
+    }
+    /* carousel page initial */
+    .carousel_profile {
+      display: flex;
+      padding: 20px;
+      overflow: hidden;
+      width: 80%;
+  
+      margin: 0 auto;
+      position: relative;
+    }
+  
+    .profile {
+      flex: 1;
+      text-align: center;
+     /*width: 100%;*/
+    }
+  
+    .profile img {
+      /* max-width: 100%;*/
+      border-radius: 20%;
+      height: 250px;
+      width: 200px;
+    }
+    .carousel_profile > div:nth-child(2) {
+      position: absolute;
+      left: 0;
+      margin: auto;
+      right: 0;
+      margin-top: -10px;
+    }
+  
+    /* us query strigns*/
+  
+    .carousel__leftSide {
+      display: none;
+    }
+  
+    .img__none {
+      display: none;
+    }
+  
+    .carousel__tittle {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  
+    .carousel__tittle--logo {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  
+    .image__bg {
+      display: flex;
+      justify-content: center;
+      width: 80%;
+      z-index: 100;
+      background-image: url(../img/code.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 0%;
+      background-size: contain;
+    }
+  
+    .carousel__img {
+      height: 50vh;
+      text-align: center;
+    }
+  
+    .carousel__tittle--modifier {
+      text-align: center;
+    }
+  
+    .carousel__text {
+      text-align: center;
+    }
+  }
+  
+  /* Media Query para dispositivos móviles (480px de ancho o menos) */
+  @media screen and (max-width: 480px) {
+    /* us */
+    .carousel__leftSide {
+      display: none;
+    }
+  
+    /* homepage section */
+    .homepage {
+      flex-direction: column;
+     /* width: 50vw;*/
+      text-align: center;
+    }
+  
+    .homepage--info {
+      padding: 50px;
+      /* Reducir el relleno en dispositivos móviles */
+    }
+  
+    .homepage--info {
+      order: 2;
+    }
+  
+    .buttons--home {
+     /* padding: 20px 15px;*/
+    }
+  
+    .button__logIn,
+    .button__singUp {
+      font-size: 12px;
+      /* Reducir aún más el tamaño de fuente en dispositivos móviles */
+    }
+  
+    /* carousel pag initial */
+  .carousel--homepage {
+      padding: 40px;
+  }
+    .carousel_profile {
+      display: flex;
+      padding: 20px;
+      overflow: hidden;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+    }
+  
+    .profile {
+      flex: 1;
+      text-align: center;
+      width: 100%;
+    }
+    .profile img {
+      max-width: 90%;
+      border-radius: 20%;
+      height: 200px;
+      width: 150px;
+    }
+    .carousel_profile > div:nth-child(2) {
+      position: absolute;
+      left: 0;
+      margin: auto;
+      right: 0;
+      margin-top: -10px;
+    }
+  
+    .scroll-icon {
+      display: block;
+      /* Mostrar el ícono de desplazamiento en dispositivos móviles */
+    }
+  }
+  
+}
+
+/* definition Universal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.fondo {
+  background-image: url(../img/fondo.svg);
+  background-repeat: no-repeat;
+  background-position: 10% 20%;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  opacity: 0.03;
+  z-index: -1;
+}
+
+/* homepage */
+.homepage {
+  display: flex;
+}
+
+.homepage--info {
+  display: grid;
+  padding: 48px;
+  padding-bottom: 80px;
+}
+
+.img__content {
+  width: auto;
+  height: auto;
+}
+
+.img__logo {
+  width: 100%;
+  height: 100%;
+}
+
+.title--home {
+  width: auto;
+  height: auto;
+  justify-content: left;
+  color: var(--text--primary);
+}
+
+.title--home h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: justify;
+}
+
+.title--home p {
+  font-size: 15px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+/* Info users */
+.info--users {
+  display: flex;
+  width: auto;
+  height: auto;
+  padding-right: 30px;
+  text-shadow: 3px 3px 10px var(--second--color);
+  justify-content: space-evenly;
+}
+
+.info--users ul {
+  list-style-type: none;
+  font-size: 15px;
+  text-align: center;
+}
+
+.number--users {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 7px;
+}
+
+/* buttons homepage */
+.buttons--home {
+  display: flex;
+  padding: 30px;
+  width: auto;
+  height: auto;
+  justify-content: space-around;
+}
+
+.button__logIn {
+  padding: 10px 25px;
+  background-color: var(--primary--color);
+  border-radius: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--second--color);
+  font-size: 15px;
+}
+.button__logIn:hover {
+  box-shadow: 1px 1px 15px var(--second--color);
+}
+
+.button__singUp {
+  padding: 10px 25px;
+  background-color: transparent;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: var(--second--color);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--second--color);
+  font-size: 15px;
+}
+.button__singUp:hover {
+  /* background-color: rgba(13, 185, 177, 0.082); */
+  box-shadow: 1px 1px 15px var(--second--color);
+}
+
+.carousel--homepage {
+  padding-top: 70px;
+}
+/*hasta aca son las cosas del padre lo que viene ya es de la configuracion del carousel como tal es posible que si cambian las cosas del padre ya el carousel no quede igual si algo me avisan*/
+.carousel_profile {
+  display: flex;
+  padding: 30px;
+  overflow: hidden;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.profile {
+  flex: 1;
+  text-align: center;
+  width: 325px;
+}
+
+.profile img {
+  /*max-width: 90%;*/
+  border-radius: 20px;
+  height: 300px;
+  width: 250px;
+}
+
+.carousel_profile > div:nth-child(2) {
+  position: absolute;
+  left: 0;
+  margin: auto;
+  right: 0;
+  margin-top: -10px;
+  /* transition: transform 0.5s ease; */
+}
+
+.scroll-icon {
+  box-sizing: border-box;
+  border: solid 4px #000;
+  display: block;
+  position: absolute;
+  left: 95%;
+  bottom: 65px;
+  height: 48px;
+  width: 32px;
+  border-radius: 32px;
+  opacity: 0.25;
+}
+
+.scroll-icon::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border-radius: 100%;
+  animation: mouse 3s infinite;
+}
+
+@keyframes mouse {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+
+  40% {
+    transform: translateY(16px);
+  }
+
+  80% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+}
+
+/* About Us Carousel */
+.carousel__fixed h3 {
+  text-align: right;
+}
+.carousel__fixed div img {
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.carousel__item {
+  display: flex;
+  align-items: center;
+}
+.carousel-leftSide {
+  text-align: center;
+}
+
+.carousel__leftSide--modifier {
+  text-align: center;
+}
+
+.carousel__rightSide {
+  text-align: center;
+}
+
+.carousel__rightSide > div {
+  display: inline-block;
+  text-align: left;
+}
+
+.carousel__tittle {
+  font-size: 2.5rem;
+  text-align: right;
+}
+
+.carousel__tittle--modifier {
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.carousel__tittle--logo {
+  letter-spacing: 0.1em;
+}
+
+.carousel__text {
+  font-size: 1rem;
+  text-align: right;
+}
+
+.carousel__img {
+  height: 100vh;
+  text-align: center;
+}
+
+/* footer section */
+.footer {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 50px;
+  margin: 0;
+  color: var(--white--color);
+  bottom: 0;
+  /* Cambiado de top a bottom para fijar el footer en la parte inferior */
+  left: 0;
+}
+
+.footer--content {
+  width: 100vw;
+  padding-top: 15px;
+  background-color: var(--background--footer);
+  justify-content: left;
+  align-items: center;
+}
+
+.container--footer {
+  display: flex;
+}
+
+.container--footer h2 {
+  font-size: 12px;
+  font-family: "Ralawey", sans-serif;
+  color: var(--text--primary);
+}
+
+.icon-copyright {
+  font-size: 15px;
+  padding: 0 10px;
+  color: var(--text--primary);
+}
+
+/* footer section */
+.footer {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 50px;
+  margin: 0;
+  color: var(--white--color);
+  bottom: 0;
+  /* Cambiado de top a bottom para fijar el footer en la parte inferior */
+  left: 0;
+}
+
+.footer--content {
+  width: 100vw;
+  padding-top: 15px;
+  background-color: var(--background--footer);
+  justify-content: left;
+  align-items: center;
+}
+
+.container--footer h2 {
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  color: var(--text--primary);
+}
+
+.icon-copyright {
+  font-size: 15px;
+  padding: 0 10px;
+  color: var(--text--primary);
+}
+
+/* Media Query para tabletas (768px de ancho o menos) */
+@media screen and (max-width: 768px) {
+  /* homepage section */
+  .homepage {
+    display: flex;
+   /* width: 100vw;*/
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .homepage--info {
+   padding: 25px;
+    /* Reducir el relleno en tabletas */
+    order: 2;
+    flex: 1;
+  }
+
+  .buttons--home{
+    padding: 0;
+    justify-content: space-around;
+  }
+  .carousel--homepage {
+    flex: 1;
+  }
+
+  .button__logIn,
+  .button__singUp {
+    font-size: 14px;
+   /* padding: 5px, 10px;*/
+    /* Reducir el tamaño de fuente en tabletas */
+  }
+  /* carousel page initial */
+  .carousel_profile {
+    display: flex;
+    padding: 20px;
+    overflow: hidden;
+    width: 80%;
+
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .profile {
+    flex: 1;
+    text-align: center;
+   /*width: 100%;*/
+  }
+
+  .profile img {
+    /* max-width: 100%;*/
+    border-radius: 20%;
+    height: 250px;
+    width: 200px;
+  }
+  .carousel_profile > div:nth-child(2) {
+    position: absolute;
+    left: 0;
+    margin: auto;
+    right: 0;
+    margin-top: -10px;
+  }
+
+  /* us query strigns*/
+
+  .carousel__leftSide {
+    display: none;
+  }
+
+  .img__none {
+    display: none;
+  }
+
+  .carousel__tittle {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .carousel__tittle--logo {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .image__bg {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    z-index: 100;
+    background-image: url(../img/code.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-size: contain;
+  }
+
+  .carousel__img {
+    height: 50vh;
+    text-align: center;
+  }
+
+  .carousel__tittle--modifier {
+    text-align: center;
+  }
+
+  .carousel__text {
+    text-align: center;
+  }
+}
+
+/* Media Query para dispositivos móviles (480px de ancho o menos) */
+@media screen and (max-width: 480px) {
+  /* us */
+  .carousel__leftSide {
+    display: none;
+  }
+
+  /* homepage section */
+  .homepage {
+    flex-direction: column;
+   /* width: 50vw;*/
+    text-align: center;
+  }
+
+  .homepage--info {
+    padding: 50px;
+    /* Reducir el relleno en dispositivos móviles */
+  }
+
+  .homepage--info {
+    order: 2;
+  }
+
+  .buttons--home {
+   /* padding: 20px 15px;*/
+  }
+
+  .button__logIn,
+  .button__singUp {
+    font-size: 12px;
+    /* Reducir aún más el tamaño de fuente en dispositivos móviles */
+  }
+
+  /* carousel pag initial */
+.carousel--homepage {
+    padding: 40px;
+}
+  .carousel_profile {
+    display: flex;
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+  }
+
+  .profile {
+    flex: 1;
+    text-align: center;
+    width: 100%;
+  }
+  .profile img {
+    max-width: 90%;
+    border-radius: 20%;
+    height: 200px;
+    width: 150px;
+  }
+  .carousel_profile > div:nth-child(2) {
+    position: absolute;
+    left: 0;
+    margin: auto;
+    right: 0;
+    margin-top: -10px;
+  }
+
+  .scroll-icon {
+    display: block;
+    /* Mostrar el ícono de desplazamiento en dispositivos móviles */
+  }
+}
