@@ -161,7 +161,7 @@ body {
 
 .profile img {
   /*max-width: 90%;*/
-  border-radius: 20%;
+  border-radius: 20px;
   height: 300px;
   width: 250px;
 }
