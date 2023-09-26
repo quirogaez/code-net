@@ -42,5 +42,5 @@ document.addEventListener("DOMContentLoaded", function () {
     showProfile(currentProfile);
   
     // Iniciar el cambio automático cada 25 segundos
-    //setInterval(autoChangeProfile, 5000);
+    setInterval(autoChangeProfile, 5000);
   });
