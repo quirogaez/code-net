@@ -1,0 +1,307 @@
+/* Definimos la familia de letras */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;1,100&display=swap");
+
+/* root colors */
+
+:root {
+
+    --primary--color: #00FFE0;
+    --second--color: #801BEA;
+    --white--color: white;
+    --black--color: black;
+    --background--footer: #b9b9b9;
+    --text--primary: #565656;
+}
+
+
+
+/* definition Universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    display: flex;
+}
+
+.fondo {
+    background-image: url(../img/fondo.svg);
+    background-repeat: no-repeat;
+    background-position: 10% 20%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    opacity: 0.03;
+    z-index: -1;
+}
+
+/* homepage */
+.homepage {
+    display: flex;
+    width: 100vw;
+}
+
+.homepage--info {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    padding: 70px;
+    padding-top: 80px;
+}
+
+.img__content {
+    width: auto;
+    height: auto;
+}
+
+.img__logo {
+    width: 100%;
+    height: 100%;
+}
+
+.title--home {
+    margin-bottom: 10px;
+    width: auto;
+    height: auto;
+    justify-content: left;
+    color: var(--text--primary);
+}
+
+.title--home h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: justify;
+}
+
+/* buttons homepage */
+.buttons--home {
+    display: flex;
+    margin-bottom: 10px;
+    width: auto;
+    height: auto;
+    justify-content: space-between;
+}
+
+.button__logIn {
+    padding: 8px 15px;
+    background-color: var(--primary--color);
+    border-radius: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--second--color);
+    font-size: 12px;
+}
+
+.button__logIn:hover {
+    box-shadow: 1px 1px 15px var(--second--color);
+}
+
+/* Info users */
+.info--users {
+    display: flex;
+    margin-top: 50px;
+    width: auto;
+    height: auto;
+    padding-right: 30px;
+    text-shadow: 3px 3px 10px var(--second--color);
+    justify-content: space-evenly;
+}
+
+.info--users ul {
+    list-style-type: none;
+    font-size: 15px;
+    text-align: center;
+}
+
+.number--users {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 7px;
+}
+
+.login--page {
+    width: 100vw;
+    padding: 70px;
+    padding-top: 80px;
+}
+.content__login {
+    background-color: #bababa6f;
+    width: auto;
+    padding: 15px 20px 5px 20px ;
+    box-shadow: 5px 5px 10px #30303069; 
+    border-radius: 6px;
+}
+
+.content__login input {
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 60px;
+    background-color: var(--white--color);
+    border: none;
+    border-radius: 6px;
+}
+.content__login label {
+    padding: 0 10px;
+    margin-top: 15px;
+}
+.link--forget {
+    padding-top: 5px;
+    margin-bottom: 20px;
+}
+.link--forget a {
+    color: var(--primary--color);
+}
+.button--login {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.button--login button {
+    padding: 10px 30px;
+    background-color: var(--second--color);
+    border-radius: 6px;
+    border: none;
+    color: var(--white--color);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.link--singup {
+    font-size: 15;
+    color: var(--second--color);
+}
+
+/* footer section */
+.footer {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 50px;
+    margin: 0;
+    color: var(--white--color);
+    bottom: 0;
+    /* Cambiado de top a bottom para fijar el footer en la parte inferior */
+    left: 0;
+}
+
+.footer--content {
+    width: 100vw;
+    padding-top: 15px;
+    background-color: var(--background--footer);
+    justify-content: left;
+    align-items: center;
+}
+
+.container--footer {
+    display: flex;
+}
+
+.container--footer h2 {
+    font-size: 12px;
+    font-family: 'Ralawey', sans-serif;
+    color: var(--text--primary);
+}
+
+.icon-copyright {
+    font-size: 15px;
+    padding: 0 10px;
+    color: var(--text--primary);
+}
+
+/* footer section */
+.footer {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 50px;
+    margin: 0;
+    color: var(--white--color);
+    bottom: 0;
+    /* Cambiado de top a bottom para fijar el footer en la parte inferior */
+    left: 0;
+}
+
+.footer--content {
+    width: 100vw;
+    padding-top: 15px;
+    background-color: var(--background--footer);
+    justify-content: left;
+    align-items: center;
+}
+
+.container--footer h2 {
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    color: var(--text--primary);
+}
+
+.icon-copyright {
+    font-size: 15px;
+    padding: 0 10px;
+    color: var(--text--primary);
+}
+
+
+/* Media Query para tabletas (768px de ancho o menos) */
+@media screen and (max-width: 768px) {
+
+    /* homepage section */
+    .homepage {
+        flex-direction: column;
+        width: 100vw;
+        text-align: center;
+    }
+
+    .homepage--info {
+        padding: 50px;
+        /* Reducir el relleno en tabletas */
+        order: 2;
+    }
+
+    .button__logIn,
+    .button__singUp {
+        font-size: 14px;
+        /* Reducir el tamaño de fuente en tabletas */
+    }
+}
+
+/* Media Query para dispositivos móviles (480px de ancho o menos) */
+@media screen and (max-width: 480px) {
+
+    /* homepage section */
+    .homepage {
+        flex-direction: column;
+        width: 50vw;
+        text-align: center;
+    }
+
+    .homepage--info {
+        padding: 40px;
+        /* Reducir el relleno en dispositivos móviles */
+    }
+
+    .homepage--info {
+        order: 2;
+    }
+
+    .buttons--home {
+        padding: 20px 15px;
+    }
+
+    .button__logIn,
+    .button__singUp {
+        font-size: 12px;
+        /* Reducir aún más el tamaño de fuente en dispositivos móviles */
+    }
+
+    .scroll-icon {
+        display: block;
+        /* Mostrar el ícono de desplazamiento en dispositivos móviles */
+    }
+}
