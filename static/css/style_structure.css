@@ -61,7 +61,7 @@ body {
 .profile-photos--logo {
     margin: 0 auto;
     width: 80%;
-    border-radius: var(--border-radius);
+    /* border-radius: var(--border-radius); */
     overflow: hidden;
     background-color: var(--background--footer);
     background-image: url(../img/code.svg);
@@ -274,7 +274,7 @@ main {
     justify-content: space-between;
     margin-top: 1rem;
     border-radius: var(--border-radius);
-    padding: .4rem var(--card-padding);
+    outline: solid 0.01px;
 
 }
 
@@ -287,12 +287,14 @@ main {
     background: #ffff;
     background: linear-gradient(180deg, rgb(6, 255, 226) 0%, #ffff 100%);
     display: flex;
+    
 }
 
 .createPost-links {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    
 
 }
 
