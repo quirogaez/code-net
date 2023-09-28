@@ -1,5 +1,6 @@
 /* Definimos la familia de letras */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;1,100&display=swap");
+
 :root {
     --primary--color: #00ffe0;
     --second--color: #801bea;
@@ -14,12 +15,16 @@
     --search-padding: 6rem 2rem;
     --card-padding: 1rem;
 
-    --stk-top-left: 4.5rem;
+    --stk-top-left: 0rem;
     --stk-top-right: -18rem;
-  }
-  
-  /* definition Universal */
-*, *::after/* , *::before */ {
+}
+
+/* definition Universal */
+*,
+*::after
+
+/* , *::before */
+    {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,7 +42,7 @@
 
 body {
     color: var(--second--color);
-    background: var( --white--color) ;
+    background: var(--white--color);
     overflow-x: hidden;
 }
 
@@ -47,10 +52,12 @@ body {
     aspect-ratio: 1/1;
     overflow: hidden;
 }
+
 .profile--logo {
     background-color: var(--background--footer);
     margin-top: 2rem;
 }
+
 .profile-photos--logo {
     margin: 0 auto;
     width: 80%;
@@ -104,13 +111,16 @@ main {
     grid-template-columns: 18vw auto 20vw;
     gap: 2rem;
 }
+
 /* --------------- MAIN LEFT --------------- */
 .main-container .main-left {
     background-color: var(--background--footer);
     position: sticky;
-    height: 100vh; /* MAX-CONTENT */
-    top:var(--stk-top-left) ;
+    height: 100vh;
+    /* MAX-CONTENT */
+    top: var(--stk-top-left);
 }
+
 .main-left .profile {
     /* background-color:#00ffe0; */
     padding: var(--card-padding);
@@ -122,14 +132,14 @@ main {
     width: 100%;
 }
 
-.main-left p{
+.main-left p {
     text-transform: lowercase;
     font-size: .9rem;
 }
 
 /* --------------- SIDEBAR --------------- */
 
-.main-left .side-bar{
+.main-left .side-bar {
     /* background-color: black; */
     margin-top: 1rem;
     border-radius: var(--card-border-radius);
@@ -148,7 +158,8 @@ main {
     background-color: var(--primary--color);
 }
 
-.menu-item span i, .menu-item span div  {
+.menu-item span i,
+.menu-item span div {
     margin-left: 2rem;
     position: relative;
 }
@@ -172,11 +183,12 @@ main {
 
 .active h3 {
     color: var(--second--color);
-    text-shadow: .5rem 0 2rem #801bea ;
+    text-shadow: .5rem 0 2rem #801bea;
 }
+
 .active {
-    background: rgb(0,255,224);
-    background: linear-gradient(90deg, rgba(0,255,224,1) 0%, rgba(185,185,185,0.7217261904761905) 44%);
+    background: rgb(0, 255, 224);
+    background: linear-gradient(90deg, rgba(0, 255, 224, 1) 0%, rgba(185, 185, 185, 0.7217261904761905) 44%);
 }
 
 .active::before {
@@ -197,9 +209,12 @@ main {
     border-bottom-left-radius: var(--card-border-radius);
     overflow: hidden;
 }
+
 /* --------------- ENDSIDEBAR --------------- */
 
 /* ------------ START MAIN MID ---------- */
+
+/* ..............projects.................. */
 .storys {
     height: 12rem;
     display: flex;
@@ -207,28 +222,97 @@ main {
     gap: .5rem;
 }
 
-.story{
+.story {
     font-size: .8rem;
     position: relative;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     flex-direction: column;
     width: 100%;
     align-items: center;
     background-color: var(--primary--color);
-    
+
 }
 
+.story p {
+    z-index: 2;
+    color: var(--text--primary);
+}
+
+.story::before {
+    content: ' ';
+    height: 3rem;
+    width: 100%;
+    display: block;
+    background: linear-gradient(transparent, var(--second--color));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.7;
+    border-bottom-right-radius: var(--card-border-radius);
+    border-bottom-left-radius: var(--card-border-radius);
+
+}
+
+
+/* Se debe agregar a cada clase cuando se extraiga de la bdd */
 .story:nth-child(1) {
     background-image: url(../img/foto1.png);
     background-repeat: no-repeat;
     background-position: 50% 0%;
     background-size: contain;
 }
+
+/* ..............end projects.................. */
+
+/* ..............form post.................. */
+.createPost {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    border-radius: var(--border-radius);
+    padding: .4rem var(--card-padding);
+
+}
+
+.createPost-on {
+    display: flex;
+}
+
+.createPost-above {
+    font-size: 0.9rem;
+    background: #ffff;
+    background: linear-gradient(180deg, rgb(6, 255, 226) 0%, #ffff 100%);
+    display: flex;
+}
+
+.createPost-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.createPost-links a {
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+}
+
+.btn-primary--form {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: var(--card-border-radius);
+}
+
+
+/* ..............end form post.................. */
+
 /* ------------ END MAIN MID ---------- */
 
 
 /* //////////////// END MAIN SECTION ////////////////////////// */
-
