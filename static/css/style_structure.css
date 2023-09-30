@@ -326,11 +326,8 @@ main {
  .bx {
     font-size: 3em;
  }
-
-  .controls {
-   ;  
-  }
-
+  
+  
 /* ..............end projects.................. */
 
 /* ..............form post.................. */
@@ -396,6 +393,12 @@ main {
     border-radius: 20%;
     height: 72px;
     width: 72px;
+  }
+  .icono_life img {
+    width: 50px;
+  }
+  .icono_chat img {
+    width: 60px;
   }
 /* ------------ END MAIN MID ---------- */
 
