@@ -117,6 +117,7 @@ main {
     background-color: var(--background--footer);
     position: sticky;
     height: 100vh;
+    max-width: 600px;
     /* MAX-CONTENT */
     top: var(--stk-top-left);
 }
@@ -135,6 +136,13 @@ main {
 .main-left p {
     text-transform: lowercase;
     font-size: .9rem;
+}
+.main-right {
+    max-width: 200px;
+    text-align: center;
+    margin-top: 40px;
+    
+
 }
 
 /* --------------- SIDEBAR --------------- */
@@ -212,46 +220,7 @@ main {
 
 
   
-  .carousel{
-    /*el flex: 1; es para complementar el display:flex; del padre es para que cada hiujo tome el 50% del padre pro eso tanto el div de la informacion como el del carousel lo tienen*/
-     flex: 1;
-     
-  }
-  /*hasta aca son las cosas del padre lo que viene ya es de la configuracion del carousel como tal es posible que si cambian las cosas del padre ya el carousel no quede igual si algo me avisan*/
-  .carousel_profile_story {
-    display: flex;
-    padding: 20px;
-    overflow: hidden;
-    max-width: 40%;
-    margin: 0 auto;
-    position: relative;
-  
-  }
-  
-  
-  .profile {
-    flex: 1;  
-    text-align: center;
-     width: 325px; 
-  }
-  
-  .profile img {
-    max-width: 90%;
-    border-radius: 20%;
-    height: 80px;
-    width: 80px;
-  }
-  
-  .button {
-      border-radius: 80%;
-      height: 10px;
-      width: 10px;
-      background: rgb(210, 207, 207);
-      border-color: rgb(206, 192, 175);
-  }
-  .controls {
-    text-align: center;  
-  }
+ 
   
 /* --------------- ENDSIDEBAR --------------- */
 
@@ -301,12 +270,66 @@ main {
 
 
 /* Se debe agregar a cada clase cuando se extraiga de la bdd */
-.story:nth-child(1) {
+/*.story:nth-child(1) {
     background-image: url(../img/foto1.png);
     background-repeat: no-repeat;
     background-position: 50% 0%;
-    background-size: contain;*/
-}
+    background-size: contain;
+}*/
+.carousel{
+    /*el flex: 1; es para complementar el display:flex; del padre es para que cada hiujo tome el 50% del padre pro eso tanto el div de la informacion como el del carousel lo tienen*/
+     flex: 1;
+     
+  }
+  /*hasta aca son las cosas del padre lo que viene ya es de la configuracion del carousel como tal es posible que si cambian las cosas del padre ya el carousel no quede igual si algo me avisan*/
+  .carousel_profile_story {
+    display: flex;
+    padding: 20px;
+    max-width: 50%;
+    margin: 0 auto;
+    position: relative
+  
+  }
+  
+  
+  .profile_story {
+    flex: 1;  
+    text-align: center;
+    margin-top: 20px;
+     /*width: 325px;*/ 
+  }
+  
+  .profile_story img {
+    max-width: 90%;
+    border-radius: 20%;
+    height: 80px;
+    width: 80px;
+  }
+  
+  .prev-btn {
+      /*border-radius: 80%;*/
+      height: 20px;
+      width: 20px;
+      background: none;
+      position: absolute;
+      left: 645px;
+      top: 60px;
+ }
+ .next-btn{
+    height: 20px;
+    width: 20px;
+    background: none;
+    position: absolute;
+    right: 730px;
+    top: 60px;
+ }
+ .bx {
+    font-size: 3em;
+ }
+
+  .controls {
+   ;  
+  }
 
 /* ..............end projects.................. */
 
@@ -356,7 +379,24 @@ main {
 
 
 /* ..............end form post.................. */
+/*---------------main_right---------------*/
+.carousel_profile_life{
+    padding: 60px;
+}
+.profile_life {
+    flex: 1;  
+    text-align: center;
+    margin-top: 20px;
+     /*width: 325px;*/ 
 
+  }
+  
+  .profile_life img {
+    max-width: 90%;
+    border-radius: 20%;
+    height: 72px;
+    width: 72px;
+  }
 /* ------------ END MAIN MID ---------- */
 
 

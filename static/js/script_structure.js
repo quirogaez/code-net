@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let index = i % numProfile;
   
         const divImag = document.createElement("div");
-        divImag.className = "profile";
+        divImag.className = "profile_story";
         const image = document.createElement("img");
         image.src = profileImg[index];
         divImag.append(image);
@@ -50,19 +50,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   /*-------------------------------final carousel story---------------------------- */
-  
-  
-  /*-------------------------------inicio carousel life-------------------------------------- */
   document.addEventListener("DOMContentLoaded", function () {
     const profileCarousel = document.querySelector(".carousel_profile_life");
     
     let profileImg = [
-      "fotos/foto1.jpg",
-      "fotos/foto2.jpg",
-      "fotos/foto3.jpg",
-      "fotos/foto4.jpg",
-      "fotos/foto5.jpg",
-      "fotos/foto6.jpg",
+        "../img/foto1.png",
+        "../img/foto2.png",
+        "../img/foto3.png",
+        "../img/foto4.png",
+        "../img/foto5.png",
+        "../img/foto6.png",
     ];
     const numProfile = profileImg.length;
     const profilePerPage = 4;
@@ -79,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let index = i % numProfile;
   
         const divImag = document.createElement("div");
-        divImag.className = "profile";
+        divImag.className = "profile_life";
         const image = document.createElement("img");
         image.src = profileImg[index];
         divImag.append(image);
@@ -88,19 +85,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     showProfile(currentProfile);
   
-    // Agregar eventos para navegar por el carrusel
-    document.querySelector(".prev-btn").addEventListener("click", function () {
-      currentProfile--;
-      if (currentProfile < 0) {
-        currentProfile = numProfile - 1;
-      }
-  
-      showProfile(currentProfile);
-    });
-  
-    document.querySelector(".next-btn").addEventListener("click", function () {
-      currentProfile++;
-      showProfile(currentProfile);
-    });
+     // Función para cambiar automáticamente las imágenes cada 25 segundos
+  function autoChangeProfile() {
+    currentProfile++;
+    showProfile(currentProfile);
+    if (currentProfile >= numProfile) {
+      currentProfile = 0;
+    }
+  }
+
+  showProfile(currentProfile);
+
+  // Iniciar el cambio automático cada 25 segundos
+  setInterval(autoChangeProfile, 5000);
   });
   /*-------------------------------final carousel life---------------------------- */
