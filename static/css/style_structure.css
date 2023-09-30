@@ -140,7 +140,7 @@ main {
 /* --------------- SIDEBAR --------------- */
 
 .main-left .side-bar {
-    /* background-color: black; */
+    
     margin-top: 1rem;
     border-radius: var(--card-border-radius);
 }
@@ -210,12 +210,55 @@ main {
     overflow: hidden;
 }
 
+
+  
+  .carousel{
+    /*el flex: 1; es para complementar el display:flex; del padre es para que cada hiujo tome el 50% del padre pro eso tanto el div de la informacion como el del carousel lo tienen*/
+     flex: 1;
+     
+  }
+  /*hasta aca son las cosas del padre lo que viene ya es de la configuracion del carousel como tal es posible que si cambian las cosas del padre ya el carousel no quede igual si algo me avisan*/
+  .carousel_profile_story {
+    display: flex;
+    padding: 20px;
+    overflow: hidden;
+    max-width: 40%;
+    margin: 0 auto;
+    position: relative;
+  
+  }
+  
+  
+  .profile {
+    flex: 1;  
+    text-align: center;
+     width: 325px; 
+  }
+  
+  .profile img {
+    max-width: 90%;
+    border-radius: 20%;
+    height: 80px;
+    width: 80px;
+  }
+  
+  .button {
+      border-radius: 80%;
+      height: 10px;
+      width: 10px;
+      background: rgb(210, 207, 207);
+      border-color: rgb(206, 192, 175);
+  }
+  .controls {
+    text-align: center;  
+  }
+  
 /* --------------- ENDSIDEBAR --------------- */
 
 /* ------------ START MAIN MID ---------- */
 
 /* ..............projects.................. */
-.storys {
+/*.storys {
     height: 12rem;
     display: flex;
     justify-content: space-between;
@@ -262,7 +305,7 @@ main {
     background-image: url(../img/foto1.png);
     background-repeat: no-repeat;
     background-position: 50% 0%;
-    background-size: contain;
+    background-size: contain;*/
 }
 
 /* ..............end projects.................. */
