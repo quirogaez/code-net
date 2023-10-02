@@ -10,9 +10,10 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
      <!-- Link Fontawasome -->
      <script src="https://kit.fontawesome.com/95b2a267a8.js" crossorigin="anonymous"></script>
-
+     <script defer src="../js/script_structure.js"></script>
 </head>
 <body>
     
@@ -87,37 +88,17 @@
             <div class="main-mid">
                 <!-- .................. PROJECTS START ........................ -->
                 
-                <div class="storys">
-                    <div class="story">
-                        <div class="profile-photos">
-                            <img src="../img/foto1.png" alt="">
-                        </div>
-                        <p>Backend</p>
-                    </div>
-                    <div class="story">
-                        <div class="profile-photos">
-                            <img src="../img/foto2.png" alt="">
-                        </div>
-                        <p>Backend</p>
-                    </div>
-                    <div class="story">
-                        <div class="profile-photos">
-                            <img src="../img/foto3.png" alt="">
-                        </div>
-                        <p>Backend</p>
-                    </div>
-                    <div class="story">
-                        <div class="profile-photos">
-                            <img src="../img/foto4.png" alt="">
-                        </div>
-                        <p>Backend</p>
-                    </div>
-                    <div class="story">
-                        <div class="profile-photos">
-                            <img src="../img/foto5.png" alt="">
-                        </div>
-                        <p>Backend</p>
-                    </div>
+                <div class="carousel-story">
+                    <div class="controls_p">
+                        <button class="prev-btn button"><i class='bx bx-chevron-left'></i></button>
+                      </div>
+                    <div class="carousel_profile_story"></div>
+                    <div class="controls_n">
+                        <button class="next-btn button"><i class='bx bx-chevron-right'></i></button>
+                      </div>
+                     </div>
+                  
+                  
 
                    
                 </div>
@@ -153,7 +134,19 @@
 
             <!-- ---------- MAIN RIGHT ---------- -->
             <div class="main-right">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia tenetur ipsum reprehenderit? At aperiam deleniti accusamus maxime, aliquam ipsam provident voluptatum mollitia excepturi id dolorem, velit quibusdam totam quisquam placeat
+                
+               
+                    <div class="icono">
+                        <button class="icono_life"><img src="../img/trasmisiones.png"></i></button>
+                      </div>
+                  <div class="carousel-life">
+                    <div class="carousel_profile_life"></div>
+                    
+                  </div>
+                  <div class="chat">
+                    <button class="icono_chat"><img src="../img/mensajes.png"></button>
+                  </div>
+                  
             </div>
             <!-- ---------- END MAIN RIGHT ---------- -->
         </main>

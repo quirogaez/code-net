@@ -117,6 +117,7 @@ main {
     background-color: var(--background--footer);
     position: sticky;
     height: 100vh;
+    max-width: 600px;
     /* MAX-CONTENT */
     top: var(--stk-top-left);
 }
@@ -136,11 +137,18 @@ main {
     text-transform: lowercase;
     font-size: .9rem;
 }
+.main-right {
+    max-width: 200px;
+    text-align: center;
+    margin-top: 40px;
+    
+
+}
 
 /* --------------- SIDEBAR --------------- */
 
 .main-left .side-bar {
-    /* background-color: black; */
+    
     margin-top: 1rem;
     border-radius: var(--card-border-radius);
 }
@@ -210,12 +218,16 @@ main {
     overflow: hidden;
 }
 
+
+  
+ 
+  
 /* --------------- ENDSIDEBAR --------------- */
 
 /* ------------ START MAIN MID ---------- */
 
 /* ..............projects.................. */
-.storys {
+/*.storys {
     height: 12rem;
     display: flex;
     justify-content: space-between;
@@ -258,13 +270,74 @@ main {
 
 
 /* Se debe agregar a cada clase cuando se extraiga de la bdd */
-.story:nth-child(1) {
+/*.story:nth-child(1) {
     background-image: url(../img/foto1.png);
     background-repeat: no-repeat;
     background-position: 50% 0%;
     background-size: contain;
-}
+}*/
+.carousel-story{
+  display: flex;
+  align-items: center;
+  /*justify-content: center;*/
+  margin: 2%;
 
+ 
+
+  }
+
+  .controls_p {
+   flex: 1;
+   text-align: right;
+  }
+
+  .controls_n {
+    flex: 1;
+    text-align: left;
+  }
+  .carousel_profile_story {
+    display: flex;
+    flex: 5;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+
+    
+  
+  }
+  
+  
+  .profile_story {
+    flex: 1;  
+    align-items: center;
+    justify-content: center;
+
+     
+  }
+  
+  .profile_story img {
+    /*max-width: 90%;*/
+    border-radius: 25%;
+    height: 80px;
+    width: 80px;
+    margin: auto;
+  }
+  
+  .prev-btn {
+      background: none;
+    
+ }
+ .next-btn{
+    background: none;
+   
+    
+  align-items: center;
+ }
+ .bx {
+    font-size: 3em;
+ }
+  
+  
 /* ..............end projects.................. */
 
 /* ..............form post.................. */
@@ -313,8 +386,107 @@ main {
 
 
 /* ..............end form post.................. */
+/*---------------main_right---------------*/
+.carousel_profile_life{
 
+}
+.carouse-life {
+
+}
+.profile_life {
+    flex: 1;  
+   
+     /*width: 325px;*/ 
+     align-items: center;
+     justify-content: center;
+     padding: 10px;
+  }
+  
+  .profile_life img {
+    
+    border-radius: 20%;
+    height: 72px;
+    width: 72px;
+    margin: auto;
+  }
+  .icono_life img {
+    width: 50px;
+    
+  }
+  .icono_chat img {
+    width: 60px;
+  }
 /* ------------ END MAIN MID ---------- */
 
 
 /* //////////////// END MAIN SECTION ////////////////////////// */
+/*----------------pantallas de celulares ----------------------*/
+@media screen and (max-width: 480px){
+    .main-container {
+       display: list-item; 
+    
+    }
+    .side-bar {
+       display: flex;
+       height: 100px;
+    }
+    .menu-item {
+        flex: 1;
+    }
+    .menu-item h3 {
+        display: none;
+    }
+    .main-right {
+        display: none;
+    }
+    .carousel-story {
+        max-width: 480px;
+    }
+    
+   
+    .profile_story img {
+        
+        border-radius: 20%;
+        height: 60px;
+        width: 70px;
+        
+        margin: 2px;
+      }
+      
+
+.bx {
+  font-size: 3em;
+}
+
+}
+/*---------------------- fin de pantallas celulares---------------------*/
+/*----------------pantallas de tables ----------------------*/
+@media screen and (max-width: 768px){
+   
+    
+     .menu-item h3 {
+         display: none;
+     }
+     .main-right {
+         display: none;
+     }
+     .carousel-story {
+         max-width: 600px;
+     }
+     
+    
+     .profile_story img {
+         
+         border-radius: 20%;
+         height: 70px;
+         width: 80px;
+         
+         margin: 2px;
+       }
+       
+ 
+ .bx {
+   font-size: 3em;
+ }
+}
+/*---------------------- fin de pantallas tables---------------------*/
