@@ -276,52 +276,62 @@ main {
     background-position: 50% 0%;
     background-size: contain;
 }*/
-.carousel{
-    /*el flex: 1; es para complementar el display:flex; del padre es para que cada hiujo tome el 50% del padre pro eso tanto el div de la informacion como el del carousel lo tienen*/
-     flex: 1;
-     
+.carousel-story{
+  display: flex;
+  align-items: center;
+  /*justify-content: center;*/
+  margin: 2%;
+
+ 
+
   }
-  /*hasta aca son las cosas del padre lo que viene ya es de la configuracion del carousel como tal es posible que si cambian las cosas del padre ya el carousel no quede igual si algo me avisan*/
+
+  .controls_p {
+   flex: 1;
+   text-align: right;
+  }
+
+  .controls_n {
+    flex: 1;
+    text-align: left;
+  }
   .carousel_profile_story {
     display: flex;
-    padding: 20px;
-    max-width: 50%;
-    margin: 0 auto;
-    position: relative
+    flex: 5;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+
+    
   
   }
   
   
   .profile_story {
     flex: 1;  
-    text-align: center;
-    margin-top: 20px;
-     /*width: 325px;*/ 
+    align-items: center;
+    justify-content: center;
+
+     
   }
   
   .profile_story img {
-    max-width: 90%;
-    border-radius: 20%;
+    /*max-width: 90%;*/
+    border-radius: 25%;
     height: 80px;
     width: 80px;
+    margin: auto;
   }
   
   .prev-btn {
-      /*border-radius: 80%;*/
-      height: 20px;
-      width: 20px;
       background: none;
-      position: absolute;
-      left: 645px;
-      top: 60px;
+    
  }
  .next-btn{
-    height: 20px;
-    width: 20px;
     background: none;
-    position: absolute;
-    right: 730px;
-    top: 60px;
+   
+    
+  align-items: center;
  }
  .bx {
     font-size: 3em;
@@ -378,24 +388,30 @@ main {
 /* ..............end form post.................. */
 /*---------------main_right---------------*/
 .carousel_profile_life{
-    padding: 60px;
+
+}
+.carouse-life {
+
 }
 .profile_life {
     flex: 1;  
-    text-align: center;
-    margin-top: 20px;
+   
      /*width: 325px;*/ 
-
+     align-items: center;
+     justify-content: center;
+     padding: 10px;
   }
   
   .profile_life img {
-    max-width: 90%;
+    
     border-radius: 20%;
     height: 72px;
     width: 72px;
+    margin: auto;
   }
   .icono_life img {
     width: 50px;
+    
   }
   .icono_chat img {
     width: 60px;
@@ -404,3 +420,73 @@ main {
 
 
 /* //////////////// END MAIN SECTION ////////////////////////// */
+/*----------------pantallas de celulares ----------------------*/
+@media screen and (max-width: 480px){
+    .main-container {
+       display: list-item; 
+    
+    }
+    .side-bar {
+       display: flex;
+       height: 100px;
+    }
+    .menu-item {
+        flex: 1;
+    }
+    .menu-item h3 {
+        display: none;
+    }
+    .main-right {
+        display: none;
+    }
+    .carousel-story {
+        max-width: 480px;
+    }
+    
+   
+    .profile_story img {
+        
+        border-radius: 20%;
+        height: 60px;
+        width: 70px;
+        
+        margin: 2px;
+      }
+      
+
+.bx {
+  font-size: 3em;
+}
+
+}
+/*---------------------- fin de pantallas celulares---------------------*/
+/*----------------pantallas de tables ----------------------*/
+@media screen and (max-width: 768px){
+   
+    
+     .menu-item h3 {
+         display: none;
+     }
+     .main-right {
+         display: none;
+     }
+     .carousel-story {
+         max-width: 600px;
+     }
+     
+    
+     .profile_story img {
+         
+         border-radius: 20%;
+         height: 70px;
+         width: 80px;
+         
+         margin: 2px;
+       }
+       
+ 
+ .bx {
+   font-size: 3em;
+ }
+}
+/*---------------------- fin de pantallas tables---------------------*/

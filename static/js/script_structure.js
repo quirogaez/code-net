@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+
   showProfile(currentProfile);
 
   // Iniciar el cambio automático cada 25 segundos
