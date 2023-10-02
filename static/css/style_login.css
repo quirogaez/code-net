@@ -83,7 +83,7 @@ body {
     display: flex;
     margin-bottom: 10px;
     width: auto;
-    height: auto;
+    height: 35px;
     justify-content: space-between;
 }
 
