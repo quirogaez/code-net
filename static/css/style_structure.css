@@ -422,20 +422,7 @@ main {
 /* //////////////// END MAIN SECTION ////////////////////////// */
 /*----------------pantallas de celulares ----------------------*/
 @media screen and (max-width: 480px){
-    .main-container {
-       display: list-item; 
-    
-    }
-    .side-bar {
-       display: flex;
-       height: 100px;
-    }
-    .menu-item {
-        flex: 1;
-    }
-    .menu-item h3 {
-        display: none;
-    }
+ 
     .main-right {
         display: none;
     }
@@ -464,9 +451,6 @@ main {
 @media screen and (max-width: 768px){
    
     
-     .menu-item h3 {
-         display: none;
-     }
      .main-right {
          display: none;
      }
