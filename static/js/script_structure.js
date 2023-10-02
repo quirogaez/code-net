@@ -1,5 +1,9 @@
 /*---------------------------------inicio carousel story----------------------------- */
 document.addEventListener("DOMContentLoaded", function () {
+    
+  
+    window.addEventListener("resize", ajustarProfilePerPage);
+
     const profileCarousel = document.querySelector(".carousel_profile_story");
    
     let profileImg = [
@@ -11,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "../img/foto6.png",
     ];
     const numProfile = profileImg.length;
-    const profilePerPage = 5;
+    let lastWindowWidth = window.innerWidth;
+    let profilePerPage = 5;
     let currentProfile = 0;
   
     function showProfile(profileIndex) {
@@ -32,6 +37,28 @@ document.addEventListener("DOMContentLoaded", function () {
         profileCarousel.append(divImag);
       }
     }
+
+    function ajustarProfilePerPage() {
+      console.log("ajustarProfilePerPage")
+      const width = window.innerWidth;
+      if(width <= 480) {
+        profilePerPage = 4;
+        if(lastWindowWidth > 480) {
+          showProfile(currentProfile);
+          console.log("Actualizando carrusel 480 - lastWindowWidth: " + lastWindowWidth );
+        }
+      } else {
+        profilePerPage = 5;
+        if(lastWindowWidth <= 480) {
+          showProfile(currentProfile);
+          console.log("Actualizando carrusel 1280 - lastWindowWidth: " + lastWindowWidth );
+        }
+      }   
+
+      lastWindowWidth = width;
+    }
+
+    ajustarProfilePerPage();
     showProfile(currentProfile);
   
     // Agregar eventos para navegar por el carrusel
