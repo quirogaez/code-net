@@ -214,7 +214,7 @@ main {
 
 .main-center{
      /* Centra el contenido del contenedor */
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -297,24 +297,27 @@ main {
 }
 .img-coments{
     color: black;
-    padding: 15px;
-   
-
+    width: 50%;
 }
 
 .img-coments:hover{
-    transform: scale(1.1);
-    color: white;
+    transform: scale(1.02);
 
 }
 .img-like{
     color:var(--second--color);
-    padding: 15px;
-    
-    color: white;
-    
+    width: 50%;
+ 
 }
-
+.fa-regular.fa-heart {
+    font-size: 35px;
+    color: var(--second--color);
+  }
+.fa-regular.fa-message{
+    margin-top: 3px;
+    font-size: 30px;
+    color: var(--second--color);
+}
 .img-like:hover{    
     transform: scale(1.1);
 }
