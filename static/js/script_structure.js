@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
     const numProfile = profileImg.length;
     let lastWindowWidth = window.innerWidth;
-    let profilePerPage = 5;
+    let profilePerPage = 6;
     let currentProfile = 0;
   
     function showProfile(profileIndex) {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log("Actualizando carrusel 480 - lastWindowWidth: " + lastWindowWidth );
         }
       } else {
-        profilePerPage = 5;
+        profilePerPage = 6;
         if(lastWindowWidth <= 480) {
           showProfile(currentProfile);
           console.log("Actualizando carrusel 1280 - lastWindowWidth: " + lastWindowWidth );

@@ -218,62 +218,17 @@ main {
 /* --------------- ENDSIDEBAR --------------- */
 
 /* ------------ START MAIN MID ---------- */
-
-/* ..............projects.................. */
-/*.storys {
-    height: 12rem;
-    display: flex;
-    justify-content: space-between;
-    gap: .5rem;
-}
-
-.story {
-    font-size: .8rem;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    flex-direction: column;
+.main-mid{
+    margin: auto;
+    margin-top: 0;
     width: 100%;
-    align-items: center;
-    background-color: var(--primary--color);
-
 }
-
-.story p {
-    z-index: 2;
-    color: var(--text--primary);
-}
-
-.story::before {
-    content: ' ';
-    height: 3rem;
-    width: 100%;
-    display: block;
-    background: linear-gradient(transparent, var(--second--color));
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    opacity: 0.7;
-    border-bottom-right-radius: var(--card-border-radius);
-    border-bottom-left-radius: var(--card-border-radius);
-
-}
-
-
-/* Se debe agregar a cada clase cuando se extraiga de la bdd */
-/*.story:nth-child(1) {
-    background-image: url(../img/foto1.png);
-    background-repeat: no-repeat;
-    background-position: 50% 0%;
-    background-size: contain;
-}*/
 .carousel-story {
     display: flex;
     align-items: center;
     /*justify-content: center;*/
     margin: 2%;
+    width: 100%;
 }
 
 .controls_p {
@@ -287,7 +242,7 @@ main {
 }
 .carousel_profile_story {
     display: flex;
-    flex: 5;
+    flex: 6;
     text-align: center;
     justify-content: center;
     padding: 10px;
@@ -301,9 +256,10 @@ main {
 
 .profile_story img {
     border-radius: 25%;
-    height: 80px;
-    width: 80px;
+    height: 90px;
+    width: 90px;
     margin: auto;
+    padding: 2%;
 }
 
 .prev-btn {
@@ -365,30 +321,37 @@ main {
 
 /* ..............end form post.................. */
 /*---------------main_right---------------*/
-.carousel_profile_life {
-}
-.carouse-life {
+.main-right{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+  
+    
 }
 .profile_life {
-    flex: 1;
-
-    /*width: 325px;*/
-    align-items: center;
-    justify-content: center;
+    
     padding: 10px;
 }
 
 .profile_life img {
     border-radius: 20%;
-    height: 72px;
-    width: 72px;
+    height: 90px;
+    width: 90px;
     margin: auto;
+    
+    
+   
+   
 }
 .icono_life img {
-    width: 50px;
+    width: 70px;
+    margin: 15px;
+    
 }
 .icono_chat img {
-    width: 60px;
+    width: 80px;
+    margin: 15px;
+  
 }
 /* ------------ END MAIN MID ---------- */
 
@@ -427,6 +390,17 @@ main {
 
     #mobilVarProfile {
         display: none;
+    }
+    .carousel-story {
+        max-width: 800px;
+    }
+
+    .profile_story img {
+        height: 70px;
+        width: 80px;
+    }
+    .bx {
+        font-size: 2em;
     }
 }
 
@@ -637,6 +611,7 @@ main {
     .profile_story img {
         height: 60px;
         width: 60px;
+        
     }
 
     .bx {
