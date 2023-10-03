@@ -133,11 +133,6 @@ main {
     text-transform: lowercase;
     font-size: 0.9rem;
 }
-.main-right {
-    max-width: 200px;
-    text-align: center;
-    margin-top: 40px;
-}
 
 /* --------------- SIDEBAR --------------- */
 
@@ -437,6 +432,7 @@ main {
    display: flex;
    flex-direction: column;
    align-items: flex-end;
+   margin: 40px;
   
     
 }
