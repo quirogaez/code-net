@@ -14,7 +14,7 @@ function resizeController (){
         /* Cambiar imagen */
         companyIcon.src = "../img/code.svg"
     }
-    else if (window.innerWidth <= 821) { //si el ancho de la ventana es menor a 768 píxeles
+    else if (window.innerWidth <= 1025) { //si el ancho de la ventana es menor a 768 píxeles
         // Agrega la clase al elementIcon
         elementIcon.forEach((element) => {
             element.classList.remove("fa-lg");
