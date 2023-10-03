@@ -862,7 +862,7 @@ body {
 }
 
 /* Media Query para tabletas (768px de ancho o menos) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1025px) {
   /* homepage section */
   .homepage {
     display: flex;
