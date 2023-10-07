@@ -214,7 +214,6 @@ main {
 /* MAIN CENTER */
 
 .main-center{
-     /* Centra el contenido del contenedor */
     display: block;
     justify-content: center;
     align-items: center;
@@ -223,51 +222,39 @@ main {
     overflow: hidden;
     justify-content: center;
     padding: 0 70px 0 70px;
-
-  
-
-   
+ 
 }
 .img-center-container{
     display: block;
     margin-top: 70px;
-    /* Oculta cualquier contenido que se desborde del borde redondeado */
-    width: 650px; /* Ajusta el ancho deseado */
+    width: 650px; 
     height: auto;
     border-bottom-style: solid;
     border-width: 1px;
     border-color: #cececea5;
- 
-           
+          
 }
 
 .img-center{
     display: grid;
     grid-template-columns: 3fr 0.4fr;
     gap: 15px;
-    /* Oculta cualquier contenido que se desborde del borde redondeado */
- /* Sombra para el contenedor */
-    width: 350px; /* Ajusta el ancho deseado */
+    width: 350px; 
     flex:1;
     width: 100%;
     height:auto;
     border-radius: 10px;
     overflow: hidden;
   
-
 }
 
 .img-technology-prin{
-    /* display: block;
-    width: 100%;
-    height: auto;
-    margin: 10px; */
-
+   
     display: flex;
-    flex-wrap: wrap; /* Asegura que las imágenes se envuelvan en filas */
-    justify-content: space-between; /* Espacio igual entre las imágenes horizontalmente */
+    flex-wrap: wrap; 
+    justify-content: space-between; 
     justify-content: space-around;
-    align-items: center; /**/ 
+    align-items: center;  
     padding-left: 10px;
     border-left-style: solid;
     border-width: 1px;
@@ -316,7 +303,6 @@ main {
     padding-top: 10px;
 }
 
-
 .img-perfil-img{
     margin-left: 0; 
     width:10%;    
@@ -336,20 +322,9 @@ main {
     overflow: hidden;  
 }
 
-.img-perfil .count1{
-    background: var(--second--color);
-    padding: .1rem .4rem;
-    font-size: .6rem;
-    height: fit-content;
-    color: rgb(132, 50, 50);
-    border-radius: .8rem;
-    position: absolute;
-    top: 1.1rem;
-    left: 2.6rem;
-}
 
 .icon-love {
-    font-size: 30px;
+    font-size: 33px;
     color: var(--second--color); 
     height: 100%;
     text-align: right;
@@ -363,9 +338,7 @@ main {
     text-align: right;
  
 }
-.img-like:hover{    
-    transform: scale(1.1);
-}
+
 .img-verified{
     background-color: #441a31;
 
@@ -700,14 +673,15 @@ main {
 
     .main-center{
         /* Centra el contenido del contenedor */
-       display: block;
-       justify-content: center;
-       align-items: center;
-       width: 100%;
-       height: auto;
-       overflow: hidden;
-       justify-content: center;
-       background-color: #801bea;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        justify-content: center;
+        padding: 0 70px 0 70px;
+
    
       
    }
@@ -715,9 +689,10 @@ main {
        display: block;
        margin-top: 50px;
        /* Oculta cualquier contenido que se desborde del borde redondeado */
-       width: 100%; /* Ajusta el ancho deseado */
+       width: 300px; /* Ajusta el ancho deseado */
        height: auto;
        background-color: #565656;
+       text-align: center;
            
    }
    
