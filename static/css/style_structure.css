@@ -221,69 +221,119 @@ main {
     width: 100%;
     height: auto;
     overflow: hidden;
+    justify-content: center;
+    padding: 0 70px 0 70px;
 
-    
-    
+  
+
+   
 }
 .img-center-container{
     display: block;
-    margin-top: 90px;
+    margin-top: 70px;
     /* Oculta cualquier contenido que se desborde del borde redondeado */
-    width: 510px; /* Ajusta el ancho deseado */
+    width: 650px; /* Ajusta el ancho deseado */
     height: auto;
-   
-
-     
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #cececea5;
+ 
+           
 }
 
 .img-center{
-    display: block;
+    display: grid;
+    grid-template-columns: 3fr 0.4fr;
+    gap: 15px;
     /* Oculta cualquier contenido que se desborde del borde redondeado */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para el contenedor */
-    width: 300px; /* Ajusta el ancho deseado */
+ /* Sombra para el contenedor */
+    width: 350px; /* Ajusta el ancho deseado */
     flex:1;
     width: 100%;
     height:auto;
     border-radius: 10px;
     overflow: hidden;
+  
 
 }
+
+.img-technology-prin{
+    /* display: block;
+    width: 100%;
+    height: auto;
+    margin: 10px; */
+
+    display: flex;
+    flex-wrap: wrap; /* Asegura que las imágenes se envuelvan en filas */
+    justify-content: space-between; /* Espacio igual entre las imágenes horizontalmente */
+    justify-content: space-around;
+    align-items: center; /**/ 
+    padding-left: 10px;
+    border-left-style: solid;
+    border-width: 1px;
+    border-color: #cececea5;
+}
+
+.img-center-publication{
+    width: 100%;
+    height:auto;
+    border-radius: 10px;
+}
 .img-description{
-   display: grid;
-   grid-template-columns: 1fr 2fr 0.5fr 0.5fr;
-   height: 100%;
+   
+   display: flex;
+   flex-wrap: wrap;
+   width: 85%;
    margin-top: 10px;
+   border-bottom: #565656;  
    
 
 }
 .img-description-top{
-    display: block;
 
+    display: grid;
+    grid-template-columns: auto 50px 50px;
+    height: auto;
+    width: 90%;
+    margin-bottom: 0;
+    padding: 10px 0 0 10px; 
 }
+
 .img-name{
    
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
-
+    color: rgb(34, 34, 34);
+    justify-items: left;
+    text-align: 50px;
 }
 .img-rol{
+   
+    width: 127.68%;
+    height: 100%;
     text-align: left;
-    color: black;
-
-
+    color: var(--text--primary);
+    font-size: 11px;
+    margin-bottom: 15px;
+    padding-top: 10px;
 }
+
 
 .img-perfil-img{
-    margin-left: 30px;
-       
+    margin-left: 0; 
+    width:10%;    
 }
+
 .img-perfil{
+    width: 100%;
+    border-radius: var(--border-radius);
+    aspect-ratio: 1;
+    overflow: hidden;  
+}
+
+.img-technology{
     width: 4rem;
     border-radius: var(--border-radius);
     aspect-ratio: 1;
-    overflow: hidden;
- 
+    overflow: hidden;  
 }
 
 .img-perfil .count1{
@@ -297,28 +347,21 @@ main {
     top: 1.1rem;
     left: 2.6rem;
 }
-.img-coments{
-    color: black;
-    width: 50%;
-}
 
-.img-coments:hover{
-    transform: scale(1.02);
-
-}
-.img-like{
-    color:var(--second--color);
-    width: 50%;
- 
-}
-.fa-regular.fa-heart {
-    font-size: 35px;
-    color: var(--second--color);
-  }
-.fa-regular.fa-message{
-    margin-top: 3px;
+.icon-love {
     font-size: 30px;
-    color: var(--second--color);
+    color: var(--second--color); 
+    height: 100%;
+    text-align: right;
+  }
+
+.icon-comment{
+    
+    font-size: 30px;
+    color: var(--second--color);  
+    height: 100%;
+    text-align: right;
+ 
 }
 .img-like:hover{    
     transform: scale(1.1);
@@ -654,6 +697,148 @@ main {
     #varProfile {
         display: none
     }
+
+    .main-center{
+        /* Centra el contenido del contenedor */
+       display: block;
+       justify-content: center;
+       align-items: center;
+       width: 100%;
+       height: auto;
+       overflow: hidden;
+       justify-content: center;
+       background-color: #801bea;
+   
+      
+   }
+   .img-center-container{
+       display: block;
+       margin-top: 50px;
+       /* Oculta cualquier contenido que se desborde del borde redondeado */
+       width: 100%; /* Ajusta el ancho deseado */
+       height: auto;
+       background-color: #565656;
+           
+   }
+   
+   .img-center{
+       display: grid;
+       grid-template-columns: 3fr 0.5fr;
+       /* Oculta cualquier contenido que se desborde del borde redondeado */
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para el contenedor */
+        /* Ajusta el ancho deseado */
+       flex:1;
+       width: 100%;
+       height:auto;
+       border-radius: 10px;
+       overflow: hidden;
+   
+   }
+   
+   .img-center-publication{
+       height: 100%;
+       width: 100%;
+       height:auto;
+       border-radius: 10px;
+   
+   }
+   .img-description{
+      display: grid;
+      grid-template-columns: 1fr 1.5fr 0.5fr 0.5fr 0.4fr;
+      height: 100%;
+      margin-top: 10px;
+      
+   
+   }
+   .img-description-top{
+       display: block;
+   
+   }
+   .img-name{
+      
+       color: black;
+       font-family: Arial, Helvetica, sans-serif;
+       text-align: left;
+       font-size: 13px;
+   
+   }
+   .img-rol{
+       text-align: left;
+       color: black;
+   
+   
+   }
+   
+   .img-perfil-img{
+       margin-left: 10px;
+     
+          
+   }
+   .img-perfil{
+       width: 3rem;
+       border-radius: var(--border-radius);
+       aspect-ratio: 1;
+       overflow: hidden;
+    
+   }
+   
+   .img-technology-prin{
+      
+       display: flex;
+       width: 60%;
+       margin-left: 8px;
+       height: auto;
+       flex-wrap: wrap; /* Asegura que las imágenes se envuelvan en filas */
+       justify-content: space-between; /* Espacio igual entre las imágenes horizontalmente */
+       justify-content: space-around;
+       align-items: center; /**/ 
+       
+   
+   
+   }
+   
+   .img-technology{
+       width: 4rem;
+       border-radius: var(--border-radius);
+       aspect-ratio: 1;
+       overflow: hidden;
+   
+      
+   }
+   .img-coments{
+    color: black;
+    width: 50%;
+}
+
+.img-coments:hover{
+    transform: scale(1.02);
+
+}
+
+.fa-regular.fa-heart {
+    font-size: 25px;
+    color: var(--second--color);
+  }
+.fa-regular.fa-message{
+    margin-top: 3px;
+    font-size: 25px;
+    color: var(--second--color);
+}
+.img-like:hover{    
+    transform: scale(1.1);
+}
+.img-verified{
+    background-color: #441a31;
+
+}
+
+
+
+
+
+
+
+
 }
 
 
