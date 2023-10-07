@@ -66,6 +66,8 @@ body {
     width: 80%;
     /* border-radius: var(--border-radius); */
     overflow: hidden;
+    background-color: var(--background--footer);
+    margin-top: 2rem;
    
 }
 
@@ -140,10 +142,11 @@ main {
 
 /* --------------- SIDEBAR --------------- */
 
-.main-left .side-bar {
+
+
+.side-bar {
     /* background-color: black; */
     margin-top: 1rem;
-    border-radius: var(--card-border-radius);
 }
 
 .menu-item {
@@ -549,7 +552,7 @@ main {
     .main-container .main-left {
         min-width: 100vw;
         text-align: center;
-        max-height: 17vh;
+        max-height: 15vh;
         justify-content: center;
         align-items: center;
 
@@ -566,7 +569,7 @@ main {
     }
 
     /* Ajustes del logo */
-    .profile--logo {
+/*     .profile--logo {
         align-self: start;
         width: 80%;
         margin-top: 0;
@@ -575,13 +578,19 @@ main {
         height: 50%;
         display: flex;
         align-items: center;
+    } */
+
+
+    .profile-photos--logo{
+        margin-top: 0;
     }
 
-    .profile--logo img {
+    .profile-photos--logo img {
         align-self: start;
         margin-top: 0;
         padding-top: 0; 
         height: 100%;
+        width: 70%;
     }
 
     .profile-photos--major {
@@ -592,20 +601,22 @@ main {
     }
 
     /* Ajustes de la barra de navegación horizontal compacta */
-    .main-left .side-bar {
-        /* background-color: black; */
+    .main-left {
         margin-top: 0;
+        /* background-color: black; */
+        padding: .5rem;
+
 
     }
     
     .side-bar {
-        
+        margin-top: 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
         height: auto;
-        width: 90%;
         flex-wrap: wrap;
+        width: 100%;
     }
 
     .menu-item {
