@@ -78,26 +78,44 @@ body {
 
 /* buttons homepage */
 .buttons--home {
-    background-color: aquamarine;
-    width: auto;
-    height: 35px;
-}
-
-.button__logIn {
-    padding: 8px 15px;
+    background-color: #565656;
+    display: flex;
+    padding: 0 100px;
+    height: 45px;
+    width: 50%;
+    justify-content: space-around;
+  }
+  
+  .button__logIn {
+    padding: 10px 25px;
+    width:150px;
     background-color: var(--primary--color);
-    border-radius: 6px;
+    border-radius: 15px;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
     color: var(--second--color);
-    font-size: 12px;
-}
-
-.button__logIn:hover {
+    font-size: 15px;
+  }
+  .button__logIn:hover {
     box-shadow: 1px 1px 15px var(--second--color);
-}
-
+  }
+  
+  .button__singUp {
+    padding: 10px 25px;
+    background-color: transparent;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: var(--second--color);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--second--color);
+    font-size: 15px;
+  }
+  .button__singUp:hover {
+    /* background-color: rgba(13, 185, 177, 0.082); */
+    box-shadow: 1px 1px 15px var(--second--color);
+  }
 
 /* footer section */
 .footer {
