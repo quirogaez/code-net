@@ -3,8 +3,6 @@
 
 /* root colors */
 
-
-
 :root {
   --primary--color: #00ffe0;
   --second--color: #801bea;
@@ -174,7 +172,7 @@ body {
   margin: auto;
   right: 0;
   margin-top: -10px;
-  transition: transform 0.5s ease; 
+  transition: transform 0.5s ease;
 }
 
 .scroll-icon {
@@ -364,7 +362,7 @@ body {
     flex: 1;
   }
 
-  .buttons--home{
+  .buttons--home {
     padding: 0;
     justify-content: space-around;
   }
@@ -488,9 +486,9 @@ body {
   }
 
   /* carousel pag initial */
-.carousel--homepage {
+  .carousel--homepage {
     padding: 40px;
-}
+  }
   .carousel_profile {
     display: flex;
     padding: 20px;
@@ -525,8 +523,6 @@ body {
     /* Mostrar el ícono de desplazamiento en dispositivos móviles */
   }
 }
-  
-
 
 /* definition Universal */
 * {
@@ -866,19 +862,19 @@ body {
   /* homepage section */
   .homepage {
     display: flex;
-   /* width: 100vw;*/
+    /* width: 100vw;*/
     text-align: center;
     flex-wrap: wrap;
   }
 
   .homepage--info {
-   padding: 25px;
+    padding: 25px;
     /* Reducir el relleno en tabletas */
     order: 2;
     flex: 1;
   }
 
-  .buttons--home{
+  .buttons--home {
     padding: 0;
     justify-content: space-around;
   }
@@ -889,7 +885,7 @@ body {
   .button__logIn,
   .button__singUp {
     font-size: 14px;
-   /* padding: 5px, 10px;*/
+    /* padding: 5px, 10px;*/
     /* Reducir el tamaño de fuente en tabletas */
   }
   /* carousel page initial */
@@ -906,7 +902,7 @@ body {
   .profile {
     flex: 1;
     text-align: center;
-   /*width: 100%;*/
+    /*width: 100%;*/
   }
 
   .profile img {
@@ -978,7 +974,7 @@ body {
   /* homepage section */
   .homepage {
     flex-direction: column;
-   /* width: 50vw;*/
+    /* width: 50vw;*/
     text-align: center;
   }
 
@@ -992,7 +988,7 @@ body {
   }
 
   .buttons--home {
-   /* padding: 20px 15px;*/
+    /* padding: 20px 15px;*/
   }
 
   .button__logIn,
@@ -1002,9 +998,9 @@ body {
   }
 
   /* carousel pag initial */
-.carousel--homepage {
+  .carousel--homepage {
     padding: 40px;
-}
+  }
   .carousel_profile {
     display: flex;
     padding: 20px;

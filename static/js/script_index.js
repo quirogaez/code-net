@@ -1,3 +1,5 @@
+
+/*carousel de index*/ 
 document.addEventListener("DOMContentLoaded", function () {
   const profileCarousel = document.querySelector(".carousel_profile");
   let profileImg = [
@@ -44,3 +46,4 @@ document.addEventListener("DOMContentLoaded", function () {
   // Iniciar el cambio automático cada 25 segundos
   setInterval(autoChangeProfile, 5000);
 });
+/*fin carousle del index*/
