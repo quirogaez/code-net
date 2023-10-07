@@ -549,7 +549,7 @@ main {
     .main-container .main-left {
         min-width: 100vw;
         text-align: center;
-        max-height: 20vh;
+        max-height: 17vh;
         justify-content: center;
         align-items: center;
 
@@ -572,13 +572,16 @@ main {
         margin-top: 0;
         padding-top: 0;
         margin-left: -3rem;
+        height: 50%;
+        display: flex;
+        align-items: center;
     }
 
     .profile--logo img {
         align-self: start;
         margin-top: 0;
         padding-top: 0; 
-        height: 50px;
+        height: 100%;
        
     }
 
@@ -608,7 +611,7 @@ main {
 
     .menu-item {
         padding: 0.5rem;
-      
+        
         margin-bottom: 0;
     }
 
@@ -640,9 +643,10 @@ main {
     }
     
     #mobilVarProfile {
-        display: block;
         max-height: 5vh;
         margin-bottom: 0;
+        display: flex;
+        align-items: center;
     }
 
     #bars{
