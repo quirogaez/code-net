@@ -102,10 +102,11 @@ body {
 
 /* buttons homepage */
 .buttons--home {
+  background-color: #565656;
   display: flex;
   padding: 30px;
   width: auto;
-  height: auto;
+  height: 45px;
   justify-content: space-around;
 }
 
