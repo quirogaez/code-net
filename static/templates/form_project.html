@@ -74,70 +74,87 @@
 
             </aside>
         </div>
+        <!-- Project form -->
         <div class="form_project_container">
-            <div class="container_project">
-                <div class="container_img">
-                    <button type="button" class="img_buttonCover">
-                        <p class="add__img">+</p>
-                        <p>agregar img</p> 
-                    </button>
-                    <button type="button" class="img_button">
-                        <p class="add__img2">+</p>
-                        <p>agregar img</p> 
-                    </button>
-                    <button type="button" class="img_button">
-                        <p class="add__img2">+</p>
-                        <p>agregar img</p> 
-                    </button>
-                    <button type="button" class="img_button">
-                        <p class="add__img2">+</p>
-                        <p>agregar img</p> 
-                    </button>
-                    <button type="button" class="img_button">
-                        <p class="add__img2">+</p>
-                        <p>agregar img</p> 
-                    </button>
-                </div>  
-                <div class="technology_container">
-                    <div class="img__tecnology">
-                        <img src="/static/img/tecnologias/1 (1).png.svg" alt="">
+            <form method="post" action="#">
+                <div class="container_project">
+                    <div class="container_img">
+                        <div class="img_buttonCover">
+                            <input
+                                accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
+                                type="file" id="addImg" hidden>
+                            <label for="addImg">agregar img</label>
+                        </div>
+                        <div class="img_button">
+                            <input
+                                accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
+                                type="file" id="addImg" hidden>
+                            <label for="addImg">agregar img</label>
+                        </div>
+                        <div class="img_button">
+                            <input
+                                accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
+                                type="file" id="addImg" hidden>
+                            <label for="addImg">agregar img</label>
+                        </div>
+                        <div class="img_button">
+                            <input
+                                accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
+                                type="file" id="addImg" hidden>
+                            <label for="addImg">agregar img</label>
+                        </div>
+                        <div class="img_button">
+                            <input
+                                accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
+                                type="file" id="addImg" hidden>
+                            <label for="addImg">agregar img</label>
+                        </div>
                     </div>
-                    <div class="img__tecnology">
-                        <img src="/static/img/tecnologias/2 (1).png.svg" alt="">
+                    <!-- tecnology -->
+                    <div class="technology_container">
+                        <div class="img__tecnology">
+                            <img src="/static/img/tecnologias/1 (1).png.svg" alt="">
+                        </div>
+                        <div class="img__tecnology">
+                            <img src="/static/img/tecnologias/2 (1).png.svg" alt="">
+                        </div>
+                        <div class="img__tecnology">
+                            <img src="/static/img/tecnologias/3.png.svg" alt="">
+                        </div>
+                        <div class="img__tecnology">
+                            <img src="/static/img/tecnologias/4.png.svg" alt="">
+                        </div>
+                        <div class="img__tecnology">
+                            <img src="/static/img/tecnologias/5.png.svg" alt="">
+                        </div>
+                        <div class="img__tecnology">
+                            <img src="/static/img/tecnologias/6.png.svg" alt="">
+                        </div>
+                        <div class="img__tecnology">
+                            <img src="/static/img/tecnologias/7.png.svg" alt="">
+                        </div>
+                        <div class="img__tecnology">
+                            <img src="/static/img/tecnologias/8.png.svg" alt="">
+                        </div>
+                        <div class="img__tecnology">
+                            <img src="/static/img/tecnologias/9.png.svg" alt="">
+                        </div>
                     </div>
-                    <div class="img__tecnology">
-                        <img src="/static/img/tecnologias/3.png.svg" alt="">
-                    </div>
-                    <div class="img__tecnology">
-                        <img src="/static/img/tecnologias/4.png.svg" alt="">
-                    </div>
-                    <div class="img__tecnology">
-                        <img src="/static/img/tecnologias/5.png.svg" alt="">
-                    </div>
-                    <div class="img__tecnology">
-                        <img src="/static/img/tecnologias/6.png.svg" alt="">
-                    </div>
-                    <div class="img__tecnology">
-                        <img src="/static/img/tecnologias/7.png.svg" alt="">
-                    </div>
-                    <div class="img__tecnology">
-                        <img src="/static/img/tecnologias/8.png.svg" alt="">
-                    </div>
-                    <div class="img__tecnology">
-                        <img src="/static/img/tecnologias/9.png.svg" alt="">
-                    </div>
-                </div>           
-            </div>
-            <div class="form--project">
-                <input type="url" class="url__project" name="url__project" placeholder="url proyecto desplegado">
-                <input type="text" class="technology" name="tecnologias" placeholder="agregar tecnología">
-                <textarea class="description" name="message" placeholder="descripción"></textarea>
-                <input type="url" class="url__gihub" name="url__gihub" placeholder="url repositorio">
-            </div>
-            <div class="container_buttonPost">
-                <button class="button_post">publicar</button>
-            </div>
+                </div>
+                <!-- Form -->
+                <div class="form--project">
+                    <input type="url" class="url__project" name="url__project" placeholder="url proyecto desplegado">
+                    <input type="text" class="technology" name="tecnologias" placeholder="agregar tecnología">
+                    <textarea class="description" name="message" placeholder="descripción"></textarea>
+                    <input type="url" class="url__gihub" name="url__gihub" placeholder="url repositorio">
+                </div>
+                <div class="container_buttonPost">
+                    <button class="button_post">publicar</button>
+                </div>
+            </form>
         </div>
-     </main>
+
+    </main>
 </body>
+
 </html>
