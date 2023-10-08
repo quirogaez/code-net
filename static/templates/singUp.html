@@ -50,22 +50,27 @@
         </div>
         <div class="login--page">
             <div class="content__login">
-                <form action="#" method="POST">
+                <form action="#" method="POST" class="form--container">
                     <input type="text" class="singup--name" name="correo" placeholder="nombre">
                     <input type="text" class="singup--lname" name="apellido" placeholder="apellido">
                     <input type="email" class="email--form" name="correo" placeholder="correo">
-                    <p>
+                    <p class="date__container">
                         <label class="date__form">Fecha de nacimiento</label>
                         <input type="date" class="date--list" name="dia">
                     </p>
+                    <select class="list__genero" name="genero">
+                        <option>Genero</option>
+                        <option>masculino</option>
+                        <option>femenino</option>
+                        <option>otro</option>
+                        </select>
                     <input type="password" class="password--form" name="contraseña" placeholder="contraseña">
                     <input type="password" class="password2--form" name="correo" placeholder="confirmar contraseña">
 
                     <p class="link--forget">Al registrarte, aceptas nuestras condiciones, la politica de privacidad y la politica de cookies.</p>
-                    <p class="button--login">
+                    <div class="button--login">
                         <button type="submit">crear cuenta</button>
-                    </p>
-                    <p>
+                    </div>
                 </form>
             </div>
         </div>

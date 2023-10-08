@@ -83,7 +83,7 @@ body {
     display: flex;
     margin-bottom: 10px;
     width: auto;
-    height: auto;
+    height: 35px;
     justify-content: space-between;
 }
 
@@ -131,12 +131,18 @@ body {
     padding-top: 50px;
 }
 .content__login {
-    display: flex;
     background-color: #bababa6f;
     width: auto;
     padding: 10px 20px;
     box-shadow: 5px 5px 10px #30303069; 
     border-radius: 6px;
+}
+
+.form--container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .content__login input {
@@ -147,17 +153,21 @@ body {
     border-radius: 6px;
 }
 .singup--name{
-    width: 48%;
+    width: 50%;
     margin-top: 10px;
 }
 .singup--lname{
     width: 48%;
-    margin-left: 10px;
     margin-top: 10px;
 }
 .email--form {
     width: 100%;
     margin-top: 10px;
+}
+
+.date__container {
+    width: 50%;
+    text-align: left;
 }
 .date__form  {
     padding-top: 8px;
@@ -167,9 +177,21 @@ body {
     color: var(--text--primary);
 }
 .date--list {
-    margin-top: 0;
+    width: 100%;
     color: var(--text--primary);
 }
+
+.list__genero {
+    width: 48%;
+    height: 55px;
+    margin-top: 26px;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 6px;
+    color: var(--text--primary);
+}
+
+
 .password--form {
     width: 100%;
 }
@@ -179,16 +201,19 @@ body {
 }
 .link--forget {
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     font-size: 12px;
     color: var(--text--primary);
+    text-align: left;
 }
 .button--login {
     text-align: center;
+    width: 100%;
     margin-bottom: 20px;
+
 }
 .button--login button {
-    padding: 10px 30px;
+    padding: 10px 35px;
     background-color: var(--second--color);
     border-radius: 6px;
     border: none;

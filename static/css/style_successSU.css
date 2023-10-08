@@ -11,6 +11,7 @@
     --black--color: black;
     --background--footer: #b9b9b9;
     --text--primary: #565656;
+    --text--title: #323232;
 }
 
 
@@ -34,7 +35,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 100vw;
     position: fixed;
     opacity: 0.03;
     z-index: -1;
@@ -42,16 +43,10 @@ body {
 
 /* homepage */
 .homepage {
-    display: flex;
+    display: inline;
     width: 100vw;
-}
-
-.homepage--info {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    padding: 70px;
-    padding-top: 80px;
+    padding: 80px;
+    text-align: center;
 }
 
 .img__content {
@@ -60,122 +55,67 @@ body {
 }
 
 .img__logo {
-    width: 100%;
+    width: 40%;
     height: 100%;
 }
 
 .title--home {
-    margin-bottom: 10px;
+    padding: 30px;
     width: auto;
     height: auto;
-    justify-content: left;
-    color: var(--text--primary);
 }
 
 .title--home h1 {
-    font-size: 20px;
+    font-size: 30px;
     text-transform: uppercase;
-    text-align: justify;
+    text-align: center;
+    color: var(--second--color);
+    text-shadow: 2px 2px 4px var(--primary--color);
+}
+.title--home p {
+    text-transform: uppercase;
 }
 
 /* buttons homepage */
 .buttons--home {
+    background-color: #565656;
     display: flex;
-    margin-bottom: 10px;
-    width: auto;
-    height: 35px;
-    justify-content: space-between;
-}
-
-.button__logIn {
-    padding: 8px 15px;
+    padding: 0 100px;
+    height: 45px;
+    width: 50%;
+    justify-content: space-around;
+  }
+  
+  .button__logIn {
+    padding: 10px 25px;
+    width:150px;
     background-color: var(--primary--color);
-    border-radius: 6px;
+    border-radius: 15px;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
     color: var(--second--color);
-    font-size: 12px;
-}
-
-.button__logIn:hover {
-    box-shadow: 1px 1px 15px var(--second--color);
-}
-
-/* Info users */
-.info--users {
-    display: flex;
-    margin-top: 50px;
-    width: auto;
-    height: auto;
-    padding-right: 30px;
-    text-shadow: 3px 3px 10px var(--second--color);
-    justify-content: space-evenly;
-}
-
-.info--users ul {
-    list-style-type: none;
     font-size: 15px;
-    text-align: center;
-}
-
-.number--users {
+  }
+  .button__logIn:hover {
+    box-shadow: 1px 1px 15px var(--second--color);
+  }
+  
+  .button__singUp {
+    padding: 10px 25px;
+    background-color: transparent;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: var(--second--color);
+    text-decoration: none;
     text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 7px;
-}
-
-.login--page {
-    width: 100vw;
-    padding: 70px;
-    padding-top: 80px;
-}
-.content__login {
-    background-color: #bababa6f;
-    width: auto;
-    padding: 15px 20px 5px 20px ;
-    box-shadow: 5px 5px 10px #30303069; 
-    border-radius: 6px;
-}
-
-.content__login input {
-    margin-top: 20px;
-    padding: 20px;
-    width: 100%;
-    height: 60px;
-    background-color: var(--white--color);
-    border: none;
-    border-radius: 6px;
-}
-.content__login label {
-    padding: 0 10px;
-    margin-top: 15px;
-}
-.link--forget {
-    padding-top: 5px;
-    margin-bottom: 20px;
-}
-.link--forget a {
-    color: var(--primary--color);
-}
-.button--login {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.button--login button {
-    padding: 10px 30px;
-    background-color: var(--second--color);
-    border-radius: 6px;
-    border: none;
-    color: var(--white--color);
-    text-transform: uppercase;
-    font-size: 12px;
-}
-
-.link--singup {
-    font-size: 15;
     color: var(--second--color);
-}
+    font-size: 15px;
+  }
+  .button__singUp:hover {
+    /* background-color: rgba(13, 185, 177, 0.082); */
+    box-shadow: 1px 1px 15px var(--second--color);
+  }
 
 /* footer section */
 .footer {
@@ -205,39 +145,6 @@ body {
 .container--footer h2 {
     font-size: 12px;
     font-family: 'Ralawey', sans-serif;
-    color: var(--text--primary);
-}
-
-.icon-copyright {
-    font-size: 15px;
-    padding: 0 10px;
-    color: var(--text--primary);
-}
-
-/* footer section */
-.footer {
-    position: fixed;
-    display: flex;
-    width: 100vw;
-    height: 50px;
-    margin: 0;
-    color: var(--white--color);
-    bottom: 0;
-    /* Cambiado de top a bottom para fijar el footer en la parte inferior */
-    left: 0;
-}
-
-.footer--content {
-    width: 100vw;
-    padding-top: 15px;
-    background-color: var(--background--footer);
-    justify-content: left;
-    align-items: center;
-}
-
-.container--footer h2 {
-    font-size: 12px;
-    font-family: 'Raleway', sans-serif;
     color: var(--text--primary);
 }
 
