@@ -406,7 +406,6 @@ body {
     height: 50vh;
     text-align: center;
   }
-
   /* footer */
   .footer {
     z-index: 100;
@@ -496,8 +495,14 @@ body {
     display: none;
   }
   .carousel__text {
-    padding: 5px 25px 50px 25px;
-    padding-top: 5px;
+    margin-bottom: 50px;
+    padding: 10px 40px 0 40px;
+    text-align: center;
+  }
+  .carousel__tittle {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.4rem;
   }
   .carousel__tittle--modifier{
     font-size: medium;
