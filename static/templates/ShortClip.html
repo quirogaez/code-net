@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code|Net</title>
     <!-- css link -->
-    <link rel="stylesheet" href="../css/style_structure.css">
+    <link rel="stylesheet" href="../css/style_ShortClip.css">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.svg">
     <!-- Link font -->
@@ -76,72 +76,34 @@
 
             </aside>
         </div>
-        <!-- ---------- END MAIN LEFT ---------- -->
 
-        <!-- ---------- MAIN MID ---------- -->
-        <div class="main-mid">
-            <!-- .................. PROJECTS START ........................ -->
 
-                 
-                <div class="carousel-story">
-                    <div class="controls_p">
-                        <button class="prev-btn button"><i class='bx bx-chevron-left'></i></button>
+        <div class="shortClip_container">
+
+            <div class="shortClip_project">
+
+                <div class="shortClip_in">
+                    <div class="img_buttonCover">
+                        <input
+                            accept="video/mp4, video/mpeg, video/ogg, video/webm, video/quicktime, video/x-msvideo, video/x-flv, video/3gpp, video/x-matroska, image/gif"
+                            type="file" id="img_button" hidden>
+
+                        <label for="img_button">
+                            <p class="add_shortClip">+</p>Agregar video o GIF
+                        </label>
                     </div>
-                    <div class="carousel_profile_story"></div>
-                    <div class="controls_n">
-                        <button class="next-btn button"><i class='bx bx-chevron-right'></i></button>
-                    </div>
+                    <h4 class="button_in_text">Ingrese un video que no supere los 2 minutos</h4>
                 </div>
-
-
-                <div class="main-center">
-                    <div id="imageContainer"></div>
+                <div class="shortClip--short">
+                    <textarea class="description" name="message" placeholder="descripción"></textarea>
+                    <input type="url" class="url_shortClip" name="url_shortClip" placeholder="URL ">
                 </div>
-
+            </div>
+            <div class="container_buttonPost">
+                <button class="button_post">publicar</button>
+            </div>
         </div>
-
-        <!-- .................. create post start  ........................ -->
-
-        <!-- .................. create post end  ........................ -->
-
-
-        <!-- .................. PROJECTS END ........................ -->
-        </div>
-        <!-- ---------- END MAIN MID ---------- -->
-        <!-- MAIN CENTER -->
-
-
-
-
-        <div class="main-right">
-
-
-            <div class="icono">
-                <button class="icono_life"><img src="../img/trasmisiones.png"></i></button>
-            </div>
-            <div class="carousel-life">
-                <div class="carousel_profile_life"></div>
-
-            </div>
-            <div class="chat">
-                <button class="icono_chat"><img src="../img/mensajes.png"></button>
-            </div>
-
-        </div> <!-- ---------- MAIN RIGHT ---------- -->
-
-        <!-- ---------- END MAIN RIGHT ---------- -->
-
-
     </main>
-
-
-
-    <!-- //////////////// END MAIN SECTION ////////////////////////// -->
-
 </body>
-<script src="../js/structure.js"></script>
-<script src="../js/publication_structure.js"></script>
 
 </html>
-
-<!-- Esto es la estructura inicial de code | NET -->

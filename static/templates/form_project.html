@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Code|Net</title>
     <!-- css link -->
-    <link rel="stylesheet" href="../css/style_formProyect.css">
+    <link rel="stylesheet" href="../css/style_formProject.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.svg">
     <!-- Link font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,31 +85,41 @@
                             <input
                                 accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
                                 type="file" id="addImg" hidden>
-                            <label for="addImg">agregar img</label>
+                            <label for="addImg" class="label_img">
+                                <p>+</p>agregar img
+                            </label>
                         </div>
                         <div class="img_button">
                             <input
                                 accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
                                 type="file" id="addImg" hidden>
-                            <label for="addImg">agregar img</label>
+                            <label for="addImg">
+                                <p>+</p>agregar img
+                            </label>
                         </div>
                         <div class="img_button">
                             <input
                                 accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
                                 type="file" id="addImg" hidden>
-                            <label for="addImg">agregar img</label>
+                            <label for="addImg">
+                                <p>+</p>agregar img
+                            </label>
                         </div>
                         <div class="img_button">
                             <input
                                 accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
                                 type="file" id="addImg" hidden>
-                            <label for="addImg">agregar img</label>
+                            <label for="addImg">
+                                <p>+</p>agregar img
+                            </label>
                         </div>
                         <div class="img_button">
                             <input
                                 accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
                                 type="file" id="addImg" hidden>
-                            <label for="addImg">agregar img</label>
+                            <label for="addImg">
+                                <p>+</p>agregar img
+                            </label>
                         </div>
                     </div>
                     <!-- tecnology -->
@@ -146,7 +158,8 @@
                 </div>
                 <!-- Form -->
                 <div class="form--project">
-                    <input type="url" class="url__project form" name="url__project" placeholder="url proyecto desplegado">
+                    <input type="url" class="url__project form" name="url__project"
+                        placeholder="url proyecto desplegado">
                     <input type="text" class="technology form" name="tecnologias" placeholder="agregar tecnología">
                     <textarea class="description form" name="message" placeholder="descripción"></textarea>
                     <input type="url" class="url__gihub form" name="url__gihub" placeholder="url repositorio">
@@ -158,6 +171,20 @@
         </div>
 
     </main>
+    <section class="modal">
+        <div class="modal__container">
+            <div class="close__modalProject">
+                <button type="button">x</button>
+            </div>
+            <img src="/static/img/modal/trofeo.svg" class="modal__img">
+            <h2 class="modal__tittle">¡has cargado tu proyecto con exito!</h2>
+            <div class="container--buttons">
+                <a href="structure.html" class="button__feed">inicio</a>
+                <a href="#" class="button_myprofile">mi perfil</a>
+            </div>
+        </div>
+    </section>
+    <script src="/static/js/modal_project.js"></script>
 </body>
 
 </html>
