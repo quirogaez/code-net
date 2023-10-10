@@ -15,7 +15,7 @@ const images = [
 
     {
     imgSrc: "../img/publicacion2.jpg",
-    perfilImgSrc: "../img/descarga.jpeg",
+    perfilImgSrc: "../img/perfilGeneration.jpeg",
     name: "Generation Colombia",
     description: "Lorem ipsum dolor sit amet...",
     tecnology1: "../img/tecnologias/1.svg",
@@ -24,6 +24,57 @@ const images = [
     tecnology4: "../img/tecnologias/4.png.svg",
     tecnology5: "../img/tecnologias/5.png.svg",
     },
+    {
+        imgSrc: "../img/publiAWS.jpg",
+        perfilImgSrc: "../img/perfilAWS.png",
+        name: "Amazon Web Service",
+        description: "Lorem ipsum dolor sit amet...",
+        tecnology1: "../img/tecnologias/1.svg",
+        tecnology2: "../img/tecnologias/2.svg",
+        tecnology3: "../img/tecnologias/3.png.svg",
+        tecnology4: "../img/tecnologias/4.png.svg",
+        tecnology5: "../img/tecnologias/5.png.svg",
+    },
+
+    {
+        imgSrc: "../img/publiNequi.jpg",
+        perfilImgSrc: "../img/perfilNequi.jpeg",
+        name: "Nequi",
+        description: "Lorem ipsum dolor sit amet...",
+        tecnology1: "../img/tecnologias/1.svg",
+        tecnology2: "../img/tecnologias/2.svg",
+        tecnology3: "../img/tecnologias/3.png.svg",
+        tecnology4: "../img/tecnologias/4.png.svg",
+        tecnology5: "../img/tecnologias/5.png.svg",
+    },
+
+    {
+        imgSrc: "../img/publiGenerationperfil.jpg",
+        perfilImgSrc: "../img/perfilGeneration.jpeg",
+        name: "Generation Colombia",
+        description: "Lorem ipsum dolor sit amet...",
+        tecnology1: "../img/tecnologias/1.svg",
+        tecnology2: "../img/tecnologias/2.svg",
+        tecnology3: "../img/tecnologias/3.png.svg",
+        tecnology4: "../img/tecnologias/4.png.svg",
+        tecnology5: "../img/tecnologias/5.png.svg",
+    },
+
+    {
+        imgSrc: "../img/publiHimalaya.jpg",
+        perfilImgSrc: "../img/perfilHimalaya.png",
+        name: "Himalaya Tecnologia",
+        description: "Lorem ipsum dolor sit amet...",
+        tecnology1: "../img/tecnologias/1.svg",
+        tecnology2: "../img/tecnologias/2.svg",
+        tecnology3: "../img/tecnologias/3.png.svg",
+        tecnology4: "../img/tecnologias/4.png.svg",
+        tecnology5: "../img/tecnologias/5.png.svg",
+    },
+       
+        
+        
+
 
 
 
