@@ -676,6 +676,8 @@ main {
         max-height: 25vh;
         justify-content: center;
         align-items: center;
+        flex-direction:unset;
+        flex-wrap: wrap;
     }
 
     .main-container .main-mid {
