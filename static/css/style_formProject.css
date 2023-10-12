@@ -62,7 +62,6 @@ body {
     margin: 0 auto;
     width: 80%;
     /* border-radius: var(--border-radius); */
-    overflow: hidden;
     background-color: var(--background--footer);
     margin-top: 2rem;
    
@@ -117,6 +116,13 @@ main {
     height: 100vh;
     /* MAX-CONTENT */
     top: var(--stk-top-left);
+    -webkit-box-shadow: 3px 0px 5px 0px rgba(31,6,29,0.32);
+    -moz-box-shadow: 3px 0px 5px 0px rgba(31,6,29,0.32);
+    box-shadow: 3px 0px 5px 0px rgba(31,6,29,0.32);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
 }
 
 .main-left .profile {
@@ -463,6 +469,12 @@ p {
         margin: 0;
     }
 
+    .menu-item i,
+    .menu-item div {
+        margin-left: 0;
+        position: relative;
+    }
+
     .menu-item .count {
         padding: 0.2rem 0.6rem;
         font-size: 0.8rem;
@@ -471,8 +483,6 @@ p {
         left: 3rem;
     }
     
-
-  
 
     #aside-porfile {
         width: 3rem;
@@ -623,8 +633,9 @@ p {
 
     .menu-item {
         padding: 0.5rem;
-
+        justify-content: center;
         margin-bottom: 0;
+        margin-right: 0rem;
     }
 
     /* Ajustes de los íconos */
