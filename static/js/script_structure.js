@@ -135,10 +135,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function showPlusOptions() {
     if(masOpcionesVisibles = false) {
 
-      document.getElementById("showOptions").style.display = "block";
+      document.querySelector("showPlus").style.display = "block";
       masOpcionesVisibles = true;
     } else {
-      document.getElementById("showOptions").style.display = "none";
+      document.querySelector("showPlus").style.display = "none";
       masOpcionesVisibles=false;
     }
   

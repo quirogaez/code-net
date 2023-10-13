@@ -214,6 +214,9 @@ main {
     border-bottom-left-radius: var(--card-border-radius);
     overflow: hidden;
 }
+.showPlus {
+    display: none;
+}
 
 /* MAIN CENTER */
 
