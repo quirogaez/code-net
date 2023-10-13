@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code|Net</title>
     <!-- css link -->
-    <link rel="stylesheet" href="../css/style_structure.css">
+    <link rel="stylesheet" href="../css/style_postForm.css">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.svg">
     <!-- Link font -->
@@ -35,6 +35,17 @@
             <div class="profile-photos--logo">
                 <img src="../img/code.svg" alt="" id="icon-company">
             </div>
+            <!--  </div> -->
+
+            <!-- <div class="profile">
+                    <div class="profile-photos">
+                        <img src="../img/code.svg" alt="">
+                    </div>
+                    <div class="hendel">
+                        <h4>-Nombre Perfil-</h4>
+                        <p class="text-gry">-Desarrollador__-</p>
+                    </div>
+               </div> -->
 
             <!-- -----------SIDEBAR---------- -->
             <aside class="side-bar">
@@ -57,7 +68,15 @@
                 <a href="" class="menu-item  message">
                     <span><i class="fa-solid fa-message  icon1"></i></span> <small class="count">5</small>
                     <h3>Mensajes</h3>
+                    <!-- ..................messages........................ -->
+                    <!-- <div class="profile-photos">
+                            <img src="../img/person.png" alt="">
+                        </div>
+                    </span>
+                    <h3>Mi perfil</h3>
+                </a>
 
+                        </div> -->
                 </a>
                 <a href="" class="menu-item " id="varProfile">
                     <span>
@@ -67,80 +86,56 @@
                     </span>
                     <h3>Mi perfil</h3>
                 </a>
-                <div class="showPlus"id="showOptions">
-                    <ul id="showOptions">
-                       <a href="" onclick="" class="options"><h3>editar perfil</h3></a>
-                       <a href="" onclick="" class="options"><h3>configuraciónes</h3></a>
-                       <a href="" onclick="" class="options"><h3>cerrar seccion</h3></a>
 
-                    </ul>
-                </div>
-
-                <a href="" onclick="showPlusOptions()" class="menu-item" id="bars">
-                   <button></button> <span><i class="fa-solid fa-bars icon1"></i></span>
+                <a href="" class="menu-item" id="bars">
+                    <span><i class="fa-solid fa-bars icon1"></i></span>
                     <h3>Más</h3>
                 </a>
-
 
 
             </aside>
         </div>
         <!-- ---------- END MAIN LEFT ---------- -->
 
+
+        <!-- ---------- END MAIN LEFT ---------- -->
+
+
         <!-- ---------- MAIN MID ---------- -->
         <div class="main-mid">
             <!-- .................. PROJECTS START ........................ -->
 
-                 
-                <div class="carousel-story">
-                    <div class="controls_p">
-                        <button class="prev-btn button"><i class='bx bx-chevron-left'></i></button>
+            <form action="#" method="POST" enctype="multipart/form-data" class="container--mid">
+                <div class="container--mid">
+                    <div class="upload-section">
+                        <input type="file" id="fileInput" name="archivo">
+                        <label for="fileInput" class="upload-button">
+                            Seleccionar archivo
+                        </label>
+                        <div id="filePreviewContainer">
+                            <img id="filePreview" src="#" alt="Vista previa del archivo">
+                        </div>
                     </div>
-                    <div class="carousel_profile_story"></div>
-                    <div class="controls_n">
-                        <button class="next-btn button"><i class='bx bx-chevron-right'></i></button>
+                    <div class="description-section">
+                        <textarea name="descripcion" placeholder="Descripción"></textarea>
+                    </div>
+                    <div class="submit-buttom">
+                        <button type="submit" class="publish-button">Publicar</button>
                     </div>
                 </div>
+            </form>
 
 
-                <div class="main-center">
-                    <div id="imageContainer"></div>
-                </div>
 
-        </div>
+            <!-- .................. create post start  ........................ -->
 
-        <!-- .................. create post start  ........................ -->
-
-        <!-- .................. create post end  ........................ -->
+            <!-- .................. create post end  ........................ -->
 
 
-        <!-- .................. PROJECTS END ........................ -->
+            <!-- .................. PROJECTS END ........................ -->
         </div>
         <!-- ---------- END MAIN MID ---------- -->
         <!-- MAIN CENTER -->
-
-
-
-
-        <div class="main-right">
-
-
-            <div class="icono">
-                <button class="icono_life"><img src="../img/trasmisiones.png"></i></button>
-            </div>
-            <div class="carousel-life">
-                <div class="carousel_profile_life"></div>
-
-            </div>
-            <div class="chat">
-                <button class="icono_chat"><img src="../img/mensajes.png"></button>
-            </div>
-
-        </div> <!-- ---------- MAIN RIGHT ---------- -->
-
-        <!-- ---------- END MAIN RIGHT ---------- -->
-
-
     </main>
 
 
@@ -149,7 +144,7 @@
 
 </body>
 <script src="../js/structure.js"></script>
-<script src="../js/publication_structure.js"></script>
+<script src="../js/postForm.js"></script>
 
 </html>
 
