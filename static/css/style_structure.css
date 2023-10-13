@@ -107,7 +107,7 @@ main {
 .main-container {
     position: relative;
     display: grid;
-    grid-template-columns: 18vw auto 20vw;
+    grid-template-columns: 18vw auto 7.5vw;
     gap: 2rem;
     /* min-height: 100vh; */
 }
@@ -213,6 +213,9 @@ main {
 .menu-item:last-child.active {
     border-bottom-left-radius: var(--card-border-radius);
     overflow: hidden;
+}
+.showPlus {
+    display: none;
 }
 
 /* MAIN CENTER */
@@ -378,16 +381,15 @@ main {
 
 /* ------------ START MAIN MID ---------- */
 .main-mid{
-    margin: auto;
-    margin-top: 0;
-    width: 100%;
+    margin:   auto;
+   
+    width: 90%;
 }
 .carousel-story {
     display: flex;
     align-items: center;
-    /*justify-content: center;*/
     margin: 2%;
-    width: 100%;
+    width: 90%;
 }
 
 .controls_p {
@@ -397,11 +399,12 @@ main {
 
 .controls_n {
     flex: 1;
+
     text-align: left;
 }
 .carousel_profile_story {
     display: flex;
-    flex: 6;
+    flex: 5;
     text-align: center;
     justify-content: center;
     padding: 10px;
@@ -481,10 +484,17 @@ main {
 /* ..............end form post.................. */
 /*---------------main_right---------------*/
 .main-right{
+  
    display: flex;
    flex-direction: column;
    align-items: flex-end;
-   margin: 40px;
+   justify-content: center;
+   max-height:1000px ;
+   margin: 0;
+   position: sticky;
+   width: 150px;
+   background: whitesmoke;
+   box-shadow: 0 0 5px 1px rgb(117, 117, 117) ;
   
     
 }

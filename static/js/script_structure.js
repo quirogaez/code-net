@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentProfile = 0;
   
     function showProfile(profileIndex) {
-      //const startIndex = slideIndex * testimonialsPerPage;
+      
       const startIndex = profileIndex;
       const endIndex = startIndex + profilePerPage;
   
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentProfile = 0;
   
     function showProfile(profileIndex) {
-      //const startIndex = slideIndex * testimonialsPerPage;
+      
       const startIndex = profileIndex;
       const endIndex = startIndex + profilePerPage;
   
@@ -128,3 +128,21 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(autoChangeProfile, 5000);
   });
   /*-------------------------------final carousel life---------------------------- */
+
+  /*-----------------------------------------------inicio boton de mas-------------------------------------------------------------------------- */
+
+  let masOpcionesVisibles = false;
+  function showPlusOptions() {
+    if(masOpcionesVisibles = false) {
+
+      document.getElementById("showOptions").style.display = "block";
+      masOpcionesVisibles = true;
+    } else {
+      document.getElementById("showOptions").style.display = "none";
+      masOpcionesVisibles=false;
+    }
+  
+  
+
+
+}
