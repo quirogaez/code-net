@@ -1,4 +1,8 @@
+import { Auth } from "./Auth.js";
 
+document.addEventListener("DOMContentLoaded", (e) => {
+    const auth = new Auth();
+})
 
 let elementIcon = document.querySelectorAll(".icon1");
 let companyIcon = document.getElementById("icon-company");

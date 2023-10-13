@@ -198,6 +198,8 @@ main {
     margin-left: 1.5rem;
 }
 
+
+
 .active h3 {
     color: var(--second--color);
     text-shadow: 0.5rem 0 2rem #801bea;
