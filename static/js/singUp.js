@@ -28,7 +28,7 @@ signupForm.addEventListener('submit', (e) => {
         }
 
         // Aquí especificamos que nos agregue los datos a la lista
-        Users.push({ name: name, lastName: lastName, email: email, date: date, genero: genero, Password: inputPassword })
+        Users.push({ name: name, lastName: lastName, email: email, date: date, genero: genero, password: inputPassword })
 
         // Aquí especificamos que nos permita recibir los datos en formato String para podernos loguear
         localStorage.setItem('users', JSON.stringify(Users))
@@ -38,6 +38,7 @@ signupForm.addEventListener('submit', (e) => {
 
         // Si el registro fue exitoso, nos redigirá al login
         window.location.href = 'structure.html'
+        
     }
 })
 
