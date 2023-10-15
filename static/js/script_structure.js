@@ -133,16 +133,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let masOpcionesVisibles = false;
   function showPlusOptions() {
-    if(masOpcionesVisibles = false) {
+    if(masOpcionesVisibles === false) {
 
-      document.querySelector("showPlus").style.display = "block";
+      document.querySelector(".showPlus").style.display = "block";
       masOpcionesVisibles = true;
+     
     } else {
-      document.querySelector("showPlus").style.display = "none";
+      document.querySelector(".showPlus").style.display = "none";
       masOpcionesVisibles=false;
+      
     }
-  
-  
-
-
+    /*-----------------------------------------------inicio boton de cerrar seccion-------------------------------------------------------------------------- */
+    function signOff() {
+      
+    }
 }
+/*-----------------------------------------------fin boton de mas-------------------------------------------------------------------------- */

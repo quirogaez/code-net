@@ -217,6 +217,35 @@ main {
 .showPlus {
     display: none;
 }
+.showOptions {
+    background: #fafafa;
+    box-shadow: 3px 3px 5px var(--text--primary);
+    width:280px;
+    height: 170px;
+    margin: auto;
+    border-radius: 5%;
+
+}
+.options {
+    
+    text-align: center;
+    cursor: pointer;
+}
+.options h3 {
+    color: #121111;
+    padding: 15px;
+    
+   
+    
+    
+}
+.optionCenter {
+    border-top: 2px solid #adadad;
+    border-bottom: 2px solid #adadad;
+    
+    
+
+}
 
 /* MAIN CENTER */
 
@@ -374,7 +403,6 @@ main {
 /* ------------ START MAIN MID ---------- */
 .main-mid{
     margin:   auto;
-
     width: 90%;
 }
 .carousel-story {
@@ -481,13 +509,13 @@ main {
    flex-direction: column;
    align-items: flex-end;
    justify-content: center;
-   max-height:1000px ;
+   right: 0;
+   height:1000px ;
    margin: 0;
-   position: sticky;
+   position:fixed;
    width: 150px;
-   background: whitesmoke;
-   box-shadow: 0 0 5px 1px rgb(117, 117, 117) ;
-  
+   background: #fafafa;
+   box-shadow: 3px 3px 5px var(--text--primary);
     
 }
 .profile_life {
