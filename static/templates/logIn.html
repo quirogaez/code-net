@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code|Net</title>
     <!-- Link js -->
-    <script defer src="../js/script.js"></script>
+    <!--<script defer src="../js/script.js"></script>-->
     <!-- link style -->
     <link rel="stylesheet" href="../css/style_login.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../img/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.svg">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ba93ad85e8.js" crossorigin="anonymous"></script>
+    <script defer src="../js/login.js"></script>
 </head>
 
 <body>
@@ -50,19 +51,19 @@
             </div>
             <div class="login--page">
                 <div class="content__login">
-                    <form action="#" method="POST">
-                            <input type="email" name="correo" placeholder="correo">
-                            <input type="password" name="contraseña" placeholder="Contraseña">
+                    <div>
+                            <input id="email" type="email" placeholder="correo">
+                            <input id="password" type="password" placeholder="Contraseña">
                         <p class="link--forget">
-                            <a href="#">¿olvidaste tu contraseña?</a>
+                            <a >¿olvidaste tu contraseña?</a>
                         </p>
                         <p class="button--login">
-                            <button type="submit">iniciar sesión</button>
+                            <button onclick="login()">iniciar sesión</button>
                         </p>
                         <p class="final_element">
                             <label>no tienes cuenta? <a href="singUp.html" class="link--singup">registrate</a></label>
                         </p>                        
-                    </form>  
+                    </div> 
                 </div>
             </div>
         </div>
