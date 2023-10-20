@@ -8,6 +8,7 @@ addEventListener("DOMContentLoaded", (e) => {
 
 const submitButton = document.querySelector(".button--login").childNodes[1];
 /* Esta funcion se debe cambiar cuando funcione base de datos */
+
 submitButton.addEventListener("click", (e) => {
     e.preventDefault();
     const users = JSON.parse(window.localStorage.getItem("users"));
@@ -18,6 +19,7 @@ submitButton.addEventListener("click", (e) => {
         for (let user of users) {
             if (user.email === emailInput && user.Password === passwordInput) {
                 window.localStorage.setItem("auth", 1);
+
                 window.location.replace("./structure")
             }
         }
