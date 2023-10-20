@@ -23,64 +23,75 @@
     <main class="container main-container">
         <!-- ---------- MAIN LEFT ---------- -->
         <div class="main-left">
-            <!-- <div class="profile--logo"> -->
             <div class="profile-photos--logo">
                 <img src="../img/code.svg" alt="" id="icon-company">
             </div>
 
             <!-- -----------SIDEBAR---------- -->
             <aside class="side-bar">
-                <a href="" class="menu-item ">
-                    <span><i class="fa-solid fa-house icon1"></i></span>
-                    <h3>Inicio</h3>
+                <a href="searchproject.html" class="menu-item ">
+                    <i class="fa-solid fa-house icon1"></i>
+                    <p>Inicio</p>
                 </a>
                 <a href="" class="menu-item ">
-                    <span><i class="fa-solid fa-magnifying-glass icon1"></i></span>
-                    <h3>Buscar</h3>
+                    <i class="fa-solid fa-magnifying-glass icon1"></i>
+                    <p>Buscar</p>
                 </a>
                 <a href="" class="menu-item ">
-                    <span><i class="fa-solid fa-play icon1"></i></span>
-                    <h3>Transmisiones</h3>
+                    <i class="fa-solid fa-play icon1"></i>
+                    <p>Transmisiones</p>
                 </a>
                 <a href="" class="menu-item ">
-                    <span><i class="fa-solid fa-video  icon1"></i></span>
-                    <h3>ShortClip</h3>
+                    <i class="fa-solid fa-video  icon1"></i>
+                    <p>ShortClip</p>
                 </a>
                 <a href="" class="menu-item  message">
-                    <span><i class="fa-solid fa-message  icon1"></i></span> <small class="count">5</small>
-                    <h3>Mensajes</h3>
-
+                    <i class="fa-solid fa-message  icon1"><small class="count">5</small></i>
+                    <p>Mensajes</p>
                 </a>
-                <a href="" class="menu-item " id="varProfile">
-                    <span>
-                        <div class="profile-photos" id="aside-porfile">
-                            <img src="../img/person.png" alt="">
-                        </div>
-                    </span>
-                    <h3>Mi perfil</h3>
+                <a href="" class="menu-item2" id="varProfile">
+                    <div class="profile-photos" id="aside-porfile">
+                        <img src="../img/person.png" alt="">
+                    </div>
+                    <p>Mi perfil</p>
                 </a>
-
-                <a href="" class="menu-item" id="bars">
-                    <span><i class="fa-solid fa-bars icon1"></i></span>
-                    <h3>Más</h3>
-                </a>
-
-
             </aside>
+            <a href="" class="menu-item3" id="bars">
+                <i class="fa-solid fa-bars icon1"></i>
+                <p>Más</p>
+            </a>
         </div>
-
+        <!-----------------------  Search  ----------------------->
+        <form action="#" method="post" target="_blank">
+            <div class="container__search">
+                <input type="search" class="search__nav" name="busquedamusica" placeholder="buscar">
+                    <input type="submit" value="" style="display: none;">
+            </div>
+            <div class="container__options">
+                <button type="onclick" class="options--category">categoria</button>
+                <button type="onclick" class="options">personas</button>
+                <button type="onclick" class="options">proyectos</button>
+                <button type="onclick" class="options">trasmisiones</button>
+                <button type="onclick" class="options">ShortClip</button>
+            </div>
+        </form>
+<!--         <div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quas saepe dolorem mollitia ipsam. Officiis vel mollitia fugiat? Explicabo debitis dignissimos illo unde et corrupti reiciendis laboriosam harum sunt est.
+            </div>
+        </div> -->
 
         <!-----------------  live streaming nav ------------------>
 
-        <section>
-            <div class="main-right">
+        <section class="main-right">
+            <div class="">
                 <div class="icono">
                     <img class="icono_life" src="../img/trasmisiones.png"></i>
                 </div>
                 <div class="carousel-life">
                     <div class="carousel_profile_life"></div>
                 </div>
- <!--                <div class="chat">
+                <!--                <div class="chat">
                     <img class="icono_chat" src="../img/mensajes.png">
                 </div> -->
             </div>

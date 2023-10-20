@@ -51,6 +51,10 @@ body {
     border-radius: var(--border-radius);
     aspect-ratio: 1/1;
     overflow: hidden;
+    margin-left: 1rem;
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s all ease;
 }
 
 .profile--logo {
@@ -62,7 +66,7 @@ body {
     margin: 0 auto;
     width: 80%;
     /* border-radius: var(--border-radius); */
-    overflow: hidden;
+   
     background-color: var(--background--footer);
     margin-top: 2rem;
    
@@ -119,6 +123,13 @@ main {
     height: 100vh;
     /* MAX-CONTENT */
     top: var(--stk-top-left);
+    -webkit-box-shadow: 3px 0px 5px 0px rgba(31,6,29,0.32);
+    -moz-box-shadow: 3px 0px 5px 0px rgba(31,6,29,0.32);
+    box-shadow: 3px 0px 5px 0px rgba(31,6,29,0.32);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
 }
 
 .main-left .profile {
@@ -156,14 +167,19 @@ main {
 }
 
 .menu-item:hover {
-    background-color: var(--primary--color);
+    background-image: linear-gradient(
+    90deg,
+    hsl(173deg 100% 50%) 0%,
+    hsl(168deg 79% 80%) -2%,
+    hsl(0deg 0% 92%) 100%
+    );
 }
 
-.menu-item span i,
-.menu-item span div {
+.menu-item i{
     margin-left: 2rem;
     position: relative;
 }
+
 
 .menu-item .count {
     background: var(--second--color);
@@ -181,6 +197,8 @@ main {
     font-size: 1rem;
     margin-left: 1.5rem;
 }
+
+
 
 .active h3 {
     color: var(--second--color);
@@ -258,11 +276,7 @@ main {
     height: auto;
     overflow: hidden;
     justify-content: center;
-    padding: 0 70px 0 70px;
-
-  
-
-   
+    padding: 0 70px 0 70px;  
 }
 .img-center-container{
     display: block;
@@ -616,10 +630,17 @@ main {
 
     .menu-item {
         margin-bottom: 50%;
+        justify-content: center;
     }
 
     .side-bar {
         margin: 0;
+    }
+
+    .menu-item i,
+    .menu-item div {
+        margin-left: 0;
+        position: relative;
     }
 
     .menu-item .count {
@@ -630,9 +651,7 @@ main {
         left: 3rem;
     }
 
-    .menu-item span div {
-        margin-left: 1rem;
-    }
+   
     #mobilVarProfile {
         display: none;
     }
@@ -666,8 +685,9 @@ main {
        width: 100%;
        height: auto;
        overflow: hidden;
-   }
-
+    }
+}
+  
 
 @media screen and (max-width: 768px) {
     .main-right {
@@ -699,11 +719,14 @@ main {
     }
 
     .main-container .main-left {
+        height: auto;
         min-width: 100vw;
         text-align: center;
-        max-height: 15vh;
+        max-height: 25vh;
         justify-content: center;
         align-items: center;
+        flex-direction:unset;
+        flex-wrap: wrap;
     }
 
     .main-container .main-mid {
@@ -716,17 +739,6 @@ main {
         display: none;
     }
 
-    /* Ajustes del logo */
-/*     .profile--logo {
-        align-self: start;
-        width: 80%;
-        margin-top: 0;
-        padding-top: 0;
-        margin-left: -3rem;
-        height: 50%;
-        display: flex;
-        align-items: center;
-    } */
 
 
     .profile-photos--logo{
@@ -769,16 +781,19 @@ main {
 
     .menu-item {
         padding: 0.5rem;
-        
+        justify-content: center;
         margin-bottom: 0;
+        margin-right: 0rem;
     }
 
     /* Ajustes de los íconos */
+
     .menu-item span {
         margin-right: 0rem;
     }
-    .menu-item span i,
-    .menu-item span div {
+
+    .menu-item i, 
+    .menu-item div {
         margin-left: 0;
     }
 
@@ -954,59 +969,3 @@ main {
 
 }
 
-
-
-/* @media screen and (max-width: 480px) {
-    .main-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0;
-        width: 100vw;
-        align-items: none;
-        align-content: flex-start
-    }
-      
-    .main-container .main-left {
-
-        width: 100vw;
-
-        justify-content: center;
-        align-content: center
-    }
-    
-    .main-container .main-mid {
-        grid-area: main-mid; 
-        width: 100vw;
-        padding: 1rem; 
-        overflow: hidden;
-    }
-
-    .main-container .main-right {
-        grid-area: main-right; 
-        display: none;
-    }
-
-    .main-right {
-        display: none;
-    }
-    .carousel-story {
-        max-width: 470px;
-    }
-
-    .profile_story img {
-        height: 60px;
-        width: 60px;
-        
-    }
-
-    .bx {
-        font-size: 2em;
-    }
-}
-
-/*----------------pantallas de celulares ----------------------*/
-
-/*---------------------- fin de pantallas celulares---------------------*/
-/*----------------pantallas de tables ----------------------*/
-
-/*---------------------- fin de pantallas tables---------------------*/
