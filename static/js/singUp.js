@@ -43,7 +43,6 @@ signupForm.addEventListener('submit', (e) => {
 
 
 /* Esta parte se debe quitar o comentar cuando se implemente la base de datos */
-
 addEventListener("DOMContentLoaded", (e) => {
     const auth = window.localStorage.getItem("auth", 1);
     if (auth) {

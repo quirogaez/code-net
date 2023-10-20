@@ -1,7 +1,7 @@
 addEventListener("DOMContentLoaded", (e) => {
     const auth = window.localStorage.getItem("auth", 1);
     if (auth) {
-        window.location.replace("./structure.html")
+        window.location.replace("./structure")
     }
 })
 
@@ -20,7 +20,7 @@ submitButton.addEventListener("click", (e) => {
             if (user.email === emailInput && user.Password === passwordInput) {
                 window.localStorage.setItem("auth", 1);
                 console.log("true");
-                window.location.replace("./structure.html")
+                window.location.replace("./structure")
             }
         }
     }
