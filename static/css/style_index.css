@@ -323,20 +323,20 @@ body {
 }
 
 /* Modal  */
-.modal--viewer {
+/* .modal--viewer {
   position: fixed;
   width: 100vw;
   height: 100vh;
   display: flex;
   background-color: #15151546;
-}
+} */
 
 .modal {
-  margin: 50px;
+  margin: 150px 350px;
   width: 50%;
   max-width: 450px;
   max-height: 240px;
-  background-color: var(--white--color);
+  background-color: #c2c2c2;
   padding: 1.5em 2.5em;
   border-radius: 6px;
 }
@@ -354,7 +354,7 @@ body {
   color: var(--second--color);
   font-size: 25px;
   border: none;
-  background-color: var(--white--color);
+  background-color:  #c2c2c2;
   cursor: pointer;
 }
 
@@ -362,7 +362,7 @@ body {
   border-radius: 6px;
   padding: 10px;
   border: none;
-  background-color: #dbdbdb;
+  background-color: #ffffff;
   width: 85%;
   height: 35px;
 }
