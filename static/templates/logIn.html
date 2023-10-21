@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code|Net</title>
     <!-- Link js -->
-    <!--<script defer src="../js/script.js"></script>-->
+
     <!-- link style -->
     <link rel="stylesheet" href="../css/style_login.css">
     <!-- Favicon -->
@@ -51,19 +51,19 @@
             </div>
             <div class="login--page">
                 <div class="content__login">
-                    <div>
-                            <input id="email" type="email" placeholder="correo">
-                            <input id="password" type="password" placeholder="Contraseña">
+                    <form action="#" method="POST" name="loginForm">
+                            <input type="email" name="correo" placeholder="correo" id="email">
+                            <input type="password" name="contraseña" placeholder="Contraseña" id="password">
                         <p class="link--forget">
-                            <a >¿olvidaste tu contraseña?</a>
+                            <a href="#">¿olvidaste tu contraseña?</a>
                         </p>
                         <p class="button--login">
-                            <button onclick="login()">iniciar sesión</button>
+                            <button type="submit">iniciar sesión</button>
                         </p>
                         <p class="final_element">
                             <label>no tienes cuenta? <a href="singUp.html" class="link--singup">registrate</a></label>
-                        </p>                        
-                    </div> 
+                        </p>
+                    </form>
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@
             </div>
         </div>
     </footer>
-
+    <script type="text/javascript" src="../js/logIn.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
