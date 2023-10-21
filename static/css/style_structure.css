@@ -224,7 +224,6 @@ main {
     height: 170px;
     margin: auto;
     border-radius: 5%;
-
 }
 .options {
     
@@ -233,18 +232,11 @@ main {
 }
 .options h3 {
     color: #121111;
-    padding: 15px;
-    
-   
-    
-    
+    padding: 15px;   
 }
 .optionCenter {
     border-top: 2px solid #adadad;
     border-bottom: 2px solid #adadad;
-    
-    
-
 }
 
 /* MAIN CENTER */

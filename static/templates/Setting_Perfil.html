@@ -16,6 +16,13 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Link Fontawasome -->
     <script src="https://kit.fontawesome.com/95b2a267a8.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ba93ad85e8.js" crossorigin="anonymous"></script>
+
     <script src="/static/templates/Setting_Perfil.html"></script>
 
 
@@ -59,7 +66,6 @@
                 <a href="" class="menu-item  message">
                     <span><i class="fa-solid fa-message  icon1"></i></span> <small class="count">5</small>
                     <h3>Mensajes</h3>
-
                 </a>
                 <a href="" class="menu-item " id="varProfile">
                     <span>
@@ -69,42 +75,50 @@
                     </span>
                     <h3>Mi perfil</h3>
                 </a>
-
                 <a href="" class="menu-item" id="bars">
                     <span><i class="fa-solid fa-bars icon1"></i></span>
                     <h3>Más</h3>
                 </a>
-
-
             </aside>
         </div>
 
-        <div class="Perfil-contain">
-            <div class="information-top">
-                <form action="procesar.php" method="post" enctype="multipart/form-data">
-                    <label for="imagen">Selecciona una imagen:</label>
-                    <input type="file" id="imagen" name="imagen" accept="image/*">
-                    <input type="submit" value="Subir Imagen">
-                </form>
-                <input type="text" class="Setting--name" name="name" placeholder="Nombre">
-                <div class="search-box">
-                    <label for="tecnology">Buscar o seleccionar tecnología:</label>
-                    <input type="text" id="tecnology" list="tecnology-list" placeholder="Escribe o selecciona...">
-                    <datalist id="tecnology-list">
-                        <option value="HTML" data-imagen="/static/img/tecnologias/2.svg">
-                        <option value="CSS" data-imagen="css.jpg">
-                        <option value="JavaScript" data-imagen="javascript.jpg">
-                        <option value="Python" data-imagen="python.jpg">
-                        <!-- Agrega más opciones según sea necesario -->
-                    </datalist>
-                    <img id="selected-tecnology-img" src="" alt="Tecnología seleccionada" style="display: none;">
-                </div>
-            </div>
-            <div class="tecnology-setting">
-                <!-- Aquí se mostrarán las tecnologías seleccionadas con imágenes -->
-            </div>
-        </div>
 
+        <div class="Perfil-contain">
+            <form>
+                
+                <input type="file" id="profile-picture" name="picture" accept="image/*">
+                <img class="img" id="profile-image" src="/static/img/perfilsinfoto.jpg" alt="Foto de Perfil">
+                <label for="full-name">Nombre:</label>
+                <input type="text" id="full-name"><br>
+                <label for="tecnologys">Selecciona una Tecnologia:</label>
+                <select id="tecnologys">
+                    <option value="figma">FIGMA</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                </select>
+                <img id="tecnology-image" src="" alt="Tecnologia"><br>
+                <p class="date__container">
+                    <label class="date__form">Fecha de nacimiento</label>
+                    <input type="date" class="date--list" id="date">
+                </p>
+                <label for="gender">Género:</label>
+                <select id="gender">
+                    <option value="mujer">Mujer</option>
+                    <option value="hombre">Hombre</option>
+                    <option value="otro">Otro</option>
+                </select><br>
+                <label for="address">Dirección:</label>
+                <input type="text" id="address"><br>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email"><br>
+                <label for="phone">Número de Celular:</label>
+                <input type="tel" id="phone"><br>
+                <div id="map"></div><br>
+                <label for="new-password">Cambiar Contraseña:</label>
+                <input type="password" id="new-password"><br>
+                <button id="save-button">Guardar</button>
+            </form>
+        </div>
     </main>
 </body>
 
