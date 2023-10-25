@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code|Net</title>
     <!-- css link -->
-    <link rel="stylesheet" href="../css/style_formProject.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/static/img/favicon.svg">
-    <!-- Link font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Link Fontawasome -->
-    <script src="https://kit.fontawesome.com/95b2a267a8.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../css/style_formProject.css">
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/static/img/favicon.svg">
+<!-- Link font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<!-- Link Fontawasome -->
+<script src="https://kit.fontawesome.com/95b2a267a8.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -122,33 +122,34 @@
                             </label>
                         </div>
                     </div>
-                    <!-- tecnology -->
+                    <!-- Tecnologías -->
                     <div class="technology_container">
-                        <div class="img__tecnology">
-                            <img src="/static/img/tecnologias/1.svg" alt="">
+
+                        <div class="img__tecnology" id="bootstrap">
+                            <img src="/static/img/tecnologias/1.svg" alt="Bootstrap">
                         </div>
-                        <div class="img__tecnology">
-                            <img src="/static/img/tecnologias/2.svg" alt="">
+                        <div class="img__tecnology" id="javascript">
+                            <img src="/static/img/tecnologias/2.svg" alt="JavaScript">
                         </div>
-                        <div class="img__tecnology">
+                        <div class="img__tecnology" id="html">
                             <img src="/static/img/tecnologias/3.png.svg" alt="">
                         </div>
-                        <div class="img__tecnology">
+                        <div class="img__tecnology" id="css">
                             <img src="/static/img/tecnologias/4.png.svg" alt="">
                         </div>
-                        <div class="img__tecnology">
+                        <div class="img__tecnology" id="react">
                             <img src="/static/img/tecnologias/5.png.svg" alt="">
                         </div>
-                        <div class="img__tecnology notVisible">
+                        <div class="img__tecnology" id="node">
                             <img src="/static/img/tecnologias/6.png.svg" alt="">
                         </div>
-                        <div class="img__tecnology notVisible">
+                        <div class="img__tecnology" id="viu">
                             <img src="/static/img/tecnologias/7.png.svg" alt="">
                         </div>
-                        <div class="img__tecnology notVisible">
+                        <div class="img__tecnology" id="aws">
                             <img src="/static/img/tecnologias/8.png.svg" alt="">
                         </div>
-                        <div class="img__tecnology notVisible">
+                        <div class="img__tecnology" id="mongodb">
                             <img src="/static/img/tecnologias/9.png.svg" alt="">
                         </div>
                         <div class="buttonplus">
@@ -156,20 +157,31 @@
                         </div>
                     </div>
                 </div>
-                <!-- Form -->
                 <div class="form--project">
                     <input type="url" class="url__project form" name="url__project"
-                        placeholder="url proyecto desplegado">
-                    <input type="text" class="technology form" name="tecnologias" placeholder="agregar tecnología">
-                    <textarea class="description form" name="message" placeholder="descripción"></textarea>
-                    <input type="url" class="url__gihub form" name="url__gihub" placeholder="url repositorio">
+                        placeholder="URL del proyecto desplegado">
+                    <select class="technology form" name="tecnologias">
+                        <option value="bootstrap">Selecciona tecnologias</option>
+                        <option value="bootstrap">Bootstrap</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="react">React.js</option>
+                        <option value="node">Node.js</option>
+                        <option value="viu">Viu.js</option>
+                        <option value="aws">AWS</option>
+                        <option value="mongodb">MongoDB</option>
+                        <option value="oracle">ORACLE</option>
+                    </select>
+                    <textarea class="description form" name="message" placeholder="Descripción"></textarea>
+                    <input type="url" class="url__github form" name="url__github"
+                        placeholder="URL del repositorio en GitHub">
                 </div>
                 <div class="container_buttonPost">
-                    <button class="button_post">publicar</button>
+                    <button class="button_post">Publicar</button>
                 </div>
             </form>
         </div>
-
     </main>
     <section class="modal">
         <div class="modal__container">
@@ -185,6 +197,9 @@
         </div>
     </section>
 </body>
-    <!-- link js -->
-    <script src="/static/js/modal_project.js"></script>
+<!-- link js -->
+<script src="/static/js/modal_project.js"></script>
+<script src="/static/js/tecnologias.js"></script>
+<script src="/static/js/form__project.js"></script>
+
 </html>
