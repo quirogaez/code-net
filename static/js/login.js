@@ -10,6 +10,7 @@ const submitButton = document.querySelector(".button--login").childNodes[1];
 /* Esta funcion se debe cambiar cuando funcione base de datos */
 console.log(submitButton)
 submitButton.addEventListener("click", (e) => {
+    console.log("estpyaki")
     e.preventDefault();
     const users = JSON.parse(window.localStorage.getItem("users"));
     const registerForm = document.forms["loginForm"];
@@ -17,7 +18,9 @@ submitButton.addEventListener("click", (e) => {
     const passwordInput = registerForm.elements["password"].value;
     if(users) {
         for (let user of users) {
-            if (user.email === emailInput && user.Password === passwordInput) {
+            console.log("estpyak2i")
+            if (user.email === emailInput && user.password === passwordInput) {
+                console.log("estpyak3i")
                 window.localStorage.setItem("auth", 1);
                 console.log("true");
                 window.location.replace("./structure")
