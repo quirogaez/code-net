@@ -8,7 +8,7 @@
     <!-- css link -->
     <link rel="stylesheet" href="/static/css/style_searchProject.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/static/img/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon/favicon.svg">
     <!-- Link font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,50 +22,80 @@
 <body>
     <main class="container main-container">
         <!-- ---------- MAIN LEFT ---------- -->
-        <div class="main-left">
+
+        <header class="main-left">
             <div class="profile-photos--logo">
                 <img src="../img/code.svg" alt="" id="icon-company">
             </div>
 
             <!-- -----------SIDEBAR---------- -->
             <aside class="side-bar">
-                <a href="searchproject.html" class="menu-item ">
-                    <i class="fa-solid fa-house icon1"></i>
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="/static/img/icons/home.svg" alt="">
+                    </div>
                     <p>Inicio</p>
                 </a>
-                <a href="" class="menu-item ">
-                    <i class="fa-solid fa-magnifying-glass icon1"></i>
+                <a href="searchproject.html" class="menu-item ">
+                    <div class="icon1">
+                        <img src="/static/img/icons/search.svg" alt="">
+                    </div>
                     <p>Buscar</p>
                 </a>
-                <a href="" class="menu-item ">
-                    <i class="fa-solid fa-play icon1"></i>
-                    <p>Transmisiones</p>
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="/static/img/icons/live.svg" alt="">
+                    </div>
+                    <p>Live</p>
                 </a>
-                <a href="" class="menu-item ">
-                    <i class="fa-solid fa-video  icon1"></i>
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="/static/img/icons/shortclip.svg" alt="">
+                    </div>
                     <p>ShortClip</p>
                 </a>
-                <a href="" class="menu-item  message">
-                    <i class="fa-solid fa-message  icon1"><small class="count">5</small></i>
+                <a href="#" class="menu-item  message">
+                    <div class="icon1">
+                        <img src="/static/img/icons/message.svg" alt=""><!-- <small class="count">5</small> -->
+                    </div>
                     <p>Mensajes</p>
                 </a>
-                <a href="" class="menu-item2" id="varProfile">
+                <a href="#" class="menu-item2" id="varProfile">
                     <div class="profile-photos" id="aside-porfile">
                         <img src="../img/person.png" alt="">
                     </div>
                     <p>Mi perfil</p>
                 </a>
             </aside>
-            <a href="" class="menu-item3" id="bars">
-                <i class="fa-solid fa-bars icon1"></i>
+            <div class="showPlus">
+                <ul class="showOptions">
+                    <li>
+                        <a class="optionsMore">
+                            <p>editar perfil</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="optionsMore ">
+                            <p class="optionCenter">configuraciónes</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="logIn.html" class="optionsMore">
+                            <p>cerrar sesión</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a onclick="showPlusOptions()" class="menu-item3" id="varProfile">
+                <i class="fa-solid fa-bars icon2"></i>
                 <p>Más</p>
             </a>
-        </div>
+        </header>
         <!-----------------------  Search  ----------------------->
         <form action="#" method="post" target="_blank">
             <div class="container__search">
                 <input type="search" class="search__nav" name="busquedamusica" placeholder="buscar">
-                    <input type="submit" value="" style="display: none;">
+                <input type="submit" value="" style="display: none;">
             </div>
             <div class="container__options">
                 <button type="onclick" class="options--category">categoria</button>
@@ -75,7 +105,7 @@
                 <button type="onclick" class="options">ShortClip</button>
             </div>
         </form>
-<!--         <div>
+        <!--         <div>
             <div>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quas saepe dolorem mollitia ipsam. Officiis vel mollitia fugiat? Explicabo debitis dignissimos illo unde et corrupti reiciendis laboriosam harum sunt est.
             </div>
@@ -84,23 +114,24 @@
         <!-----------------  live streaming nav ------------------>
 
         <section class="main-right">
-            <div class="">
-                <div class="icono">
-                    <img class="icono_life" src="../img/trasmisiones.png"></i>
-                </div>
-                <div class="carousel-life">
-                    <div class="carousel_profile_life"></div>
-                </div>
-                <!--                <div class="chat">
+            <div class="icono">
+                <img class="icono_life" src="../img/trasmisiones.png"></i>
+            </div>
+            <div class="carousel-life">
+                <div class="carousel_profile_life"></div>
+            </div>
+            <!--                <div class="chat">
                     <img class="icono_chat" src="../img/mensajes.png">
                 </div> -->
-            </div>
         </section>
 
     </main>
 
 </body>
 <script src="../js/structure.js"></script>
+<script src="/static/js/sidebar.js"></script>
 <script src="../js/publication_structure.js"></script>
+<script src="../js/search_project.js"></script>
+<script src="//code.tidio.co/jyvlyxqxgpph2pmupu9kpbz1mfibcguw.js" async></script>
 
 </html>
