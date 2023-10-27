@@ -16,7 +16,7 @@ function resizeController (){
             element.classList.add("fa-lg");
         })
         /* Cambiar imagen */
-        companyIcon.src = "../img/code.svg"
+        companyIcon.src = "/static/img/code.svg"
     }
     else if (window.innerWidth <= 1025) { //si el ancho de la ventana es menor a 768 píxeles
         // Agrega la clase al elementIcon
@@ -25,13 +25,13 @@ function resizeController (){
             element.classList.add("fa-2xl");
         })
         /* Cambiar imagen */
-        companyIcon.src = "../img/favicon.svg"
+        companyIcon.src = "/static/img/favicon/favicon.svg"
 
     } else {
         // Si la condición no se cumple,  eliminar la clase si es necesario
         elementIcon.forEach((element) => {
             element.classList.remove("fa-2xl");
-            companyIcon.src = "../img/code.svg"
+            companyIcon.src = "/static/img/code.svg"
         })
 
     }
