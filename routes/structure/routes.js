@@ -5,8 +5,6 @@ import {searchDir} from '../searchDir.js'
 const router = Router()
 
 /* Borrar si se usa EJS */
-
-
 router.get('/structure', (req, res) => {
     /* Con ejs */
     //res.render('logIn',);

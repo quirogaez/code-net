@@ -24,18 +24,21 @@
         <!-- ---------- MAIN LEFT ---------- -->
 
         <header class="main-left">
-            <div class="profile-photos--logo">
-                <img src="../img/code.svg" alt="" id="icon-company">
-            </div>
-
-<!--             <a href="" class="menu-item" id="mobilVarProfile">
-                <span>
-                    <div class="profile-photos--major" id="nav-profile">
+            <div class="container_mobile">
+                <div class="profile-photos--logo">
+                    <img src="../img/code.svg" alt="" id="icon-company">
+                </div>
+                <div class="profile_more">
+                <a href="#" class="profile__mobile" id="varProfile">
+                    <div class="profile__mobile" id="aside-porfile">
                         <img src="../img/person.png" alt="">
                     </div>
-                </span> 
-            </a> -->
-
+                </a>
+                <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
+                    <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
+                </a>
+                </div>
+            </div>
             <!-- -----------SIDEBAR---------- -->
             <aside class="side-bar">
                 <a href="#" class="menu-item">
@@ -44,7 +47,7 @@
                     </div>
                     <p>Inicio</p>
                 </a>
-                <a href="searchproject.html" class="menu-item ">
+                <a href="http://localhost:8081/codenet/search" class="menu-item ">
                     <div class="icon1">
                         <img src="../img/icons/search.svg" alt="">
                     </div>
@@ -123,14 +126,13 @@
 
         <section class="main-right">
             <div class="icono">
-                <img class="icono_life" src="../img/trasmisiones.png"></i>
+                <a href="#">
+                    <img class="icono_life" src="../img/trasmisiones.png"></i>
+                </a>
             </div>
             <div class="carousel-life">
                 <div class="carousel_profile_life"></div>
             </div>
-            <!--                <div class="chat">
-                    <img class="icono_chat" src="../img/mensajes.png">
-                </div> -->
         </section>
 
     </main>

@@ -1,5 +1,5 @@
 import express from 'express';
-import mongoose from 'mongoose';
+/* import mongoose from 'mongoose'; */
 import dotenv from 'dotenv';
 import helmet from 'helmet';
 import morgan from 'morgan';
@@ -21,10 +21,10 @@ app.use(express.static('static'));
 app.use('/codenet', routes)
 
 /* Configuración base de datos */
-mongoose.connect(process.env.MONGOOSE_URL)
+/* mongoose.connect(process.env.MONGOOSE_URL)
     .then(() => {
         console.log("Connected to MONGODB");
-});
+}); */
  
 // Establecer EJS como el motor de plantillas
 /* app.set('view engine', 'ejs'); */
@@ -36,10 +36,6 @@ app.set('views', `${__dirname}\\static\\templates\\`); // Ruta a la carpeta de v
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("tiny"));
-
-
-
-
 
 /* Levantar servidor */
 app.listen(8081, () => {

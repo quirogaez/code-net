@@ -17,7 +17,7 @@ submitButton.addEventListener("click", (e) => {
     const passwordInput = registerForm.elements["password"].value;
     if(users) {
         for (let user of users) {
-            if (user.email === emailInput && user.Password === passwordInput) {
+            if (user.email === emailInput && user.password === passwordInput) {
                 window.localStorage.setItem("auth", 1);
                 console.log("true");
                 window.location.replace("./structure")
