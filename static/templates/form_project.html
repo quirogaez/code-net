@@ -8,7 +8,7 @@
     <!-- css link -->
     <link rel="stylesheet" href="../css/style_formProject.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/static/img/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../img/favicon/favicon.svg">
     <!-- Link font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,72 +16,93 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Link Fontawasome -->
     <script src="https://kit.fontawesome.com/95b2a267a8.js" crossorigin="anonymous"></script>
-    <!-- Firebase imports -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
-
 </head>
 
 
 
 <body>
-
-    <nav class="container">
-        <h2>
-
-        </h2>
-    </nav>
-
-    <!-- //////////////// MAIN SECTION ////////////////////////// -->
     <main class="container main-container">
-        <!-- ---------- MAIN LEFT ---------- -->
-        <div class="main-left">
-            <!-- <div class="profile--logo"> -->
-            <div class="profile-photos--logo">
-                <img src="../img/code.svg" alt="" id="icon-company">
+        <!-- ---------- NAV BAR---------- -->
+        <header class="main-left">
+            <div class="container_mobile">
+                <div class="profile-photos--logo">
+                    <img src="../img/code.svg" alt="" id="icon-company">
+                </div>
+                <div class="profile_more">
+                <a href="#" class="profile__mobile" id="varProfile">
+                    <div class="profile__mobile" id="aside-porfile">
+                        <img src="../img/person.png" alt="">
+                    </div>
+                </a>
+                <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
+                    <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
+                </a>
+                </div>
             </div>
-
             <!-- -----------SIDEBAR---------- -->
             <aside class="side-bar">
-                <a href="" class="menu-item ">
-                    <span><i class="fa-solid fa-house icon1"></i></span>
-                    <h3>Inicio</h3>
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="../img/icons/home.svg" alt="">
+                    </div>
+                    <p>Inicio</p>
                 </a>
-                <a href="" class="menu-item ">
-                    <span><i class="fa-solid fa-magnifying-glass icon1"></i></span>
-                    <h3>Buscar</h3>
+                <a href="http://localhost:8081/codenet/search" class="menu-item ">
+                    <div class="icon1">
+                        <img src="../img/icons/search.svg" alt="">
+                    </div>
+                    <p>Buscar</p>
                 </a>
-                <a href="" class="menu-item ">
-                    <span><i class="fa-solid fa-play icon1"></i></span>
-                    <h3>Transmisiones</h3>
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="../img/icons/live.svg" alt="">
+                    </div>
+                    <p>Live</p>
                 </a>
-                <a href="" class="menu-item ">
-                    <span><i class="fa-solid fa-video  icon1"></i></span>
-                    <h3>ShortClip</h3>
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="../img/icons/shortclip.svg" alt="">
+                    </div>
+                    <p>ShortClip</p>
                 </a>
-                <a href="" class="menu-item  message">
-                    <span><i class="fa-solid fa-message  icon1"></i></span> <small class="count">5</small>
-                    <h3>Mensajes</h3>
-
+                <a href="#" class="menu-item  message">
+                    <div class="icon1">
+                        <img src="../img/icons/message.svg" alt=""><!-- <small class="count">5</small> -->
+                    </div>
+                    <p>Mensajes</p>
                 </a>
-                <a href="" class="menu-item " id="varProfile">
-                    <span>
-                        <div class="profile-photos" id="aside-porfile">
-                            <img src="../img/person.png" alt="">
-                        </div>
-                    </span>
-                    <h3>Mi perfil</h3>
+                <a href="#" class="menu-item2" id="varProfile">
+                    <div class="profile-photos" id="aside-porfile">
+                        <img src="../img/person.png" alt="">
+                    </div>
+                    <p>Mi perfil</p>
                 </a>
-
-                <a href="" class="menu-item" id="bars">
-                    <span><i class="fa-solid fa-bars icon1"></i></span>
-                    <h3>Más</h3>
-                </a>
-
-
             </aside>
-        </div>
-        <!-- Project form -->
+            <div class="showPlus">
+                <ul class="showOptions">
+                    <li>
+                        <a class="optionsMore">
+                            <p>editar perfil</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="optionsMore ">
+                            <p class="optionCenter">configuraciónes</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="logIn.html" class="optionsMore">
+                            <p>cerrar sesión</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a onclick="showPlusOptions()" class="menu-item3" id="varProfile">
+                <i class="fa-solid fa-bars icon2"></i>
+                <p>Más</p>
+            </a>
+        </header>
+        <!-------------------- Project form -------------------->
         <div class="form_project_container">
             <form method="POST" action="#">
                 <div class="container_project">
@@ -89,7 +110,7 @@
                         <div class="img_buttonCover">
                             <input
                                 class="input_img"
-                                accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
+                               
                                 type="file" id="addImg1" hidden>
                             <label for="addImg1" class="label_img">
                                 <p>+</p>agregar img
@@ -132,61 +153,75 @@
                             </label>
                         </div>
                     </div>
-                    <!-- tecnology -->
+                    <!-- Tecnologías -->
                     <div class="technology_container">
-                        <div class="img__tecnology">
-                            <img src="/static/img/tecnologias/1.svg" alt="">
+
+                        <div class="img__tecnology" id="bootstrap">
+                            <img src="../img/tecnologias/1.svg" alt="Bootstrap">
+                            <img src="../img/tecnologias/1.svg" alt="Bootstrap">
                         </div>
-                        <div class="img__tecnology">
-                            <img src="/static/img/tecnologias/2.svg" alt="">
+                        <div class="img__tecnology" id="javascript">
+                            <img src="../img/tecnologias/2.svg" alt="JavaScript">
+                            <img src="../img/tecnologias/2.svg" alt="JavaScript">
                         </div>
-                        <div class="img__tecnology">
-                            <img src="/static/img/tecnologias/3.png.svg" alt="">
+                        <div class="img__tecnology" id="html">
+                            <img src="../img/tecnologias/3.svg" alt="">
                         </div>
-                        <div class="img__tecnology">
-                            <img src="/static/img/tecnologias/4.png.svg" alt="">
+                        <div class="img__tecnology" id="css">
+                            <img src="../img/tecnologias/4.svg" alt="">
                         </div>
-                        <div class="img__tecnology">
-                            <img src="/static/img/tecnologias/5.png.svg" alt="">
+                        <div class="img__tecnology" id="react">
+                            <img src="../img/tecnologias/5.svg" alt="">
                         </div>
-                        <div class="img__tecnology notVisible">
-                            <img src="/static/img/tecnologias/6.png.svg" alt="">
+                        <div class="img__tecnology" id="node">
+                            <img src="../img/tecnologias/6.svg" alt="">
                         </div>
-                        <div class="img__tecnology notVisible">
-                            <img src="/static/img/tecnologias/7.png.svg" alt="">
+                        <div class="img__tecnology" id="viu">
+                            <img src="../img/tecnologias/7.svg" alt="">
                         </div>
-                        <div class="img__tecnology notVisible">
-                            <img src="/static/img/tecnologias/8.png.svg" alt="">
+                        <div class="img__tecnology" id="aws">
+                            <img src="../img/tecnologias/8.svg" alt="">
                         </div>
-                        <div class="img__tecnology notVisible">
-                            <img src="/static/img/tecnologias/9.png.svg" alt="">
+                        <div class="img__tecnology" id="mongodb">
+                            <img src="../img/tecnologias/9.svg" alt="">
                         </div>
                         <div class="buttonplus">
                             <i class='bx bxs-plus-circle'></i>
                         </div>
                     </div>
                 </div>
-                <!-- Form -->
                 <div class="form--project">
                     <input type="url" class="url__project form" name="url__project"
-                        placeholder="url proyecto desplegado">
-                    <input type="text" class="technology form" name="tecnologias" placeholder="agregar tecnología">
-                    <textarea class="description form" name="message" placeholder="descripción"></textarea>
-                    <input type="url" class="url__gihub form" name="url__gihub" placeholder="url repositorio">
+                        placeholder="URL del proyecto desplegado">
+                    <select class="technology form" name="tecnologias">
+                        <option value="bootstrap">Selecciona tecnologias</option>
+                        <option value="bootstrap">Bootstrap</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="react">React.js</option>
+                        <option value="node">Node.js</option>
+                        <option value="viu">Viu.js</option>
+                        <option value="aws">AWS</option>
+                        <option value="mongodb">MongoDB</option>
+                        <option value="oracle">ORACLE</option>
+                    </select>
+                    <textarea class="description form" name="message" placeholder="Descripción"></textarea>
+                    <input type="url" class="url__github form" name="url__github"
+                        placeholder="URL del repositorio en GitHub">
                 </div>
                 <div class="container_buttonPost">
-                    <button class="button_post">publicar</button>
+                    <button class="button_post">Publicar</button>
                 </div>
             </form>
         </div>
-
     </main>
     <section class="modal">
         <div class="modal__container">
             <div class="close__modalProject">
                 <button type="button">x</button>
             </div>
-            <img src="/static/img/modal/trofeo.svg" class="modal__img">
+            <img src="../img/modal/trofeo.svg" class="modal__img">
             <h2 class="modal__tittle">¡has cargado tu proyecto con exito!</h2>
             <div class="container--buttons">
                 <a href="structure.html" class="button__feed">inicio</a>
@@ -195,106 +230,13 @@
         </div>
     </section>
 </body>
-    <!-- link js -->
-    <script src="../js/modal_project.js"></script>
-    <script  >
-        const firebaseConfig = {
-            apiKey: "AIzaSyAhdPsO1vSuZyTS2AGZ19DEljSzQoX0pAM",
-            authDomain: "code-net-7a600.firebaseapp.com",
-            databaseURL: "https://code-net-7a600-default-rtdb.firebaseio.com",
-            projectId: "code-net-7a600",
-            storageBucket: "code-net-7a600.appspot.com",
-            messagingSenderId: "264017678385",
-            appId: "1:264017678385:web:9fd646fe04c9d19cab0510",
-            measurementId: "G-NFVBWE9W87"
-        };
-        const app = firebase.initializeApp(firebaseConfig); 
-        const storage = firebase.storage();
-        
-        
-         const uploadImage = async (imagesToPost) => {
-            for(let image in imagesToPost) {
-                console.log(imagesToPost[image])
-                let url = await uploadProcess(
-                    imagesToPost[image],
-                    "12345"
-                    );
-            }
-        }
-        
-         const uploadProcess = (file, filename) => {
-            return new Promise((resolve, reject) => {
-                const storageRef = storage.ref().child("images");
-                const folderRef = storageRef.child(filename);
-                const uploadTask = folderRef.put(file);
-                let uploadedFileName
-                uploadTask.on("state_changed", (snapshot) => {
-                    uploadedFileName = snapshot.ref.name;
-                },(error) => {
-                    reject(error)
-                }, () => {
-                    storage
-                    .ref("images")
-                    .child(uploadedFileName)
-                    .getDownloadURL()
-                    .then((url) => {
-                        console.log("URL", url);
-                        resolve(url)
-                    }) 
-                })
-            })
-        } 
-        
-        
-        const buttonPost = document.querySelector(".button_post");
-        
-        const imagesToPost = {};
+<!-- link js -->
+<script type="module" src="../js/structure.js"></script>
+<script src="../js/modal_project.js"></script>
+<script src="../js/tecnologias.js"></script>
+<script src="../js/form__project.js"></script>
+<script src="../js/sidebar.js"></script>
+<script src="../js/search_project.js"></script>
+<script src="//code.tidio.co/jyvlyxqxgpph2pmupu9kpbz1mfibcguw.js" async></script>
 
-        buttonPost.addEventListener('click', e => {
-            e.preventDefault();
-            alert("Está seguro que quiere subir el proyecto con " +  Object.keys(imagesToPost).length + " imagenes")
-            uploadImage(imagesToPost);
-        })
-        
-        const projectMedia = document.querySelectorAll('.input_img');
-        console.log(projectMedia)
-        projectMedia.forEach((image) => {
-            image.addEventListener('change', function (e)  {
-                console.log(e.target.files[0]);
-                const fileContainer = e.target;
-                const file = e.target.files[0];
-                if (file) {
-                    // Obtiene una referencia al elemento que disparó el evento `change`
-                    const inputElement = e.target.id;
-                    
-                    // Verifica si ya hay una imagen asociada a ese elemento y elimínala
-                    if (imagesToPost[inputElement]) {
-                        delete imagesToPost[inputElement];
-                        /* console.log(`Imagen en ${inputElement} eliminada.`); */
-                    }
-                    
-                    // Asigna la nueva imagen al objeto imagesToPost con el contexto actual
-                    imagesToPost[inputElement] = file;
-                    /* console.log(`Imagen en ${inputElement} actualizada.`); */
-                }
-                imageCreate(file, fileContainer);
-                
-            });
-        });
-        
-        
-        
-        
-        function imageCreate(imgData, fileContainer) {
-            const imgText = fileContainer.nextElementSibling;
-            console.log(imgText)
-            const spanImage = document.createElement("span");
-            imgText.textContent = " ";
-            spanImage.className = "filedata";
-            spanImage.style.display = 'block';
-            spanImage.innerHTML = imgData.name;
-            imgText.appendChild(spanImage)
-        }
-        
-        </script>
 </html>

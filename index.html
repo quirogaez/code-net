@@ -262,6 +262,7 @@
             </div>
         </section>
     </main>
+
     <!-- footer section -->
     <footer class="footer footer-centrado">
         <div class="footer--content">
@@ -271,8 +272,23 @@
             </div>
         </div>
     </footer>
+    <section class="modal--viewer">
+        <div id="miModal" class="modal">
+            <div class="close__modalProject">
+                <button id="cerrarModal">x</button>
+            </div>
+            <h2 class="modal__tittle">suscribete</h2>
+            <p>escribe tu correo, para recibir notificaciones y mantenerte actualizad*!</p>
+            <form action="https://formsubmit.co/codenet@gmx.es" method="POST">
+                <input type="email" class="input--modal" placeholder="correo" required>
+                <button class="send" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
     <!-- link bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/static/js/modal_project2.js"></script>
 </body>
 
 </html>
