@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code|Net</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="/static/css/style_SettingPerfil.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.svg">
+    <!-- Link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link Fontawasome -->
+    <script src="https://kit.fontawesome.com/95b2a267a8.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ba93ad85e8.js" crossorigin="anonymous"></script>
+    <script defer src="/static/js/Setting_Perfil.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="container">
+        <h2>
+
+        </h2>
+    </nav>
+
+    <!-- //////////////// MAIN SECTION ////////////////////////// -->
+    <main class="main-container">
+        <!-- ---------- MAIN LEFT ---------- -->
+        <div class="main-left">
+            <!-- <div class="profile--logo"> -->
+            <div class="profile-photos--logo">
+                <img src="../img/code.svg" alt="" id="icon-company">
+            </div>
+
+            <!-- -----------SIDEBAR---------- -->
+            <aside class="side-bar">
+                <a href="" class="menu-item ">
+                    <span><i class="fa-solid fa-house icon1"></i></span>
+                    <h3>Inicio</h3>
+                </a>
+                <a href="" class="menu-item ">
+                    <span><i class="fa-solid fa-magnifying-glass icon1"></i></span>
+                    <h3>Buscar</h3>
+                </a>
+                <a href="" class="menu-item ">
+                    <span><i class="fa-solid fa-play icon1"></i></span>
+                    <h3>Transmisiones</h3>
+                </a>
+                <a href="" class="menu-item ">
+                    <span><i class="fa-solid fa-video  icon1"></i></span>
+                    <h3>ShortClip</h3>
+                </a>
+                <a href="" class="menu-item  message">
+                    <span><i class="fa-solid fa-message  icon1"></i></span> <small class="count">5</small>
+                    <h3>Mensajes</h3>
+                </a>
+                <a href="" class="menu-item " id="varProfile">
+                    <span>
+                        <div class="profile-photos" id="aside-porfile">
+                            <img src="../img/person.png" alt="">
+                        </div>
+                    </span>
+                    <h3>Mi perfil</h3>
+                </a>
+                <a href="" class="menu-item" id="bars">
+                    <span><i class="fa-solid fa-bars icon1"></i></span>
+                    <h3>Más</h3>
+                </a>
+            </aside>
+        </div>
+
+        <!-- contenedor central  -->
+        <div class="Perfil-contain">
+            <form class="perfil-contain-form">
+                <div class="initial">
+                    <img id="image-preview" src="/static/img/portadasinfoto.jpeg" alt="Imagen actual"
+                        style="max-width: 100%; max-height: 300px; cursor: pointer;">
+                    <input type="file" id="file-input" accept="image/*" style="display: none;">
+                    <div class="initial-sec">
+                        <input type="text" class="full-name" id="name" placeholder="Nombre" required>
+                        <input type="text" class="rol-name" id="name" placeholder="Rol" required>
+                    </div>
+                </div>
+                <div class="tecnology">
+                    <select id="tecnologys">
+                        <option value="">Habilidades</option>
+                        <option value="figma">FIGMA</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                    </select>
+                    <div id="tecnology-images"></div>
+                </div>
+                <div class="date-information">
+                    <div class="date_person">
+                        <div class="date">
+                            <p class="date__container">
+                                <label class="date__form">Fecha de nacimiento</label>
+                                <input type="date" class="date--list" id="date">
+                            </p>
+
+                            <select id="gender">
+                                <option value="Genero">Genero</option>
+                                <option value="mujer">Mujer</option>
+                                <option value="hombre">Hombre</option>
+                                <option value="otro">Otro</option>
+                            </select><br>
+
+                        </div>
+                        <input type="text" class="address" id="addres" placeholder="Direccion" required>
+                        <input type="text" class="correo" id="correo" placeholder="Correo Electronico" required>
+                    </div>
+                    <div class="map-phone">
+
+                        <div id="map">
+                            <img id="image-map" src="/static/img/portadasinfoto.jpeg" alt="Imagen actual"
+                                style="max-width: 100%; max-height: 300px; cursor: pointer;">
+                        </div>
+                        <input type="text" class="phone" id="phone" placeholder="Telefono" required>
+                    </div>
+                </div>
+                <a href="" class="new password">
+                    <h4>Cambiar Contraseña</h4>
+                </a>
+
+                <button id="save-button">Guardar</button>
+               
+            </form>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
