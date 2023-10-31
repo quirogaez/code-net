@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,77 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code|Net</title>
     <!-- css link -->
-<link rel="stylesheet" href="../css/style_formProject.css">
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="/static/img/favicon.svg">
-<!-- Link font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<!-- Link Fontawasome -->
-<script src="https://kit.fontawesome.com/95b2a267a8.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="../css/style_formProject.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../img/favicon/favicon.svg">
+    <!-- Link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link Fontawasome -->
+    <script src="https://kit.fontawesome.com/95b2a267a8.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-    <nav class="container">
-        <h2>
-
-        </h2>
-    </nav>
-
-    <!-- //////////////// MAIN SECTION ////////////////////////// -->
     <main class="container main-container">
-        <!-- ---------- MAIN LEFT ---------- -->
-        <div class="main-left">
-            <!-- <div class="profile--logo"> -->
-            <div class="profile-photos--logo">
-                <img src="../img/code.svg" alt="" id="icon-company">
+        <!-- ---------- NAV BAR---------- -->
+        <header class="main-left">
+            <div class="container_mobile">
+                <div class="profile-photos--logo">
+                    <img src="../img/code.svg" alt="" id="icon-company">
+                </div>
+                <div class="profile_more">
+                <a href="#" class="profile__mobile" id="varProfile">
+                    <div class="profile__mobile" id="aside-porfile">
+                        <img src="../img/person.png" alt="">
+                    </div>
+                </a>
+                <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
+                    <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
+                </a>
+                </div>
             </div>
-
             <!-- -----------SIDEBAR---------- -->
             <aside class="side-bar">
-                <a href="" class="menu-item ">
-                    <span><i class="fa-solid fa-house icon1"></i></span>
-                    <h3>Inicio</h3>
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="../img/icons/home.svg" alt="">
+                    </div>
+                    <p>Inicio</p>
                 </a>
-                <a href="" class="menu-item ">
-                    <span><i class="fa-solid fa-magnifying-glass icon1"></i></span>
-                    <h3>Buscar</h3>
+                <a href="http://localhost:8081/codenet/search" class="menu-item ">
+                    <div class="icon1">
+                        <img src="../img/icons/search.svg" alt="">
+                    </div>
+                    <p>Buscar</p>
                 </a>
-                <a href="" class="menu-item ">
-                    <span><i class="fa-solid fa-play icon1"></i></span>
-                    <h3>Transmisiones</h3>
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="../img/icons/live.svg" alt="">
+                    </div>
+                    <p>Live</p>
                 </a>
-                <a href="" class="menu-item ">
-                    <span><i class="fa-solid fa-video  icon1"></i></span>
-                    <h3>ShortClip</h3>
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="../img/icons/shortclip.svg" alt="">
+                    </div>
+                    <p>ShortClip</p>
                 </a>
-                <a href="" class="menu-item  message">
-                    <span><i class="fa-solid fa-message  icon1"></i></span> <small class="count">5</small>
-                    <h3>Mensajes</h3>
-
+                <a href="#" class="menu-item  message">
+                    <div class="icon1">
+                        <img src="../img/icons/message.svg" alt=""><!-- <small class="count">5</small> -->
+                    </div>
+                    <p>Mensajes</p>
                 </a>
-                <a href="" class="menu-item " id="varProfile">
-                    <span>
-                        <div class="profile-photos" id="aside-porfile">
-                            <img src="../img/person.png" alt="">
-                        </div>
-                    </span>
-                    <h3>Mi perfil</h3>
+                <a href="#" class="menu-item2" id="varProfile">
+                    <div class="profile-photos" id="aside-porfile">
+                        <img src="../img/person.png" alt="">
+                    </div>
+                    <p>Mi perfil</p>
                 </a>
-
-                <a href="" class="menu-item" id="bars">
-                    <span><i class="fa-solid fa-bars icon1"></i></span>
-                    <h3>Más</h3>
-                </a>
-
-
             </aside>
-        </div>
-        <!-- Project form -->
+            <div class="showPlus">
+                <ul class="showOptions">
+                    <li>
+                        <a class="optionsMore">
+                            <p>editar perfil</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="optionsMore ">
+                            <p class="optionCenter">configuraciónes</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="logIn.html" class="optionsMore">
+                            <p>cerrar sesión</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a onclick="showPlusOptions()" class="menu-item3" id="varProfile">
+                <i class="fa-solid fa-bars icon2"></i>
+                <p>Más</p>
+            </a>
+        </header>
+        <!-------------------- Project form -------------------->
         <div class="form_project_container">
             <form method="post" action="#">
                 <div class="container_project">
@@ -126,31 +150,31 @@
                     <div class="technology_container">
 
                         <div class="img__tecnology" id="bootstrap">
-                            <img src="/static/img/tecnologias/1.svg" alt="Bootstrap">
+                            <img src="../img/tecnologias/1.svg" alt="Bootstrap">
                         </div>
                         <div class="img__tecnology" id="javascript">
-                            <img src="/static/img/tecnologias/2.svg" alt="JavaScript">
+                            <img src="../img/tecnologias/2.svg" alt="JavaScript">
                         </div>
                         <div class="img__tecnology" id="html">
-                            <img src="/static/img/tecnologias/3.png.svg" alt="">
+                            <img src="../img/tecnologias/3.svg" alt="">
                         </div>
                         <div class="img__tecnology" id="css">
-                            <img src="/static/img/tecnologias/4.png.svg" alt="">
+                            <img src="../img/tecnologias/4.svg" alt="">
                         </div>
                         <div class="img__tecnology" id="react">
-                            <img src="/static/img/tecnologias/5.png.svg" alt="">
+                            <img src="../img/tecnologias/5.svg" alt="">
                         </div>
                         <div class="img__tecnology" id="node">
-                            <img src="/static/img/tecnologias/6.png.svg" alt="">
+                            <img src="../img/tecnologias/6.svg" alt="">
                         </div>
                         <div class="img__tecnology" id="viu">
-                            <img src="/static/img/tecnologias/7.png.svg" alt="">
+                            <img src="../img/tecnologias/7.svg" alt="">
                         </div>
                         <div class="img__tecnology" id="aws">
-                            <img src="/static/img/tecnologias/8.png.svg" alt="">
+                            <img src="../img/tecnologias/8.svg" alt="">
                         </div>
                         <div class="img__tecnology" id="mongodb">
-                            <img src="/static/img/tecnologias/9.png.svg" alt="">
+                            <img src="../img/tecnologias/9.svg" alt="">
                         </div>
                         <div class="buttonplus">
                             <i class='bx bxs-plus-circle'></i>
@@ -188,7 +212,7 @@
             <div class="close__modalProject">
                 <button type="button">x</button>
             </div>
-            <img src="/static/img/modal/trofeo.svg" class="modal__img">
+            <img src="../img/modal/trofeo.svg" class="modal__img">
             <h2 class="modal__tittle">¡has cargado tu proyecto con exito!</h2>
             <div class="container--buttons">
                 <a href="structure.html" class="button__feed">inicio</a>
@@ -198,8 +222,12 @@
     </section>
 </body>
 <!-- link js -->
-<script src="/static/js/modal_project.js"></script>
-<script src="/static/js/tecnologias.js"></script>
-<script src="/static/js/form__project.js"></script>
+<script type="module" src="../js/structure.js"></script>
+<script src="../js/modal_project.js"></script>
+<script src="../js/tecnologias.js"></script>
+<script src="../js/form__project.js"></script>
+<script src="../js/sidebar.js"></script>
+<script src="../js/search_project.js"></script>
+<script src="//code.tidio.co/jyvlyxqxgpph2pmupu9kpbz1mfibcguw.js" async></script>
 
 </html>

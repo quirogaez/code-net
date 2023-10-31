@@ -390,18 +390,6 @@ img {
         display: grid;
         grid-template-columns: 18vw auto;
     }
-
-    /*         .carousel-story {
-            max-width: 700px;
-        }
- */
-    /*         .profile_story img {
-            height: 70px;
-            width: 80px;
-        }
-        .bx {
-            font-size: 2em;
-        } */
 }
 
 /*----- Media Query to smart phone (480px) -----*/
