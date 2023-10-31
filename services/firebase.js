@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 // Configuración de Firebase con la información de tu proyecto
 dotenv.config()
 const firebaseConfig = {
-    apiKey: process.env.authDomain,
+    apiKey: process.env.APIKEY,
     authDomain: process.env.authDomain,
     databaseURL: process.env.databaseURL,
     projectId: "code-net-7a600",
