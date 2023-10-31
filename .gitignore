@@ -36,3 +36,5 @@ build/
 # Archivos de configuración de IntelliJ IDEA
 .idea/
 
+#Archivos Autenticación HTTPS
+.pem

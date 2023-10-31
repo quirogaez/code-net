@@ -1,3 +1,4 @@
+// Importa los módulos necesarios
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
@@ -8,40 +9,40 @@ import routes from "./routes/routes.js";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
+// Obtiene la ruta del archivo actual
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-dotenv.config()
+// Configura las variables de entorno
+dotenv.config();
+
+// Crea una instancia de Express
 const app = express();
 
-/* Configurar lugar de archivos estaticos*/
+// Configura Express para servir archivos estáticos desde la carpeta "static"
 app.use(express.static('static'));
 
-/* Manejar las rutas */
-app.use('/codenet', routes)
+// Configura las rutas definidas en "routes.js" bajo el prefijo "/codenet"
+app.use('/codenet', routes);
 
-/* Configuración base de datos */
+// Conecta a la base de datos MongoDB usando la URL definida en las variables de entorno
 mongoose.connect(process.env.MONGOOSE_URL)
     .then(() => {
         console.log("Connected to MONGODB");
-});
- 
-// Establecer EJS como el motor de plantillas
-/* app.set('view engine', 'ejs'); */
+    });
 
-// Especificar la ubicación de las vistas (plantillas)
-app.set('views', `${__dirname}\\static\\templates\\`); // Ruta a la carpeta de vistas
+// Establece EJS como el motor de plantillas (opcional, está comentado)
+// app.set('view engine', 'ejs');
 
-//Middlwares
-app.use(express.json());
-app.use(helmet());
-app.use(morgan("tiny"));
+// Especifica la ubicación de las vistas (plantillas) en la carpeta "static/templates"
+app.set('views', `${__dirname}\\static\\templates\\`);
 
+// Aplica middlewares para procesar solicitudes y mejorar la seguridad
+app.use(express.json()); // Middleware para analizar datos JSON en las solicitudes
+app.use(helmet()); // Middleware para mejorar la seguridad de la aplicación
+app.use(morgan("tiny")); // Middleware para el registro de solicitudes HTTP
 
-
-
-
-/* Levantar servidor */
+// Inicia el servidor en el puerto 8080
 app.listen(8080, () => {
     console.log("Server is running");
-})
+});

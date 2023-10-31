@@ -24,11 +24,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // Validar la selección de tecnologías
         const selectedTechnology = selectTecnologias.value;
         if (selectedTechnology === 'bootstrap') {
-
+            return true; 
+        } else {
             alert('Debes seleccionar una tecnología válida.');
-            return false; 
+            return false;
         }
 
-        return true;
+        
     }
 });
