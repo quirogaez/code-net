@@ -22,9 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ba93ad85e8.js" crossorigin="anonymous"></script>
-
-    <script src="/static/templates/Setting_Perfil.html"></script>
-
+    <script defer src="/static/js/Setting_Perfil.js"></script>
 
 </head>
 
@@ -37,7 +35,7 @@
     </nav>
 
     <!-- //////////////// MAIN SECTION ////////////////////////// -->
-    <main class="container main-container">
+    <main class="main-container">
         <!-- ---------- MAIN LEFT ---------- -->
         <div class="main-left">
             <!-- <div class="profile--logo"> -->
@@ -82,44 +80,66 @@
             </aside>
         </div>
 
-
+        <!-- contenedor central  -->
         <div class="Perfil-contain">
-            <form>
-                
-                <input type="file" id="profile-picture" name="picture" accept="image/*">
-                <img class="img" id="profile-image" src="/static/img/perfilsinfoto.jpg" alt="Foto de Perfil">
-                <label for="full-name">Nombre:</label>
-                <input type="text" id="full-name"><br>
-                <label for="tecnologys">Selecciona una Tecnologia:</label>
-                <select id="tecnologys">
-                    <option value="figma">FIGMA</option>
-                    <option value="html">HTML</option>
-                    <option value="css">CSS</option>
-                </select>
-                <img id="tecnology-image" src="" alt="Tecnologia"><br>
-                <p class="date__container">
-                    <label class="date__form">Fecha de nacimiento</label>
-                    <input type="date" class="date--list" id="date">
-                </p>
-                <label for="gender">Género:</label>
-                <select id="gender">
-                    <option value="mujer">Mujer</option>
-                    <option value="hombre">Hombre</option>
-                    <option value="otro">Otro</option>
-                </select><br>
-                <label for="address">Dirección:</label>
-                <input type="text" id="address"><br>
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email"><br>
-                <label for="phone">Número de Celular:</label>
-                <input type="tel" id="phone"><br>
-                <div id="map"></div><br>
-                <label for="new-password">Cambiar Contraseña:</label>
-                <input type="password" id="new-password"><br>
+            <form class="perfil-contain-form">
+                <div class="initial">
+                    <img id="image-preview" src="/static/img/portadasinfoto.jpeg" alt="Imagen actual"
+                        style="max-width: 100%; max-height: 300px; cursor: pointer;">
+                    <input type="file" id="file-input" accept="image/*" style="display: none;">
+                    <div class="initial-sec">
+                        <input type="text" class="full-name" id="name" placeholder="Nombre" required>
+                        <input type="text" class="rol-name" id="name" placeholder="Rol" required>
+                    </div>
+                </div>
+                <div class="tecnology">
+                    <select id="tecnologys">
+                        <option value="">Habilidades</option>
+                        <option value="figma">FIGMA</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                    </select>
+                    <div id="tecnology-images"></div>
+                </div>
+                <div class="date-information">
+                    <div class="date_person">
+                        <div class="date">
+                            <p class="date__container">
+                                <label class="date__form">Fecha de nacimiento</label>
+                                <input type="date" class="date--list" id="date">
+                            </p>
+
+                            <select id="gender">
+                                <option value="Genero">Genero</option>
+                                <option value="mujer">Mujer</option>
+                                <option value="hombre">Hombre</option>
+                                <option value="otro">Otro</option>
+                            </select><br>
+
+                        </div>
+                        <input type="text" class="address" id="addres" placeholder="Direccion" required>
+                        <input type="text" class="correo" id="correo" placeholder="Correo Electronico" required>
+                    </div>
+                    <div class="map-phone">
+
+                        <div id="map">
+                            <img id="image-map" src="/static/img/portadasinfoto.jpeg" alt="Imagen actual"
+                                style="max-width: 100%; max-height: 300px; cursor: pointer;">
+                        </div>
+                        <input type="text" class="phone" id="phone" placeholder="Telefono" required>
+                    </div>
+                </div>
+                <a href="" class="new password">
+                    <h4>Cambiar Contraseña</h4>
+                </a>
+
                 <button id="save-button">Guardar</button>
+               
             </form>
         </div>
     </main>
+
+
 </body>
 
 </html>
