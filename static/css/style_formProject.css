@@ -69,6 +69,7 @@ img {
     margin-top: 20px;
 }
 .menu-item {
+    margin-top: 5px;
     position: relative;
     display: flex;
     align-items: center;

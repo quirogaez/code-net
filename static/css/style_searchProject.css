@@ -76,6 +76,7 @@ img {
 }
 
 .menu-item {
+    margin-top: 5px;
     position: relative;
     display: flex;
     align-items: center;
@@ -262,7 +263,6 @@ img {
 .container__search {
     display: flex;
     padding: 1rem 5rem;
-    width: 72vw;
     text-align: center;
 }
 
@@ -340,7 +340,6 @@ img {
     border-color: var(--second--color);
     border-radius: 10%;
 }
-
 /* RESPONSIVE */
 
 /* ----- media query for tablets ----- */
