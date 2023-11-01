@@ -306,24 +306,6 @@ img {
     border-color: var(--second--color);
 }
 
-
-
-
-
-
-
-
-
-.main-right {}
-
-.icono {}
-
-.icono_life {}
-
-.carousel-life {}
-
-.carousel_profile_life {}
-
 /* ---------- navigation post ---------- */
 
 .main-center {
@@ -479,18 +461,22 @@ img {
     height: 10vh;
     padding: 5px 40px;
 }
+
 .icono_life {
     width: 100%;
     height: 100%;
 }
+
 .carousel-life {
     margin-top: 0;
     padding: 0 5px;
     height: 80%;
 }
+
 .profile_life {
     margin: 18px;
 }
+
 .profile_life img {
     border-style: solid;
     border-width: 1px;
@@ -499,249 +485,279 @@ img {
 }
 
 /* RESPONSIVE */
-
-
-/* Media Query para tabletas (768px de ancho o menos) */
+/* ----- media query for tablets ----- */
 @media screen and (max-width: 1025px) {
-    .main-container .profile--logo {
-        margin-top: 0;
-        padding-top: 1rem
-            /* Opcional */
-        ;
-        align-self: start;
-    }
-
     .main-container {
-        grid-template-columns: 5rem auto 0;
-
+        display: grid;
+        grid-template-columns: 18vw auto;
     }
 
-    /* mid */
-    .main-mid {
-        grid-column: 2/3;
-        margin-top: 0;
-    }
-
-    .main-right {
-        display: none;
-    }
-
-    .menu-item {
-        margin-bottom: 50%;
-        justify-content: center;
-    }
-
-    .side-bar {
-        margin: 0;
-    }
-
-    .menu-item i,
-    .menu-item div {
-        margin-left: 0;
-        position: relative;
-    }
-
-    .menu-item .count {
-        padding: 0.2rem 0.6rem;
-        font-size: 0.8rem;
-        border-radius: 0.8rem;
-        top: 0.8rem;
-        left: 3rem;
-    }
-
-
-    #mobilVarProfile {
-        display: none;
-    }
-
-    #aside-porfile {
-        width: 3rem;
-    }
-
-    #aside-porfile img {
-        width: 100%;
-    }
-
-    .main-right {
-        display: none;
-    }
-
-    .carousel-story {
-        max-width: 700px;
-    }
-
-    .profile_story img {
-        height: 70px;
-        width: 80px;
-    }
-
-    .bx {
-        font-size: 2em;
-    }
-
-    .main-center {
-        /* Centra el contenido del contenedor */
-        display: block;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    .main-right {
-        display: none;
-    }
-
-    .carousel-story {
-        max-width: 700px;
-    }
-
-    .profile_story img {
-        height: 70px;
-        width: 80px;
-    }
-
-    .bx {
-        font-size: 2em;
-    }
-
-}
-
-/* Media Query para dispositivos móviles (480px de ancho o menos) */
-@media screen and (max-width: 480px) {
-    .main-container {
-        display: flex;
-        flex-wrap: wrap;
-
-        width: 100vw;
-        align-items: none;
-        align-content: flex-start;
-    }
-
-    .main-container .main-left {
-        height: auto;
-        min-width: 100vw;
-        text-align: center;
-        max-height: 25vh;
-        justify-content: center;
-        align-items: center;
-        flex-direction: unset;
-        flex-wrap: wrap;
-    }
-
-    .main-container .main-mid {
-        width: 100%;
-        padding: 1rem;
-        overflow: hidden;
-    }
-
-    .main-container .main-right {
-        display: none;
-    }
-
-
-
-    .profile-photos--logo {
-        margin-top: 0;
-    }
-
-    .profile-photos--logo img {
-        align-self: start;
-        margin-top: 0;
-        padding-top: 0;
-        height: 100%;
-        width: 70%;
-    }
-
-    .profile-photos--major {
-        width: 3rem;
-        border-radius: var(--border-radius);
-        aspect-ratio: 1/1;
-        overflow: hidden;
-    }
-
-    /* Ajustes de la barra de navegación horizontal compacta */
     .main-left {
-        margin-top: 0;
-        /* background-color: black; */
-        padding: .5rem;
-
-
+        bottom: 0;
     }
 
+    /* --------------- navbar --------------- */
     .side-bar {
-        margin-top: 0;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: auto;
-        flex-wrap: wrap;
-        width: 100%;
+        margin-top: 100px;
     }
 
     .menu-item {
-        padding: 0.5rem;
-        justify-content: center;
-        margin-bottom: 0;
-        margin-right: 0rem;
+        padding: 40px;
     }
 
-    /* Ajustes de los íconos */
-
-    .menu-item span {
-        margin-right: 0rem;
+    .menu-item:hover,
+    .menu-item:active {
+        transform: scale(1.3);
+        background-image: none;
     }
 
-    .menu-item i,
-    .menu-item div {
-        margin-left: 0;
+    /* ----- class active (js) ----- */
+    .menu-item.active {
+        background-image: none;
     }
 
-    .menu-item .count {
+    .side-bar p {
+        display: none;
+    }
+
+    .menu-item3 p {
+        display: none;
+    }
+
+    /*.count {
         background: var(--second--color);
         padding: 0.1rem 0.4rem;
-        font-size: 0.5rem;
+        font-size: 0.6rem;
         height: fit-content;
         color: white;
         border-radius: 0.8rem;
         position: absolute;
         top: 1.1rem;
-        left: 1.2rem;
+        left: 2.6rem;
+    } */
+    .icon1 {
+        width: 100%;
+        height: 3rem;
     }
 
-    /* Ajustes de la foto de perfil */
-    #nav-profile img {
-        height: 40px;
+    .icon1 img {
+        width: 80%;
     }
 
-    #mobilVarProfile {
-        max-height: 5vh;
-        margin-bottom: 0;
-        display: flex;
-        align-items: center;
+    .profile-photos {
+        width: 3.5rem;
+        border-radius: var(--border-radius);
+        aspect-ratio: 1/1;
+        overflow: hidden;
     }
 
-    #bars {
+    .icon2 {
+        font-size: 30px;
+    }
+
+    /*----- option more ----- */
+    .optionsMore p {
+        font-size: medium;
+    }
+
+    .main-right {
         display: none;
     }
 
-    #varProfile {
-        display: none
+    /* ----- carousel project ----- */
+    .main-mid {
+        width: 82vw;
+        padding: 0;
+    }
+    .carousel-story {
+        margin-top: 15px;
+        padding: 5px;
+    }
+    .bx {
+        font-size: 1.5em;
+    }
+    .carousel_profile_story {
+        justify-content: space-between;
+        padding: 0;
     }
 
+    .profile_story img {
+        height: 90px;
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-story {
+        max-width: 700px;
+    }
+
+    .profile_story img {
+        height: 70px;
+        width: 80px;
+    }
+
+    .bx {
+        font-size: 2em;
+    }
+
+    .main-right {
+        display: none;
+    }
+}
+
+/*----- Media Query to smart phone (480px) -----*/
+@media screen and (max-width: 480px) {
+
+    /* ----- Main container ----- */
+    .main-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* ----- navbar ----- */
+    .main-left {
+        width: 100vw;
+        min-width: 100vw;
+        height: auto;
+    }
+
+    .container_mobile {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .profile_more {
+        display: flex;
+    }
+
+    /* ----- logo container----- */
+    .profile-photos--logo {
+        margin-top: 0.5rem;
+        width: 40%;
+    }
+
+    /* ----- profile ----- */
+    .profile__mobile {
+        display: block;
+        margin-top: 0.5rem;
+        margin-right: 1rem;
+        width: 2.5rem;
+        border-radius: var(--border-radius);
+        aspect-ratio: 1/1;
+        overflow: hidden;
+    }
+
+    .menu_mobile {
+        display: block;
+        margin-top: 1.2rem;
+        margin-right: 1rem;
+    }
+
+    .icon_mobile {
+        color: #440d7e;
+        font-size: 2rem;
+    }
+
+    /* ----- sidebar ----- */
+    .side-bar {
+        display: flex;
+        width: 100vw;
+        min-width: 100vw;
+        margin-top: 4px;
+        justify-content: space-between;
+    }
+
+    .menu-item {
+        padding: 0 22px;
+        height: 3.8rem;
+    }
+
+    .menu-item:hover,
+    .menu-item:active {
+        transform: scale(1.3);
+        background-image: none;
+    }
+
+    /* ----- class active (js) ----- */
+    .menu-item.active {
+        background-image: none;
+    }
+
+    /* ----- count message ----- */
+    /*  .count {
+    background: var(--second--color);
+    padding: 0.1rem 0.4rem;
+    font-size: 0.6rem;
+    height: fit-content;
+    color: white;
+    border-radius: 0.8rem;
+    position: absolute;
+    top: 1.1rem;
+    left: 2.6rem;
+} */
+    .icon1 {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .icon1 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu-item2 {
+        display: none;
+    }
+
+    .icon2 {
+        color: #390e68;
+    }
+
+    .menu-item2 p {
+        font-size: medium;
+        margin-left: 1.5rem;
+    }
+
+    /*----- option more ----- */
+    .menu-item3 {
+        display: none;
+    }
+
+    .showOptions {
+        position: fixed;
+        left: 5rem;
+        margin-top: 1rem;
+        bottom: auto;
+    }
+    /* ----- carousel projects ------ */
+    .main-mid {
+        margin-top: 15px;
+        width: 100vw;
+        padding: 0;
+    }
+    .carousel-story {
+        padding: 0;
+    }
+    .bx {
+        font-size: 1.5em;
+    }
+    .carousel_profile_story {
+        justify-content: space-between;
+        padding: 0;
+    }
+    .profile_story img {
+        height: 90px;
+    }
+    /* -------- navigation post ------ */
     .main-center {
-        /* Centra el contenido del contenedor */
         display: block;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: auto;
         overflow: hidden;
-        padding: 0 0 0 0;
+        padding: 0 15px;
     }
 
     .img-center {
@@ -754,11 +770,9 @@ img {
 
     }
 
-
-
     .img-center-container {
         display: block;
-        margin-top: 70px;
+        margin-top: 50px;
         /* Oculta cualquier contenido que se desborde del borde redondeado */
         width: 350px;
         /* Ajusta el ancho deseado */
@@ -766,9 +780,7 @@ img {
         border-bottom-style: solid;
         border-width: 1px;
         border-color: #cececea5;
-
     }
-
     .img-technology-prin {
 
         display: flex;
@@ -779,26 +791,20 @@ img {
         justify-content: space-around;
         align-items: center;
         margin-top: 15px;
-
     }
-
     .img-center-publication {
         width: 350px;
         height: 100%;
         border-radius: 10px;
         padding: 0 1px 0 1px;
     }
-
     .img-description {
 
         display: flex;
         flex-wrap: wrap;
         width: 85%;
         margin-top: 10px;
-
-
     }
-
     .img-description-top {
 
         display: grid;
@@ -808,17 +814,13 @@ img {
         width: 80%;
         margin-bottom: 0;
         padding: 10px 0 0 10px;
-
-
     }
-
     .img-name {
 
         color: rgb(34, 34, 34);
         justify-items: left;
         font-size: 20px;
     }
-
     .img-rol {
 
         text-align: justify;
@@ -828,32 +830,24 @@ img {
         font-size: 11px;
         margin-bottom: 15px;
         padding-top: 10px;
-
-
     }
-
-
     .img-perfil-img {
         margin-top: 5px;
         margin-left: 0;
         width: 20%;
     }
-
     .img-perfil {
         width: 100%;
         border-radius: var(--border-radius);
         aspect-ratio: 1;
         overflow: hidden;
     }
-
     .img-technology {
         width: 3rem;
         border-radius: var(--border-radius);
         aspect-ratio: 1;
         overflow: hidden;
     }
-
-
     .icon-love {
         font-size: 33px;
         color: var(--second--color);
@@ -861,20 +855,19 @@ img {
         text-align: right;
 
     }
-
     .icon-comment {
 
         font-size: 30px;
         color: var(--second--color);
         height: 100%;
         text-align: right;
-
-
     }
-
     .img-verified {
         background-color: #441a31;
-
+    }
+    /*  ------ hidden lives ------ */
+    .main-right {
+        display: none;
     }
 
 }
