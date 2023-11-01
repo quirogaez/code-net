@@ -26,10 +26,10 @@ app.use(express.static('static'));
 app.use('/codenet', routes);
 
 // Conecta a la base de datos MongoDB usando la URL definida en las variables de entorno
-mongoose.connect(process.env.MONGOOSE_URL)
+/* mongoose.connect(process.env.MONGOOSE_URL)
     .then(() => {
         console.log("Connected to MONGODB");
-    });
+    }); */
 
 // Establece EJS como el motor de plantillas (opcional, está comentado)
 // app.set('view engine', 'ejs');
@@ -43,6 +43,6 @@ app.use(helmet()); // Middleware para mejorar la seguridad de la aplicación
 app.use(morgan("tiny")); // Middleware para el registro de solicitudes HTTP
 
 // Inicia el servidor en el puerto 8080
-app.listen(8080, () => {
+app.listen(8081, () => {
     console.log("Server is running");
 });
