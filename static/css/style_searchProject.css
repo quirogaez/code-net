@@ -296,30 +296,26 @@ img {
 
 .icono {
     width: 100%;
-    height: 10%;
+    height: 15vh;
     padding: 5px 40px;
 }
-
+.icono_life {
+    width: 100%;
+    height: 100%;
+}
 .carousel-life {
     margin-top: 0;
     padding: 0 5px;
     height: 80%;
 }
-
 .profile_life {
     margin: 18px;
 }
-
 .profile_life img {
     border-style: solid;
     border-width: 1px;
     border-color: var(--second--color);
     border-radius: 10%;
-}
-
-.icono_life {
-    width: 100%;
-    height: 100%;
 }
 
 /* RESPONSIVE */
@@ -383,12 +379,18 @@ img {
     .optionsMore p {
         font-size: medium;
     }
+    .main-right {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .main-container {
         display: grid;
         grid-template-columns: 18vw auto;
+    }
+    .main-right {
+        display: none;
     }
 }
 
@@ -504,7 +506,6 @@ img {
         margin-top: 1rem;
         bottom: auto;
     }
-
     .main-right {
         display: none;
     }

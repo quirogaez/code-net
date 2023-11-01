@@ -24,7 +24,6 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -34,12 +33,13 @@ body {
 /* ----- Main container ----- */
 .main-container {
     display: grid;
-    grid-template-columns: 18vw auto 10vw;
+    grid-template-columns: 18vw auto;
 }
-
 /* ----- navbar ----- */
 .main-left {
     position: sticky;
+    top: 0;
+    bottom: 0;
     height: 100vh;
     background-color: #f4f4f4;
     box-shadow: 1px 1px 8px var(--text--primary);
@@ -68,7 +68,6 @@ img {
 .side-bar {
     margin-top: 20px;
 }
-
 .menu-item {
     position: relative;
     display: flex;
@@ -121,8 +120,10 @@ img {
 }
 
 .menu-item p {
+    color: #440d7e;
     font-size: medium;
     margin-left: 1.5rem;
+    font-family: 'Raleway', sans-serif;
 }
 
 .menu-item2 {
@@ -165,8 +166,10 @@ img {
 }
 
 .menu-item2 p {
+    color: #440d7e;
     font-size: medium;
     margin-left: 1.5rem;
+    font-family: 'Raleway', sans-serif;
 }
 
 /*----- option more ----- */
@@ -203,6 +206,7 @@ img {
     font-size: medium;
     margin-left: 1.5rem;
     color: #30095a;
+    font-family: 'Raleway', sans-serif;
 }
 
 .showPlus {
@@ -235,6 +239,11 @@ img {
     color: #272727;
     padding: 15px;
     font-size: medium;
+    font-family: 'Ralawey', sans-serif;
+}
+.optionsMore p:hover {
+    color: #383838;
+    font-family: 'Ralawey', sans-serif;
 }
 
 .optionCenter {
@@ -245,7 +254,7 @@ img {
 /* --------------- form project --------------- */
 
 .form_project_container {
-    margin: 15px;
+    margin: 5px 12px;
     padding: 20px;
     border-radius: 10px;
     background-color: #D9D9D9;
@@ -310,6 +319,7 @@ p {
     margin-top: 10px;
     padding: 15px;
     background-color: var(--white--color);
+    border: none;
     border-radius: 10px;
     box-shadow: 0 1px 5px #8b8b8b;
     color: var(--text--primary);
@@ -320,11 +330,18 @@ p {
 .url__project {
     width: 65%;
     height: 48px;
+    
 }
 .technology {
-    width: 34%;
     margin-left: 5px;
     height: 48px;
+    width: 34%;
+    padding: 15px;
+    background-color: var(--white--color);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px #8b8b8b;
+    color: var(--text--primary);
 }
 .description {
     width: 100%;
@@ -332,11 +349,13 @@ p {
     margin-top: 10px;
     padding: 15px;
     background-color: var(--white--color);
+    border: none;
     border-radius: 10px;
     box-shadow: 0 1px 5px #8b8b8b;
     color: var(--text--primary);
+    font-family: 'Ralawey', sans-serif;
 }
-.url__gihub {
+.url__github {
     width: 100%;
     height: 48px;
 }

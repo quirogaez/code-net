@@ -26,10 +26,10 @@ app.use(express.static('static'));
 app.use('/codenet', routes);
 
 // Conecta a la base de datos MongoDB usando la URL definida en las variables de entorno
-mongoose.connect(process.env.MONGOOSE_URL)
+/* mongoose.connect(process.env.MONGOOSE_URL)
     .then(() => {
         console.log("Connected to MONGODB");
-    });
+    }); */
 
 // Establece EJS como el motor de plantillas (opcional, está comentado)
 // app.set('view engine', 'ejs');
