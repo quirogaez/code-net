@@ -28,6 +28,8 @@
 
 body {
     font-family: 'Raleway', sans-serif;
+    min-width: 100vh;
+    overflow-x: hidden;
 }
 
 /* ----- Main container ----- */
@@ -42,6 +44,8 @@ body {
     height: 100vh;
     background-color: #f4f4f4;
     box-shadow: 1px 1px 8px var(--text--primary);
+    flex-direction: column;
+    top: var(--stk-top-left);
 }
 
 /* ----- logo container----- */
@@ -57,12 +61,15 @@ img {
     width: 100%;
     display: block;
 }
+
 .profile__mobile {
     display: none;
 }
+
 .menu_mobile {
     display: none;
 }
+
 /* ----- sidebar ----- */
 .side-bar {
     margin-top: 20px;
@@ -79,6 +86,7 @@ img {
 
 .menu-item:hover,
 .menu-item:active {
+    transform: scale(1.1);
     font-weight: bold;
     color: #440d7e;
     background-image: linear-gradient(90deg,
@@ -89,6 +97,7 @@ img {
 
 /* ----- class active (js) ----- */
 .menu-item.active {
+    transform: scale(1.1);
     font-weight: bold;
     color: #440d7e;
     background-image: linear-gradient(90deg,
@@ -122,6 +131,7 @@ img {
 .menu-item p {
     font-size: medium;
     margin-left: 1.5rem;
+    color: #440d7e;
 }
 
 .menu-item2 {
@@ -135,6 +145,7 @@ img {
 
 .menu-item2:hover,
 .menu-item2:active {
+    transform: scale(1.1);
     font-weight: bold;
     color: #440d7e;
     background-image: linear-gradient(90deg,
@@ -144,6 +155,7 @@ img {
 }
 
 .menu-item2.active {
+    transform: scale(1.1);
     font-weight: bold;
     color: #440d7e;
     background-image: linear-gradient(90deg,
@@ -166,9 +178,10 @@ img {
 .menu-item2 p {
     font-size: medium;
     margin-left: 1.5rem;
+    color: #440d7e;
 }
 
-/*----- option more ----- */
+/* ---------- option more ---------- */
 .menu-item3 {
     position: fixed;
     bottom: 0;
@@ -181,6 +194,7 @@ img {
 }
 
 .menu-item3:hover {
+    transform: scale(1.1);
     font-weight: bold;
     color: #440d7e;
     background-image: linear-gradient(90deg,
@@ -190,6 +204,7 @@ img {
 }
 
 .menu-item3.active {
+    transform: scale(1.1);
     font-weight: bold;
     color: #440d7e;
     background-image: linear-gradient(90deg,
@@ -203,6 +218,8 @@ img {
     margin-left: 1.5rem;
     color: #30095a;
 }
+
+/* -----menu more options ----- */
 
 .showPlus {
     display: none;
@@ -288,6 +305,8 @@ img {
 
 /*---------------main_right---------------*/
 .main-right {
+    position: fixed;
+    right: 0;
     background-color: #ffffff;
     box-shadow: 3px 3px 5px var(--text--primary);
     width: 10vw;
@@ -296,21 +315,25 @@ img {
 
 .icono {
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     padding: 5px 40px;
 }
+
 .icono_life {
     width: 100%;
     height: 100%;
 }
+
 .carousel-life {
     margin-top: 0;
     padding: 0 5px;
     height: 80%;
 }
+
 .profile_life {
     margin: 18px;
 }
+
 .profile_life img {
     border-style: solid;
     border-width: 1px;
@@ -392,7 +415,6 @@ img {
         display: none;
     }
 }
-
 /*----- Media Query to smart phone (480px) -----*/
 @media screen and (max-width: 480px) {
 
