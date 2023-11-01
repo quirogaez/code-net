@@ -81,12 +81,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const profileCarousel = document.querySelector(".carousel_profile_life");
     
     let profileImg = [
-        "../img/foto1.png",
-        "../img/foto2.png",
-        "../img/foto3.png",
-        "../img/foto4.png",
-        "../img/foto5.png",
-        "../img/foto6.png",
+        "https://static-cdn.jtvnw.net/previews-ttv/live_user_theo-296x335.jpg",
+        "https://static-cdn.jtvnw.net/previews-ttv/live_user_hempuli-296x335.jpg",
+        "https://static-cdn.jtvnw.net/previews-ttv/live_user_artimus83-296x335.jpg",
+        "https://static-cdn.jtvnw.net/previews-ttv/live_user_programmer_network-296x335.jpg",
+        "https://static-cdn.jtvnw.net/previews-ttv/live_user_artimus83-296x335.jpg",
+        "https://static-cdn.jtvnw.net/previews-ttv/live_user_llcoolchris_-296x335.jpg",
     ];
     const numProfile = profileImg.length;
     const profilePerPage = 4;
