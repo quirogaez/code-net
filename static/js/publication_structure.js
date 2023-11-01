@@ -4,11 +4,11 @@ const images = [
       perfilImgSrc: "../img/cesa.png",
       name: "CESA",
       description: "Lorem ipsum dolor sit amet...",
-      tecnology1: "../img/tecnologias/10.png.svg",
-      tecnology2: "../img/tecnologias/9.png.svg",
-      tecnology3: "../img/tecnologias/8.png.svg",
-      tecnology4: "../img/tecnologias/7.png.svg",
-      tecnology5: "../img/tecnologias/6.png.svg",
+      tecnology1: "../img/tecnologias/10.svg",
+      tecnology2: "../img/tecnologias/9.svg",
+      tecnology3: "../img/tecnologias/8.svg",
+      tecnology4: "../img/tecnologias/7.svg",
+      tecnology5: "../img/tecnologias/6.svg",
 
     },
 
@@ -20,9 +20,9 @@ const images = [
     description: "Lorem ipsum dolor sit amet...",
     tecnology1: "../img/tecnologias/1.svg",
     tecnology2: "../img/tecnologias/2.svg",
-    tecnology3: "../img/tecnologias/3.png.svg",
-    tecnology4: "../img/tecnologias/4.png.svg",
-    tecnology5: "../img/tecnologias/5.png.svg",
+    tecnology3: "../img/tecnologias/3.svg",
+    tecnology4: "../img/tecnologias/4.svg",
+    tecnology5: "../img/tecnologias/5.svg",
     },
     {
         imgSrc: "../img/publiAWS.jpg",
@@ -31,9 +31,9 @@ const images = [
         description: "Lorem ipsum dolor sit amet...",
         tecnology1: "../img/tecnologias/1.svg",
         tecnology2: "../img/tecnologias/2.svg",
-        tecnology3: "../img/tecnologias/3.png.svg",
-        tecnology4: "../img/tecnologias/4.png.svg",
-        tecnology5: "../img/tecnologias/5.png.svg",
+        tecnology3: "../img/tecnologias/3.svg",
+        tecnology4: "../img/tecnologias/4.svg",
+        tecnology5: "../img/tecnologias/5.svg",
     },
 
     {
@@ -43,9 +43,9 @@ const images = [
         description: "Lorem ipsum dolor sit amet...",
         tecnology1: "../img/tecnologias/1.svg",
         tecnology2: "../img/tecnologias/2.svg",
-        tecnology3: "../img/tecnologias/3.png.svg",
-        tecnology4: "../img/tecnologias/4.png.svg",
-        tecnology5: "../img/tecnologias/5.png.svg",
+        tecnology3: "../img/tecnologias/3.svg",
+        tecnology4: "../img/tecnologias/4.svg",
+        tecnology5: "../img/tecnologias/5.svg",
     },
 
     {
@@ -55,9 +55,9 @@ const images = [
         description: "Lorem ipsum dolor sit amet...",
         tecnology1: "../img/tecnologias/1.svg",
         tecnology2: "../img/tecnologias/2.svg",
-        tecnology3: "../img/tecnologias/3.png.svg",
-        tecnology4: "../img/tecnologias/4.png.svg",
-        tecnology5: "../img/tecnologias/5.png.svg",
+        tecnology3: "../img/tecnologias/3.svg",
+        tecnology4: "../img/tecnologias/4.svg",
+        tecnology5: "../img/tecnologias/5.svg",
     },
 
     {
@@ -67,17 +67,11 @@ const images = [
         description: "Lorem ipsum dolor sit amet...",
         tecnology1: "../img/tecnologias/1.svg",
         tecnology2: "../img/tecnologias/2.svg",
-        tecnology3: "../img/tecnologias/3.png.svg",
-        tecnology4: "../img/tecnologias/4.png.svg",
-        tecnology5: "../img/tecnologias/5.png.svg",
+        tecnology3: "../img/tecnologias/3.svg",
+        tecnology4: "../img/tecnologias/4.svg",
+        tecnology5: "../img/tecnologias/5.svg",
     },
-       
-        
-        
-
-
-
-
+    
     // Agrega más objetos para cada imagen que desees mostrar
   ];
 

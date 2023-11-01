@@ -8,7 +8,7 @@
     <!-- css link -->
     <link rel="stylesheet" href="../css/style_structure.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/static/img/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../img/favicon/favicon.svg">
     <!-- Link font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,91 +16,94 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Link Fontawasome -->
     <script src="https://kit.fontawesome.com/95b2a267a8.js" crossorigin="anonymous"></script>
-    <script defer src="../js/script_structure.js"></script>
+
 </head>
 
 <body>
-
-    <nav class="container">
-        <h2>
-
-        </h2>
-    </nav>
-
-    <!-- //////////////// MAIN SECTION ////////////////////////// -->
     <main class="container main-container">
-        <!-- ---------- MAIN LEFT ---------- -->
-        <div class="main-left">
-            <!-- <div class="profile--logo"> -->
-            <div class="profile-photos--logo">
-                <img src="../img/code.svg" alt="" id="icon-company">
-            </div>
-
-            <a href="" class="menu-item" id="mobilVarProfile">
-                <span>
-                    <div class="profile-photos--major" id="nav-profile">
+        <!-- ---------- NAVBAR ---------- -->
+        <header class="main-left">
+            <div class="container_mobile">
+                <div class="profile-photos--logo">
+                    <img src="../img/code.svg" alt="" id="icon-company">
+                </div>
+                <div class="profile_more">
+                <a href="#" class="profile__mobile" id="varProfile">
+                    <div class="profile__mobile" id="aside-porfile">
                         <img src="../img/person.png" alt="">
                     </div>
-                </span> 
-            </a>
-
+                </a>
+                <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
+                    <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
+                </a>
+                </div>
+            </div>
             <!-- -----------SIDEBAR---------- -->
             <aside class="side-bar">
-                <a class="menu-item ">
-                    <span><i class="fa-solid fa-house icon1"></i></span>
-                    <h3>Inicio</h3>
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="../img/icons/home.svg" alt="">
+                    </div>
+                    <p>Inicio</p>
                 </a>
-                <a class="menu-item ">
-                    <span><i class="fa-solid fa-magnifying-glass icon1"></i></span>
-                    <h3>Buscar</h3>
+                <a href="http://localhost:8081/codenet/search" class="menu-item ">
+                    <div class="icon1">
+                        <img src="../img/icons/search.svg" alt="">
+                    </div>
+                    <p>Buscar</p>
                 </a>
-                <a class="menu-item ">
-                    <span><i class="fa-solid fa-play icon1"></i></span>
-                    <h3>Transmisiones</h3>
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="../img/icons/live.svg" alt="">
+                    </div>
+                    <p>Live</p>
                 </a>
-                <a class="menu-item ">
-                    <span><i class="fa-solid fa-video  icon1"></i></span>
-                    <h3>ShortClip</h3>
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="../img/icons/shortclip.svg" alt="">
+                    </div>
+                    <p>ShortClip</p>
                 </a>
-                <a class="menu-item  message">
-                    <span><i class="fa-solid fa-message  icon1"></i></span> <small class="count">5</small>
-                    <h3>Mensajes</h3>
-
+                <a href="#" class="menu-item  message">
+                    <div class="icon1">
+                        <img src="../img/icons/message.svg" alt=""><!-- <small class="count">5</small> -->
+                    </div>
+                    <p>Mensajes</p>
                 </a>
-                <a href="" class="menu-item " id="varProfile">
-                    <span>
-                        <div class="profile-photos" id="aside-porfile">
-                            <img src="../img/person.png" alt="">
-                        </div>
-                    </span>
-                    <h3>Mi perfil</h3>
+                <a href="#" class="menu-item2" id="varProfile">
+                    <div class="profile-photos" id="aside-porfile">
+                        <img src="../img/person.png" alt="">
+                    </div>
+                    <p>Mi perfil</p>
                 </a>
-                <div class="showPlus">
-                    <ul class="showOptions">
-                       <a class="options"><h3>editar perfil</h3></a>
-                       <a class="options "><h3 class="optionCenter">configuraciónes</h3></a>
-                       <a href="logIn.html" class="options"><h3>cerrar seccion</h3></a>
-                    </ul>
-                </div>
-
-                
-
-
-
             </aside>
-
-            <a onclick="showPlusOptions()" class="menu-item" id="bars">
-                <span><i class="fa-solid fa-bars icon1"></i></span>
-                <h3>Más</h3>
+            <div class="showPlus">
+                <ul class="showOptions">
+                    <li>
+                        <a class="optionsMore">
+                            <p>editar perfil</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="optionsMore ">
+                            <p class="optionCenter">configuraciónes</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="logIn.html" class="optionsMore">
+                            <p>cerrar sesión</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a onclick="showPlusOptions()" class="menu-item3" id="varProfile">
+                <i class="fa-solid fa-bars icon2"></i>
+                <p>Más</p>
             </a>
-        </div>
-        <!-- ---------- END MAIN LEFT ---------- -->
+        </header>
 
-        <!-- ---------- MAIN MID ---------- -->
-        <div class="main-mid">
-            <!-- .................. PROJECTS START ........................ -->
-
-                 
+            <!-- .................. carousel projects ........................ -->
+            <div class="main-mid">              
                 <div class="carousel-story">
                     <div class="controls_p">
                         <button class="prev-btn button"><i class='bx bx-chevron-left'></i></button>
@@ -111,55 +114,27 @@
                     </div>
                 </div>
 
-
+                <!-------------------- publicaciones -------------------->
                 <div class="main-center">
                     <div id="imageContainer"></div>
                 </div>
-
-        </div>
-
-        <!-- .................. create post start  ........................ -->
-
-        <!-- .................. create post end  ........................ -->
-
-
-        <!-- .................. PROJECTS END ........................ -->
-        </div>
-        <!-- ---------- END MAIN MID ---------- -->
-        <!-- MAIN CENTER -->
-
-
-
-
-        <div class="main-right">
-
-
+            </div>
+        <!-----------------  live streaming nav ------------------>
+        <section class="main-right">
             <div class="icono">
-                <button class="icono_life"><img src="../img/trasmisiones.png"></i></button>
+                <a href="#">
+                    <img class="icono_life" src="../img/trasmisiones.png"></i>
+                </a>
             </div>
             <div class="carousel-life">
                 <div class="carousel_profile_life"></div>
-
             </div>
-            <div class="chat">
-                <button class="icono_chat"><img src="../img/mensajes.png"></button>
-            </div>
-
-        </div> <!-- ---------- MAIN RIGHT ---------- -->
-
-        <!-- ---------- END MAIN RIGHT ---------- -->
-
-
+        </section>
     </main>
-
-
-
-    <!-- //////////////// END MAIN SECTION ////////////////////////// -->
-
 </body>
 <script defer type="module" src="../js/structure.js"></script>
 <script src="../js/publication_structure.js"></script>
+<script defer src="../js/script_structure.js"></script>
+<script src="//code.tidio.co/jyvlyxqxgpph2pmupu9kpbz1mfibcguw.js" async></script>
 
 </html>
-
-<!-- Esto es la estructura inicial de code | NET -->
