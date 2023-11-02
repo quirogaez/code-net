@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   /*-------------------------------final carousel life---------------------------- */
 
-  /*-----------------------------------------------inicio boton de mas-------------------------------------------------------------------------- */
+  /*--------------------------------inicio boton de mas------------------------------------------- */
 
   let masOpcionesVisibles = false;
   function showPlusOptions() {
@@ -143,9 +143,5 @@ document.addEventListener("DOMContentLoaded", function () {
       masOpcionesVisibles=false;
       
     }
-    /*-----------------------------------------------inicio boton de cerrar seccion-------------------------------------------------------------------------- */
-    function signOff() {
-      
-    }
+    /*-------------------------------inicio boton de cerrar seccion----------------- */
 }
-/*-----------------------------------------------fin boton de mas-------------------------------------------------------------------------- */
