@@ -1,35 +1,37 @@
-// Agregar un evento "DOMContentLoaded" para ejecutar el código al cargar la página
-document.addEventListener('DOMContentLoaded', function() {
-    // Obtener el elemento select y las imágenes
-    const selectTecnologias = document.querySelector('select[name="tecnologias');
+document.addEventListener('DOMContentLoaded', function () {
+    const selectTecnologias = document.querySelector('select[name="tecnologias"]');
     const tecnologiaImages = document.querySelectorAll('.img__tecnology');
+    const selectedImages = new Set(); // Conjunto para almacenar las imágenes seleccionadas
 
     // Ocultar todas las imágenes al cargar la página
     tecnologiaImages.forEach((img) => {
         img.style.display = 'none';
     });
 
-    // Agregar un evento de cambio al select
     selectTecnologias.addEventListener('change', (event) => {
         const selectedOption = selectTecnologias.value;
-
-        // Mostrar la imagen correspondiente a la opción seleccionada
         const selectedImage = document.getElementById(selectedOption);
+
         if (selectedImage) {
             selectedImage.style.display = 'block';
+            selectedImages.add(selectedImage); // Agregar la imagen seleccionada al conjunto
         }
     });
 
-    // Agregar un evento para cerrar las imágenes al hacer clic en la "X"
     tecnologiaImages.forEach((img) => {
-        const closeButton = document.createElement('span');
-        closeButton.textContent = 'X';
-        closeButton.className = 'close-button';
-        img.appendChild(closeButton);
+        const closeButtonDiv = document.createElement('div');
+        closeButtonDiv.className = 'close-button-container'; // Clase contenedora
 
-        closeButton.addEventListener('click', () => {
+        const closeButtonSpan = document.createElement('span');
+        closeButtonSpan.textContent = 'X';
+        closeButtonSpan.className = 'close-button'; // Clase existente
+
+        closeButtonDiv.appendChild(closeButtonSpan);
+        img.appendChild(closeButtonDiv);
+
+        closeButtonSpan.addEventListener('click', () => {
             img.style.display = 'none';
-            selectTecnologias.selectedIndex = 0; // Restablecer el select a su opción predeterminada
+            selectedImages.delete(img); // Remover la imagen del conjunto al hacer clic en el botón 'X'
         });
     });
 });

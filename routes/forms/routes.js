@@ -26,7 +26,7 @@ router.get('/post', (req, res) => {
 
 router.get('/shortclip', (req, res) => {
     const __dirnameAll = searchDir();
-    const filePath = path.join(__dirnameAll, 'static', 'templates', 'shortClip.html');
+    const filePath = path.join(__dirnameAll, 'static', 'templates', 'formShortClip.html');
     res.sendFile(filePath);
 });
 

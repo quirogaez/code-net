@@ -30,14 +30,14 @@
                     </a>
                 </div>
                 <div class="profile_more">
-                <a href="#" class="profile__mobile" id="varProfile">
-                    <div class="profile__mobile" id="aside-porfile">
-                        <img src="../img/person.png" alt="">
-                    </div>
-                </a>
-                <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
-                    <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
-                </a>
+                    <a href="#" class="profile__mobile" id="varProfile">
+                        <div class="profile__mobile" id="aside-porfile">
+                            <img src="../img/person.png" alt="">
+                        </div>
+                    </a>
+                    <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
+                        <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
+                    </a>
                 </div>
             </div>
             <!-- -----------SIDEBAR---------- -->
@@ -60,7 +60,7 @@
                     </div>
                     <p>Live</p>
                 </a>
-                <a href="#" class="menu-item">
+                <a href="http://localhost:8081/codenet/clips" class="menu-item">
                     <div class="icon1">
                         <img src="../img/icons/shortclip.svg" alt="">
                     </div>
@@ -104,19 +104,46 @@
             </a>
         </header>
         <!-----------------------  Search  ----------------------->
-        <form action="#" method="post" target="_blank">
-            <div class="container__search">
-                <input type="search" class="search__nav" name="busquedamusica" placeholder="buscar">
-                <input type="submit" value="" style="display: none;">
+        <div>
+            <!--------------------- menu plus --------------------->
+            <div class="showPublication">
+                <ul class="showPublication_PPS">
+                    <li>
+                        <a href="http://localhost:8081/codenet/post" class="optionAdd">
+                            <p>agregar publicación</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:8081/codenet/project" class="optionAdd">
+                            <p class="optionAdd_publication">agregar proyecto</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:8081/codenet/shortclip" class="optionAdd">
+                            <p>agregar shortclip</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="container__options">
-                <button type="onclick" class="options--category">categoria</button>
-                <button type="onclick" class="options">personas</button>
-                <button type="onclick" class="options">proyectos</button>
-                <button type="onclick" class="options">trasmisiones</button>
-                <button type="onclick" class="options">ShortClip</button>
-            </div>
-        </form>
+            <a onclick="showAddOption()" class="buttonPlus" id="varProfile">
+                <i class="fa-solid fa-plus"></i>
+            </a>
+            <!------------------- searchf form  -->
+            <form action="#" method="post" target="_blank">
+                <div class="container__search">
+                    <input type="search" class="search__nav" name="busquedamusica" placeholder="buscar">
+                    <input type="submit" value="" style="display: none;">
+                </div>
+                <div class="container__options">
+                    <button type="onclick" class="options--category">categoria</button>
+                    <button type="onclick" class="options">personas</button>
+                    <button type="onclick" class="options">proyectos</button>
+                    <button type="onclick" class="options">trasmisiones</button>
+                    <button type="onclick" class="options">ShortClip</button>
+                </div>
+            </form>
+        </div>
+
         <!-----------------  live streaming carousel ------------------>
         <section class="main-right">
             <div class="icono">
@@ -134,6 +161,7 @@
 <script type="module" src="../js/structure.js"></script>
 <script src="../js/sidebar.js"></script>
 <script src="../js/script_structure.js"></script>
+<script src="../js/buttonPlus.js"></script>
 <script src="../js/search_project.js"></script>
 <script src="../js/publication_structure.js"></script>
 <script src="//code.tidio.co/jyvlyxqxgpph2pmupu9kpbz1mfibcguw.js" async></script>

@@ -264,11 +264,13 @@ img {
     display: flex;
     flex-direction: column;
 }
+
 .container__search {
     display: flex;
     padding: 1rem 5rem;
     text-align: center;
 }
+
 .search__nav {
     padding: 20px;
     width: 100%;
@@ -280,36 +282,42 @@ img {
     background-color: #b2b2b24a;
     box-shadow: 0 1px 5px var(--text--primary);
 }
+
 /*  ------------------ streams section ------------------- */
 .streamSection {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-/*     background-color: #00ffe0; */
+    /*     background-color: #00ffe0; */
     width: 96%;
     justify-content: space-evenly;
 }
+
 .streamContainer {
     margin: 5px;
-/*     background-color: #390e68; */
+    /*     background-color: #390e68; */
     padding: 5px;
     width: 20rem;
     height: 15rem;
 }
+
 .stream_preview {
     width: 100%;
     height: 80%;
 }
+
 .preview {
     width: 100%;
     height: 100%;
 }
+
 .stream_info {
     display: flex;
     flex-wrap: wrap;
     margin-top: 6px;
     justify-content: space-between;
 }
+
 /* .container_photo {
     background-color: #00ffe0;
 } */
@@ -319,28 +327,289 @@ img {
     aspect-ratio: 1/1;
     overflow: hidden;
 }
+
 .info__text {
     width: 14rem;
     padding: 0.3rem 0;
 }
+
 .name {
     color: #000000;
     font-size: 15px;
     text-transform: uppercase;
 }
+
 .spectators {
     color: var(--text--primary);
     font-size: smaller;
 }
+
 .fa-eye {
     color: var(--text--primary);
 }
+
 .goToTwitch {
     width: 2rem;
     text-align: center;
     padding: 10px 0;
 }
+
 .fa-arrow-up-right-from-square {
     color: var(--text--primary);
     font-size: larger;
+}
+
+/* RESPONSIVE */
+
+/* ----- media query for tablets ----- */
+@media screen and (max-width: 1025px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 18vw auto;
+    }
+    .main-left {
+        bottom: 0;
+    }
+
+    /* --------------- navbar --------------- */
+    .side-bar {
+        margin-top: 100px;
+    }
+
+    .menu-item {
+        padding: 40px;
+    }
+
+    .menu-item:hover,
+    .menu-item:active {
+        transform: scale(1.3);
+        background-image: none;
+    }
+
+    /* ----- class active (js) ----- */
+    .menu-item.active {
+        background-image: none;
+    }
+
+    .side-bar p {
+        display: none;
+    }
+
+    .menu-item3 p {
+        display: none;
+    }
+
+    /*.count {
+        background: var(--second--color);
+        padding: 0.1rem 0.4rem;
+        font-size: 0.6rem;
+        height: fit-content;
+        color: white;
+        border-radius: 0.8rem;
+        position: absolute;
+        top: 1.1rem;
+        left: 2.6rem;
+    } */
+    .icon1 {
+        width: 100%;
+        height: 3rem;
+    }
+
+    .icon1 img {
+        width: 80%;
+    }
+
+    .profile-photos {
+        width: 3.5rem;
+        border-radius: var(--border-radius);
+        aspect-ratio: 1/1;
+        overflow: hidden;
+    }
+
+    .icon2 {
+        font-size: 30px;
+    }
+
+    /*----- option more ----- */
+    .optionsMore p {
+        font-size: medium;
+    }
+    /* --------------- search stream -------------- */
+    .mainContainer {
+        width: 82vw;
+    }
+
+    /*  ------------------ streams section ------------------- */
+    .streamContainer {
+        width: 18rem;
+    }
+    .stream_info {
+        margin-top: 5px;
+    }
+    .info__text {
+        width: 12rem;
+        padding: 0.3rem 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-story {
+        max-width: 700px;
+    }
+
+    .profile_story img {
+        height: 70px;
+        width: 80px;
+    }
+
+    .bx {
+        font-size: 2em;
+    }
+}
+
+/*----- Media Query to smart phone (480px) -----*/
+@media screen and (max-width: 480px) {
+
+    /* ----- Main container ----- */
+    .main-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* ----- navbar ----- */
+    .main-left {
+        width: 100vw;
+        min-width: 100vw;
+        height: auto;
+    }
+
+    .container_mobile {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .profile_more {
+        display: flex;
+    }
+
+    /* ----- logo container----- */
+    .profile-photos--logo {
+        margin-top: 0.5rem;
+        width: 40%;
+    }
+
+    /* ----- profile ----- */
+    .profile__mobile {
+        display: block;
+        margin-top: 0.5rem;
+        margin-right: 1rem;
+        width: 2.5rem;
+        border-radius: var(--border-radius);
+        aspect-ratio: 1/1;
+        overflow: hidden;
+    }
+
+    .menu_mobile {
+        display: block;
+        margin-top: 1.2rem;
+        margin-right: 1rem;
+    }
+
+    .icon_mobile {
+        color: #440d7e;
+        font-size: 2rem;
+    }
+
+    /* ----- sidebar ----- */
+    .side-bar {
+        display: flex;
+        width: 100vw;
+        min-width: 100vw;
+        margin-top: 4px;
+        justify-content: space-between;
+    }
+
+    .menu-item {
+        padding: 0 22px;
+        height: 3.8rem;
+    }
+
+    .menu-item:hover,
+    .menu-item:active {
+        transform: scale(1.3);
+        background-image: none;
+    }
+
+    /* ----- class active (js) ----- */
+    .menu-item.active {
+        background-image: none;
+    }
+
+    /* ----- count message ----- */
+    /*  .count {
+    background: var(--second--color);
+    padding: 0.1rem 0.4rem;
+    font-size: 0.6rem;
+    height: fit-content;
+    color: white;
+    border-radius: 0.8rem;
+    position: absolute;
+    top: 1.1rem;
+    left: 2.6rem;
+} */
+    .icon1 {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .icon1 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu-item2 {
+        display: none;
+    }
+
+    .icon2 {
+        color: #390e68;
+    }
+
+    .menu-item2 p {
+        font-size: medium;
+        margin-left: 1.5rem;
+    }
+
+    /*----- option more ----- */
+    .menu-item3 {
+        display: none;
+    }
+
+    .showOptions {
+        position: fixed;
+        left: 5rem;
+        margin-top: 1rem;
+        bottom: auto;
+    }
+    /* --------------- search stream -------------- */
+    .mainContainer {
+        width: 100vw;
+    }
+    .container__search {
+        padding: 1rem;
+    }
+    .search__nav {
+        height: 3rem;
+    }
+    /*  ------------------ streams section ------------------- */
+    .streamContainer {
+        width: 22rem;
+    }
+    .stream_info {
+        margin-top: 5px;
+    }
+    .info__text {
+        width: 12rem;
+        padding: 0.3rem 0;
+    }
 }
