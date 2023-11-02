@@ -323,7 +323,24 @@ p {
     margin: 0 20px;
     height: 60px;
     width: 60px;
+    display: none;
   }
+  .close-button-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .close-button {
+    width: 1rem;
+    height: 1rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 100%;
+    color: var(--text--primary);
+    background-color: var(--white--color);
+    font-size: x-small;
+    cursor: pointer;
+}
 
 .form--project {
     color: var(--second--color);
