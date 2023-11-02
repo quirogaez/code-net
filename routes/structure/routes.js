@@ -35,4 +35,14 @@ router.get('/streams', (req, res) => {
     res.sendFile(filePath);
 });
 
+router.get('/clips', (req, res) => {
+    /* Con ejs */
+    //res.render('logIn',);
+    /* Sin EJS */
+    console.log(searchDir())
+    const __dirnameAll = searchDir();
+    const filePath = path.join(__dirnameAll, 'static', 'templates', 'ShortClip.html');
+    res.sendFile(filePath);
+});
+
 export default router; 
