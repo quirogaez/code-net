@@ -35,7 +35,7 @@ body {
 /* ----- Main container ----- */
 .main-container {
     display: grid;
-    grid-template-columns: 18vw auto;
+    grid-template-columns: 18vw auto 10vw;
 }
 
 /* ----- navbar ----- */
@@ -259,275 +259,46 @@ img {
     border-bottom: 1.5px solid #adadad;
 }
 
-/* ----------- shortclip ---------- */
-
-.shortClip_container {
-    margin: 15px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #D9D9D9;
-    box-shadow: 4px 4px 6px #bebebe;
-}
-.add_shortClip{
-    font-size: 80px;
-    font-family: 'Courier New', Courier, monospace;
-}
-.shortClip_project {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    gap: 10px;
-    color: var(--second--color);
-    margin-top: 5px;
-}
-.shortClip_project input {
-    margin-top: 10px;
-    padding: 15px;
-    background-color: var(--white--color);
-    border-radius: 10px;
-    box-shadow: 0 1px 5px #8b8b8b;
-    color: var(--text--primary);
-}
-
-.shortClip_in{
-    display: grid;
-    grid-template-rows: 90% 10%;
-    width: 100%;
-    height: 75vh;   
-}
-
-.img_buttonCover {
-
+/* --------------- search stream -------------- */
+.mainContainer {
     display: flex;
-    align-items: center;
-    justify-content: center; 
-    background-color: var(--white--color);
-    color: var(--text--primary);
-    text-align: center; 
-    padding: 20px;
-    cursor: pointer;   
+    flex-direction: column;
 }
 
-.duration{
+/* --------------- main right ---------------- */
+.main-right {
+    position: fixed;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 5px var(--text--primary);
+    width: 10vw;
+    height: 100%;
+}
+
+.icono {
     width: 100%;
-    height: 48px;
+    height: 10vh;
+    padding: 5px 40px;
 }
-.button_in_text{
-    margin-top: 2%;
-    font-size: 14px;
-    color: var(--text--primary);
-    text-align: center;
 
-}
-.description {
+.icono_life {
     width: 100%;
-    height: 100px;
-    padding: 15px;
-    background-color: var(--white--color);
-    border-radius: 10px;
-    box-shadow: 0 1px 5px #8b8b8b;
-    color: var(--text--primary);
-}
-.url_shortClip {
-    width: 100%;
-    height: 48px;
-}
-.container_buttonPost {
-    text-align: center;
-    margin-top: 25px;
-}
-.button_post {
-    padding: 20px 120px;
-    background-color: var(--second--color);
-    border-radius: 6px;
-    border: none;
-    color: var(--white--color);
-    text-transform: uppercase;
-    font-size: 12px;
-    cursor: pointer;
+    height: 100%;
 }
 
-/*-----------------------------------------responsive---------------------------------------------*/
-
-/* -------------- Responsive device 1220 ----------------- */
-@media screen and (max-width: 1025px) {
-    .main-container {
-        display: grid;
-        grid-template-columns: 18vw auto;
-    }
-
-    /* --------------- navbar --------------- */
-    .side-bar {
-        margin-top: 100px;
-    }
-
-    .menu-item {
-        padding: 40px;
-    }
-
-    .side-bar p {
-        display: none;
-    }
-
-    .menu-item3 p {
-        display: none;
-    }
-
-    /*.count {
-        background: var(--second--color);
-        padding: 0.1rem 0.4rem;
-        font-size: 0.6rem;
-        height: fit-content;
-        color: white;
-        border-radius: 0.8rem;
-        position: absolute;
-        top: 1.1rem;
-        left: 2.6rem;
-    } */
-    .icon1 {
-        width: 100%;
-        height: 3rem;
-    }
-
-    .icon1 img {
-        width: 80%;
-    }
-
-    .profile-photos {
-        width: 3.5rem;
-        border-radius: var(--border-radius);
-        aspect-ratio: 1/1;
-        overflow: hidden;
-    }
-
-    .icon2 {
-        font-size: 30px;
-    }
-
-    /*----- option more ----- */
-    .optionsMore p {
-        font-size: medium;
-    }
-}
-/* ---------- Media query 825px ----------*/
-
-@media screen and (max-width: 825px) {
-    .main-container {
-        display: grid;
-        grid-template-columns: 18vw auto;
-    }
+.carousel-life {
+    margin-top: 0;
+    padding: 0 5px;
+    height: 80%;
 }
 
-/* ------------------------ 480px ---------------------------- */
+.profile_life {
+    margin: 18px;
+}
 
-@media screen and (max-width: 480px) {
-     /* ----- Main container ----- */
-     .main-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    /* ----- navbar ----- */
-    .main-left {
-        width: 100vw;
-        min-width: 100vw;
-        height: auto;
-    }
-    .container_mobile {
-        display: flex;
-        justify-content: space-between;
-    }
-    .profile_more {
-        display: flex;
-    }
-    /* ----- logo container----- */
-    .profile-photos--logo {
-        margin-top: 0.5rem;
-        width: 40%;
-    }
-    /* ----- profile ----- */
-    .profile__mobile {
-        display: block;
-        margin-top: 0.5rem;
-        margin-right: 1rem;
-        width: 2.5rem;
-        border-radius: var(--border-radius);
-        aspect-ratio: 1/1;
-        overflow: hidden;
-    }
-    .menu_mobile {
-        display: block;
-        margin-top: 1.2rem;
-        margin-right: 1rem;
-    }
-    .icon_mobile {
-        color: #440d7e;
-        font-size: 2rem;
-    }
-    /* ----- sidebar ----- */
-    .side-bar {
-        display: flex;
-        width: 100vw;
-        min-width: 100vw;
-        margin-top: 4px;
-        justify-content: space-between;
-    }
-    .menu-item {
-        padding: 0 22px;
-        height: 3.8rem;
-    }
-    .menu-item:hover,
-    .menu-item:active {
-        transform: scale(1.3);
-        background-image: none;
-    }
-    /* ----- class active (js) ----- */
-    .menu-item.active {
-        background-image: none;
-    }
-
-    /* ----- count message ----- */
-    /*  .count {
-    background: var(--second--color);
-    padding: 0.1rem 0.4rem;
-    font-size: 0.6rem;
-    height: fit-content;
-    color: white;
-    border-radius: 0.8rem;
-    position: absolute;
-    top: 1.1rem;
-    left: 2.6rem;
-} */
-    .icon1 {
-        width: 1.8rem;
-        height: 1.8rem;
-    }
-
-    .icon1 img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .menu-item2 {
-        display: none;
-    }
-
-    .icon2 {
-        color: #390e68;
-    }
-
-    .menu-item2 p {
-        font-size: medium;
-        margin-left: 1.5rem;
-    }
-
-    /*----- option more ----- */
-    .menu-item3 {
-        display: none;
-    }
-    .showOptions {
-        position: fixed;
-        left: 5rem;
-        margin-top: 1rem;
-        bottom: auto;
-    }
-
+.profile_life img {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--second--color);
+    border-radius: 10%;
 }
