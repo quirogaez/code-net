@@ -1,6 +1,8 @@
 import { Auth } from "./Auth.js";
+let response;
+let movies;
 
-document.addEventListener("DOMContentLoaded", (e) => {
+document.addEventListener("DOMContentLoaded", async (e) => {
     const auth = new Auth();
 })
 
@@ -44,19 +46,6 @@ window.addEventListener('resize', resizeController);
 resizeController();
 
 
-// Realiza una solicitud Fetch POST al servidor para subir las imágenes
-const response =  fetch('http://localhost:8080/codenet/streams', {
-    method: 'GET'
-})
-.then(async response => {
-    if (response.ok) {
-        console.log(await response.json());
-    } else {
-        console.error('Error al subir las imágenes');
-    }
-})
-.catch(error => {
-    console.error('Error al subir las imágenes', error);
-});
+
 
 
