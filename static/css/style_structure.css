@@ -1,0 +1,883 @@
+/* Definimos la familia de letras */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;1,100&display=swap");
+
+:root {
+    --primary--color: #00ffe0;
+    --second--color: #801bea;
+    --white--color: white;
+    --black--color: black;
+    --background--footer: #eaeaea;
+    --text--primary: #565656;
+    --btn-padding: 0.6rem 2rem;
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --search-padding: 6rem 2rem;
+    --card-padding: 1rem;
+    --stk-top-left: 0rem;
+    --stk-top-right: -18rem;
+}
+
+/* definition Universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    min-width: 100vh;
+    overflow-x: hidden;
+}
+
+/* ----- Main container ----- */
+.main-container {
+    display: grid;
+    grid-template-columns: 18vw auto 10vw;
+}
+
+/* ----- navbar ----- */
+.main-left {
+    position: sticky;
+    height: 100vh;
+    background-color: #f4f4f4;
+    box-shadow: 1px 1px 8px var(--text--primary);
+    flex-direction: column;
+    top: var(--stk-top-left);
+}
+
+/* ----- logo container----- */
+.profile-photos--logo {
+    overflow: hidden;
+    margin-top: 1.5rem;
+    padding: var(--card-padding);
+    width: 100%;
+}
+
+/* ----- img logo ----- */
+img {
+    width: 100%;
+    display: block;
+}
+
+.profile__mobile {
+    display: none;
+}
+
+.menu_mobile {
+    display: none;
+}
+
+/* ----- sidebar ----- */
+.side-bar {
+    margin-top: 20px;
+}
+
+.menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 40px;
+    height: 3.8rem;
+}
+
+.menu-item:hover,
+.menu-item:active {
+    transform: scale(1.1);
+    font-weight: bold;
+    color: #440d7e;
+    background-image: linear-gradient(90deg,
+            hsl(173deg 100% 50%) 0%,
+            hsl(168deg 79% 80%) -2%,
+            hsla(0, 0%, 92%, 0) 100%);
+}
+
+/* ----- class active (js) ----- */
+.menu-item.active {
+    transform: scale(1.1);
+    font-weight: bold;
+    color: #440d7e;
+    background-image: linear-gradient(90deg,
+            hsl(173deg 100% 50%) 0%,
+            hsl(168deg 79% 80%) -2%,
+            hsla(0, 0%, 92%, 0) 100%);
+}
+
+/* ----- count message ----- */
+/*  .count {
+    background: var(--second--color);
+    padding: 0.1rem 0.4rem;
+    font-size: 0.6rem;
+    height: fit-content;
+    color: white;
+    border-radius: 0.8rem;
+    position: absolute;
+    top: 1.1rem;
+    left: 2.6rem;
+} */
+.icon1 {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.icon1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu-item p {
+    font-size: medium;
+    margin-left: 1.5rem;
+    color: #440d7e;
+}
+
+.menu-item2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 30px;
+    height: 3.8rem;
+}
+
+.menu-item2:hover,
+.menu-item2:active {
+    transform: scale(1.1);
+    font-weight: bold;
+    color: #440d7e;
+    background-image: linear-gradient(90deg,
+            hsl(173deg 100% 50%) 0%,
+            hsl(168deg 79% 80%) -2%,
+            hsla(0, 0%, 92%, 0) 100%);
+}
+
+.menu-item2.active {
+    transform: scale(1.1);
+    font-weight: bold;
+    color: #440d7e;
+    background-image: linear-gradient(90deg,
+            hsl(173deg 100% 50%) 0%,
+            hsl(168deg 79% 80%) -2%,
+            hsla(0, 0%, 92%, 0) 100%);
+}
+
+.profile-photos {
+    width: 2rem;
+    border-radius: var(--border-radius);
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.icon2 {
+    color: #390e68;
+}
+
+.menu-item2 p {
+    font-size: medium;
+    margin-left: 1.5rem;
+    color: #440d7e;
+}
+
+/* ---------- option more ---------- */
+.menu-item3 {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 40px;
+    height: 3.8rem;
+    width: 18vw;
+}
+
+.menu-item3:hover {
+    transform: scale(1.1);
+    font-weight: bold;
+    color: #440d7e;
+    background-image: linear-gradient(90deg,
+            hsl(173deg 100% 50%) 0%,
+            hsl(168deg 79% 80%) -2%,
+            hsla(0, 0%, 92%, 0) 100%);
+}
+
+.menu-item3.active {
+    transform: scale(1.1);
+    font-weight: bold;
+    color: #440d7e;
+    background-image: linear-gradient(90deg,
+            hsl(173deg 100% 50%) 0%,
+            hsl(168deg 79% 80%) -2%,
+            hsla(0, 0%, 92%, 0) 100%);
+}
+
+.menu-item3 p {
+    font-size: medium;
+    margin-left: 1.5rem;
+    color: #30095a;
+}
+
+/* -----menu more options ----- */
+
+.showPlus {
+    display: none;
+}
+
+.showOptions {
+    position: absolute;
+    left: 2rem;
+    bottom: 4rem;
+    padding: 5px 25px;
+    background: #fafafa;
+    box-shadow: 2px 2px 5px var(--text--primary);
+    width: 280px;
+    height: 170px;
+    margin: auto;
+    border-radius: 5%;
+}
+
+.showOptions li:hover {
+    background-color: #d3d3d3;
+}
+
+.optionsMore {
+    text-align: center;
+    cursor: pointer;
+}
+
+.optionsMore p {
+    color: #272727;
+    padding: 15px;
+    font-size: medium;
+}
+
+.optionCenter {
+    border-top: 1.5px solid #adadad;
+    border-bottom: 1.5px solid #adadad;
+}
+
+/* ------------ carousel projects ---------- */
+.main-mid {
+    padding: 15px;
+    width: 100%;
+}
+
+.carousel-story {
+    display: flex;
+    align-items: center;
+    width: 98%;
+    padding: 0 20px;
+}
+
+.prev-btn {
+    background: none;
+    border: none;
+}
+
+.bx {
+    font-size: 2em;
+}
+
+.carousel_profile_story {
+    display: flex;
+    flex: 5;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.next-btn {
+    background: none;
+    align-items: center;
+    border: none;
+}
+
+.controls_n {
+    text-align: left;
+    border: none;
+}
+
+.profile_story {
+    flex: 1;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.profile_story img {
+    border-radius: 15%;
+    height: 100px;
+    width: 90px;
+    margin: auto;
+    border: solid;
+    border-width: 1px;
+    border-color: var(--second--color);
+}
+
+/* ---------- navigation post ---------- */
+
+.main-center {
+    /* Centra el contenido del contenedor */
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    justify-content: center;
+    padding: 0 70px 0 70px;
+}
+
+.img-center-container {
+    display: block;
+    margin-top: 70px;
+    height: auto;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #cececea5;
+}
+
+.img-center {
+    display: grid;
+    grid-template-columns: 3fr 0.4fr;
+    gap: 15px;
+    width: 350px;
+    flex: 1;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img-technology-prin {
+    display: flex;
+    flex-wrap: wrap;
+    /* Asegura que las imágenes se envuelvan en filas */
+    justify-content: space-between;
+    /* Espacio igual entre las imágenes horizontalmente */
+    justify-content: space-around;
+    align-items: center;
+    /**/
+    padding-left: 10px;
+    border-left-style: solid;
+    border-width: 1px;
+    border-color: #cececea5;
+}
+
+.img-center-publication {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.img-description {
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    margin-top: 10px;
+    border-bottom: #565656;
+}
+
+.img-description-top {
+    display: grid;
+    grid-template-columns: auto 50px 50px;
+    height: auto;
+    width: 90%;
+    margin-bottom: 0;
+    padding: 10px 0 0 10px;
+}
+
+.img-name {
+
+    color: rgb(34, 34, 34);
+    justify-items: left;
+    text-align: 50px;
+}
+
+.img-rol {
+    width: 127.68%;
+    height: 100%;
+    text-align: left;
+    color: var(--text--primary);
+    font-size: 11px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+}
+
+.img-perfil-img {
+    margin-left: 0;
+    width: 10%;
+}
+
+.img-perfil {
+    width: 100%;
+    border-radius: var(--border-radius);
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.img-technology {
+    width: 4rem;
+    border-radius: var(--border-radius);
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.img-perfil .count1 {
+    background: var(--second--color);
+    padding: .1rem .4rem;
+    font-size: .6rem;
+    height: fit-content;
+    color: rgb(132, 50, 50);
+    border-radius: .8rem;
+    position: absolute;
+    top: 1.1rem;
+    left: 2.6rem;
+}
+
+.icon-love {
+    font-size: 30px;
+    color: var(--second--color);
+    height: 100%;
+    text-align: right;
+}
+
+.icon-comment {
+    font-size: 30px;
+    color: var(--second--color);
+    height: 100%;
+    text-align: right;
+}
+
+.img-verified {
+    background-color: #441a31;
+}
+
+/*---------------main_right---------------*/
+.main-right {
+    position: fixed;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 5px var(--text--primary);
+    width: 10vw;
+    height: 100%;
+}
+
+.icono {
+    width: 100%;
+    height: 10vh;
+    padding: 5px 40px;
+}
+
+.icono_life {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-life {
+    margin-top: 0;
+    padding: 0 5px;
+    height: 80%;
+}
+
+.profile_life {
+    margin: 18px;
+}
+
+.profile_life img {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--second--color);
+    border-radius: 10%;
+}
+
+/* RESPONSIVE */
+/* ----- media query for tablets ----- */
+@media screen and (max-width: 1025px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 18vw auto;
+    }
+
+    .main-left {
+        bottom: 0;
+    }
+
+    /* --------------- navbar --------------- */
+    .side-bar {
+        margin-top: 100px;
+    }
+
+    .menu-item {
+        padding: 40px;
+    }
+
+    .menu-item:hover,
+    .menu-item:active {
+        transform: scale(1.3);
+        background-image: none;
+    }
+
+    /* ----- class active (js) ----- */
+    .menu-item.active {
+        background-image: none;
+    }
+
+    .side-bar p {
+        display: none;
+    }
+
+    .menu-item3 p {
+        display: none;
+    }
+
+    /*.count {
+        background: var(--second--color);
+        padding: 0.1rem 0.4rem;
+        font-size: 0.6rem;
+        height: fit-content;
+        color: white;
+        border-radius: 0.8rem;
+        position: absolute;
+        top: 1.1rem;
+        left: 2.6rem;
+    } */
+    .icon1 {
+        width: 100%;
+        height: 3rem;
+    }
+
+    .icon1 img {
+        width: 80%;
+    }
+
+    .profile-photos {
+        width: 3.5rem;
+        border-radius: var(--border-radius);
+        aspect-ratio: 1/1;
+        overflow: hidden;
+    }
+
+    .icon2 {
+        font-size: 30px;
+    }
+
+    /*----- option more ----- */
+    .optionsMore p {
+        font-size: medium;
+    }
+
+    .main-right {
+        display: none;
+    }
+
+    /* ----- carousel project ----- */
+    .main-mid {
+        width: 82vw;
+        padding: 0;
+    }
+    .carousel-story {
+        margin-top: 15px;
+        padding: 5px;
+    }
+    .bx {
+        font-size: 1.5em;
+    }
+    .carousel_profile_story {
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .profile_story img {
+        height: 90px;
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-story {
+        max-width: 700px;
+    }
+
+    .profile_story img {
+        height: 70px;
+        width: 80px;
+    }
+
+    .bx {
+        font-size: 2em;
+    }
+
+    .main-right {
+        display: none;
+    }
+}
+
+/*----- Media Query to smart phone (480px) -----*/
+@media screen and (max-width: 480px) {
+
+    /* ----- Main container ----- */
+    .main-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* ----- navbar ----- */
+    .main-left {
+        width: 100vw;
+        min-width: 100vw;
+        height: auto;
+    }
+
+    .container_mobile {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .profile_more {
+        display: flex;
+    }
+
+    /* ----- logo container----- */
+    .profile-photos--logo {
+        margin-top: 0.5rem;
+        width: 40%;
+    }
+
+    /* ----- profile ----- */
+    .profile__mobile {
+        display: block;
+        margin-top: 0.5rem;
+        margin-right: 1rem;
+        width: 2.5rem;
+        border-radius: var(--border-radius);
+        aspect-ratio: 1/1;
+        overflow: hidden;
+    }
+
+    .menu_mobile {
+        display: block;
+        margin-top: 1.2rem;
+        margin-right: 1rem;
+    }
+
+    .icon_mobile {
+        color: #440d7e;
+        font-size: 2rem;
+    }
+
+    /* ----- sidebar ----- */
+    .side-bar {
+        display: flex;
+        width: 100vw;
+        min-width: 100vw;
+        margin-top: 4px;
+        justify-content: space-between;
+    }
+
+    .menu-item {
+        padding: 0 22px;
+        height: 3.8rem;
+    }
+
+    .menu-item:hover,
+    .menu-item:active {
+        transform: scale(1.3);
+        background-image: none;
+    }
+
+    /* ----- class active (js) ----- */
+    .menu-item.active {
+        background-image: none;
+    }
+
+    /* ----- count message ----- */
+    /*  .count {
+    background: var(--second--color);
+    padding: 0.1rem 0.4rem;
+    font-size: 0.6rem;
+    height: fit-content;
+    color: white;
+    border-radius: 0.8rem;
+    position: absolute;
+    top: 1.1rem;
+    left: 2.6rem;
+} */
+    .icon1 {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .icon1 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu-item2 {
+        display: none;
+    }
+
+    .icon2 {
+        color: #390e68;
+    }
+
+    .menu-item2 p {
+        font-size: medium;
+        margin-left: 1.5rem;
+    }
+
+    /*----- option more ----- */
+    .menu-item3 {
+        display: none;
+    }
+
+    .showOptions {
+        position: fixed;
+        left: 5rem;
+        margin-top: 1rem;
+        bottom: auto;
+    }
+    /* ----- carousel projects ------ */
+    .main-mid {
+        margin-top: 15px;
+        width: 100vw;
+        padding: 0;
+    }
+    .carousel-story {
+        padding: 0;
+    }
+    .bx {
+        font-size: 1.5em;
+    }
+    .carousel_profile_story {
+        justify-content: space-between;
+        padding: 0;
+    }
+    .profile_story img {
+        height: 90px;
+    }
+    /* -------- navigation post ------ */
+    .main-center {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding: 0 15px;
+    }
+
+    .img-center {
+        display: block;
+        width: 100%;
+        flex: 1;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+
+    }
+
+    .img-center-container {
+        display: block;
+        margin-top: 50px;
+        /* Oculta cualquier contenido que se desborde del borde redondeado */
+        width: 350px;
+        /* Ajusta el ancho deseado */
+        height: auto;
+        border-bottom-style: solid;
+        border-width: 1px;
+        border-color: #cececea5;
+    }
+    .img-technology-prin {
+
+        display: flex;
+        flex-wrap: wrap;
+        /* Asegura que las imágenes se envuelvan en filas */
+        justify-content: space-between;
+        /* Espacio igual entre las imágenes horizontalmente */
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 15px;
+    }
+    .img-center-publication {
+        width: 350px;
+        height: 100%;
+        border-radius: 10px;
+        padding: 0 1px 0 1px;
+    }
+    .img-description {
+
+        display: flex;
+        flex-wrap: wrap;
+        width: 85%;
+        margin-top: 10px;
+    }
+    .img-description-top {
+
+        display: grid;
+        grid-template-columns: 150px 50px 50px;
+        gap: 3px;
+        height: auto;
+        width: 80%;
+        margin-bottom: 0;
+        padding: 10px 0 0 10px;
+    }
+    .img-name {
+
+        color: rgb(34, 34, 34);
+        justify-items: left;
+        font-size: 20px;
+    }
+    .img-rol {
+
+        text-align: justify;
+        width: 170%;
+        height: 100%;
+        color: var(--text--primary);
+        font-size: 11px;
+        margin-bottom: 15px;
+        padding-top: 10px;
+    }
+    .img-perfil-img {
+        margin-top: 5px;
+        margin-left: 0;
+        width: 20%;
+    }
+    .img-perfil {
+        width: 100%;
+        border-radius: var(--border-radius);
+        aspect-ratio: 1;
+        overflow: hidden;
+    }
+    .img-technology {
+        width: 3rem;
+        border-radius: var(--border-radius);
+        aspect-ratio: 1;
+        overflow: hidden;
+    }
+    .icon-love {
+        font-size: 33px;
+        color: var(--second--color);
+        height: 100%;
+        text-align: right;
+
+    }
+    .icon-comment {
+
+        font-size: 30px;
+        color: var(--second--color);
+        height: 100%;
+        text-align: right;
+    }
+    .img-verified {
+        background-color: #441a31;
+    }
+    /*  ------ hidden lives ------ */
+    .main-right {
+        display: none;
+    }
+
+}

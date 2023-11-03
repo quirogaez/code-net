@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code|Net</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="../css/style_ShortClip.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../img/favicon/favicon.svg">
+    <!-- Link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link Fontawasome -->
+    <script src="https://kit.fontawesome.com/95b2a267a8.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <main class="container main-container">
+        <!-- ---------- NAVBAR ---------- -->
+        <header class="main-left">
+            <div class="container_mobile">
+                <div class="profile-photos--logo">
+                    <img src="../img/code.svg" alt="" id="icon-company">
+                </div>
+                <div class="profile_more">
+                <a href="#" class="profile__mobile" id="varProfile">
+                    <div class="profile__mobile" id="aside-porfile">
+                        <img src="../img/person.png" alt="">
+                    </div>
+                </a>
+                <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
+                    <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
+                </a>
+                </div>
+            </div>
+            <!-- -----------SIDEBAR---------- -->
+            <aside class="side-bar">
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="/img/icons/home.svg" alt="">
+                    </div>
+                    <p>Inicio</p>
+                </a>
+                <a href="http://localhost:8081/codenet/search" class="menu-item ">
+                    <div class="icon1">
+                        <img src="../img/icons/search.svg" alt="">
+                    </div>
+                    <p>Buscar</p>
+                </a>
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="../img/icons/live.svg" alt="">
+                    </div>
+                    <p>Live</p>
+                </a>
+                <a href="#" class="menu-item">
+                    <div class="icon1">
+                        <img src="../img/icons/shortclip.svg" alt="">
+                    </div>
+                    <p>ShortClip</p>
+                </a>
+                <a href="#" class="menu-item  message">
+                    <div class="icon1">
+                        <img src="../img/icons/message.svg" alt=""><!-- <small class="count">5</small> -->
+                    </div>
+                    <p>Mensajes</p>
+                </a>
+                <a href="#" class="menu-item2" id="varProfile">
+                    <div class="profile-photos" id="aside-porfile">
+                        <img src="../img/person.png" alt="">
+                    </div>
+                    <p>Mi perfil</p>
+                </a>
+            </aside>
+            <div class="showPlus">
+                <ul class="showOptions">
+                    <li>
+                        <a class="optionsMore">
+                            <p>editar perfil</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="optionsMore ">
+                            <p class="optionCenter">configuraciónes</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="logIn.html" class="optionsMore">
+                            <p>cerrar sesión</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a onclick="showPlusOptions()" class="menu-item3" id="varProfile">
+                <i class="fa-solid fa-bars icon2"></i>
+                <p>Más</p>
+            </a>
+        </header>
+        <!------------ form shortClip ----------->
+        <div class="shortClip_container">
+            <div class="shortClip_project">
+
+                <div class="shortClip_in">
+                    <div class="img_buttonCover">
+                        <input
+                            accept="video/mp4, video/mpeg, video/ogg, video/webm, video/quicktime, video/x-msvideo, video/x-flv, video/3gpp, video/x-matroska, image/gif"
+                            type="file" id="img_button" hidden>
+
+                        <label for="img_button">
+                            <p class="add_shortClip">+</p>Agregar video o GIF
+                        </label>
+                    </div>
+                    <h4 class="button_in_text">Ingrese un video que no supere los 2 minutos</h4>
+                </div>
+                <div class="shortClip--short">
+                    <textarea class="description" name="message" placeholder="descripción"></textarea>
+                    <input type="url" class="url_shortClip" name="url_shortClip" placeholder="URL ">
+                </div>
+            </div>
+            <div class="container_buttonPost">
+                <button class="button_post">publicar</button>
+            </div>
+        </div>
+    </main>
+</body>
+<script type="module" src="../js/structure.js"></script>
+<script src="../js/script_structure.js"></script>
+<script src="../js/sidebar.js"></script>
+<script src="../js/search_project.js"></script>
+<script src="//code.tidio.co/jyvlyxqxgpph2pmupu9kpbz1mfibcguw.js" async></script>
+
+</html>
