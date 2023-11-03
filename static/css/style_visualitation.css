@@ -359,6 +359,12 @@ img {
 }
 /* ------------ END MAIN MID ---------- */
 
+
+.main-central{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
 /* //////////////// END MAIN SECTION ////////////////////////// */
 
 /* RESPONSIVE */
