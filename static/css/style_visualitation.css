@@ -266,7 +266,10 @@ img {
 /* ..............end projects.................. */
 
 /* ..............main central.................. */
+.main-central{
 
+    background-color: #441a31;
+}
 
 
 /*---------------main_about---------------*/
@@ -280,7 +283,7 @@ img {
    margin: 0;
    position:fixed;
    width: 250px;
-   background: #fafafa;
+   /* background: #fafafa; */
    box-shadow: 3px 3px 5px var(--text--primary);
     
 }
