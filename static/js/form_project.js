@@ -66,7 +66,7 @@ buttonPost.addEventListener('click', e => {
     .catch(error => {
         console.error('Error al subir las imágenes', error);
     });
-});
+}); 
 
 // Función para mostrar el nombre de la imagen seleccionada
 function imageCreate(imgData, fileContainer) {
@@ -79,3 +79,4 @@ function imageCreate(imgData, fileContainer) {
     spanImage.innerHTML = imgData.name;
     imgText.appendChild(spanImage);
 }
+

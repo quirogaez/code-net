@@ -3,7 +3,6 @@ import path from 'path'
 import {searchDir} from '../searchDir.js'
 import uploadImage from '../../services/firebase.js'
 import fileUpload from 'express-fileupload';
-import getStreams from '../../services/twitch.js'
 
 
 const router = Router()
@@ -32,17 +31,6 @@ router.get('/shortclip', (req, res) => {
 });
 
 
-//Ruta para obtener streams
-router.get('/streams', async (req, res) => {
-    const {pag, num} = req.query;
-    try{
-        const dataStreams = await getStreams({pag, num});
-        console.log(dataStreams)
-        res.status(200).json({data: dataStreams});
-    } catch (e) {
-        res.status(500).send("Invalid request");
-    }
-});
 
 
 // Ruta para subir imágenes
@@ -50,27 +38,32 @@ router.post('/project', async (req, res) => {
     res.header('Access-Control-Allow-Origin', '*');
     console.log("Sí sirve el POST");
 
+    // Comprueba si se proporcionó un archivo de imagen en la solicitud
     if (req.files && req.files.imageFile) {
-        // Obténer la imagen desde el request
+        // Obtén la imagen desde la solicitud
         const image = req.files.imageFile;
-        console.log(image)
+        console.log(image);
 
         try {
             // Llama a la función uploadImage para cargar la imagen y obtén la URL de descarga
             const url = await uploadImage(image);
 
-            //  Guardarla en una base de datos - PREGUTNAR PROFE ALEx
-            
-            // Envía una respuesta al cliente
+            // Guarda la URL de la imagen en una base de datos o realiza cualquier otra acción necesaria
+            // (Esta parte se encuentra comentada y deberás implementarla según tus necesidades)
+
+            // Envía una respuesta al cliente con éxito y la URL de la imagen cargada
             res.json({ success: true, url });
         } catch (error) {
+            // En caso de un error al cargar la imagen, registra el error y envía una respuesta de error al cliente
             console.error('Error al subir la imagen:', error);
             res.status(500).json({ success: false, error: 'Error al subir la imagen' });
         }
     } else {
+        // Si no se proporcionó un archivo de imagen en la solicitud, envía una respuesta de error al cliente
         res.status(400).json({ success: false, error: 'No se proporcionó una imagen' });
     }
 });
+
 
 
 

@@ -22,12 +22,13 @@ const storage = getStorage(app);
 
 // Función para subir imágenes a Firebase Storage
 const uploadImage = async (imagesToPost) => {
-    let i = 0;
+   /*  console.log(imagesToPost instanceof Array) */
+    if (!(imagesToPost instanceof Array)) {
+        imagesToPost = [imagesToPost];
+    }
     for (let image in imagesToPost) {
-        
-        console.log(imagesToPost)
+        console.log(imagesToPost);
         let url = await uploadProcess(imagesToPost[image], image);
-        i++;
     }
 }
 

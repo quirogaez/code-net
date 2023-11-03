@@ -323,8 +323,8 @@ p {
     margin: 0 20px;
     height: 60px;
     width: 60px;
+    display: none;
   }
-  
   .close-button-container {
     position: absolute;
     top: 0;
@@ -340,8 +340,8 @@ p {
     background-color: var(--white--color);
     font-size: x-small;
     cursor: pointer;
-  }
-  
+}
+
 .form--project {
     color: var(--second--color);
     margin-top: 5px;
