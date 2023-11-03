@@ -49,7 +49,6 @@ router.post('/project', async (req, res) => {
             const url = await uploadImage(image);
 
             // Guarda la URL de la imagen en una base de datos o realiza cualquier otra acción necesaria
-            // (Esta parte se encuentra comentada y deberás implementarla según tus necesidades)
 
             // Envía una respuesta al cliente con éxito y la URL de la imagen cargada
             res.json({ success: true, url });
