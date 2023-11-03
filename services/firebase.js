@@ -3,6 +3,8 @@ import { getAuth } from 'firebase/auth';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { initializeApp } from 'firebase/app';
 import dotenv from 'dotenv';
+import crypto from 'node:crypto'
+
 // Configuración de Firebase con la información de tu proyecto
 dotenv.config()
 const firebaseConfig = {
@@ -35,6 +37,7 @@ const uploadImage = async (imagesToPost) => {
 // Función para procesar la subida de una imagen
 const uploadProcess = (file, filename) => {
     return new Promise((resolve, reject) => {
+        filename =  crypto.randomUUID();
         const storageRef = ref(storage, 'images');
         const folderRef = ref(storageRef, filename);
         const uploadTask =  uploadBytesResumable(folderRef, Buffer.from( file.data, 'binary'), {contentType: file.mimetype});
