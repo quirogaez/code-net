@@ -76,6 +76,7 @@ img {
 }
 
 .menu-item {
+    margin-top: 5px;
     position: relative;
     display: flex;
     align-items: center;
@@ -258,11 +259,80 @@ img {
     border-bottom: 1.5px solid #adadad;
 }
 
+/* ------------------ Main Center ------------------- */
+
+/* -------------- button plus ------------ */
+.showPublication {
+    display: none;
+}
+.showPublication li:hover {
+    background-color: #d3d3d3;
+}
+.showPublication_PPS {
+    position: fixed;
+    bottom: 4rem;
+    padding: 5px 25px;
+    background: #fafafa;
+    box-shadow: 2px 2px 5px var(--text--primary);
+    width: 280px;
+    height: 170px;
+    margin: auto;
+    border-radius: 5%;
+}
+.showPublication_PPS li:hover {
+    background-color: #d3d3d3;
+}
+.optionProject {
+    position: absolute;
+    left: 2rem;
+    bottom: 4rem;
+    padding: 5px 25px;
+    background: #fafafa;
+    box-shadow: 2px 2px 5px var(--text--primary);
+    width: 280px;
+    height: 170px;
+    margin: auto;
+    border-radius: 5%;
+}
+.optionAdd {
+    text-align: center;
+    cursor: pointer;
+}
+.optionAdd p {
+    color: #272727;
+    padding: 15px;
+    font-size: medium;
+}
+.optionAdd_publication {
+    border-top: 1.5px solid #adadad;
+    border-bottom: 1.5px solid #adadad;
+}
+
+.buttonPlus {
+    position: fixed;
+    padding: 1.2rem 0;
+    bottom: 3rem;
+    height: 3.5em;
+    width: 3.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--primary--color);
+}
+.buttonPlus i {
+    color: #440d7e;
+
+}
+.buttonPlus:hover,
+.buttonPlus:active {
+    transform: scale(1.1);
+    color: #200043;
+}
+
 /* --------------- Search --------------- */
 .container__search {
     display: flex;
     padding: 1rem 5rem;
-    width: 72vw;
     text-align: center;
 }
 
@@ -340,7 +410,6 @@ img {
     border-color: var(--second--color);
     border-radius: 10%;
 }
-
 /* RESPONSIVE */
 
 /* ----- media query for tablets ----- */

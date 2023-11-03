@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import routes from "./routes/routes.js";
+import path from 'node:path';
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -35,7 +36,7 @@ app.use('/codenet', routes);
 // app.set('view engine', 'ejs');
 
 // Especifica la ubicación de las vistas (plantillas) en la carpeta "static/templates"
-app.set('views', `${__dirname}\\static\\templates\\`);
+app.set('views', path.join(`${__dirname}`, "static", "templates"));
 
 // Aplica middlewares para procesar solicitudes y mejorar la seguridad
 app.use(express.json()); // Middleware para analizar datos JSON en las solicitudes

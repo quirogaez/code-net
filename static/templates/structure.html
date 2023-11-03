@@ -25,7 +25,9 @@
         <header class="main-left">
             <div class="container_mobile">
                 <div class="profile-photos--logo">
-                    <img src="../img/code.svg" alt="" id="icon-company">
+                    <a href="http://localhost:8081/codenet/structure">
+                        <img src="../img/code.svg" alt="" id="icon-company">
+                    </a>
                 </div>
                 <div class="profile_more">
                 <a href="#" class="profile__mobile" id="varProfile">
@@ -40,7 +42,7 @@
             </div>
             <!-- -----------SIDEBAR---------- -->
             <aside class="side-bar">
-                <a href="#" class="menu-item">
+                <a href="http://localhost:8081/codenet/structure" class="menu-item">
                     <div class="icon1">
                         <img src="../img/icons/home.svg" alt="">
                     </div>
@@ -52,13 +54,13 @@
                     </div>
                     <p>Buscar</p>
                 </a>
-                <a href="#" class="menu-item">
+                <a href="http://localhost:8081/codenet/streams" class="menu-item">
                     <div class="icon1">
                         <img src="../img/icons/live.svg" alt="">
                     </div>
                     <p>Live</p>
                 </a>
-                <a href="#" class="menu-item">
+                <a href="http://localhost:8081/codenet/clips" class="menu-item">
                     <div class="icon1">
                         <img src="../img/icons/shortclip.svg" alt="">
                     </div>
@@ -80,17 +82,17 @@
             <div class="showPlus">
                 <ul class="showOptions">
                     <li>
-                        <a class="optionsMore">
+                        <a href="#" class="optionsMore">
                             <p>editar perfil</p>
                         </a>
                     </li>
                     <li>
-                        <a class="optionsMore ">
+                        <a href="#" class="optionsMore ">
                             <p class="optionCenter">configuraciónes</p>
                         </a>
                     </li>
                     <li>
-                        <a href="logIn.html" class="optionsMore">
+                        <a href="#" class="optionsMore">
                             <p>cerrar sesión</p>
                         </a>
                     </li>
@@ -103,7 +105,30 @@
         </header>
 
             <!-- .................. carousel projects ........................ -->
-            <div class="main-mid">              
+            <div class="main-mid">    
+            <!--------------------- menu plus --------------------->
+            <div class="showPublication">
+                <ul class="showPublication_PPS">
+                    <li>
+                        <a href="http://localhost:8081/codenet/post" class="optionAdd">
+                            <p>agregar publicación</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:8081/codenet/project" class="optionAdd">
+                            <p class="optionAdd_publication">agregar proyecto</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://localhost:8081/codenet/shortclip" class="optionAdd">
+                            <p>agregar shortclip</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a onclick="showAddOption()" class="buttonPlus" id="varProfile">
+                <i class="fa-solid fa-plus"></i>
+            </a>          
                 <div class="carousel-story">
                     <div class="controls_p">
                         <button class="prev-btn button"><i class='bx bx-chevron-left'></i></button>
@@ -118,11 +143,14 @@
                 <div class="main-center">
                     <div id="imageContainer"></div>
                 </div>
-            </div>
-        <!-----------------  live streaming nav ------------------>
+         </div>
+
+
+
+        <!-----------------  live streaming carousel ------------------>
         <section class="main-right">
             <div class="icono">
-                <a href="#">
+                <a href="http://localhost:8081/codenet/streams">
                     <img class="icono_life" src="../img/trasmisiones.png"></i>
                 </a>
             </div>
@@ -135,6 +163,8 @@
 <script defer type="module" src="../js/structure.js"></script>
 <script src="../js/publication_structure.js"></script>
 <script defer src="../js/script_structure.js"></script>
+<script src="../js/sidebar.js"></script>
+<script src="../js/buttonPlus.js"></script>
 <script src="//code.tidio.co/jyvlyxqxgpph2pmupu9kpbz1mfibcguw.js" async></script>
 
 </html>

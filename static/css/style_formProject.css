@@ -28,6 +28,8 @@
 
 body {
     font-family: 'Raleway', sans-serif;
+    min-width: 100vh;
+    overflow-x: hidden;
 }
 
 /* ----- Main container ----- */
@@ -35,14 +37,16 @@ body {
     display: grid;
     grid-template-columns: 18vw auto;
 }
+
 /* ----- navbar ----- */
 .main-left {
     position: sticky;
-    top: 0;
-    bottom: 0;
     height: 100vh;
     background-color: #f4f4f4;
     box-shadow: 1px 1px 8px var(--text--primary);
+    flex-direction: column;
+    top: var(--stk-top-left);
+    
 }
 
 /* ----- logo container----- */
@@ -58,28 +62,34 @@ img {
     width: 100%;
     display: block;
 }
+
 .profile__mobile {
     display: none;
 }
+
 .menu_mobile {
     display: none;
 }
+
 /* ----- sidebar ----- */
 .side-bar {
     margin-top: 20px;
 }
+
 .menu-item {
+    margin-top: 5px;
     position: relative;
     display: flex;
     align-items: center;
     cursor: pointer;
     padding: 0 40px;
     height: 3.8rem;
+    
 }
 
 .menu-item:hover,
 .menu-item:active {
-    transform: scale(1.3);
+    transform: scale(1.1);
     font-weight: bold;
     color: #440d7e;
     background-image: linear-gradient(90deg,
@@ -90,7 +100,7 @@ img {
 
 /* ----- class active (js) ----- */
 .menu-item.active {
-    transform: scale(1.3);
+    transform: scale(1.1);
     font-weight: bold;
     color: #440d7e;
     background-image: linear-gradient(90deg,
@@ -122,10 +132,10 @@ img {
 }
 
 .menu-item p {
-    color: #440d7e;
     font-size: medium;
     margin-left: 1.5rem;
-    font-family: 'Raleway', sans-serif;
+    color: #440d7e;
+    font-family: 'Ralawey', sans-serif;
 }
 
 .menu-item2 {
@@ -139,7 +149,7 @@ img {
 
 .menu-item2:hover,
 .menu-item2:active {
-    transform: scale(1.3);
+    transform: scale(1.1);
     font-weight: bold;
     color: #440d7e;
     background-image: linear-gradient(90deg,
@@ -149,7 +159,7 @@ img {
 }
 
 .menu-item2.active {
-    transform: scale(1.3);
+    transform: scale(1.1);
     font-weight: bold;
     color: #440d7e;
     background-image: linear-gradient(90deg,
@@ -170,13 +180,13 @@ img {
 }
 
 .menu-item2 p {
-    color: #440d7e;
     font-size: medium;
     margin-left: 1.5rem;
-    font-family: 'Raleway', sans-serif;
+    color: #440d7e;
+    font-family: 'Ralawey', sans-serif;
 }
 
-/*----- option more ----- */
+/* ---------- option more ---------- */
 .menu-item3 {
     position: fixed;
     bottom: 0;
@@ -189,7 +199,7 @@ img {
 }
 
 .menu-item3:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     font-weight: bold;
     color: #440d7e;
     background-image: linear-gradient(90deg,
@@ -199,7 +209,7 @@ img {
 }
 
 .menu-item3.active {
-    transform: scale(1.3);
+    transform: scale(1.1);
     font-weight: bold;
     color: #440d7e;
     background-image: linear-gradient(90deg,
@@ -212,8 +222,10 @@ img {
     font-size: medium;
     margin-left: 1.5rem;
     color: #30095a;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Ralawey', sans-serif;
 }
+
+/* -----menu more options ----- */
 
 .showPlus {
     display: none;
@@ -245,11 +257,6 @@ img {
     color: #272727;
     padding: 15px;
     font-size: medium;
-    font-family: 'Ralawey', sans-serif;
-}
-.optionsMore p:hover {
-    color: #383838;
-    font-family: 'Ralawey', sans-serif;
 }
 
 .optionCenter {
@@ -309,12 +316,30 @@ p {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-    justify-content: space-between;
 }
 .img__tecnology {
+    position: relative;
+    display: inline-block;
     margin: 0 20px;
     height: 60px;
     width: 60px;
+    display: none;
+  }
+  .close-button-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .close-button {
+    width: 1rem;
+    height: 1rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 100%;
+    color: var(--text--primary);
+    background-color: var(--white--color);
+    font-size: x-small;
+    cursor: pointer;
 }
 
 .form--project {
@@ -324,19 +349,19 @@ p {
 .form--project input {
     margin-top: 10px;
     padding: 15px;
-    background-color: var(--white--color);
     border: none;
-    border-radius: 10px;
-    box-shadow: 0 1px 5px #8b8b8b;
     color: var(--text--primary);
 }
-.verify__project {
-    background-color: #00ffe0;
-}
 .url__project {
-    width: 65%;
+    width: 60%;
     height: 48px;
-    
+    border-radius: 10px 0 0 10px;
+}
+.verify{
+    background-color: #00ffe0;
+    width: 5%;
+    height: 48px;
+    border-radius: 0 10px 10px 0;
 }
 .technology {
     margin-left: 5px;
@@ -364,6 +389,9 @@ p {
 .url__github {
     width: 100%;
     height: 48px;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px #8b8b8b;
 }
 .container_buttonPost {
     text-align: center;
@@ -382,6 +410,83 @@ p {
 .buttonplus {
     display: none;
 }
+
+
+
+ /* ---------------------------- ventana modal "estas seguro" ---------------- */
+.sure {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #171717af;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+.sure--show {
+    opacity: 1;
+    pointer-events: unset;
+}
+.close__modalSure {
+    width: 100%;
+    text-align: right;
+
+}
+.close__modalSure button {
+    color: var(--second--color);
+    font-size: 25px;
+    border: none;
+    background-color: var(--white--color);
+    cursor: pointer;
+}
+.modal__container {
+    margin:auto;
+    width: 90%;
+    max-width: 450px;
+    max-height: 90%;
+    background-color: var(--white--color);
+    padding: 1.5em 2.5em;
+    display: grid;
+    gap: 1.5em;
+    place-items: center;
+    grid-auto-columns: 100%;
+}
+.modal__img {
+    width: 30%;
+}
+.modal__tittle {
+    font-size: large;
+}
+.container--buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.button__feed {
+    background-color: var(--primary--color);
+    padding: 10px;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: medium;
+}
+.button_myprofile {
+    background-color: none;
+    border: solid;
+    border-color: var(--second--color);
+    border-radius: 10px;
+    padding: 10px;
+    height: 40px;
+    width: 150px;
+    color: var(--second--color);
+    text-align: center;
+    font-size: medium;
+}
+
+ /* ---------------------------- ventana modal "estas seguro" ---------------- */
 
 .modal {
     position: fixed;

@@ -9,7 +9,7 @@ export function searchDir() {
     const __dirnameArray =  __dirname.split("\\");
     __dirnameArray.splice(__dirnameArray.length-1,2);
     const __dirnameAll = __dirnameArray.join("\\");
-    console.log("alo")
+    console.log("Dirname")
     return __dirnameAll;
 }
 

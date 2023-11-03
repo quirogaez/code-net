@@ -16,32 +16,33 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Link Fontawasome -->
     <script src="https://kit.fontawesome.com/95b2a267a8.js" crossorigin="anonymous"></script>
+
 </head>
-
-
 
 <body>
     <main class="container main-container">
-        <!-- ---------- NAV BAR---------- -->
+        <!-- ---------- NAVBAR ---------- -->
         <header class="main-left">
             <div class="container_mobile">
                 <div class="profile-photos--logo">
-                    <img src="../img/code.svg" alt="" id="icon-company">
+                    <a href="http://localhost:8081/codenet/structure">
+                        <img src="../img/code.svg" alt="" id="icon-company">
+                    </a>
                 </div>
                 <div class="profile_more">
-                <a href="#" class="profile__mobile" id="varProfile">
-                    <div class="profile__mobile" id="aside-porfile">
-                        <img src="../img/person.png" alt="">
-                    </div>
-                </a>
-                <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
-                    <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
-                </a>
+                    <a href="#" class="profile__mobile" id="varProfile">
+                        <div class="profile__mobile" id="aside-porfile">
+                            <img src="../img/person.png" alt="">
+                        </div>
+                    </a>
+                    <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
+                        <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
+                    </a>
                 </div>
             </div>
             <!-- -----------SIDEBAR---------- -->
             <aside class="side-bar">
-                <a href="#" class="menu-item">
+                <a href="http://localhost:8081/codenet/structure" class="menu-item">
                     <div class="icon1">
                         <img src="../img/icons/home.svg" alt="">
                     </div>
@@ -53,13 +54,13 @@
                     </div>
                     <p>Buscar</p>
                 </a>
-                <a href="#" class="menu-item">
+                <a href="http://localhost:8081/codenet/streams" class="menu-item">
                     <div class="icon1">
                         <img src="../img/icons/live.svg" alt="">
                     </div>
                     <p>Live</p>
                 </a>
-                <a href="#" class="menu-item">
+                <a href="http://localhost:8081/codenet/clips" class="menu-item">
                     <div class="icon1">
                         <img src="../img/icons/shortclip.svg" alt="">
                     </div>
@@ -81,17 +82,17 @@
             <div class="showPlus">
                 <ul class="showOptions">
                     <li>
-                        <a class="optionsMore">
+                        <a href="#" class="optionsMore">
                             <p>editar perfil</p>
                         </a>
                     </li>
                     <li>
-                        <a class="optionsMore ">
+                        <a href="#" class="optionsMore ">
                             <p class="optionCenter">configuraciónes</p>
                         </a>
                     </li>
                     <li>
-                        <a href="logIn.html" class="optionsMore">
+                        <a href="#" class="optionsMore">
                             <p>cerrar sesión</p>
                         </a>
                     </li>
@@ -106,22 +107,24 @@
         <div class="form_project_container">
             <form method="POST" action="#">
                 <div class="container_project">
+                    <!------------ add prooject images ------------>
                     <div class="container_img">
-                        <div class="img_buttonCover">
+                        <div class="img_button img_buttonCover">
                             <input class="input_img" type="file" id="addImg1" hidden>
                             <label for="addImg1" class="label_img">
                                 <p>+</p>agregar img
                             </label>
                         </div>
                         <div class="img_button">
-                            <input class="input_img" accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"type="file" id="addImg2" hidden>
+                            <input class="input_img"
+                                accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
+                                type="file" id="addImg2" hidden>
                             <label for="addImg2">
                                 <p>+</p>agregar img
                             </label>
                         </div>
                         <div class="img_button">
-                            <input
-                                class="input_img"
+                            <input class="input_img"
                                 accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
                                 type="file" id="addImg3" hidden>
                             <label for="addImg3">
@@ -129,8 +132,7 @@
                             </label>
                         </div>
                         <div class="img_button">
-                            <input
-                                class="input_img"
+                            <input class="input_img"
                                 accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
                                 type="file" id="addImg4" hidden>
                             <label for="addImg4">
@@ -138,8 +140,7 @@
                             </label>
                         </div>
                         <div class="img_button">
-                            <input
-                                class="input_img"
+                            <input class="input_img"
                                 accept="image/jpg, image/jpeg, image/png, image/web, image/JPG, image/JPEG, image/PNG, image/WEB"
                                 type="file" id="addImg5" hidden>
                             <label for="addImg5">
@@ -147,9 +148,8 @@
                             </label>
                         </div>
                     </div>
-                    <!-- Tecnologías -->
+                    <!------------------- Tecnologías ------------------>
                     <div class="technology_container">
-
                         <div class="img__tecnology" id="bootstrap">
                             <img src="../img/tecnologias/1.svg" alt="Bootstrap">
                         </div>
@@ -157,36 +157,91 @@
                             <img src="../img/tecnologias/2.svg" alt="JavaScript">
                         </div>
                         <div class="img__tecnology" id="html">
-                            <img src="../img/tecnologias/3.svg" alt="">
+                            <img src="../img/tecnologias/3.svg" alt="HTML">
                         </div>
                         <div class="img__tecnology" id="css">
-                            <img src="../img/tecnologias/4.svg" alt="">
+                            <img src="../img/tecnologias/4.svg" alt="CSS">
                         </div>
                         <div class="img__tecnology" id="react">
-                            <img src="../img/tecnologias/5.svg" alt="">
+                            <img src="../img/tecnologias/5.svg" alt="React">
                         </div>
                         <div class="img__tecnology" id="node">
-                            <img src="../img/tecnologias/6.svg" alt="">
+                            <img src="../img/tecnologias/6.svg" alt="Node">
                         </div>
                         <div class="img__tecnology" id="viu">
-                            <img src="../img/tecnologias/7.svg" alt="">
+                            <img src="../img/tecnologias/7.svg" alt="Viu">
                         </div>
                         <div class="img__tecnology" id="aws">
-                            <img src="../img/tecnologias/8.svg" alt="">
+                            <img src="../img/tecnologias/8.svg" alt="AWS">
                         </div>
                         <div class="img__tecnology" id="mongodb">
-                            <img src="../img/tecnologias/9.svg" alt="">
+                            <img src="../img/tecnologias/9.svg" alt="MongoDB">
                         </div>
+                        <div class="img__tecnology" id="oracle">
+                            <img src="../img/tecnologias/10.svg" alt="MongoDB">
+                        </div>
+                        <div class="img__tecnology" id="wordpress">
+                            <img src="../img/tecnologias/Wordpress.svg" alt="WordPress">
+                        </div>
+                        <div class="img__tecnology" id="underscore">
+                            <img src="../img/tecnologias/underscore.js.svg" alt="UnderScore">
+                        </div>
+                        <div class="img__tecnology" id="ruby">
+                            <img src="../img/tecnologias/ruby.svg" alt="Ruby">
+                        </div>
+                        <div class="img__tecnology" id="rails">
+                            <img src="../img/tecnologias/rails.svg" alt="Rails">
+                        </div>
+                        <div class="img__tecnology" id="php">
+                            <img src="../img/tecnologias/php.svg" alt="PHP">
+                        </div>
+                        <div class="img__tecnology" id="nuxt">
+                            <img src="../img/tecnologias/nuxt.js.svg" alt="Nuxt.js">
+                        </div>
+                        <div class="img__tecnology" id="nginx">
+                            <img src="../img/tecnologias/nginx.svg" alt="Nginx">
+                        </div>
+                        <div class="img__tecnology" id="mysql">
+                            <img src="../img/tecnologias/mysql.svg" alt="MySQL">
+                        </div>
+                        <div class="img__tecnology" id="maps">
+                            <img src="../img/tecnologias/maps.svg" alt="Maps">
+                        </div>
+                        <div class="img__tecnology" id="jquery">
+                            <img src="../img/tecnologias/jquery.svg" alt="jQuery">
+                        </div>
+                        <div class="img__tecnology" id="java">
+                            <img src="../img/tecnologias/java.svg" alt="Java">
+                        </div>
+                        <div class="img__tecnology" id="inertia">
+                            <img src="../img/tecnologias/inertia.svg" alt="Inertia">
+                        </div>
+                        <div class="img__tecnology" id="github">
+                            <img src="../img/tecnologias/github.svg" alt="GitHub">
+                        </div>
+                        <div class="img__tecnology" id="firebase">
+                            <img src="../img/tecnologias/firebase.svg" alt="Firebase">
+                        </div>
+                        <div class="img__tecnology" id="filetype">
+                            <img src="../img/tecnologias/filetype.svg" alt="FileType">
+                        </div>
+                        <div class="img__tecnology" id="cloudflare">
+                            <img src="../img/tecnologias/cloudflare.svg" alt="CloudFlare">
+                        </div>
+                        
+                        <!------- button add tecnology (media query)  ------->
                         <div class="buttonplus">
                             <i class='bx bxs-plus-circle'></i>
                         </div>
                     </div>
                 </div>
+
+                <!------------ url project ----------------->
                 <div class="form--project">
-                    <input type="url" class="url__project form" name="url__project"
-                        placeholder="URL del proyecto desplegado">
+                    <input type="url" class="url__project form" name="url__project" placeholder="URL del proyecto desplegado"><input type="#" class="verify">
+                    <!----------- button add tecnology ------------->    
                     <select class="technology form" name="tecnologias">
-                        <option value="bootstrap">Selecciona tecnologias</option>
+                        <option value="vacio">Selecciona tecnologias</option>
                         <option value="bootstrap">Bootstrap</option>
                         <option value="javascript">JavaScript</option>
                         <option value="html">HTML</option>
@@ -197,39 +252,65 @@
                         <option value="aws">AWS</option>
                         <option value="mongodb">MongoDB</option>
                         <option value="oracle">ORACLE</option>
+                        <option value="wordpress">WordPress</option>
+                        <option value="underscore">UnderScore</option>
+                        <option value="ruby">Ruby</option>
+                        <option value="rails">Rails</option>
+                        <option value="php">PHP</option>
+                        <option value="nuxt">Nuxt.js</option>
+                        <option value="nginx">Nginx</option>
+                        <option value="mysql">MySQL</option>
+                        <option value="maps">Maps</option>
+                        <option value="jquery">jQuery</option>
+                        <option value="java">Java</option>
+                        <option value="inertia">Inertia.js</option>
+                        <option value="github">GitHub</option>
+                        <option value="firebase">Firebase</option>
+                        <option value="filetype">FileType</option>
+                        <option value="cloudflare">CloudFlare</option>
                     </select>
+                    <!---------- Description project ------------>
                     <textarea class="description form" name="message" placeholder="Descripción"></textarea>
-                    <input type="url" class="    form" name="url__github" placeholder="URL del repositorio en GitHub">
+                    <!--------------- repository Git Hub ---------------->
+                    <input type="url" class="url__github form" name="url__github" placeholder="URL del repositorio en GitHub">
                 </div>
                 <div class="container_buttonPost">
                     <button class="button_post">Publicar</button>
                 </div>
             </form>
         </div>
+        <!------------ modal windows --------------->
+        <section class="sure">
+            <div class="modal__container">
+                <div class="close__modalSure">
+                    <button type="button">x</button>
+                </div>
+                <h2 class="modal__tittle">¿Estas seguro que deseas cargar tu proyecto?</h2>
+                <div class="container--buttons">
+                    <button class="acceptButton">aceptar</button>
+                    <button type="button" class="discard">descartar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="modal">
+            <div class="modal__container">
+                <img src="../img/modal/trofeo.svg" class="modal__img">
+                <h2 class="modal__tittle">¡has cargado tu proyecto con exito!</h2>
+                <div class="container--buttons">
+                    <a href="structure.html" class="button__feed">inicio</a>
+                    <a href="#" class="button_myprofile">mi perfil</a>
+                </div>
+            </div>
+        </section>
     </main>
-    <section class="modal">
-        <div class="modal__container">
-            <div class="close__modalProject">
-                <button type="button">x</button>
-            </div>
-            <img src="../img/modal/trofeo.svg" class="modal__img">
-            <h2 class="modal__tittle">¡has cargado tu proyecto con exito!</h2>
-            <div class="container--buttons">
-                <a href="structure.html" class="button__feed">inicio</a>
-                <a href="#" class="button_myprofile">mi perfil</a>
-            </div>
-        </div>
-    </section>
+
 </body>
 <!-- link js -->
-<script type="module" src="../js/structure.js"></script>
-<script src="../js/modal_project.js"></script>
-<script src="../js/tecnologias.js"></script>
-<script type="module" src="../js/form_project.js"></script>
-<script src="../js/form__project.js"></script>
-<script type="module" src="../js/form_project.js"></script>
+<script type="module" src="../js/form_project_valdiations.js"></script>
 <script src="../js/sidebar.js"></script>
-<script src="../js/search_project.js"></script>
+<script defer type="module" src="../js/structure.js"></script>
+<script src="../js/sidebar.js"></script>
 <script src="//code.tidio.co/jyvlyxqxgpph2pmupu9kpbz1mfibcguw.js" async></script>
 
 </html>

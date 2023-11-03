@@ -35,7 +35,7 @@ body {
 /* ----- Main container ----- */
 .main-container {
     display: grid;
-    grid-template-columns: 18vw auto 10vw;
+    grid-template-columns: 18vw auto;
 }
 
 /* ----- navbar ----- */
@@ -259,249 +259,114 @@ img {
     border-bottom: 1.5px solid #adadad;
 }
 
-/* ---------------- Main Center ----------------- */
+/* --------------- search stream -------------- */
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+}
 
-/* -------------- button plus ------------ */
-.showPublication {
-    display: none;
-}
-.showPublication li:hover {
-    background-color: #d3d3d3;
-}
-.showPublication_PPS {
-    position: fixed;
-    bottom: 4rem;
-    padding: 5px 25px;
-    background: #fafafa;
-    box-shadow: 2px 2px 5px var(--text--primary);
-    width: 280px;
-    height: 170px;
-    margin: auto;
-    border-radius: 5%;
-}
-.showPublication_PPS li:hover {
-    background-color: #d3d3d3;
-}
-.optionProject {
-    position: absolute;
-    left: 2rem;
-    bottom: 4rem;
-    padding: 5px 25px;
-    background: #fafafa;
-    box-shadow: 2px 2px 5px var(--text--primary);
-    width: 280px;
-    height: 170px;
-    margin: auto;
-    border-radius: 5%;
-}
-.optionAdd {
+.container__search {
+    display: flex;
+    padding: 1rem 5rem;
     text-align: center;
-    cursor: pointer;
-}
-.optionAdd p {
-    color: #272727;
-    padding: 15px;
-    font-size: medium;
-}
-.optionAdd_publication {
-    border-top: 1.5px solid #adadad;
-    border-bottom: 1.5px solid #adadad;
 }
 
-.buttonPlus {
-    position: fixed;
-    padding: 1.2rem 0;
-    bottom: 3rem;
-    height: 3.5em;
-    width: 3.5rem;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 50%;
-    background-color: var(--primary--color);
-}
-.buttonPlus i {
-    color: #440d7e;
-
-}
-.buttonPlus:hover,
-.buttonPlus:active {
-    transform: scale(1.1);
-    color: #200043;
-}
-
-/* ------------ carousel projects ---------- */
-.main-mid {
-    padding: 15px;
+.search__nav {
+    padding: 20px;
     width: 100%;
+    height: 3.3rem;
+    border: none;
+    color: var(--text--primary);
+    text-transform: capitalize;
+    border-radius: 6px;
+    background-color: #b2b2b24a;
+    box-shadow: 0 1px 5px var(--text--primary);
 }
 
-.carousel-story {
+/*  ------------------ streams section ------------------- */
+.streamSection {
     display: flex;
-    align-items: center;
-    width: 98%;
-    padding: 0 20px;
-}
-
-.prev-btn {
-    background: none;
-    border: none;
-}
-
-.bx {
-    font-size: 2em;
-}
-
-.carousel_profile_story {
-    display: flex;
-    flex: 5;
-    text-align: center;
-    justify-content: center;
-    padding: 10px;
-}
-
-.next-btn {
-    background: none;
-    align-items: center;
-    border: none;
-}
-
-.controls_n {
-    text-align: left;
-    border: none;
-}
-
-.profile_story {
-    flex: 1;
-    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    /*     background-color: #00ffe0; */
+    width: 96%;
     justify-content: space-evenly;
-
 }
 
-.profile_story img {
-    border-radius: 15%;
-    height: 100px;
-    width: 90px;
-    margin: auto;
-    border: solid;
-    border-width: 1px;
-    border-color: var(--second--color);
+.streamContainer {
+    margin: 5px;
+    /*     background-color: #390e68; */
+    padding: 5px;
+    width: 20rem;
+    height: 15rem;
 }
 
-/* -------------- Short Clips ------------ */
-
-.container_shortClip {
-    padding: 20px 80px;
+.stream_preview {
     width: 100%;
+    height: 80%;
 }
 
-.shortclip_publication {
-    padding: 10px 50px;
-}
-
-.container_img {
-    width: 100%;
-    height: auto;
-}
-
-.shortclip {
-    border-radius: 20px;
+.preview {
     width: 100%;
     height: 100%;
 }
 
-.shortclip__infoContainer {
+.stream_info {
     display: flex;
-    margin-top: 10px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+    justify-content: space-between;
 }
 
-.profilePhoto {
-    width: 4rem;
+/* .container_photo {
+    background-color: #00ffe0;
+} */
+.profile_photo {
+    width: 2.5rem;
     border-radius: var(--border-radius);
     aspect-ratio: 1/1;
     overflow: hidden;
 }
 
-.info_shortClip {
-    margin-top: 5px;
-    margin-left: 8px;
-    width: 100%;
-}
-
-.container_Name {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+.info__text {
+    width: 14rem;
+    padding: 0.3rem 0;
 }
 
 .name {
-    width: 80%;
+    color: #000000;
+    font-size: 15px;
     text-transform: uppercase;
-    font-weight: bold;
-    color: #272727;
 }
 
-.icon-love {
-    color: var(--second--color);
-    font-size: 18px;
-}
-
-.icon-comment {
-    color: var(--second--color);
-    font-size: 18px;
-}
-
-.description {
-    margin-top: 10px;
+.spectators {
     color: var(--text--primary);
-    font-size: small;
+    font-size: smaller;
 }
 
-/*---------------main_right---------------*/
-.main-right {
-    position: fixed;
-    right: 0;
-    background-color: #ffffff;
-    box-shadow: 3px 3px 5px var(--text--primary);
-    width: 10vw;
-    height: 100%;
+.fa-eye {
+    color: var(--text--primary);
 }
 
-.icono {
-    width: 100%;
-    height: 10vh;
-    padding: 5px 40px;
+.goToTwitch {
+    width: 2rem;
+    text-align: center;
+    padding: 10px 0;
 }
 
-.icono_life {
-    width: 100%;
-    height: 100%;
-}
-
-.carousel-life {
-    margin-top: 0;
-    padding: 0 5px;
-    height: 80%;
-}
-
-.profile_life {
-    margin: 18px;
-}
-
-.profile_life img {
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--second--color);
-    border-radius: 10%;
+.fa-arrow-up-right-from-square {
+    color: var(--text--primary);
+    font-size: larger;
 }
 
 /* RESPONSIVE */
+
 /* ----- media query for tablets ----- */
 @media screen and (max-width: 1025px) {
     .main-container {
         display: grid;
         grid-template-columns: 18vw auto;
     }
-
     .main-left {
         bottom: 0;
     }
@@ -569,54 +434,21 @@ img {
     .optionsMore p {
         font-size: medium;
     }
-
-
-    /* ----- carousel project ----- */
-    .main-mid {
+    /* --------------- search stream -------------- */
+    .mainContainer {
         width: 82vw;
-        padding: 0;
     }
 
-    .carousel-story {
-        margin-top: 15px;
-        padding: 5px;
+    /*  ------------------ streams section ------------------- */
+    .streamContainer {
+        width: 18rem;
     }
-
-    .bx {
-        font-size: 1.5em;
+    .stream_info {
+        margin-top: 5px;
     }
-
-    .carousel_profile_story {
-        justify-content: space-between;
-        padding: 0;
-    }
-
-    .profile_story img {
-        height: 90px;
-        width: 80px;
-    }
-
-
-    /* -------------------------------------------------------------------- */
-    .container_shortClip {
-        padding: 20px 50px;
-    }
-    .shortclip_publication {
-        padding: 10px 50px;
-    }
-
-    .container_img {
-        width: 100%;
-        height: auto;
-    }
-
-    .shortclip {
-        border-radius: 10%;
-    }
-
-    /*  ------ hidden lives ------ */
-    .main-right {
-        display: none;
+    .info__text {
+        width: 12rem;
+        padding: 0.3rem 0;
     }
 }
 
@@ -632,10 +464,6 @@ img {
 
     .bx {
         font-size: 2em;
-    }
-
-    .main-right {
-        display: none;
     }
 }
 
@@ -763,67 +591,25 @@ img {
         margin-top: 1rem;
         bottom: auto;
     }
-
-    /* ----- carousel projects ------ */
-    .main-mid {
-        margin-top: 15px;
+    /* --------------- search stream -------------- */
+    .mainContainer {
         width: 100vw;
-        padding: 0;
     }
-
-    .carousel-story {
-        padding: 0;
+    .container__search {
+        padding: 1rem;
     }
-
-    .bx {
-        font-size: 1.5em;
+    .search__nav {
+        height: 3rem;
     }
-
-    .carousel_profile_story {
-        justify-content: space-between;
-        padding: 0;
+    /*  ------------------ streams section ------------------- */
+    .streamContainer {
+        width: 22rem;
     }
-
-    .profile_story img {
-        height: 90px;
+    .stream_info {
+        margin-top: 5px;
     }
-
-    /* -------------- Short Clips ------------ */
-
-.container_shortClip {
-    padding: 20px;
-    width: 100%;
-}
-
-.shortclip_publication {
-    padding: 10px;
-}
-
-.name {
-    width: 60%;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #272727;
-    font-size: 14px;
-}
-
-.icon-love {
-    font-size: 18px;
-}
-
-.icon-comment {
-    font-size: 18px;
-}
-
-.description {
-    margin-top: 10px;
-    color: var(--text--primary);
-    font-size: small;
-}
-
-    /*  ------ hidden lives ------ */
-    .main-right {
-        display: none;
+    .info__text {
+        width: 12rem;
+        padding: 0.3rem 0;
     }
-
 }
