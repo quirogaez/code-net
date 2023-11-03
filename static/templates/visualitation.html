@@ -4,33 +4,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualización de Perfil</title>
-    <link rel="stylesheet" href="/static/css/style_VisualizacionPerfil.css">
+    <title>Code|Net</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="../css/style_visualitation.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.svg">
+    <!-- Link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link Fontawasome -->
+    <script src="https://kit.fontawesome.com/95b2a267a8.js" crossorigin="anonymous"></script>
+    <script defer src="../js/Visualizacion_Perfil.js"></script>
 </head>
 
 <body>
-    <div class="profile-view">
-        <h1>Perfil de Usuario</h1>
-        <div class="profile-info">
-            <div class="profile-image">
-                <img src="/static/img/portadasinfoto.jpeg" alt="Imagen de Perfil">
+
+    <nav class="container">
+        <h2>
+
+        </h2>
+    </nav>
+
+    <!-- //////////////// MAIN SECTION ////////////////////////// -->
+    <main class="container main-container">
+        <!-- ---------- MAIN LEFT ---------- -->
+        <div class="main-left">
+            <!-- <div class="profile--logo"> -->
+            <div class="profile-photos--logo">
+                <img src="../img/code.svg" alt="" id="icon-company">
             </div>
-            <div class="profile-details">
-                <h2>Nombre: <span id="profileName"></span></h2>
-                <h2>Rol: <span id="profileRole"></span></h2>
-                <h2>Habilidades:</h2>
-                <ul id="profileSkills">
-                    <!-- Aquí se llenarán las habilidades -->
-                </ul>
-                <h2>Fecha de Nacimiento: <span id="profileDate"></span></h2>
-                <h2>Género: <span id="profileGender"></span></h2>
-                <h2>Dirección: <span id="profileAddress"></span></h2>
-                <h2>Correo Electrónico: <span id="profileEmail"></span></h2>
-                <h2>Teléfono: <span id="profilePhone"></span></h2>
-            </div>
+
+            <a href="" class="menu-item" id="mobilVarProfile">
+                <span>
+                    <div class="profile-photos--major" id="nav-profile">
+                        <img src="../img/person.png" alt="">
+                    </div>
+                </span>
+            </a>
+
+            <!-- -----------SIDEBAR---------- -->
+            <aside class="side-bar">
+                <a class="menu-item ">
+                    <span><i class="fa-solid fa-house icon1"></i></span>
+                    <h3>Inicio</h3>
+                </a>
+                <a class="menu-item ">
+                    <span><i class="fa-solid fa-magnifying-glass icon1"></i></span>
+                    <h3>Buscar</h3>
+                </a>
+                <a class="menu-item ">
+                    <span><i class="fa-solid fa-play icon1"></i></span>
+                    <h3>Transmisiones</h3>
+                </a>
+                <a class="menu-item ">
+                    <span><i class="fa-solid fa-video  icon1"></i></span>
+                    <h3>ShortClip</h3>
+                </a>
+                <a class="menu-item  message">
+                    <span><i class="fa-solid fa-message  icon1"></i></span> <small class="count">5</small>
+                    <h3>Mensajes</h3>
+
+                </a>
+                <a href="" class="menu-item " id="varProfile">
+                    <span>
+                        <div class="profile-photos" id="aside-porfile">
+                            <img src="../img/person.png" alt="">
+                        </div>
+                    </span>
+                    <h3>Mi perfil</h3>
+                </a>
+                <div class="showPlus">
+                    <ul class="showOptions">
+                        <a class="options">
+                            <h3>editar perfil</h3>
+                        </a>
+                        <a class="options ">
+                            <h3 class="optionCenter">configuraciónes</h3>
+                        </a>
+                        <a href="logIn.html" class="options">
+                            <h3>cerrar seccion</h3>
+                        </a>
+                    </ul>
+                </div>
+
+
+            </aside>
+
+            <a onclick="showPlusOptions()" class="menu-item" id="bars">
+                <span><i class="fa-solid fa-bars icon1"></i></span>
+                <h3>Más</h3>
+            </a>
         </div>
-    </div>
-    <script src="/static/js/Visualizacion_Perfil.js"></script>
+        <!-- ---------- END MAIN LEFT ---------- -->
+
+        <!-- ---------- MAIN MID ---------- -->
+        <div class="main-mid">
+            <!-- .................. PROJECTS START ........................ -->
+
+
+            <div class="carousel-story">
+                <div class="controls_p">
+                    <button class="prev-btn button"><i class='bx bx-chevron-left'></i></button>
+                </div>
+                <div class="carousel_profile_story"></div>
+                <div class="controls_n">
+                    <button class="next-btn button"><i class='bx bx-chevron-right'></i></button>
+                </div>
+            </div>
+
+
+            <div class="main-center">
+                <div id="imageContainer"></div>
+            </div>
+
+        </div>
+
+        <!-- .................. create post start  ........................ -->
+
+        <!-- .................. create post end  ........................ -->
+
+
+        <!-- .................. PROJECTS END ........................ -->
+        </div>
+        <!-- ---------- END MAIN MID ---------- -->
+        <!-- MAIN CENTER -->
+
+
+
+
+        <div class="main-right">
+            <div id="userData">                    
+                    <a class="location">    
+                        <i class="fa-sharp fa-solid fa-location-dot" style="color: #7f1aea;"></i>
+                        <span id="nombre"></span>
+                    </a>
+                    <p><strong>Apellido:</strong> <span id="apellido"></span></p>
+                    <p><strong>Tecnología:</strong> <span id="tecnologia"></span></p>
+                    <p><strong>Fecha de Nacimiento:</strong> <span id="date"></span></p>
+                    <p><strong>Género:</strong> <span id="gender"></span></p>
+                    <i class="fa-sharp fa-solid fa-user" style="color: #7f1aea;" id="gender"></i>
+                    <p><strong>Dirección:</strong> <span id="address"></span></p>
+                    <i class="fa-sharp fa-solid fa-envelope" style="color: #7f1aea;" id="correo"></i>
+                    <i class="fa-sharp fa-solid fa-cake-candles" style="color: #7f1aea;" id="date"></i>
+                    <i class="fa-sharp fa-solid fa-location-dot" style="color: #7f1aea;"></i>
+                    <i class="fa-sharp fa-solid fa-envelope" style="color: #7f1aea;" id="correo"></i>
+                    <i class="fa-sharp fa-solid fa-phone" style="color: #7f1aea;"></i>
+            </div>
+
+        </div> <!-- ---------- MAIN RIGHT ---------- -->
+
+        <!-- ---------- END MAIN RIGHT ---------- -->
+
+
+    </main>
+
+
+
+    <!-- //////////////// END MAIN SECTION ////////////////////////// -->
+
 </body>
 
+
 </html>
+
+<!-- Esto es la estructura inicial de code | NET -->

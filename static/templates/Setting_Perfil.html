@@ -84,7 +84,7 @@
         <div class="Perfil-contain">
             <form class="perfil-contain-form">
                 <div class="initial">
-                    <img id="image-preview" src="/static/img/portadasinfoto.jpeg" alt="Imagen actual"
+                    <img id="image-preview" src="/static/img/perfilsinfoto.jpg" alt="Imagen actual"
                         style="max-width: 100%; max-height: 300px; cursor: pointer;">
                     <input type="file" id="file-input" accept="image/*" style="display: none;">
                     <div class="initial-sec">
@@ -95,8 +95,8 @@
                 <div class="tecnology">
                     <select id="tecnologys">
                         <option value="">Habilidades</option>
-                        <option value="figma">FIGMA</option>
-                        <option value="html">HTML</option>
+                        <option value="Boostrap">Boostrap</option>
+                        <option value="JavaScript">JavaScript</option>
                         <option value="css">CSS</option>
                     </select>
                     <div id="tecnology-images"></div>
@@ -108,8 +108,7 @@
                                 <label class="date__form">Fecha de nacimiento</label>
                                 <input type="date" class="date--list" id="date">
                             </p>
-
-                            <select id="gender">
+                            <select class="date--gender" id="gender">
                                 <option value="Genero">Genero</option>
                                 <option value="mujer">Mujer</option>
                                 <option value="hombre">Hombre</option>
@@ -124,16 +123,18 @@
 
                         <div id="map">
                             <img id="image-map" src="/static/img/portadasinfoto.jpeg" alt="Imagen actual"
-                                style="max-width: 100%; max-height: 300px; cursor: pointer;">
+                                style="cursor: pointer;">
                         </div>
-                        <input type="text" class="phone" id="phone" placeholder="Telefono" required>
+                        <input type="text" class="phone" id="phone" placeholder="Celular / WhatsApp" required>
                     </div>
                 </div>
-                <a href="" class="new password">
-                    <h4>Cambiar Contraseña</h4>
+                <a href="" class="new_password">
+                    <h4 class="password">Cambiar Contraseña</h4>
                 </a>
-
-                <button id="save-button">Guardar</button>
+                <div class="button">
+                    <button id="save-button">Guardar Cambios</button>
+                </div>
+               
                
             </form>
         </div>

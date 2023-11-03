@@ -1,23 +1,21 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Obtener datos del almacenamiento local (puedes cambiar esto según tu implementación)
-    const userData = JSON.parse(localStorage.getItem('userData'));
+document.addEventListener("DOMContentLoaded", function () {
+    // Obtener los datos del Local Storage
+    const storedData = localStorage.getItem("userData");
+    if (storedData) {
+        const userData = JSON.parse(storedData);
+        document.getElementById("nombre").textContent = userData.nombre;
+        document.getElementById("apellido").textContent = userData.apellido;
+        document.getElementById("tecnologia").textContent = userData.tecnologia;
+        document.getElementById("date").textContent = userData.date;
+        document.getElementById("gender").textContent = userData.gender;
+        document.getElementById("address").textContent = userData.address;
+        document.getElementById("correo").textContent = userData.correo;
+        document.getElementById("phone").textContent = userData.phone;
 
-    // Rellenar los campos en la página de visualización
-    if (userData) {
-        document.getElementById('profileName').textContent = userData.name;
-        document.getElementById('profileRole').textContent = userData.role;
-        document.getElementById('profileDate').textContent = userData.date;
-        document.getElementById('profileGender').textContent = userData.gender;
-        document.getElementById('profileAddress').textContent = userData.address;
-        document.getElementById('profileEmail').textContent = userData.email;
-        document.getElementById('profilePhone').textContent = userData.phone;
-
-        // Rellenar habilidades
-        const skillsList = document.getElementById('profileSkills');
-        userData.skills.forEach(skill => {
-            const listItem = document.createElement('li');
-            listItem.textContent = skill;
-            skillsList.appendChild(listItem);
-        });
+        // Mostrar la imagen de perfil si está presente
+        if (userData.profileImage) {
+            const profileImage = document.getElementById("profileImage");
+            profileImage.src = userData.profileImage;
+        }
     }
 });
