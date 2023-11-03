@@ -6,6 +6,10 @@ const router = Router()
 
 /* Borrar si se usa EJS */
 router.use(express.json());
+const __dirnameAllStatic = searchDir();
+
+router.use(express.static(path.join(__dirnameAllStatic, 'static')));
+
 
 router.get('/profile', (req, res) => {
     /* Con ejs */
