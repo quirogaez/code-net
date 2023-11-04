@@ -28,10 +28,14 @@ const uploadImage = async (imagesToPost) => {
     if (!(imagesToPost instanceof Array)) {
         imagesToPost = [imagesToPost];
     }
+    let  arrayUrl = []
     for (let image in imagesToPost) {
         console.log(imagesToPost);
         let url = await uploadProcess(imagesToPost[image], image);
+        arrayUrl.push(url);
     }
+    console.log(arrayUrl);
+    return arrayUrl
 }
 
 // Función para procesar la subida de una imagen

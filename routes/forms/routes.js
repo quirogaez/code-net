@@ -47,11 +47,11 @@ router.post('/project', async (req, res) => {
         try {
             // Llama a la función uploadImage para cargar la imagen y obtén la URL de descarga
             const url = await uploadImage(image);
-
+            console.log(url + "Desde la peticion")
             // Guarda la URL de la imagen en una base de datos o realiza cualquier otra acción necesaria
 
             // Envía una respuesta al cliente con éxito y la URL de la imagen cargada
-            res.json({ success: true, url });
+            res.json({ success: true, url: url });
         } catch (error) {
             // En caso de un error al cargar la imagen, registra el error y envía una respuesta de error al cliente
             console.error('Error al subir la imagen:', error);
