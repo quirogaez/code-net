@@ -109,7 +109,7 @@
                 <div class="container_project">
                     <!------------ add prooject images ------------>
                     <div class="container_img">
-                        <div class="img_button img_buttonCover">
+                        <div class="img_button1">
                             <input class="input_img" type="file" id="addImg1" hidden>
                             <label for="addImg1" class="label_img">
                                 <p>+</p>agregar img
@@ -159,7 +159,7 @@
                                 alt="JavaScript">
                         </div>
                         <div class="img__tecnology" id="html">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2Fgithub.svg?alt=media&token=1ed47073-27dc-4137-b6f3-23043a60dcc0&_gl=1*ljt8or*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA2NTg1Mi4yMi4xLjE2OTkwNjYzMjIuMjQuMC4w"
+                            <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2Fhtml.svg?alt=media&token=b9cc2e45-8ce8-411b-83a5-f7804e04d1f1&_gl=1*o8nkt2*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA3MDExMS4yMy4wLjE2OTkwNzAxMTEuNjAuMC4w"
                                 alt="HTML">
                         </div>
                         <div class="img__tecnology" id="css">
@@ -256,50 +256,49 @@
                         </div>
 
                         <!------- button add tecnology (media query)  ------->
-                        <div class="buttonplus">
-                            <i class='bx bxs-plus-circle'></i>
-                        </div>
                     </div>
                 </div>
 
                 <!------------ url project ----------------->
                 <div class="form--project">
-
-                    <div class="container__urlProject">
-                        <input type="url" class="url__project" name="url__project"
-                            placeholder="URL del proyecto desplegado"><label class="checkVerify" for="verify"><i
-                                class="fa-solid fa-check"></i></label><input type="#" id="verify" class="verify">
+                    <div class="responsiveTechnologies">
+                        <div class="container__urlProject">
+                            <input type="url" class="url__project" name="url__project"
+                                placeholder="URL del proyecto desplegado"><label class="checkVerify" for="verify"><i
+                                    class="fa-solid fa-check"></i></label><input type="#" id="verify" class="verify">
+                        </div>
+                        <!----------- button add tecnology ------------->
+                        <select class="technology" id="technology" name="tecnologias">
+                            <option value="vacio">Selecciona tecnologias</option>
+                            <option value="bootstrap">Bootstrap</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="react">React.js</option>
+                            <option value="node">Node.js</option>
+                            <option value="viu">Viu.js</option>
+                            <option value="aws">AWS</option>
+                            <option value="mongodb">MongoDB</option>
+                            <option value="oracle">ORACLE</option>
+                            <option value="wordpress">WordPress</option>
+                            <option value="underscore">UnderScore</option>
+                            <option value="ruby">Ruby</option>
+                            <option value="rails">Rails</option>
+                            <option value="php">PHP</option>
+                            <option value="nuxt">Nuxt.js</option>
+                            <option value="nginx">Nginx</option>
+                            <option value="mysql">MySQL</option>
+                            <option value="maps">Maps</option>
+                            <option value="jquery">jQuery</option>
+                            <option value="java">Java</option>
+                            <option value="inertia">Inertia.js</option>
+                            <option value="github">GitHub</option>
+                            <option value="firebase">Firebase</option>
+                            <option value="filetype">FileType</option>
+                            <option value="cloudflare">CloudFlare</option>
+                        </select>
                     </div>
-                    <!----------- button add tecnology ------------->
-                    <select class="technology" name="tecnologias">
-                        <option value="vacio">Selecciona tecnologias</option>
-                        <option value="bootstrap">Bootstrap</option>
-                        <option value="javascript">JavaScript</option>
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                        <option value="react">React.js</option>
-                        <option value="node">Node.js</option>
-                        <option value="viu">Viu.js</option>
-                        <option value="aws">AWS</option>
-                        <option value="mongodb">MongoDB</option>
-                        <option value="oracle">ORACLE</option>
-                        <option value="wordpress">WordPress</option>
-                        <option value="underscore">UnderScore</option>
-                        <option value="ruby">Ruby</option>
-                        <option value="rails">Rails</option>
-                        <option value="php">PHP</option>
-                        <option value="nuxt">Nuxt.js</option>
-                        <option value="nginx">Nginx</option>
-                        <option value="mysql">MySQL</option>
-                        <option value="maps">Maps</option>
-                        <option value="jquery">jQuery</option>
-                        <option value="java">Java</option>
-                        <option value="inertia">Inertia.js</option>
-                        <option value="github">GitHub</option>
-                        <option value="firebase">Firebase</option>
-                        <option value="filetype">FileType</option>
-                        <option value="cloudflare">CloudFlare</option>
-                    </select>
+                    
                     <!---------- Description project ------------>
                     <textarea class="description" name="message" placeholder="Descripción"></textarea>
                     <!--------------- repository Git Hub ---------------->
