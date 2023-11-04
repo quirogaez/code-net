@@ -13,7 +13,7 @@ export class Auth {
        }
    }
    
-    logOut() {
+   static logOut() {
        localStorage.removeItem("auth");
        window.location.replace("/");
    }

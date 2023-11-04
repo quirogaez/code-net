@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code|Net</title>
     <!-- css link -->
-    <link rel="stylesheet" href="../css/style_structure.css">
+    <link rel="stylesheet" href="../css/style_visualitation.css">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../img/favicon/favicon.svg">
     <!-- Link font -->
@@ -30,14 +30,14 @@
                     </a>
                 </div>
                 <div class="profile_more">
-                <a href="#" class="profile__mobile" id="varProfile">
-                    <div class="profile__mobile" id="aside-porfile">
-                        <img src="../img/person.png" alt="">
-                    </div>
-                </a>
-                <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
-                    <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
-                </a>
+                    <a href="#" class="profile__mobile" id="varProfile">
+                        <div class="profile__mobile" id="aside-porfile">
+                            <img src="../img/person.png" alt="">
+                        </div>
+                    </a>
+                    <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
+                        <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
+                    </a>
                 </div>
             </div>
             <!-- -----------SIDEBAR---------- -->
@@ -92,7 +92,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="optionsMore" onclick="Auth.logOut()">
+                        <a href="#" class="optionsMore">
                             <p>cerrar sesión</p>
                         </a>
                     </li>
@@ -103,66 +103,88 @@
                 <p>Más</p>
             </a>
         </header>
+        <!-- ---------- END MAIN LEFT ---------- -->
 
-            <!-- .................. carousel projects ........................ -->
-            <div class="main-mid">    
-            <!--------------------- menu plus --------------------->
-            <div class="showPublication">
-                <ul class="showPublication_PPS">
-                    <li>
-                        <a href="/codenet/post" class="optionAdd">
-                            <p>agregar publicación</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/codenet/project" class="optionAdd">
-                            <p class="optionAdd_publication">agregar proyecto</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/codenet/shortclip" class="optionAdd">
-                            <p>agregar shortclip</p>
-                        </a>
-                    </li>
-                </ul>
+        <!-- ---------- MAIN MID ---------- -->
+        <div class="main-central">
+            <div class="main-header">
+                <div class="portada">
+                    
+                    <img class="portada">
+                    <p><span id="nombre"></span></p>
+                    <p> <span id="roles"></span></p>
+                    <img src="" id="profileImage" alt="Imagen de perfil">
+                    
+                    <a class="edit-portada">
+                        <i class="fa-sharp fa-regular fa-pen-circle" style="color: #7f1aea;"></i>
+                        <span id="date"></span>
+                    </a>
+                </div>
+               
+                
             </div>
-            <a onclick="showAddOption()" class="buttonPlus" id="varProfile">
-                <i class="fa-solid fa-plus"></i>
-            </a>          
-                <div class="carousel-story">
-                    <div class="controls_p">
-                        <button class="prev-btn button"><i class='bx bx-chevron-left'></i></button>
-                    </div>
-                    <div class="carousel_profile_story"></div>
-                    <div class="controls_n">
-                        <button class="next-btn button"><i class='bx bx-chevron-right'></i></button>
-                    </div>
+
+            <div class="main-mid">
+                <!-- .................. PROJECTS START ........................ -->
+                <p> hola en medio</p>
+                
+            </div>
+
+            <!-- .................. create post start  ........................ -->
+
+            <!-- .................. create post end  ........................ -->
+
+
+            <!-- .................. PROJECTS END ........................ -->
+
+            <!-- ---------- END MAIN MID ---------- -->
+            <!-- MAIN CENTER -->
+
+            <div class="main-about">
+                <div id="userData">
+                    <p class="about-title">SOBRE MÍ</p>
+                    <a class="genero">
+                        <i class="fa-sharp fa-solid fa-user" style="color: #7f1aea;"></i>
+                        <span id="gender"></span>
+                    </a>
+                    <a class="about-date">
+                        <i class="fa-sharp fa-solid fa-cake-candles" style="color: #7f1aea;"></i>
+                        <span id="date"></span>
+                    </a>
+                    <a class="about-address">
+                        <i class="fa-sharp fa-solid fa-location-dot" style="color: #7f1aea;"></i>
+                        <span id="address"></span>
+                    </a>
+                    <a class="about-correo">
+                        <i class="fa-sharp fa-solid fa-envelope" style="color: #7f1aea;"></i>
+                        <span id="correo"></span>
+                    </a>
+                    <a class="about-phone">
+                        <i class="fa-sharp fa-solid fa-phone" style="color: #7f1aea;"></i>
+                        <span id="phone"></span>
+                    </a>
+
+                    
+                    <p><strong>Tecnología:</strong> <span id="tecnologia"></span></p>
+
+
+
                 </div>
 
-                <!-------------------- publicaciones -------------------->
-                <div class="main-center">
-                    <div id="imageContainer"></div>
-                </div>
-         </div>
-        <!-----------------  live streaming carousel ------------------>
-        <section class="main-right">
-            <div class="icono">
-                <a href="/codenet/streams">
-                    <img class="icono_life" src="../img/trasmisiones.png"></i>
-                </a>
-            </div>
-            <div class="carousel-life">
-                <div class="carousel_profile_life"></div>
-            </div>
-        </section>
+            </div> <!-- ---------- MAIN RIGHT ---------- -->
+        </div>
+
+        <!-- ---------- END MAIN RIGHT ---------- -->
+
+
     </main>
+
 </body>
-<script defer type="module" src="../js/structure.js"></script>
-<script defer type="module" src="../js/Auth.js"></script>
-<script src="../js/publication_structure.js"></script>
-<script defer src="../js/script_structure.js"></script>
+<!-- link js -->
+
 <script src="../js/sidebar.js"></script>
-<script src="../js/buttonPlus.js"></script>
+<script defer type="module" src="../js/structure.js"></script>
+<script src="../js/Visualizacion_Perfil.js"></script>
 <script src="//code.tidio.co/jyvlyxqxgpph2pmupu9kpbz1mfibcguw.js" async></script>
 
 </html>
