@@ -352,16 +352,25 @@ p {
     border: none;
     color: var(--text--primary);
 }
-.url__project {
-    width: 60%;
+.container__urlProject {
+    display: flex;
     height: 48px;
+    background-color: #30095a;
+}
+.url__project {
+    margin-top: 0;
+    width: 60%;
+    height: 100%;
     border-radius: 10px 0 0 10px;
 }
-.verify{
+.checkVerify {
     background-color: #00ffe0;
     width: 5%;
-    height: 48px;
+    height: 100%;
     border-radius: 0 10px 10px 0;
+}
+.verify {
+    display: none;
 }
 .technology {
     margin-left: 5px;

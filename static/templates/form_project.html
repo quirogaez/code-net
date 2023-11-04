@@ -238,7 +238,9 @@
 
                 <!------------ url project ----------------->
                 <div class="form--project">
-                    <input type="url" class="url__project form" name="url__project" placeholder="URL del proyecto desplegado"><input type="#" class="verify">
+                    <div class="container__urlProject">
+                        <input type="url" class="url__project" name="url__project" placeholder="URL del proyecto desplegado"><label class="checkVerify" for="verify"><i class="fa-solid fa-check"></i></label><input type="#" id="verify" class="verify">
+                    </div>
                     <!----------- button add tecnology ------------->    
                     <select class="technology form" name="tecnologias">
                         <option value="vacio">Selecciona tecnologias</option>
