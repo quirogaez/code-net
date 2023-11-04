@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (storedData) {
         const userData = JSON.parse(storedData);
         document.getElementById("nombre").textContent = userData.nombre;
-        document.getElementById("apellido").textContent = userData.apellido;
+        document.getElementById("roles").textContent = userData.roles;
         document.getElementById("tecnologia").textContent = userData.tecnologia;
         document.getElementById("date").textContent = userData.date;
         document.getElementById("gender").textContent = userData.gender;
