@@ -7,14 +7,15 @@ import getTechnologies from '../../services/technologies.js'
 
 const router = Router()
 
-router.post('/project', async (req, res) => {
+router.post('/technologies', async (req, res) => {
     res.header('Access-Control-Allow-Origin', '*');
     console.log("Sí sirve el POST");
-    const {body} = req.body;
+    const {url} = req.body;
     try {
-        data = await getTechnologies(url)
+        const data = await getTechnologies(url);
+        res.status(200).json({data: data})
     } catch (e) {
-
+        res.status(400).json({error: e})
     }
 });
 

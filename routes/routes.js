@@ -4,6 +4,7 @@ import structureRoutes from './structure/routes.js'; // Rutas relacionadas con l
 import formsRoutes from './forms/routes.js';       // Rutas relacionadas con los formularios
 import twitchRoutes from './twitch/routes.js'; // Rutas relacionadas con la API de twitch
 import profileRoutes from './profile/routes.js'; // Rutas relacionadas con el perfil de usuario
+import technologiesRoutes from './technologies/routes.js'; // Rutas relacionadas con extraer tecnologias 
 
 import express, { Router } from 'express';
 
@@ -16,6 +17,8 @@ router.use('', structureRoutes);   // Monta las rutas de estructura bajo la ruta
 router.use('', formsRoutes);    
 router.use('', twitchRoutes);     // Monta las rutas de la API de twitch
 router.use('', profileRoutes);     // Monta las rutas de perfil de usuario
+router.use('', technologiesRoutes);     // Monta las rutas de extraer tecnologias 
+
 
 // Exporta el enrutador principal que contiene todas las rutas
 export default router;
