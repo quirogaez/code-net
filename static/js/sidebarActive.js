@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     enlaces.forEach(function(enlace) {
 
       if (enlace.href === currentPageURL) {
-        enlace.classList.add('active'); // Agrega la clase "active" al enlace actual
+        enlace.classList.add('active'); 
       }
     });
   });

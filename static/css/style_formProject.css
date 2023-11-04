@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;1,100&display=swap");
 
 :root {
-    --primary--color: #00ffe0;
+    --primary--color: #00ffe1;
     --second--color: #801bea;
     --white--color: white;
     --black--color: black;
@@ -343,27 +343,48 @@ p {
 }
 
 .form--project {
+    display: flex;
+    flex-wrap: wrap;
     color: var(--second--color);
     margin-top: 5px;
 }
 .form--project input {
-    margin-top: 10px;
     padding: 15px;
     border: none;
     color: var(--text--primary);
 }
+.container__urlProject {
+    margin-top: 10px;
+    display: flex;
+    padding: 0;
+    height: 48px;
+    width: 65%;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px #8b8b8b;
+}
 .url__project {
-    width: 60%;
+    margin: auto;
+    width: 93%;
     height: 48px;
     border-radius: 10px 0 0 10px;
+    color: var(--text--primary);
 }
-.verify{
-    background-color: #00ffe0;
-    width: 5%;
-    height: 48px;
+.checkVerify {
+    background-color: var(--primary--color);
+    width: 7%;
+    height: 100%;
     border-radius: 0 10px 10px 0;
+    color: var(--text--primary);
+}
+.fa-check {
+    margin-top: 5px;
+    font-size: larger;
+}
+.verify {
+    display: none;
 }
 .technology {
+    margin-top: 10px;
     margin-left: 5px;
     height: 48px;
     width: 34%;
@@ -387,6 +408,7 @@ p {
     font-family: 'Ralawey', sans-serif;
 }
 .url__github {
+    margin-top: 10px;
     width: 100%;
     height: 48px;
     background-color: #ffff;
