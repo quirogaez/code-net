@@ -1,12 +1,12 @@
 // Importa los módulos necesarios
 import express from 'express';
-import mongoose from 'mongoose'; 
+/* import mongoose from 'mongoose';  */
 import dotenv from 'dotenv';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import routes from "./routes/routes.js";
 import path from 'node:path';
-import twitchAuth from './config.js';
+/* import twitchAuth from './config.js'; */
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -46,7 +46,7 @@ app.use(morgan("tiny")); // Middleware para el registro de solicitudes HTTP
 
 
 // app.js
-if (!process.env.twitchAUTH) {
+/* if (!process.env.twitchAUTH) {
     (async () => {
         process.env["twitchAUTH"] = await twitchAuth();
 
@@ -55,7 +55,7 @@ if (!process.env.twitchAUTH) {
     })
     
 }
-  
+   */
 const PORT = process.env.PORT || 8080
 
 

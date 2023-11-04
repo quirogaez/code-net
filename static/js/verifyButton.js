@@ -1,6 +1,8 @@
-const verifyButton = document.querySelector('.sure')
-const closeSure = document.querySelector('.close__modalSure')
-openSure.addEventListener ('click', (e)=> {
+const verifyButton = document.getElementById('verify')
+
+verifyButton.addEventListener ('click', (e)=> {
     e.preventDefault();
-    sure.classList.add('sure--show')
+    alert ("verificacion en proceso")
 });
+
+
