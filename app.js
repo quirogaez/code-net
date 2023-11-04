@@ -46,7 +46,7 @@ app.use(morgan("tiny")); // Middleware para el registro de solicitudes HTTP
 
 
 // app.js
-if (!process.env.twitchAUTH) {
+/* if (!process.env.twitchAUTH) {
     (async () => {
         process.env["twitchAUTH"] = await twitchAuth();
 
@@ -54,7 +54,7 @@ if (!process.env.twitchAUTH) {
         console.log(process.env.twitchAUTH)
     })
     
-}
+} */
   
 const PORT = process.env.PORT || 8080
 
