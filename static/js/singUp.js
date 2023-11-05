@@ -9,6 +9,7 @@ signupForm.addEventListener('submit', (e) => {
     const email = document.querySelector('#email').value
     const date = document.querySelector('#date').value
     const genero = document.querySelector('#genero').value
+    const username = document.querySelector('#username').value
     const inputPassword = document.querySelector('#password').value
     const confirmPassword = document.querySelector('#confirm_password').value
 
@@ -20,7 +21,7 @@ signupForm.addEventListener('submit', (e) => {
     } else {
         // Inicializamos una variable que recibirá los datos de los usuarios registrados, si no hay datos almacenados, se creará un arreglo vacío
         const Users = JSON.parse(localStorage.getItem('users')) || []
-        const isUserRegistered = Users.find(user => user.email === email)
+        const isUserRegistered = Users.find(user => user.email === email, user=> user.username === username)
 
         // Si el email que desee registrar, ya existe, nos dirá que ya se encuentra registrado, sino me permitirá ingresar sin problema al sistema
         if (isUserRegistered) {
@@ -28,7 +29,7 @@ signupForm.addEventListener('submit', (e) => {
         }
 
         // Aquí especificamos que nos agregue los datos a la lista
-        Users.push({ name: name, lastName: lastName, email: email, date: date, genero: genero, password: inputPassword })
+        Users.push({ name: name, lastName: lastName, email: email, date: date, genero: genero, username: username ,password: inputPassword })
 
         // Aquí especificamos que nos permita recibir los datos en formato String para podernos loguear
         localStorage.setItem('users', JSON.stringify(Users))
@@ -37,7 +38,7 @@ signupForm.addEventListener('submit', (e) => {
         alert('Registro Exitoso!')
 
         // Si el registro fue exitoso, nos redigirá al login
-        window.location.href = 'structure.html'
+        window.location.href = 'http://localhost:8080/codenet/structure'
         
     }
 })

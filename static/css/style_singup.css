@@ -190,10 +190,13 @@ body {
     border-radius: 6px;
     color: var(--text--primary);
 }
-
+.username {
+    width: 100%;
+}
 
 .password--form {
     width: 100%;
+    margin-top: 10px;
 }
 .password2--form {
     width: 100%;
