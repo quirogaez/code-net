@@ -196,16 +196,16 @@ document.addEventListener("DOMContentLoaded",  function() {
 
   /*--------------------------------inicio boton de mas------------------------------------------- */
 
-  let masOpcionesVisibles = false;
+  let MasOpcionesVisibles = false;
   function showPlusOptions() {
-    if(masOpcionesVisibles === false) {
+    if(MasOpcionesVisibles === false) {
 
       document.querySelector(".showPlus").style.display = "block";
-      masOpcionesVisibles = true;
+      MasOpcionesVisibles = true;
      
     } else {
       document.querySelector(".showPlus").style.display = "none";
-      masOpcionesVisibles=false;
+      MasOpcionesVisibles=false;
       
     }
     /*-------------------------------inicio boton de cerrar seccion----------------- */

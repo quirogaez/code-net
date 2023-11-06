@@ -35,7 +35,7 @@ body {
 /* ----- Main container ----- */
 .main-container {
     display: grid;
-    grid-template-columns: 18vw auto;
+    grid-template-columns: 18vw 82vw;
 }
 
 /* ----- navbar ----- */
@@ -369,10 +369,6 @@ img {
 
 /* ----- media query for tablets ----- */
 @media screen and (max-width: 1025px) {
-    .main-container {
-        display: grid;
-        grid-template-columns: 18vw auto;
-    }
 
     /* --------------- navbar --------------- */
     .side-bar {
@@ -426,11 +422,18 @@ img {
     .main-right {
         display: none;
     }
+
+    .form_project_container {
+        margin: 5px auto;
+        padding: 10px;
+        min-width: 100%;
+    }
 }
 @media screen and (max-width: 768px) {
-    .main-container {
-        display: grid;
-        grid-template-columns: 18vw auto;
+
+    .upload-button {
+        max-width: 30%;
+        font-size: .5rem;
     }
 }
 /*----- Media Query to smart phone (480px) -----*/
@@ -544,5 +547,10 @@ img {
         left: 5rem;
         margin-top: 1rem;
         bottom: auto;
+    }
+
+    .upload-button {
+        max-width: 30%;
+        font-size: .5rem;
     }
 }

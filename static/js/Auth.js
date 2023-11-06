@@ -1,4 +1,4 @@
-export class Auth {
+/* export class Auth {
    constructor() {
        document.querySelector("body").style.display = "none";
        const auth = localStorage.getItem("auth");
@@ -19,3 +19,4 @@ export class Auth {
    }
 }
 
+ */

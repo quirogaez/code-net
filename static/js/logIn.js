@@ -1,14 +1,14 @@
 addEventListener("DOMContentLoaded", (e) => {
-    const auth = window.localStorage.getItem("auth", 1);
+    /* const auth = window.localStorage.getItem("auth", 1);
     if (auth) {
         window.location.replace("./structure")
-    }
+    } */
 })
 
 const submitButton = document.querySelector(".button--login").childNodes[1];
 /* Esta funcion se debe cambiar cuando funcione base de datos */
 console.log(submitButton)
-submitButton.addEventListener("click", (e) => {
+submitButton.addEventListener("click", async (e) => {
     e.preventDefault();
     const users = JSON.parse(window.localStorage.getItem("users"));
     const registerForm = document.forms["loginForm"];
@@ -19,8 +19,15 @@ submitButton.addEventListener("click", (e) => {
             if (user.email === emailInput && user.password === passwordInput) {
                 window.localStorage.setItem("auth", 1);
                 console.log("true");
-                window.location.replace("./structure")
+                
             }
         }
     }
+    let res = await fetch(window.location.search + "/codenet/login", {
+        method: 'POST',
+        body: JSON.stringify({ username: emailInput, password: passwordInput }),
+        headers: { "Content-type": "application/json; charset=UTF-8" }
+    })
+    /* let respose = await res.json();
+    console.log(respose) */
 })
