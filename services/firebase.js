@@ -3,7 +3,7 @@ import { getAuth } from 'firebase/auth';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { initializeApp } from 'firebase/app';
 import dotenv from 'dotenv';
-import crypto from 'node:crypto'
+import crypto from 'node:crypto';
 
 // Configuración de Firebase con la información de tu proyecto
 dotenv.config()
@@ -35,7 +35,7 @@ const uploadImage = async (imagesToPost) => {
         arrayUrl.push(url);
     }
     console.log(arrayUrl);
-    return arrayUrl
+    return arrayUrl;
 }
 
 // Función para procesar la subida de una imagen

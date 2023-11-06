@@ -19,3 +19,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+const editarPerfilButton = document.getElementById("editarPerfilButton");
+
+editarPerfilButton.addEventListener("click", function() {
+    // Redirige a la página HTML deseada
+    window.location.href = "../templates/Setting_Perfil.html";
+});
+
+const editPortadaButton = document.getElementById("edit-portada-button");
+const portadaImage = document.getElementById("portada-image");
+const fileInput = document.getElementById("file-input");
+
+editPortadaButton.addEventListener("click", function() {
+    fileInput.click(); // Al hacer clic en el ícono, se activa el input de archivo oculto
+});
+
+fileInput.addEventListener("change", function() {
+    const selectedFile = fileInput.files[0];
+
+    if (selectedFile) {
+        const objectURL = URL.createObjectURL(selectedFile);
+        portadaImage.src = objectURL; // Muestra la imagen seleccionada por el usuario
+    }
+});

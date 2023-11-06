@@ -2,7 +2,7 @@
 import axios from 'axios';
 import dotenv from 'dotenv';
 
-dotenv.config()
+dotenv.config();
 
 async function getStreams(data = {}) {
     const pagination = data?.pag || null; // Obtiene el valor de 'pag' de los datos o establece null si no está presente
