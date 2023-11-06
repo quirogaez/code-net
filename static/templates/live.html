@@ -88,7 +88,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="optionsMore ">
+                        <a onclick="settingShow()" class="optionsMore">
                             <p class="optionCenter">configuraciónes</p>
                         </a>
                     </li>
@@ -106,6 +106,23 @@
         </header>
         <!-------------------------- search stream --------------------------->
         <div class="mainContainer">
+            <!--------------------- settings page ----------------->
+            <section class="showSettings">
+                <div class="setting">
+                    <div class="close__modalSure">
+                        <button type="button">x</button>
+                    </div>
+                    <div class="darkMode">
+                        <p>Modo oscuro</p>
+                        <label class="switch">
+                            <input type="checkbox" id="mySwitch">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="languageMode"> lenguaje</div>
+                </div>
+            </section>
+            <!----------------------- live section ---------------->
             <div class="container__search">
                 <input type="search" class="search__nav" name="busquedamusica" placeholder="buscar">
                 <input type="submit" value="" style="display: none;">
@@ -344,6 +361,7 @@
 <!------------ js navbar -------------->
 <script src="../js/sidebarActive.js"></script>
 <script src="../js/optionMore.js"></script>
+<script src="../js/settingsPage.js"></script>
 <!------------ button plus forms -------------->
 <script src="../js/buttonPlus.js"></script>
 <!------- carousels ------>

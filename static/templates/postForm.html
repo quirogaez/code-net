@@ -31,14 +31,14 @@
                     </a>
                 </div>
                 <div class="profile_more">
-                <a href="#" class="profile__mobile" id="varProfile">
-                    <div class="profile__mobile" id="aside-porfile">
-                        <img src="../img/person.png" alt="">
-                    </div>
-                </a>
-                <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
-                    <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
-                </a>
+                    <a href="#" class="profile__mobile" id="varProfile">
+                        <div class="profile__mobile" id="aside-porfile">
+                            <img src="../img/person.png" alt="">
+                        </div>
+                    </a>
+                    <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
+                        <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
+                    </a>
                 </div>
             </div>
             <!-- -----------SIDEBAR---------- -->
@@ -88,7 +88,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="optionsMore ">
+                        <a onclick="settingShow()" class="optionsMore">
                             <p class="optionCenter">configuraciónes</p>
                         </a>
                     </li>
@@ -106,6 +106,22 @@
         </header>
         <!-------------------- Post form -------------------->
         <div class="form_project_container">
+            <!--------------------- settings page ----------------->
+            <section class="showSettings">
+                <div class="setting">
+                    <div class="close__modalSure">
+                        <button type="button">x</button>
+                    </div>
+                    <div class="darkMode">
+                        <p>Modo oscuro</p>
+                        <label class="switch">
+                            <input type="checkbox" id="mySwitch">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="languageMode"> lenguaje</div>
+                </div>
+            </section>
             <form action="#" method="POST" enctype="multipart/form-data" class="container--mid">
                 <div class="container--mid">
                     <div class="upload-section">
@@ -117,7 +133,8 @@
                             <img id="filePreview" src="#" alt="Vista previa del archivo">
                         </div>
                     </div>
-                        <textarea name="descripcion-section" class="description-section" placeholder="Descripción"></textarea>
+                    <textarea name="descripcion-section" class="description-section"
+                        placeholder="Descripción"></textarea>
                     <div class="submit-buttom">
                         <button type="submit" class="publish-button">Publicar</button>
                     </div>
@@ -134,6 +151,7 @@
 <!------------ js navbar -------------->
 <script src="../js/sidebarActive.js"></script>
 <script src="../js/optionMore.js"></script>
+<script src="../js/settingsPage.js"></script>
 <!------------ button plus forms -------------->
 <script src="../js/buttonPlus.js"></script>
 <!------- carousels ------>
