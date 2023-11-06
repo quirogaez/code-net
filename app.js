@@ -6,7 +6,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import routes from "./routes/routes.js";
 import path from 'node:path';
-import twitchAuth from './config.js'; 
+import twitchAuth from './config.js';
 import session from 'express-session';
 
 import { fileURLToPath } from 'url';

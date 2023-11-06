@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     selectTecnologias.addEventListener('change', (event) => {
         const selectedOption = selectTecnologias.value;
+
+        if (selectedOption !== 'vacio') {
+            const optionToDisable = selectTecnologias.querySelector(`option[value="${selectedOption}"]`);
+            optionToDisable.disabled = true;
+        }
+        
         const selectedImage = document.getElementById(selectedOption);
 
         if (selectedImage) {
@@ -134,6 +140,7 @@ function imageCreate(imgData, fileContainer) {
     spanImage.style.display = 'block';
     spanImage.innerHTML = imgData.name;
     imgText.appendChild(spanImage);
+
 }
 
 
