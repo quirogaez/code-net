@@ -1,6 +1,7 @@
 import express, {Router} from 'express'
 import path from 'path'
 import {searchDir} from '../searchDir.js'
+import auth from '../../middlewares/Auth.js'
 
 const router = Router()
 
@@ -19,7 +20,7 @@ router.get('/login', (req, res) => {
 });
 
 
-router.get('/signup', (req, res) => {
+router.get('/signup', auth, (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
@@ -35,9 +36,13 @@ router.post('/login', (req, res) => {
     const {username, password} = req.body;
     /* OJO aqui se debe ahcer la validacion con la base de datos */
     if (username && password) {
-        res.redirect("http://localhost:8080/codenet/structure");
+        /* Se dejara la sesion con el id de la persona */
+        req.session.user = 1;
+        res.redirect(303, '/codenet/structure');
     } else 
-    { res.header("si");}
+    { 
+        res.header("si");
+    }
 });
 
 

@@ -3,6 +3,7 @@ import path from 'path'
 import {searchDir} from '../searchDir.js'
 import uploadImage from '../../services/firebase.js'
 import fileUpload from 'express-fileupload';
+import auth from '../../middlewares/Auth.js'
 
 
 const router = Router()
@@ -12,19 +13,19 @@ const router = Router()
 router.use(express.json());
 router.use(fileUpload());
 
-router.get('/project', (req, res) => {
+router.get('/project', auth, (req, res) => {
     const __dirnameAll = searchDir();
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'form_project.html');
     res.sendFile(filePath);
 });
 
-router.get('/post', (req, res) => {
+router.get('/post', auth, (req, res) => {
     const __dirnameAll = searchDir();
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'postForm.html');
     res.sendFile(filePath);
 });
 
-router.get('/shortclip', (req, res) => {
+router.get('/shortclip', auth, (req, res) => {
     const __dirnameAll = searchDir();
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'formShortClip.html');
     res.sendFile(filePath);

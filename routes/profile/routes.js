@@ -1,6 +1,8 @@
 import express, {Router} from 'express'
 import path from 'path'
 import {searchDir} from '../searchDir.js'
+import auth from '../../middlewares/Auth.js'
+
 
 const router = Router()
 
@@ -11,7 +13,7 @@ const __dirnameAllStatic = searchDir();
 router.use(express.static(path.join(__dirnameAllStatic, 'static')));
 
 
-router.get('/profile', (req, res) => {
+router.get('/profile', auth, (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
@@ -22,7 +24,7 @@ router.get('/profile', (req, res) => {
 });
 
 
-router.get('/profile/edit', (req, res) => {
+router.get('/profile/edit', auth, (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
