@@ -23,10 +23,17 @@ submitButton.addEventListener("click", async (e) => {
             }
         }
     }
-    let res = await fetch(window.location.search + "/codenet/login", {
+   await fetch(window.location.search + "/codenet/login", {
         method: 'POST',
         body: JSON.stringify({ username: emailInput, password: passwordInput }),
         headers: { "Content-type": "application/json; charset=UTF-8" }
+    }).then(response => {
+        if (response.redirected) {
+            // Si la respuesta es una redirección, navega a la nueva URL
+            window.location.href = response.url;
+        } else {
+            return response.json();
+        }
     })
     /* let respose = await res.json();
     console.log(respose) */
