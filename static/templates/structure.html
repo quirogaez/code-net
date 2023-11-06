@@ -30,14 +30,14 @@
                     </a>
                 </div>
                 <div class="profile_more">
-                <a href="#" class="profile__mobile" id="varProfile">
-                    <div class="profile__mobile" id="aside-porfile">
-                        <img src="../img/person.png" alt="">
-                    </div>
-                </a>
-                <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
-                    <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
-                </a>
+                    <a href="#" class="profile__mobile" id="varProfile">
+                        <div class="profile__mobile" id="aside-porfile">
+                            <img src="../img/person.png" alt="">
+                        </div>
+                    </a>
+                    <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
+                        <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
+                    </a>
                 </div>
             </div>
             <!-- -----------SIDEBAR---------- -->
@@ -87,7 +87,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="optionsMore ">
+                        <a onclick="settingShow()" class="optionsMore">
                             <p class="optionCenter">configuraciónes</p>
                         </a>
                     </li>
@@ -104,8 +104,8 @@
             </a>
         </header>
 
-            <!-- .................. carousel projects ........................ -->
-            <div class="main-mid">    
+        <!-- .................. carousel projects ........................ -->
+        <div class="main-mid">
             <!--------------------- menu plus --------------------->
             <div class="showPublication">
                 <ul class="showPublication_PPS">
@@ -126,22 +126,42 @@
                     </li>
                 </ul>
             </div>
-            <a onclick="showAddOption()" class="buttonPlus" id="varProfile"><i class="fa-solid fa-plus"></i></a>          
-                <div class="carousel-story">
-                    <div class="controls_p">
-                        <button class="prev-btn button"><i class='bx bx-chevron-left'></i></button>
-                    </div>
-                    <div class="carousel_profile_story"></div>
-                    <div class="controls_n">
-                        <button class="next-btn button"><i class='bx bx-chevron-right'></i></button>
-                    </div>
-                </div>
+            <a onclick="showAddOption()" class="buttonPlus" id="varProfile"><i class="fa-solid fa-plus"></i></a>
 
-                <!-------------------- publicaciones -------------------->
-                <div class="main-center">
-                    <div id="imageContainer"></div>
+
+            <!------------------------------- carousel projects ---------------------->
+            <div class="carousel-story">
+                <div class="controls_p">
+                    <button class="prev-btn button"><i class='bx bx-chevron-left'></i></button>
                 </div>
-         </div>
+                <div class="carousel_profile_story"></div>
+                <div class="controls_n">
+                    <button class="next-btn button"><i class='bx bx-chevron-right'></i></button>
+                </div>
+            </div>
+
+            <!--------------------- settings page ----------------->
+            <section class="showSettings">
+                <div class="setting">
+                    <div class="close__modalSure">
+                        <button type="button">x</button>
+                    </div>
+                    <div class="darkMode">
+                        <p>Modo oscuro</p>
+                        <label class="switch">
+                            <input type="checkbox" id="mySwitch">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="languageMode"> lenguaje</div>
+                </div>
+            </section>
+
+            <!-------------------- publicaciones -------------------->
+            <div class="main-center">
+                <div id="imageContainer"></div>
+            </div>
+        </div>
         <!-----------------  live streaming carousel ------------------>
         <section class="main-right">
             <div class="icono">
@@ -153,6 +173,7 @@
                 <div class="carousel_profile_life"></div>
             </div>
         </section>
+
     </main>
 </body>
 <!----------------------- link js ------------------------------>
@@ -171,5 +192,9 @@
 <script src="../js/publication_structure.js"></script>
 <!------------ sesion ----------------->
 <script defer type="module" src="../js/Auth.js"></script>
+
+
+
+<script src="../js/settingsPage.js"></script>
 
 </html>
