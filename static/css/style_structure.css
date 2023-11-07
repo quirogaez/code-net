@@ -697,8 +697,8 @@ img {
 .modal-center{
     display: flex;
     flex-direction: row;
-   
-    margin-bottom: 10px;
+    margin: 20px 0;
+    
 }
 .close {
     position: absolute;
@@ -727,7 +727,7 @@ img {
     all: initial; /* Restablece todos los estilos */
     font: inherit; /* Hereda la fuente del texto */
     color: var(--second--color); /* Hereda el color del texto */
-    font-size: 20px;
+    font-size: 16px;
     margin-left: 53%;
     background: none; /* Sin fondo */
     border: none; /* Sin borde */
@@ -742,7 +742,16 @@ img {
 #messageContainer{
     margin-top: 5px;
 }
-
+.messageIn{
+    all: initial; /* Restablece todos los estilos */
+    font: inherit; /* Hereda la fuente del texto */
+    color: var(--text--primary); /* Hereda el color del texto */
+    font-size: 16px;
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    padding: 0; /* Sin relleno */
+    border-bottom: 1px solid #888;
+}
 /*---------------main_right---------------*/
 .main-right {
     position: fixed;

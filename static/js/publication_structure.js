@@ -25,70 +25,99 @@ const images = [
     like: 0,
     comment: 1,
   },
-  // Agrega más objetos para cada imagen que desees mostrar
 ];
 
-const mainContainer = document.querySelector('.main-center');
-const modal = document.getElementById('modal');
-const messageAuthor = document.getElementById('messageAuthor');
-const messageInput = document.getElementById('messageInput');
-const messageContainer = document.getElementById('messageContainer');
-for (const image of images) {
-  const imageHtml = `
+const mainContainer = document.getElementById('imageContainer');
+const modalsContainer = document.getElementById('modals-container');
+let currentIndex = -1;
+
+function createModal(index) {
+  const modalHtml = `
+    <div id="modal-${index}" class="modal">
+        <div class="modal-content">
+            <div class="modal-top">
+                <span class="close" onclick="closeModal(${index})">&times;</span>
+                <span id="messageAuthor-${index}"></span>
+            </div>
+            <div class="modal-center">
+                <input class="messageIn" type="text" id="messageInput-${index}" placeholder="Escribe un comentario...">
+                <button id="publishButton" onclick="publishMessage(${index})">Publicar</button>
+            </div>
+            <div class="message-cont" id="messageContainer-${index}"></div>
+        </div>
+    </div>
+  `;
+  modalsContainer.innerHTML += modalHtml;
+}
+
+function openModal(index) {
+  currentIndex = index;
+  const modal = document.getElementById(`modal-${index}`);
+  modal.style.display = 'block';
+  document.getElementById(`messageAuthor-${index}`).textContent = images[index].name;
+}
+
+function closeModal(index) {
+  currentIndex = -1;
+  const modal = document.getElementById(`modal-${index}`);
+  modal.style.display = 'none';
+  document.getElementById(`messageAuthor-${index}`).textContent = '';
+  document.getElementById(`messageInput-${index}`).value = '';
+}
+
+function publishMessage(index) {
+  const author = images[index].name;
+  const messageInput = document.getElementById(`messageInput-${index}`);
+  const messageContainer = document.getElementById(`messageContainer-${index}`);
+
+  if (author && messageInput.value) {
+    const messageHtml = `<p><strong>${author}:</strong> ${messageInput.value}</p>`;
+    messageContainer.innerHTML += messageHtml;
+    messageInput.value = '';
+  }
+}
+
+function loadImages() {
+  for (let i = 0; i < images.length; i++) {
+    createModal(i);
+
+    const imageHtml = `
     <div class="img-center-container">
         <div class="img-center">
-            <img class="img-center-publication" src="${image.imgSrc}" />
+            <img class="img-center-publication" src="${images[i].imgSrc}" />
             <div class="img-technology-prin">
-                <img class="img-technology" src="${image.tecnology1}" />
-                <img class="img-technology" src="${image.tecnology2}" />
-                <img class="img-technology" src="${image.tecnology3}" />
-                <img class="img-technology" src="${image.tecnology4}" />
-                <img class="img-technology" src="${image.tecnology5}" />
+                <img class="img-technology" src="${images[i].tecnology1}" />
+                <img class="img-technology" src="${images[i].tecnology2}" />
+                <img class "img-technology" src="${images[i].tecnology3}" />
+                <img class="img-technology" src="${images[i].tecnology4}" />
+                <img class="img-technology" src="${images[i].tecnology5}" />
             </div>
-            <!-- Resto de tus elementos de imagen y tecnología aquí -->
         </div>
         <div class="img-description">
             <div class="img-perfil-img">
-                <div class="img-perfil"><img src="${image.perfilImgSrc}" alt=""></div>
+                <div class="img-perfil"><img src="${images[i].perfilImgSrc}" alt=""></div>
                 <div class="img-verified"></div>
             </div>
             <div class="img-description-top">
-                <h3 class="img-name">${image.name}</h3>
-                <div class="img-like" id="like-${image.name}">
-                    <i class="fa-regular fa-heart icon-love" onclick="toggleLike('${image.name}')"></i>${image.like}
+                <h3 class="img-name">${images[i].name}</h3>
+                <div class="img-like" id="like-${images[i].name}">
+                    <i class="fa-regular fa-heart icon-love" onclick="toggleLike('${images[i].name}')"></i>${images[i].like}
                 </div>
-                <div class="img-coment"><i class="fa-regular fa-message icon-comment" onclick="openModal('${image.name}')"></i>${image.comment}</div>
-                <p class="img-rol">${image.description}</p>
+                <div class="img-coment">
+                    <i class="fa-regular fa-message icon-comment" onclick="openModal(${i})"></i>${images[i].comment}
+                </div>
+                <p class="img-rol">${images[i].description}</p>
             </div>
         </div>
     </div>
   `;
-  mainContainer.innerHTML += imageHtml;
+
+    mainContainer.innerHTML += imageHtml;
+  }
 }
 
-function openModal(name) {
-modal.style.display = 'block';
-messageAuthor.textContent = name;
-}
+loadImages();
 
-function closeModal() {
-modal.style.display = 'none';
-messageAuthor.textContent = '';
-messageInput.value = '';
-}
-
-function publishMessage() {
-const author = messageAuthor.textContent;
-const message = messageInput.value;
-
-if (author && message) {
-  const messageHtml = `<p><strong>${author}:</strong> ${message}</p>`;
-  messageContainer.innerHTML += messageHtml;
-
-  // Limpiar el input de mensaje después de publicar el mensaje
-  messageInput.value = '';
-}
-}
 
 function toggleLike(name) {
   const likeElement = document.getElementById(`like-${name}`);
