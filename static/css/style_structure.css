@@ -712,17 +712,7 @@ img {
 .close:hover{
     transform: scale(1.5);
 }
-#messageInput{
-    all: initial; /* Restablece todos los estilos */
-    font: inherit; /* Hereda la fuente del texto */
-    color: inherit; /* Hereda el color del texto */
-    background: none; /* Sin fondo */
-    border: none; /* Sin borde */
-    padding: 0; /* Sin relleno */
-    cursor: pointer; /* Establece un cursor de puntero al pasar el mouse */
-    border-bottom: 1px solid #888;
-    
-}
+
 #publishButton {
     all: initial; /* Restablece todos los estilos */
     font: inherit; /* Hereda la fuente del texto */
