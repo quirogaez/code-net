@@ -935,7 +935,6 @@ img {
     color: var(--text--primary);
     font-size: small;
 }
-
     /*  ------ hidden lives ------ */
     .main-right {
         display: none;
