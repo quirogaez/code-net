@@ -32,6 +32,11 @@ router.get('/signup', auth, (req, res) => {
     res.status(200).sendFile(filePath);
 });
 
+router.get('/logout', (req, res) => {
+    req.session.destroy();
+    res.redirect(303, '/codenet/structure');
+});
+
 router.post('/login', (req, res) => {
     res.header('Access-Control-Allow-Origin', '*');
     console.log("sirve loginf")
@@ -39,7 +44,7 @@ router.post('/login', (req, res) => {
     /* OJO aqui se debe ahcer la validacion con la base de datos */
     if (username && password) {
         /* Se dejara la sesion con el id de la persona */
-        req.session.user = 1;
+        req.session.user = "amy";
         res.redirect(303, '/codenet/structure');
     } else 
     { 
