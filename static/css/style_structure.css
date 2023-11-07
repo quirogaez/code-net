@@ -808,15 +808,15 @@ img {
 
     /* ----- Main container ----- */
     .main-container {
-        display: flex;
-        flex-wrap: wrap;
+        display: inline-block;
+        width: 100%;
     }
 
     /* ----- navbar ----- */
     .main-left {
         width: 100vw;
         min-width: 100vw;
-        height: auto;
+        height: 200px;
     }
 
     .container_mobile {
