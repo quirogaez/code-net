@@ -69,7 +69,6 @@ if (!process.env.twitchAUTH) {
     })().then( ()=> {
         console.log(process.env.twitchAUTH)
     })
-    
 }
 
 const PORT = process.env.PORT || 8080
