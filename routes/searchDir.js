@@ -28,7 +28,7 @@ export function searchDir() {
     console.log(__dirnameAll);
     
     // Retorna la ruta completa del directorio (__dirnameAll)
-    return  "/var/task" ;
+    return __dirnameAll  /* "/var/task" */ ;
 }
 
 // Exporta la función searchDir como módulo predeterminado
