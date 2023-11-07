@@ -15,9 +15,9 @@ router.get('/login', (req, res) => {
     /* Sin EJS */
     console.log(searchDir())
     const __dirnameAll = searchDir();
-    console.log("dirnameall:" + __dirnameAll)
+    console.log("dirnameall: " + __dirnameAll)
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'logIn.html');
-    console.log("silepath:" + filePath)
+    console.log("silepath: " + filePath)
     res.sendFile(filePath);
 });
 
