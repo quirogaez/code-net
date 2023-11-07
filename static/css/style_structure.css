@@ -814,8 +814,7 @@ img {
 
     /* ----- navbar ----- */
     .main-left {
-        width: 100vw;
-        min-width: 100vw;
+        width: 100%;
         height: 200px;
     }
 
@@ -930,11 +929,13 @@ img {
     /* ----- carousel projects ------ */
     .main-mid {
         margin-top: 15px;
-        width: 100vw;
+        width: 100%;
         padding: 0;
     }
     .carousel-story {
         padding: 0;
+        width: 100%;
+
     }
     .bx {
         font-size: 1.5em;
@@ -948,6 +949,7 @@ img {
     }
     /* -------- navigation post ------ */
     .main-center {
+        background-color: #00ffe0;
         display: block;
         justify-content: center;
         align-items: center;
