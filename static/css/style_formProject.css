@@ -450,7 +450,6 @@ p {
     width: 0;
 }
 
-
 .img__tecnology {
     position: relative;
     display: inline-block;
@@ -631,12 +630,9 @@ p {
     grid-auto-columns: 100%;
 }
 
-.modal__img {
-    width: 30%;
-}
-
 .modal__tittle {
     font-size: large;
+    padding: 20px;
 }
 
 .container--buttons {
@@ -645,18 +641,20 @@ p {
     justify-content: space-evenly;
 }
 
-.button__feed {
+.acceptButton {
     background-color: var(--primary--color);
     padding: 10px;
     height: 40px;
     width: 150px;
+    border: none;
+    color: var(--second--color);
     border-radius: 10px;
     text-align: center;
     font-size: medium;
 }
 
-.button_myprofile {
-    background-color: none;
+.discard {
+    background-color: var(--white--color);
     border: solid;
     border-color: var(--second--color);
     border-radius: 10px;

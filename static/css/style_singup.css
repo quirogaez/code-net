@@ -150,34 +150,39 @@ body {
     height: 55px;
     background-color: var(--white--color);
     border: none;
-    border-radius: 6px;
 }
 .singup--name{
     width: 50%;
     margin-top: 10px;
+    border-radius: 6px;
 }
 .singup--lname{
     width: 48%;
     margin-top: 10px;
+    border-radius: 6px;
 }
 .email--form {
     width: 100%;
     margin-top: 10px;
+    border-radius: 6px;
 }
 
 .date__container {
     width: 50%;
     text-align: left;
+    border-radius: 6px;
 }
 .date__form  {
     padding-top: 8px;
     margin-bottom: 0;
     font-size: 12px;
     display: block;
+    border-radius: 6px;
     color: var(--text--primary);
 }
 .date--list {
     width: 100%;
+    border-radius: 6px;
     color: var(--text--primary);
 }
 
@@ -192,8 +197,30 @@ body {
 }
 .username {
     width: 100%;
+    border-radius: 6px;
 }
-
+.password-input { 
+    display: flex;
+    width: 100%;
+}
+.password--form  {
+    margin-top: 10px;
+    padding: 20px;
+    width: 90%;
+    height: 60px;
+    background-color: var(--white--color);
+    border: none;
+    border-radius: 6px 0 0 6px;
+}
+.password-toggle {
+    margin-top: 10px;
+    padding: 20px 5px;
+    width: 10%;
+    height: 55px;
+    background-color: var(--white--color);
+    border: none;
+    border-radius: 0 6px 6px 0;
+}
 .password--form {
     width: 100%;
     margin-top: 10px;

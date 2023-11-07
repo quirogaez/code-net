@@ -4,14 +4,14 @@ const signupForm = document.querySelector('#signUpForm')
 // Inicializamos una función que nos permitirá envíar los datos del formulario
 signupForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    const name = document.querySelector('#name').value
-    const lastName = document.querySelector('#lastName').value
-    const email = document.querySelector('#email').value
-    const date = document.querySelector('#date').value
-    const genero = document.querySelector('#genero').value
-    const username = document.querySelector('#username').value
-    const inputPassword = document.querySelector('#password').value
-    const confirmPassword = document.querySelector('#confirm_password').value
+    const name = document.querySelector('#name').value.trim();
+    const lastName = document.querySelector('#lastName').value.trim();
+    const email = document.querySelector('#email').value.trim();
+    const date = document.querySelector('#date').value.trim();
+    const genero = document.querySelector('#genero').value.trim();
+    const username = document.querySelector('#username').value.trim();
+    const inputPassword = document.querySelector('#password').value.trim();
+    const confirmPassword = document.querySelector('#confirm_password').value.trim();
 
     if (inputPassword !== confirmPassword) {
         alert('Las contraseñas no coinciden');
@@ -52,3 +52,34 @@ signupForm.addEventListener('submit', (e) => {
     }
 })
  */
+
+function togglePasswordVisibility() {
+    const passwordField = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        eyeIcon.classList.remove('fa-eye');
+        eyeIcon.classList.add('fa-eye-slash');
+    } else {
+        passwordField.type = 'password';
+        eyeIcon.classList.remove('fa-eye-slash');
+        eyeIcon.classList.add('fa-eye');
+    }
+}
+
+function togglePasswordVisibility1() {
+    const passwordConfirm = document.getElementById('confirm_password');
+    const eyeIcon1 = document.getElementById('eyeIcon1');
+
+    if (passwordConfirm.type === 'confirm_password') {
+        passwordConfirm.type = 'text';
+        eyeIcon1.classList.remove('fa-eye');
+        eyeIcon1.classList.add('fa-eye-slash');
+    } else {
+        passwordConfirm.type = 'confirm_password';
+        eyeIcon1.classList.remove('fa-eye-slash');
+        eyeIcon1.classList.add('fa-eye');
+    }
+}
+

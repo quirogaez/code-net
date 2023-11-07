@@ -44,7 +44,7 @@ body {
     padding-top: 80px;
 }
 .img__content {
-    width: auto;
+    width: 600px;
     height: auto;
 }
 .img__logo {
@@ -71,15 +71,14 @@ body {
     justify-content: space-between;
 }
 .button__logIn {
-    padding: 14px 35px;
+    padding: 15px 25px;
     background-color: var(--primary--color);
-    border-radius: 30px;
+    border-radius: 15px;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
     color: var(--second--color);
-    font-size: 12px;
-    box-shadow: 1px 1.5px 1px var(--second--color);
+    font-size: 15px;
 }
 .button__logIn:hover {
     box-shadow: 1px 1px 15px var(--second--color);
@@ -116,7 +115,7 @@ body {
     box-shadow: 5px 5px 10px #30303069; 
     border-radius: 6px;
 }
-.content__login input {
+.email {
     margin-top: 20px;
     padding: 20px;
     width: 100%;
@@ -125,16 +124,37 @@ body {
     border: none;
     border-radius: 6px;
 }
+.password-input { 
+    display: flex;
+}
+.password {
+    margin-top: 20px;
+    padding: 20px;
+    width: 90%;
+    height: 60px;
+    background-color: var(--white--color);
+    border: none;
+    border-radius: 6px 0 0 6px;
+}
+.password-toggle {
+    margin-top: 20px;
+    padding: 20px 5px;
+    width: 10%;
+    height: 60px;
+    background-color: var(--white--color);
+    border: none;
+    border-radius: 0 6px 6px 0;
+}
 .content__login label {
     padding: 0 10px;
     margin-top: 15px;
 }
 .link--forget {
-    padding-top: 5px;
+    padding-top: 10px;
     margin-bottom: 20px;
 }
 .link--forget a {
-    color: var(--primary--color);
+    color: var(--second--color);
 }
 .button--login {
     text-align: center;
