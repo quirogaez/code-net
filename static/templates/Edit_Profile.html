@@ -87,7 +87,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="optionsMore ">
+                        <a onclick="settingShow()" class="optionsMore">
                             <p class="optionCenter">configuraciónes</p>
                         </a>
                     </li>
@@ -105,6 +105,22 @@
         </header>
         <!-----------------------  Search  ----------------------->
         <div>
+            <!--------------------- settings page ----------------->
+            <section class="showSettings">
+                <div class="setting">
+                    <div class="close__modalSure">
+                        <button type="button">x</button>
+                    </div>
+                    <div class="darkMode">
+                        <p>Modo oscuro</p>
+                        <label class="switch">
+                            <input type="checkbox" id="mySwitch">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="languageMode"> lenguaje</div>
+                </div>
+            </section>
             <!--------------------- menu plus --------------------->
             <div class="showPublication">
                 <ul class="showPublication_PPS">
@@ -142,6 +158,16 @@
                     <button type="onclick" class="options">ShortClip</button>
                 </div>
             </form>
+
+            <div class="containerSearch">
+                <div class="categories">
+                    <div class="fullContainers"></div>
+                </div>
+                <div class="people"></div>
+                <div class="project"></div>
+                <div class="lives"></div>
+                <div class="shortclip"></div>
+            </div>
         </div>
 
         <!-----------------  live streaming carousel ------------------>
@@ -158,12 +184,19 @@
     </main>
 
 </body>
-<script type="module" src="../js/structure.js"></script>
-<script src="../js/sidebar.js"></script>
-<script src="../js/script_structure.js"></script>
+<!----------------------- link js ------------------------------>
+<!------------ js chatbot ------------->
+<script src="//code.tidio.co/cjtbpljwr7yfgwu6eowmxsgon3xjuykc.js" async></script>
+<!------------ responsive logo --------->
+<script defer type="module" src="../js/responsiveLogo.js"></script>
+<!------------ js navbar -------------->
+<script src="../js/sidebarActive.js"></script>
+<script src="../js/optionMore.js"></script>
+<script src="../js/settingsPage.js"></script>
+<!------------ button plus forms -------------->
 <script src="../js/buttonPlus.js"></script>
-<script src="../js/search_project.js"></script>
-<script src="../js/publication_structure.js"></script>
-<script src="//code.tidio.co/jyvlyxqxgpph2pmupu9kpbz1mfibcguw.js" async></script>
+<!------- carousels ------>
+<script defer src="../js/carousels.js"></script>
+<!------------ js page ---------------->
 
 </html>

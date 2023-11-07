@@ -1,15 +1,17 @@
 // Importa los módulos necesarios
 import express from 'express';
-import mongoose from 'mongoose'; 
+/* import mongoose from 'mongoose';  */
 import dotenv from 'dotenv';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import routes from "./routes/routes.js";
 import path from 'node:path';
 import twitchAuth from './config.js';
+import session from 'express-session';
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+
 
 // Obtiene la ruta del archivo actual
 const __filename = fileURLToPath(import.meta.url);
@@ -20,6 +22,15 @@ dotenv.config();
 
 // Crea una instancia de Express
 const app = express();
+
+app.use(session({
+    secret: process.env.SECRET_SESSION,
+    resave: true,
+    saveUninitialized: true,
+    cookie: { maxAge: 1000 * 60 * 60 * 24 }
+}));
+ 
+
 
 // Configura Express para servir archivos estáticos desde la carpeta "static"
 app.use(express.static('static'));
@@ -41,12 +52,12 @@ app.set('views', path.join(`${__dirname}`, "static", "templates"));
 
 // Aplica middlewares para procesar solicitudes y mejorar la seguridad
 app.use(express.json()); // Middleware para analizar datos JSON en las solicitudes
-app.use(helmet()); // Middleware para mejorar la seguridad de la aplicación
-app.use(morgan("tiny")); // Middleware para el registro de solicitudes HTTP
+/* app.use(helmet()); // Middleware para mejorar la seguridad de la aplicación
+*/app.use(morgan("tiny")); // Middleware para el registro de solicitudes HTTP
 
 
 // app.js
-/* if (!process.env.twitchAUTH) {
+if (!process.env.twitchAUTH) {
     (async () => {
         process.env["twitchAUTH"] = await twitchAuth();
 
@@ -54,8 +65,8 @@ app.use(morgan("tiny")); // Middleware para el registro de solicitudes HTTP
         console.log(process.env.twitchAUTH)
     })
     
-} */
-  
+}
+
 const PORT = process.env.PORT || 8080
 
 

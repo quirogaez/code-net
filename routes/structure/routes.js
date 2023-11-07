@@ -1,11 +1,12 @@
 import express, {Router} from 'express'
 import path from 'path'
 import {searchDir} from '../searchDir.js'
+import auth from '../../middlewares/Auth.js'
 
 const router = Router()
 
 /* Borrar si se usa EJS */
-router.get('/structure', (req, res) => {
+router.get('/structure', auth, (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
@@ -15,7 +16,7 @@ router.get('/structure', (req, res) => {
     res.sendFile(filePath);
 });
 
-router.get('/search', (req, res) => {
+router.get('/search', auth, (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
@@ -25,7 +26,7 @@ router.get('/search', (req, res) => {
     res.sendFile(filePath);
 });
 
-router.get('/streams', (req, res) => {
+router.get('/streams', auth, (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
@@ -35,7 +36,7 @@ router.get('/streams', (req, res) => {
     res.sendFile(filePath);
 });
 
-router.get('/clips', (req, res) => {
+router.get('/clips', auth, (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */

@@ -1,11 +1,11 @@
-import { Auth } from "./Auth.js";
+/* import { Auth } from "./Auth.js"; */
 let response;
 let movies;
 
-document.addEventListener("DOMContentLoaded", async (e) => {
+/* document.addEventListener("DOMContentLoaded", async (e) => {
     const auth = new Auth();
 })
-
+ */
 /* let elementIcon = document.querySelectorAll(".icon1"); */
 let companyIcon = document.getElementById("icon-company");
 

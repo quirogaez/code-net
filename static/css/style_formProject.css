@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;1,100&display=swap");
 
 :root {
-    --primary--color: #00ffe0;
+    --primary--color: #00ffe1;
     --second--color: #801bea;
     --white--color: white;
     --black--color: black;
@@ -46,7 +46,7 @@ body {
     box-shadow: 1px 1px 8px var(--text--primary);
     flex-direction: column;
     top: var(--stk-top-left);
-    
+
 }
 
 /* ----- logo container----- */
@@ -84,7 +84,7 @@ img {
     cursor: pointer;
     padding: 0 40px;
     height: 3.8rem;
-    
+
 }
 
 .menu-item:hover,
@@ -257,12 +257,128 @@ img {
     color: #272727;
     padding: 15px;
     font-size: medium;
+    font-family: 'Ralawey', sans-serif;
 }
 
 .optionCenter {
     border-top: 1.5px solid #adadad;
     border-bottom: 1.5px solid #adadad;
 }
+/* -------------- setting options -----------------*/
+
+.showSettings {
+    display: none;
+}
+.setting {
+    margin: auto 20rem;
+    position: fixed;
+    padding: 5px 25px;
+    background: var(--white--color);
+    box-shadow: 2px 2px 5px var(--text--primary);
+    width: 350px;
+    height: 240px;
+    border-radius: 5%;
+}
+.modal__container {
+    margin: auto;
+    width: 90%;
+    max-width: 450px;
+    max-height: 90%;
+    background-color: var(--white--color);
+    padding: 1.5em 2.5em;
+    display: grid;
+    gap: 1.5em;
+    place-items: center;
+    grid-auto-columns: 100%;
+}
+.close__modalSure {
+    width: 100%;
+    text-align: right;
+}
+.close__modalSure button {
+    color: var(--second--color);
+    font-size: 25px;
+    border: none;
+    background-color: var(--white--color);
+    cursor: pointer;
+}
+.darkMode {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    height: 55px;
+    justify-content: space-between;
+    border-bottom: solid 1px  #adadad ;
+}
+.darkMode p {
+    margin: 2px;
+    padding: 5px;
+    text-align: left;
+    font-size: large;
+    color: #272727;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .languageMode {
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    height: 55px;
+    font-size: large;
+    color: #272727;
+  }
+  
+
+
+
 
 /* --------------- form project --------------- */
 
@@ -273,11 +389,14 @@ img {
     background-color: #D9D9D9;
     box-shadow: 4px 4px 6px #bebebe;
 }
-.container_project{
+
+.container_project {
     display: grid;
+    height: 250px;
     grid-template-columns: 66% auto;
     grid-template-rows: 250px;
 }
+
 .container_img {
     display: grid;
     grid-template-columns: 45% 25% 25%;
@@ -285,14 +404,20 @@ img {
     height: 100%;
     justify-content: start;
 }
+.img_button1 {
+    grid-area: 1 / 1 / 3 / 1;
+}
+
 .img_buttonCover {
     cursor: pointer;
     grid-row: 1 / 3;
 }
-.img_button {   
+
+.img_button {
     cursor: pointer;
     background-color: chartreuse;
 }
+
 label {
     display: block;
     width: 100%;
@@ -303,35 +428,44 @@ label {
     background-color: var(--white--color);
     text-align: center;
 }
-.label_img{ 
+
+.label_img {
     padding: 60px;
 }
+
 p {
     font-size: 60px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    
+
 }
+
 .technology_container {
     padding: 0 10px;
     display: flex;
     flex-wrap: wrap;
     height: 100%;
+    overflow-y: scroll;
 }
+.technology_container::-webkit-scrollbar {
+    width: 0;
+}
+
 .img__tecnology {
     position: relative;
     display: inline-block;
-    margin: 0 20px;
-    height: 60px;
+    margin: 10px 20px;
+    min-height: 60px;
     width: 60px;
     display: none;
-  }
-  .close-button-container {
+}
+
+.close-button-container {
     position: absolute;
     top: 0;
     right: 0;
-  }
-  
-  .close-button {
+}
+
+.close-button {
     width: 1rem;
     height: 1rem;
     padding: 0.2rem 0.5rem;
@@ -343,27 +477,61 @@ p {
 }
 
 .form--project {
+    display: flex;
+    flex-wrap: wrap;
     color: var(--second--color);
     margin-top: 5px;
 }
-.form--project input {
+.responsiveTechnologies {
+    display: flex;
     margin-top: 10px;
+    width: 100%;
+}
+
+.form--project input {
     padding: 15px;
     border: none;
     color: var(--text--primary);
 }
+
+.container__urlProject {
+    margin-top: 10px;
+    display: flex;
+    padding: 0;
+    height: 48px;
+    width: 65%;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px #8b8b8b;
+}
+
 .url__project {
-    width: 60%;
+    margin: auto;
+    width: 93%;
     height: 48px;
     border-radius: 10px 0 0 10px;
+    color: var(--text--primary);
 }
-.verify{
-    background-color: #00ffe0;
-    width: 5%;
-    height: 48px;
+
+.checkVerify {
+    background-color: var(--primary--color);
+    width: 7%;
+    height: 100%;
     border-radius: 0 10px 10px 0;
+    color: var(--text--primary);
 }
+
+.fa-check {
+    margin-top: 5px;
+    font-size: larger;
+    color: var(--second--color);
+}
+
+.verify {
+    display: none;
+}
+
 .technology {
+    margin-top: 10px;
     margin-left: 5px;
     height: 48px;
     width: 34%;
@@ -374,6 +542,7 @@ p {
     box-shadow: 0 1px 5px #8b8b8b;
     color: var(--text--primary);
 }
+
 .description {
     width: 100%;
     height: 100px;
@@ -386,17 +555,21 @@ p {
     color: var(--text--primary);
     font-family: 'Ralawey', sans-serif;
 }
+
 .url__github {
+    margin-top: 10px;
     width: 100%;
     height: 48px;
     background-color: #ffff;
     border-radius: 10px;
     box-shadow: 0 1px 5px #8b8b8b;
 }
+
 .container_buttonPost {
     text-align: center;
     margin-top: 25px;
 }
+
 .button_post {
     padding: 10px 30px;
     background-color: var(--second--color);
@@ -407,13 +580,12 @@ p {
     font-size: 12px;
     cursor: pointer;
 }
+
 .buttonplus {
     display: none;
 }
 
-
-
- /* ---------------------------- ventana modal "estas seguro" ---------------- */
+/* ---------------------------- ventana modal "estas seguro" ---------------- */
 .sure {
     position: fixed;
     top: 0;
@@ -425,15 +597,18 @@ p {
     opacity: 0;
     pointer-events: none;
 }
+
 .sure--show {
     opacity: 1;
     pointer-events: unset;
 }
+
 .close__modalSure {
     width: 100%;
     text-align: right;
 
 }
+
 .close__modalSure button {
     color: var(--second--color);
     font-size: 25px;
@@ -441,8 +616,9 @@ p {
     background-color: var(--white--color);
     cursor: pointer;
 }
+
 .modal__container {
-    margin:auto;
+    margin: auto;
     width: 90%;
     max-width: 450px;
     max-height: 90%;
@@ -453,28 +629,32 @@ p {
     place-items: center;
     grid-auto-columns: 100%;
 }
-.modal__img {
-    width: 30%;
-}
+
 .modal__tittle {
     font-size: large;
+    padding: 20px;
 }
+
 .container--buttons {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
 }
-.button__feed {
+
+.acceptButton {
     background-color: var(--primary--color);
     padding: 10px;
     height: 40px;
     width: 150px;
+    border: none;
+    color: var(--second--color);
     border-radius: 10px;
     text-align: center;
     font-size: medium;
 }
-.button_myprofile {
-    background-color: none;
+
+.discard {
+    background-color: var(--white--color);
     border: solid;
     border-color: var(--second--color);
     border-radius: 10px;
@@ -486,7 +666,7 @@ p {
     font-size: medium;
 }
 
- /* ---------------------------- ventana modal "estas seguro" ---------------- */
+/* ---------------------------- ventana modal "estas seguro" ---------------- */
 
 .modal {
     position: fixed;
@@ -499,23 +679,27 @@ p {
     opacity: 0;
     pointer-events: none;
 }
+
 .modal--show {
     opacity: 1;
     pointer-events: unset;
 }
+
 .close__modalProject {
     width: 100%;
     text-align: right;
 
 }
+
 .close__modalProject button {
     color: var(--second--color);
     font-size: 25px;
     background-color: var(--white--color);
     cursor: pointer;
 }
+
 .modal__container {
-    margin:auto;
+    margin: auto;
     width: 90%;
     max-width: 450px;
     max-height: 90%;
@@ -526,17 +710,21 @@ p {
     place-items: center;
     grid-auto-columns: 100%;
 }
+
 .modal__img {
     width: 30%;
 }
+
 .modal__tittle {
     font-size: large;
 }
+
 .container--buttons {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
 }
+
 .button__feed {
     background-color: var(--primary--color);
     padding: 10px;
@@ -546,6 +734,7 @@ p {
     text-align: center;
     font-size: medium;
 }
+
 .button_myprofile {
     background-color: none;
     border: solid;
@@ -567,7 +756,7 @@ p {
 @media screen and (max-width: 1025px) {
     .main-container {
         display: grid;
-        grid-template-columns: 18vw auto;
+        grid-template-columns: 18vw 82vw;
     }
 
     /* --------------- navbar --------------- */
@@ -622,7 +811,94 @@ p {
     .optionsMore p {
         font-size: medium;
     }
+
+    /* --------------- form project --------------- */
+
+    .form_project_container {
+        margin: 12px;
+        width: 78vw;
+    }
+
+    .container_project {
+        display: inline-block;
+        width: 100%;
+        height: 350px;
+    }
+
+    .container_img {
+        height: 300px;
+    }
+
+    .img_button1 {
+        grid-area: 1 / 1 / 3 / 1;
+    }
+
+    .technology_container {
+        margin-top: 25px;
+        height: 70px;
+        width: 100%;
+        padding: 0;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+
+    .img__tecnology {
+        position: relative;
+        margin: 0 10px;
+        height: 60px;
+        min-width: 60px;
+        display: none;
+    }
+
+    .form--project input {
+        padding: 15px;
+        border: none;
+        color: var(--text--primary);
+    }
+
+    .responsiveTechnologies {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .container__urlProject {
+        margin-top: 15px;
+        order: 2;
+        width: 100%;
+    }
+
+    .url__project {
+        width: 85%;
+    }
+
+    .checkVerify {
+        width: 15%;
+    }
+
+    .verify {
+        display: none;
+    }
+
+    .technology {
+        order: 1;
+        margin-left: 0;
+        height: 50px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .description {
+        height: 150px;
+        margin-top: 15px;
+    }
+
+    .url__github {
+        margin-top: 15px;
+        height: 50px;
+    }
 }
+
 /* ---------- Media query 825px ----------*/
 
 @media screen and (max-width: 825px) {
@@ -632,32 +908,38 @@ p {
     }
 }
 
-/* ------------------------ 480px ---------------------------- */
+/* ------------------------ responsive smart phone ---------------------------- */
 
 @media screen and (max-width: 480px) {
-     /* ----- Main container ----- */
-     .main-container {
+
+    /* ----- Main container ----- */
+    .main-container {
         display: flex;
         flex-wrap: wrap;
     }
+
     /* ----- navbar ----- */
     .main-left {
         width: 100vw;
         min-width: 100vw;
         height: auto;
     }
+
     .container_mobile {
         display: flex;
         justify-content: space-between;
     }
+
     .profile_more {
         display: flex;
     }
+
     /* ----- logo container----- */
     .profile-photos--logo {
         margin-top: 0.5rem;
         width: 40%;
     }
+
     /* ----- profile ----- */
     .profile__mobile {
         display: block;
@@ -668,15 +950,18 @@ p {
         aspect-ratio: 1/1;
         overflow: hidden;
     }
+
     .menu_mobile {
         display: block;
         margin-top: 1.2rem;
         margin-right: 1rem;
     }
+
     .icon_mobile {
         color: #440d7e;
         font-size: 2rem;
     }
+
     /* ----- sidebar ----- */
     .side-bar {
         display: flex;
@@ -685,15 +970,18 @@ p {
         margin-top: 4px;
         justify-content: space-between;
     }
+
     .menu-item {
         padding: 0 22px;
         height: 3.8rem;
     }
+
     .menu-item:hover,
     .menu-item:active {
         transform: scale(1.3);
         background-image: none;
     }
+
     /* ----- class active (js) ----- */
     .menu-item.active {
         background-image: none;
@@ -738,11 +1026,92 @@ p {
     .menu-item3 {
         display: none;
     }
+
     .showOptions {
         position: fixed;
         left: 5rem;
         margin-top: 1rem;
         bottom: auto;
+    }
+
+    /* --------------- form project --------------- */
+
+    .form_project_container {
+        margin: 12px 8px;
+        width: 95vw;
+    }
+
+    .container_project {
+        display: inline-block;
+        height: 350px;
+    }
+
+    .container_img {
+        height: 250px;
+    }
+
+    .img_button1 {
+        grid-area: 1 / 1 / 3 / 1;
+    }
+
+    .technology_container {
+        margin-top: 25px;
+        height: 70px;
+        padding: 0;
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .img__tecnology {
+        position: relative;
+        margin: 0 10px;
+        height: 60px;
+        min-width: 60px;
+        display: none;
+    }
+
+    .form--project input {
+        padding: 15px;
+        border: none;
+        color: var(--text--primary);
+    }
+
+    .responsiveTechnologies {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .container__urlProject {
+        margin-top: 15px;
+        order: 2;
+        width: 100%;
+    }
+
+    .url__project {
+        width: 90%;
+    }
+
+    .verify {
+        display: none;
+    }
+
+    .technology {
+        order: 1;
+        margin-left: 0;
+        height: 50px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .description {
+        height: 150px;
+        margin-top: 15px;
+    }
+
+    .url__github {
+        margin-top: 15px;
+        height: 50px;
     }
 
 }

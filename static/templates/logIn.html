@@ -10,7 +10,7 @@
     <!-- link style -->
     <link rel="stylesheet" href="../css/style_login.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/static/img/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../img/favicon/favicon.svg">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,9 +25,9 @@
         </div>
         <div class="homepage">
             <div class="homepage--info">
-                <div class="profile-photos--logo">
-                    <a href="/codenet/structure">
-                        <img src="../img/code.svg" alt="" id="icon-company">
+                <div class="img__content">
+                    <a href="/codenet">
+                        <img src="../img/code.svg" class="img__logo" alt="" id="icon-company">
                     </a>
                 </div>
                 <div class="title--home">
@@ -54,8 +54,13 @@
             <div class="login--page">
                 <div class="content__login">
                     <form action="#" method="POST" name="loginForm">
-                            <input type="email" name="correo" placeholder="correo" id="email">
-                            <input type="password" name="contraseña" placeholder="Contraseña" id="password">
+                            <input class="email" type="email" name="correo" placeholder="correo" id="email">
+                            <div class="password-input">
+                                <input class="password" type="password" name="contraseña" placeholder="Contraseña" id="password">
+                                <span class="password-toggle" onclick="togglePasswordVisibility()">
+                                    <i class="fa fa-eye" id="eyeIcon"></i>
+                                </span>
+                            </div>
                         <p class="link--forget">
                             <a href="#">¿olvidaste tu contraseña?</a>
                         </p>
