@@ -3,11 +3,11 @@ import {searchDir} from '../routes/searchDir.js'
 
 // Authentication and Authorization Middleware
 const auth = function(req, res, next) {
-    if (req.session && req.session.user)
+    if (req.session)
       return next();
     else {
       const __dirnameAll = searchDir();
-      const filePath = path.join(__dirnameAll, 'static', 'templates', 'Index.html');
+      const filePath = path.join(__dirnameAll, 'static', 'templates', 'index.html');
       res.sendFile(filePath);
     }
 };
