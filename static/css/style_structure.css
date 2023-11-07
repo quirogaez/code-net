@@ -513,19 +513,119 @@ img {
     color: var(--second--color);
     height: 100%;
     text-align: right;
+    transition: color 0.3s;
+}
+.icon-love:hover{
+    color:#b067ff;
+}
+.img-like{
+    color:var(--second--color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
+.img-coment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:white;
+
+}
 .icon-comment {
     font-size: 30px;
     color: var(--second--color);
     height: 100%;
     text-align: right;
 }
-
+#comments{
+    color: white;
+}
+.icon-comment:hover{
+    color:#b067ff;
+}
 .img-verified {
     background-color: #441a31;
 }
 
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+  
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    border-radius: 5px;
+}
+.modal-top{
+    border-bottom: 2px solid #888;
+    margin-bottom: 10px;
+}
+.modal-center{
+    display: flex;
+    flex-direction: row;
+   
+    margin-bottom: 10px;
+}
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+}
+.close:hover{
+    transform: scale(1.5);
+}
+#messageInput{
+    all: initial; /* Restablece todos los estilos */
+    font: inherit; /* Hereda la fuente del texto */
+    color: inherit; /* Hereda el color del texto */
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    padding: 0; /* Sin relleno */
+    cursor: pointer; /* Establece un cursor de puntero al pasar el mouse */
+    border-bottom: 1px solid #888;
+    
+}
+#publishButton {
+    all: initial; /* Restablece todos los estilos */
+    font: inherit; /* Hereda la fuente del texto */
+    color: var(--second--color); /* Hereda el color del texto */
+    font-size: 20px;
+    margin-left: 53%;
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    padding: 0; /* Sin relleno */
+    cursor: pointer; /* Establece un cursor de puntero al pasar el mouse */
+    text-align: end;
+    transition: 0.3s;
+}
+#publishButton:hover{
+    color:#b067ff;
+}
+#messageContainer{
+    margin-top: 5px;
+}
 
 /*---------------main_right---------------*/
 .main-right {

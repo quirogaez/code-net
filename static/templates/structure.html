@@ -30,14 +30,14 @@
                     </a>
                 </div>
                 <div class="profile_more">
-                <a href="#" class="profile__mobile" id="varProfile">
-                    <div class="profile__mobile" id="aside-porfile">
-                        <img src="../img/person.png" alt="">
-                    </div>
-                </a>
-                <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
-                    <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
-                </a>
+                    <a href="#" class="profile__mobile" id="varProfile">
+                        <div class="profile__mobile" id="aside-porfile">
+                            <img src="../img/person.png" alt="">
+                        </div>
+                    </a>
+                    <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
+                        <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
+                    </a>
                 </div>
             </div>
             <!-- -----------SIDEBAR---------- -->
@@ -104,8 +104,8 @@
             </a>
         </header>
 
-            <!-- .................. carousel projects ........................ -->
-            <div class="main-mid">    
+        <!-- .................. carousel projects ........................ -->
+        <div class="main-mid">
             <!--------------------- menu plus --------------------->
             <div class="showPublication">
                 <ul class="showPublication_PPS">
@@ -128,23 +128,38 @@
             </div>
             <a onclick="showAddOption()" class="buttonPlus" id="varProfile">
                 <i class="fa-solid fa-plus"></i>
-            </a>          
-                <div class="carousel-story">
-                    <div class="controls_p">
-                        <button class="prev-btn button"><i class='bx bx-chevron-left'></i></button>
-                    </div>
-                    <div class="carousel_profile_story"></div>
-                    <div class="controls_n">
-                        <button class="next-btn button"><i class='bx bx-chevron-right'></i></button>
-                    </div>
+            </a>
+            <div class="carousel-story">
+                <div class="controls_p">
+                    <button class="prev-btn button"><i class='bx bx-chevron-left'></i></button>
                 </div>
-
-                <!-------------------- publicaciones -------------------->
-                <div class="main-center">
-                    <div id="imageContainer"></div>
+                <div class="carousel_profile_story"></div>
+                <div class="controls_n">
+                    <button class="next-btn button"><i class='bx bx-chevron-right'></i></button>
                 </div>
-         </div>
+            </div>
 
+            <!-------------------- publicaciones -------------------->
+            <div class="main-center">
+                <div id="imageContainer"></div>
+            </div>
+            <!-- modal -->
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-top">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <span id="messageAuthor"></span>
+                    </div>    
+                    <div class="modal-center">
+                        <input type="text" id="messageInput" placeholder="Escribe un comentario...">
+                        <button id="publishButton" onclick="publishMessage()">Publicar</button>
+                    </div>
+                    <div class="message-cont" id="messageContainer"></div>
+                </div>
+            </div>
+
+        </div>
 
 
         <!-----------------  live streaming carousel ------------------>
