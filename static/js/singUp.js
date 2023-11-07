@@ -38,7 +38,7 @@ signupForm.addEventListener('submit', (e) => {
         alert('Registro Exitoso!')
 
         // Si el registro fue exitoso, nos redigirá al login
-        window.location.href = 'http://localhost:8080/codenet/structure'
+        window.location.href /* = 'http://localhost:8080/codenet/structure' */
         
     }
 })

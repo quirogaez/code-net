@@ -3,7 +3,7 @@ import {searchDir} from '../routes/searchDir.js'
 
 // Authentication and Authorization Middleware
 const auth = function(req, res, next) {
-    if (req.session)
+    if (req.session && req.session.user)
       return next();
     else {
       const __dirnameAll = searchDir();
