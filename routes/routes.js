@@ -6,7 +6,7 @@ import twitchRoutes from './twitch/routes.js'; // Rutas relacionadas con la API 
 import profileRoutes from './profile/routes.js'; // Rutas relacionadas con el perfil de usuario
 import technologiesRoutes from './technologies/routes.js'; // Rutas relacionadas con extraer tecnologias 
 
-import express, { Router } from 'express';
+import { Router } from 'express';
 
 // Crea una instancia de Express Router
 const router = Router();
