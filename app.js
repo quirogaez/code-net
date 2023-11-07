@@ -1,6 +1,6 @@
 // Importa los módulos necesarios
 import express from 'express';
-/* import mongoose from 'mongoose';  */
+import mongoose from 'mongoose';  
 import dotenv from 'dotenv';
 import helmet from 'helmet';
 /* import morgan from 'morgan'; */
@@ -8,6 +8,7 @@ import routes from "./routes/routes.js";
 import path from 'node:path';
 import twitchAuth from './config.js';
 import session from 'express-session';
+import MongoStore from 'connect-mongo';
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -16,17 +17,21 @@ import { dirname } from 'path';
 // Obtiene la ruta del archivo actual
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+/* Se maneja al sesion en mongodb */
 
 // Configura las variables de entorno
 dotenv.config();
+
+
 
 // Crea una instancia de Express
 const app = express();
 
 app.use(session({
     secret: process.env.SECRET_SESSION,
-    resave: true,
+    resave: false,
     saveUninitialized: true,
+    store: MongoStore.create({ mongoUrl: process.env.MONGOOSE_URL }),
     cookie: { maxAge: 1000 * 60 * 60 * 24 }
 }));
  
@@ -42,8 +47,8 @@ app.use('/codenet', routes);
 /* mongoose.connect(process.env.MONGOOSE_URL)
     .then(() => {
         console.log("Connected to MONGODB");
-    }); */
-
+    });
+ */
 // Establece EJS como el motor de plantillas (opcional, está comentado)
 // app.set('view engine', 'ejs');
 

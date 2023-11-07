@@ -52,7 +52,7 @@ buttonPost.addEventListener('click', e => {
     /* uploadImage(imagesToPost); */
 
     // Realiza una solicitud Fetch POST al servidor para subir las imágenes
-    fetch('http://localhost:8080/codenet/project', {
+    fetch(window.location.search + 'codenet/project', {
         method: 'POST',
         body: formData
     })
