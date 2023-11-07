@@ -10,7 +10,7 @@ router.get('/structure', auth, (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
-    console.log(searchDir())
+    console.log(req.session.user)
     const __dirnameAll = searchDir();
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'structure.html');
     res.sendFile(filePath);

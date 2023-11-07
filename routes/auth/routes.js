@@ -44,7 +44,7 @@ router.post('/login', (req, res) => {
     /* OJO aqui se debe ahcer la validacion con la base de datos */
     if (username && password) {
         /* Se dejara la sesion con el id de la persona */
-        req.session.user = "amy";
+        req.session.user = 2;
         res.redirect(303, '/codenet/structure');
     } else 
     { 
