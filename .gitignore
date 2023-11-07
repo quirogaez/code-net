@@ -4,7 +4,7 @@ Thumbs.db
 
 # Carpetas de dependencias de Node.js
 node_modules/
-services/
+
 # Archivos generados por npm
 npm-debug.log
 yarn-error.log

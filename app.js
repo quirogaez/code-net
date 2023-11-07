@@ -3,7 +3,7 @@ import express from 'express';
 /* import mongoose from 'mongoose';  */
 import dotenv from 'dotenv';
 import helmet from 'helmet';
-import morgan from 'morgan';
+/* import morgan from 'morgan'; */
 import routes from "./routes/routes.js";
 import path from 'node:path';
 import twitchAuth from './config.js';
@@ -53,7 +53,7 @@ app.set('views', path.join(`${__dirname}`, "static", "templates"));
 // Aplica middlewares para procesar solicitudes y mejorar la seguridad
 app.use(express.json()); // Middleware para analizar datos JSON en las solicitudes
 /* app.use(helmet()); // Middleware para mejorar la seguridad de la aplicación
-*/app.use(morgan("tiny")); // Middleware para el registro de solicitudes HTTP
+*//* app.use(morgan("tiny")); // Middleware para el registro de solicitudes HTTP */
 
 
 // app.js
