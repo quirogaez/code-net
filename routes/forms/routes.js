@@ -49,6 +49,7 @@ router.post('/project', async (req, res) => {
             // Llama a la función uploadImage para cargar la imagen y obtén la URL de descarga
             const url = await uploadImage(image);
             console.log(url + "Desde la peticion")
+            console.log(url[0] + "Desde la peticion")
             // Guarda la URL de la imagen en una base de datos o realiza cualquier otra acción necesaria
 
             // Envía una respuesta al cliente con éxito y la URL de la imagen cargada
