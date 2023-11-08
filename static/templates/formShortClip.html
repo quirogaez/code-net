@@ -121,7 +121,7 @@
                     <div class="languageMode"> lenguaje</div>
                 </div>
             </section>
-            <div class="shortClip_project">
+            <!-- <form class="shortClip_project">
 
                 <div class="shortClip_in">
                     <div class="img_buttonCover">
@@ -139,9 +139,28 @@
                     <textarea class="description" name="message" placeholder="descripción"></textarea>
                     <input type="url" class="url_shortClip" name="url_shortClip" placeholder="URL ">
                 </div>
-            </div>
+            </form>
             <div class="container_buttonPost">
                 <button class="button_post">publicar</button>
+            </div> -->
+
+            <form class="shortClip_project" id="videoUploadForm">
+                <div class="shortClip_in">
+                    <div class="img_buttonCover">
+                        <input accept="video/mp4, video/mpeg, video/ogg, video/webm, video/quicktime, video/x-msvideo, video/x-flv, video/3gpp, video/x-matroska, image/gif" type="file" id="img_button" hidden>
+                        <label for="img_button">
+                            <p class="add_shortClip">+</p>Agregar video o GIF
+                        </label>
+                    </div>
+                    <h4 class="button_in_text">Ingrese un video que no supere los 2 minutos</h4>
+                </div>
+                <div class="shortClip--short">
+                    <textarea class="description" name="message" id="videoDescription" placeholder="Descripción" required></textarea>
+                    <input type="url" class="url_shortClip" name="url_shortClip" id="videoURL" placeholder="URL" required>
+                </div>
+            </form>
+            <div class="container_buttonPost">
+                <button class="button_post" id="submitButton">Publicar</button>
             </div>
         </div>
     </main>
@@ -159,6 +178,6 @@
 <!------- carousels ------>
 <script defer src="../js/carousels.js"></script>
 <!------------ js page ---------------->
-
+<script defer src="../js/form_shortclip.js"></script>
 
 </html>

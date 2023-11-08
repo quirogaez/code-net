@@ -26,11 +26,9 @@ const images = [
     comment: 1,
   },
 ];
-
 const mainContainer = document.getElementById('imageContainer');
 const modalsContainer = document.getElementById('modals-container');
 let currentIndex = -1;
-
 function createModal(index) {
   const modalHtml = `
     <div id="modal-${index}" class="modal">
@@ -49,7 +47,6 @@ function createModal(index) {
   `;
   modalsContainer.innerHTML += modalHtml;
 }
-
 function openModal(index) {
   currentIndex = index;
   const modal = document.getElementById(`modal-${index}`);
@@ -80,7 +77,6 @@ function publishMessage(index) {
 function loadImages() {
   for (let i = 0; i < images.length; i++) {
     createModal(i);
-
     const imageHtml = `
     <div class="img-center-container">
         <div class="img-center">
@@ -111,14 +107,11 @@ function loadImages() {
         </div>
     </div>
   `;
-
     mainContainer.innerHTML += imageHtml;
   }
 }
 
 loadImages();
-
-
 function toggleLike(name) {
   const likeElement = document.getElementById(`like-${name}`);
   for (const image of images) {
