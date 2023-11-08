@@ -109,35 +109,20 @@ img {
             hsla(0, 0%, 92%, 0) 100%);
 }
 
-/* ----- count message ----- */
-/*  .count {
-    background: var(--second--color);
-    padding: 0.1rem 0.4rem;
-    font-size: 0.6rem;
-    height: fit-content;
-    color: white;
-    border-radius: 0.8rem;
-    position: absolute;
-    top: 1.1rem;
-    left: 2.6rem;
-} */
 .icon1 {
     width: 1.5rem;
     height: 1.5rem;
 }
-
 .icon1 img {
     width: 100%;
     height: 100%;
 }
-
 .menu-item p {
     font-size: medium;
     margin-left: 1.5rem;
     color: #440d7e;
     font-family: 'Ralawey', sans-serif;
 }
-
 .menu-item2 {
     position: relative;
     display: flex;
@@ -386,15 +371,55 @@ img {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     background-color: #441a31;
 }
-.main-header{
+
+.main-header {
     grid-column-start: 1;
-    grid-column-end:6;
+    grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 2;
+    width: 100%;
+    height: 400px;
     background-color: #00ffe0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
-#profileImage{
+.portada {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.fa-pen-to-square {
+    position: absolute; /* Establecer la posición absoluta para que se pueda colocar libremente */
+    top: 0; /* Ajusta la posición superior según sea necesario */
+    left: 0; /* Ajusta la posición izquierda según sea necesario */
+    color: #ffffff; /* Cambia el color del icono */
+    background-color: #000000;/* Cambia el color de fondo del icono si es necesario */
     
+}
+#portada-image{
+    width: 100%;
+   height: 70%; 
+}
+#file-input{
+    width: 100%;
+    height: 70%;
+}
+.rol-perfilbutton{
+    width: 100%;
+    background-color: #441a31;
+}
+ .edit-portada {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+}
+#profileImage{ 
     width: 8rem;
     border-radius: 100px;
     aspect-ratio: 1/1;
@@ -407,8 +432,13 @@ img {
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 3;
-    background-color: #9d00ff;
-
+    background-color: #ffffff;
+}
+.main-middle-cont{
+    display: flex;
+    flex-direction: rows;
+    justify-content: center;
+    background-color: #022824;
 }
 .main-mid{
     grid-column-start: 1;
@@ -425,14 +455,9 @@ img {
     width: 100%;
     background-color: #022824;
 }
-.edit-portada{
-    width: 100%;
-    height: 70px;
-}
 .fa-pen-to-square{
     font-size: 40px;
 }
-
 /*---------------main_about---------------*/
 .main-about{
 
@@ -455,71 +480,71 @@ img {
     text-align: center;
 }
 .genero{
-    display: flex; /* Activa el modelo de caja flexible */
-    align-items: center; /* Alinea verticalmente el contenido al centro */
+    display: flex; 
+    align-items: center; 
     border-bottom: 1px #c3c0c0;
     border-bottom-style: solid;
 }
 .fa-user{
     font-size: 22px;
     width: 10%;
-    margin: 4% 8%; /* Agrega un margen a la derecha del ícono de 5px */
+    margin: 4% 8%; 
 }
 .about-date{
-    display: flex; /* Activa el modelo de caja flexible */
-    align-items: center; /* Alinea verticalmente el contenido al centro */
+    display: flex; 
+    align-items: center; 
     border-bottom: 1px #c3c0c0;
     border-bottom-style: solid;
 }
 .fa-cake-candles{
     font-size: 22px;
     width: 10%;
-    margin: 4% 8%; /* Agrega un margen a la derecha del ícono de 5px */
+    margin: 4% 8%; 
 }
 .about-address{
-    display: flex; /* Activa el modelo de caja flexible */
-    align-items: center; /* Alinea verticalmente el contenido al centro */
+    display: flex; 
+    align-items: center;
     border-bottom: 1px #c3c0c0;
     border-bottom-style: solid;
 }
 .fa-location-dot{
     font-size: 22px;
     width: 10%;
-    margin: 4% 8%; /* Agrega un margen a la derecha del ícono de 5px */
+    margin: 4% 8%; 
 }
 
 .location {
-    display: flex; /* Activa el modelo de caja flexible */
-    align-items: center; /* Alinea verticalmente el contenido al centro */
+    display: flex; 
+    align-items: center; 
     border-bottom: 1px #c3c0c0;
     border-bottom-style: solid;
 }
 .fa-location-dot {
     font-size: 22px;
     width: 10%;
-    margin: 4% 8%; /* Agrega un margen a la derecha del ícono de 5px */  
+    margin: 4% 8%;   
 }
 .about-correo{
-    display: flex; /* Activa el modelo de caja flexible */
-    align-items: center; /* Alinea verticalmente el contenido al centro */
+    display: flex; 
+    align-items: center;
     border-bottom: 1px #c3c0c0;
     border-bottom-style: solid;
 }
 .fa-envelope{
     font-size: 22px;
     width: 10%;
-    margin: 4% 8%; /* Agrega un margen a la derecha del ícono de 5px */ 
+    margin: 4% 8%; 
 }
 .about-phone{
-    display: flex; /* Activa el modelo de caja flexible */
-    align-items: center; /* Alinea verticalmente el contenido al centro */
+    display: flex; 
+    align-items: center; 
     border-bottom: 1px #c3c0c0;
     border-bottom-style: solid;
 }
 .fa-phone{
     font-size: 22px;
     width: 10%;
-    margin: 4% 8%; /* Agrega un margen a la derecha del ícono de 5px */ 
+    margin: 4% 8%; 
 }
 /* ------------ END MAIN MID ---------- */
 

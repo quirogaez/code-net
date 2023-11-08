@@ -527,8 +527,12 @@ img {
 }
 .close__modalSure {
     width: 100%;
-    text-align: right;
-
+    text-align: center;
+    margin: 8%;  
+    background-color: var(--second--color);
+    border-radius: 5px;
+    padding: 8px 12px;
+    color: #fafafa;
 }
 .close__modalSure button {
     color: var(--second--color);

@@ -27,7 +27,7 @@ const tecnologyImagesContainer = document.getElementById("tecnology-images");
 
 tecnologyImagesContainer.style.display = "flex"; //contenedor de las imagenes
 tecnologySelect.addEventListener("change", function () {
-    if (tecnologyImagesContainer.children.length >= 8) {
+    if (tecnologyImagesContainer.children.length >= 2) {
        /*  alert("Solo se permiten ocho tecnologías"); */
     
     openSure();
@@ -35,13 +35,12 @@ tecnologySelect.addEventListener("change", function () {
 
     }
 
-    //funcion para mostrar el modal
+    /*funcion para mostrar el modal */
     function openSure(){
        
         const sure = document.querySelector('.sure');
         
-      /*   openSure().addEventListener('click', (e) => { */
-           /*  e.preventDefault(); */
+  
             sure.classList.add('sure--show');
             const closeSure = document.querySelector('.close__modalSure'); 
             closeSure.addEventListener('click', (e) => {
