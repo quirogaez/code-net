@@ -28,13 +28,38 @@ signupForm.addEventListener('submit', async (e) => {
        /*  password: inputPassword */
 
         // Aquí especificamos de que si el registro fue correcto, entonces nos aparecerá un msj de alerta de que fue exitoso
-        alert('Registro Exitoso!')
+       
         const response = await fetch(window.location.search + "/codenet/signup", {
             method: "POST",
             body: JSON.stringify({userData: userData, loginData: loginData}),
             headers: { "Content-type": "application/json; charset=UTF-8" }
-        })
+        });
         const responseData = await response.json();
+        console.log(responseData)
+        if (responseData?.error) {
+            Swal.fire({
+                title: responseData.error,
+                icon: "warning",
+                iconColor: "#801bea",
+                confirmButtonText: "Reintentar",
+                confirmButtonColor: "#801bea",
+            })
+        } else if (responseData.success) {
+            Swal.fire({
+                title: "Usuario creado con exito",
+                text: `Su correo de acceso es: ${responseData.emailAccess}`,
+                icon: "success",
+                iconColor: "#801bea",
+                confirmButtonText: "Iniciar Sesión!",
+                confirmButtonColor: "#801bea",
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    window.location.href = window.location.search + "/codenet/login"
+                }
+            })
+        }
+        
         console.log(responseData)
         // Si el registro fue exitoso, nos redigirá al login
         window.location.href /* = 'http://localhost:8080/codenet/structure' */

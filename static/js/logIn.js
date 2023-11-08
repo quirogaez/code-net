@@ -23,9 +23,12 @@ submitButton.addEventListener("click", async (e) => {
             }
         }
     }
+
+    /* Se hace el objeto para enviar a la peticion */
+   const loginData = { username: emailInput, password: passwordInput };
    await fetch(window.location.search + "/codenet/login", {
         method: 'POST',
-        body: JSON.stringify({ username: emailInput, password: passwordInput }),
+        body: JSON.stringify({loginData: loginData}),
         headers: { "Content-type": "application/json; charset=UTF-8" }
     }).then(response => {
         if (response.redirected) {
