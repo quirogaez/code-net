@@ -31,7 +31,7 @@ app.use(session({
     secret: "ascunwdivundfoivndfjnvoasdimvoidfvsioafvmdoifvaipdfvPOSDVPDS",
     resave: true,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: process.env.MONGOOSE_URL }),
+   /*  store: MongoStore.create({ mongoUrl: process.env.MONGOOSE_URL }), */
     cookie: { maxAge: 1000 * 60 * 60 * 24 }
 }));
  
@@ -67,12 +67,13 @@ app.use(express.json()); // Middleware para analizar datos JSON en las solicitud
     
 } */
 
-await mongoose.connect(process.env.MONGOOSE_URL)
+/* await mongoose.connect(process.env.MONGOOSE_URL)
         .then(() => {
             console.log("Connected to MONGODB");
-        })
+        }) */
 
 // Inicia el servidor en el puerto 8080
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log("Server is running");
 });
