@@ -64,7 +64,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const urlGithubValue = document.querySelector('[name="url__github"]').value.trim();
         const descriptionValue = document.querySelector('.description').value.trim();
         if (Object.keys(imagesToPost).length === 0 || selectTecnologias.value === 'vacio' || urlProjectValue === '' || urlGithubValue === '' || descriptionValue === '') {
-            alert('Por favor, complete todos los campos del formulario.');
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Por favor, complete todos los campos del formulario.",
+            });
+            return
         } else {
             const sure = document.querySelector('.sure');
             const closeSure = document.querySelector('.close__modalSure');
