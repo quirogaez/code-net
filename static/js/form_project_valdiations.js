@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const selectTecnologias = document.querySelector('select[name="tecnologias"]');
     const tecnologiaImages = document.querySelectorAll('.img__tecnology');
     const openModal = document.querySelector ('.button_post');
-    const selectedImages = new Set(); 
+    const technologies =  new Set(); 
 
 
     selectTecnologias.addEventListener('change', (event) => {
@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (selectedImage) {
             selectedImage.style.display = 'block';
-            selectedImages.add(selectedImage);
+            technologies.add(selectedImage.childNodes[1].src);
+            console.log(technologies)
         }
     });
 
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         closeButtonSpan.addEventListener('click', () => {
             img.style.display = 'none';
-            selectedImages.delete(img);
+            technologies.delete(img);
         });
     });
 
@@ -61,7 +62,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const urlProjectValue = document.querySelector('.url__project').value.trim();
         const urlGithubValue = document.querySelector('[name="url__github"]').value.trim();
-        if (Object.keys(imagesToPost).length === 0 || selectTecnologias.value === 'vacio' || urlProjectValue === '' || urlGithubValue === '') {
+        const descriptionValue = document.querySelector('.description').value.trim();
+        if (Object.keys(imagesToPost).length === 0 || selectTecnologias.value === 'vacio' || urlProjectValue === '' || urlGithubValue === '' || descriptionValue === '') {
             alert('Por favor, complete todos los campos del formulario.');
         } else {
             const sure = document.querySelector('.sure');
@@ -79,7 +81,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     for (const inputName in imagesToPost) {
                         formData.append('imageFile', imagesToPost[inputName]);
                     }
-        
+                    formData.append('urlProjectDeploy', urlProjectValue);
+                    formData.append('urlGitHub', urlGithubValue);
+                    formData.append('description', descriptionValue);
+                    formData.append('technologies',  Array.from(technologies));
                     /* uploadImage(imagesToPost); */
         
                     // Realiza una solicitud Fetch POST al servidor para subir las imágenes
