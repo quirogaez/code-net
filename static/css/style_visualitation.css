@@ -46,7 +46,6 @@ body {
     box-shadow: 1px 1px 8px var(--text--primary);
     flex-direction: column;
     top: var(--stk-top-left);
-    
 }
 
 /* ----- logo container----- */
@@ -84,7 +83,6 @@ img {
     cursor: pointer;
     padding: 0 40px;
     height: 3.8rem;
-    
 }
 
 .menu-item:hover,
@@ -109,20 +107,34 @@ img {
             hsla(0, 0%, 92%, 0) 100%);
 }
 
+/* ----- count message ----- */
+/*  .count {
+    background: var(--second--color);
+    padding: 0.1rem 0.4rem;
+    font-size: 0.6rem;
+    height: fit-content;
+    color: white;
+    border-radius: 0.8rem;
+    position: absolute;
+    top: 1.1rem;
+    left: 2.6rem;
+} */
 .icon1 {
     width: 1.5rem;
     height: 1.5rem;
 }
+
 .icon1 img {
     width: 100%;
     height: 100%;
 }
+
 .menu-item p {
     font-size: medium;
     margin-left: 1.5rem;
     color: #440d7e;
-    font-family: 'Ralawey', sans-serif;
 }
+
 .menu-item2 {
     position: relative;
     display: flex;
@@ -168,7 +180,6 @@ img {
     font-size: medium;
     margin-left: 1.5rem;
     color: #440d7e;
-    font-family: 'Ralawey', sans-serif;
 }
 
 /* ---------- option more ---------- */
@@ -207,7 +218,6 @@ img {
     font-size: medium;
     margin-left: 1.5rem;
     color: #30095a;
-    font-family: 'Ralawey', sans-serif;
 }
 
 /* -----menu more options ----- */
@@ -248,6 +258,7 @@ img {
     border-top: 1.5px solid #adadad;
     border-bottom: 1.5px solid #adadad;
 }
+
 /* -------------- setting options -----------------*/
 
 .showSettings {
@@ -361,197 +372,158 @@ img {
   }
   
 
-/* ..............main central.................. */
-.main-central{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    background-color: #441a31;
+
+
+/* --------------------------- Main Center ------------- */
+
+/* -------------- button plus ------------ */
+.showPublication {
+    display: none;
+}
+.showPublication li:hover {
+    background-color: #d3d3d3;
+}
+.showPublication_PPS {
+    position: fixed;
+    bottom: 4rem;
+    padding: 5px 25px;
+    background: #fafafa;
+    box-shadow: 2px 2px 5px var(--text--primary);
+    width: 280px;
+    height: 170px;
+    margin: auto;
+    border-radius: 5%;
+}
+.showPublication_PPS li:hover {
+    background-color: #d3d3d3;
+}
+.optionProject {
+    position: absolute;
+    left: 2rem;
+    bottom: 4rem;
+    padding: 5px 25px;
+    background: #fafafa;
+    box-shadow: 2px 2px 5px var(--text--primary);
+    width: 280px;
+    height: 170px;
+    margin: auto;
+    border-radius: 5%;
+}
+.optionAdd {
+    text-align: center;
+    cursor: pointer;
+}
+.optionAdd p {
+    color: #272727;
+    padding: 15px;
+    font-size: medium;
+}
+.optionAdd_publication {
+    border-top: 1.5px solid #adadad;
+    border-bottom: 1.5px solid #adadad;
 }
 
-.main-header {
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    width: 100%;
-    height: 400px;
-    background-color: #00ffe0;
+.buttonPlus {
+    margin-left: 15px;
+    position: fixed;
+    padding: 1.2rem 0;
+    bottom: 3rem;
+    height: 3.5em;
+    width: 3.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--primary--color);
+}
+.buttonPlus i {
+    color: #440d7e;
+
+}
+.buttonPlus:hover,
+.buttonPlus:active {
+    transform: scale(1.1);
+    color: #200043;
+}
+
+/* ..............main central.................. */
+.main-central {
     display: flex;
-    flex-direction: column;
-    position: relative;
+    padding: 10px;
+}
+.myProfile {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #00ffe0;
+}
+.main-header {
+    width: 100%;
+    height: 30rem;
+}
+.personalInfo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.containerPortada {
+    width: 100%;
+    height: 12rem;
 }
 .portada {
-    width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
 }
-
+.edit-portada {
+}
+.fa-regular {
+}
 .fa-pen-to-square {
-    position: absolute; /* Establecer la posición absoluta para que se pueda colocar libremente */
-    top: 0; /* Ajusta la posición superior según sea necesario */
-    left: 0; /* Ajusta la posición izquierda según sea necesario */
-    color: #ffffff; /* Cambia el color del icono */
-    background-color: #000000;/* Cambia el color de fondo del icono si es necesario */
-    
 }
-#portada-image{
+.rol-perfilbutton {
+    background-color: #f4f4f4;
     width: 100%;
-   height: 70%; 
+    height: 6rem;
+    border-radius: 0 0 10px 10px;
 }
-#file-input{
-    width: 100%;
-    height: 70%;
-}
-.rol-perfilbutton{
-    width: 100%;
-    background-color: #441a31;
-}
- .edit-portada {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    padding: 5px;
-    cursor: pointer;
-    background-color: rgb(255, 0, 0);
-}
-#profileImage{ 
-    width: 8rem;
-    border-radius: 100px;
-    aspect-ratio: 1/1;
-    overflow: hidden;   
-    background-color: aqua;
-    margin: 10px 10px 10px 50px;
-}
-.main-middle{
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    background-color: #ffffff;
-}
-.main-middle-cont{
-    display: flex;
-    flex-direction: rows;
-    justify-content: center;
-    background-color: #022824;
-}
-.main-mid{
-    grid-column-start: 1;
-    grid-column-end:5;
-    grid-row-start: 3;
-    grid-row-end: 4;
-     background-color: #ff6200; 
-}
-.main-about{
-    grid-column-start: 3;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 5;
-    width: 100%;
-    background-color: #022824;
-}
-.fa-pen-to-square{
-    font-size: 40px;
-}
-/*---------------main_about---------------*/
-.main-about{
+.containerPhoto__profile {
 
-   /* display: flex;
-   flex-direction: column;
-   align-items: center; 
-   right: 0;
-   height:1000px;
-   margin: 0;
-   position:fixed;
-   width: 250px;
-   /* background: #fafafa; */
-   box-shadow: 3px 3px 5px var(--text--primary);
-    
 }
-.title-about{
-    width: 100%;
-    align-items: center;
-    margin: 8% 0;
-    text-align: center;
+.tecnologies-mostrar {
 }
-.genero{
-    display: flex; 
-    align-items: center; 
-    border-bottom: 1px #c3c0c0;
-    border-bottom-style: solid;
+.main-middle {
 }
-.fa-user{
-    font-size: 22px;
-    width: 10%;
-    margin: 4% 8%; 
+.main-mid {
 }
-.about-date{
-    display: flex; 
-    align-items: center; 
-    border-bottom: 1px #c3c0c0;
-    border-bottom-style: solid;
+.main-about {
 }
-.fa-cake-candles{
-    font-size: 22px;
-    width: 10%;
-    margin: 4% 8%; 
+.about-title {
 }
-.about-address{
-    display: flex; 
-    align-items: center;
-    border-bottom: 1px #c3c0c0;
-    border-bottom-style: solid;
+.genero {
 }
-.fa-location-dot{
-    font-size: 22px;
-    width: 10%;
-    margin: 4% 8%; 
+.fa-sharp {
 }
-
-.location {
-    display: flex; 
-    align-items: center; 
-    border-bottom: 1px #c3c0c0;
-    border-bottom-style: solid;
+.fa-solid {
+}
+.fa-user {
+}
+.about-date {
+}
+.fa-cake-candles {
+}
+.about-address {
 }
 .fa-location-dot {
-    font-size: 22px;
-    width: 10%;
-    margin: 4% 8%;   
 }
-.about-correo{
-    display: flex; 
-    align-items: center;
-    border-bottom: 1px #c3c0c0;
-    border-bottom-style: solid;
+.about-correo {
 }
-.fa-envelope{
-    font-size: 22px;
-    width: 10%;
-    margin: 4% 8%; 
+.fa-envelope {
 }
-.about-phone{
-    display: flex; 
-    align-items: center; 
-    border-bottom: 1px #c3c0c0;
-    border-bottom-style: solid;
+.about-phone {
 }
-.fa-phone{
-    font-size: 22px;
-    width: 10%;
-    margin: 4% 8%; 
+.fa-phone {
 }
-/* ------------ END MAIN MID ---------- */
 
-
-.main-central{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-/* //////////////// END MAIN SECTION ////////////////////////// */
 
 /* RESPONSIVE */
 
