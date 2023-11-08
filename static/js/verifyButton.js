@@ -31,6 +31,11 @@ verifyButton.addEventListener ('click', async (e)=> {
                 pasrseTech = "aws";
                 console.log(pasrseTech)
             }
+            if(pasrseTech === "Netlify") {
+                
+                pasrseTech = "netlify";
+                console.log(pasrseTech)
+            }
             if (myDataString.includes(pasrseTech)) {
                 const selectedImage = document.getElementById(pasrseTech.toLowerCase());
                 if (selectedImage) {
@@ -47,7 +52,7 @@ verifyButton.addEventListener ('click', async (e)=> {
         Bootstrap: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2FBoostrap.svg?alt=media&token=98cc90b4-5ae7-4e0b-a21c-79e75f1f64fa&_gl=1*fvudtu*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA2NTg1Mi4yMi4xLjE2OTkwNjYxOTYuMTQuMC4w",
         js: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2Fjavascript.svg?alt=media&token=24735da3-03d5-4589-81a5-e76f18440f6b&_gl=1*yi1vu3*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA2NTg1Mi4yMi4xLjE2OTkwNjYzOTcuMjUuMC4w",
         css: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2Fcss.svg?alt=media&token=c521b903-a631-4de8-b1f5-baf77b9bf13e&_gl=1*1qsxlsj*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA2NTg1Mi4yMi4xLjE2OTkwNjYyNTkuMTQuMC4wg",
-        html: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2Fgithub.svg?alt=media&token=1ed47073-27dc-4137-b6f3-23043a60dcc0&_gl=1*ljt8or*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA2NTg1Mi4yMi4xLjE2OTkwNjYzMjIuMjQuMC4w",
+        html: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2Fhtml.svg?alt=media&token=b9cc2e45-8ce8-411b-83a5-f7804e04d1f1&_gl=1*4tvk3g*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQyNTkzNi4zMy4xLjE2OTk0MjU5NDMuNTMuMC4w",
         React: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2Freact.svg?alt=media&token=348d75f5-3165-4f67-b747-787cc2571cc0&_gl=1*not4r2*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA2NTg1Mi4yMi4xLjE2OTkwNjY1NDcuNS4wLjA.",
         Node: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2Fnodejs.svg?alt=media&token=db6dacae-3aed-4622-85e4-ac9093319c5d&_gl=1*35rsrt*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA2NTg1Mi4yMi4xLjE2OTkwNjY0ODEuMTEuMC4w",
         Vue:"https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2Fvuejs.svg?alt=media&token=002e05da-5625-4bdf-9592-abfaf3317558&_gl=1*16pev87*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA2NTg1Mi4yMi4xLjE2OTkwNjY1OTYuMjMuMC4w",
@@ -69,5 +74,6 @@ verifyButton.addEventListener ('click', async (e)=> {
         rails: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2Frails.svg?alt=media&token=d7128a56-9b75-485c-abd3-b27cbe9ba002&_gl=1*1mgnk34*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA2NTg1Mi4yMi4xLjE2OTkwNjY1MzUuMTcuMC4w",
         Ruby: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2Fruby.svg?alt=media&token=c65f9247-7f32-4823-b41e-5ec8822182cf&_gl=1*15whmcl*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA2NTg1Mi4yMi4xLjE2OTkwNjY1NTkuNjAuMC4w",
         Underscore: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2Funderscore.js.svg?alt=media&token=d8edd8d2-fad1-48f1-aeb9-5a8f0177275f&_gl=1*1jec16z*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA2NTg1Mi4yMi4xLjE2OTkwNjY1NzYuNDMuMC4w",
-        WordPress:"https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2FWordpress.svg?alt=media&token=0a2df88a-09c3-4af1-9c9e-f75d966271e5&_gl=1*1j52s7t*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA2NTg1Mi4yMi4xLjE2OTkwNjYyMTMuNjAuMC4w"
+        WordPress:"https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2FWordpress.svg?alt=media&token=0a2df88a-09c3-4af1-9c9e-f75d966271e5&_gl=1*1j52s7t*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA2NTg1Mi4yMi4xLjE2OTkwNjYyMTMuNjAuMC4w",
+        netlify: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2Fnetlify.svg?alt=media&token=7a8cbb4c-bc9e-4545-945a-3d2315756ad3&_gl=1*3wjc0t*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQwNDI3NC4zMS4xLjE2OTk0MDQyODYuNDguMC4w"
     };
