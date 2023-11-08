@@ -24,7 +24,7 @@ dotenv.config();
 const app = express();
 
 app.use(session({
-    secret: process.env.SECRET_SESSION,
+    secret: "ascunwdivundfoivndfjnvoasdimvoidfvsioafvmdoifvaipdfvPOSDVPDS",
     resave: true,
     saveUninitialized: true,
     cookie: { maxAge: 1000 * 60 * 60 * 24 }
@@ -57,7 +57,7 @@ app.use(express.json()); // Middleware para analizar datos JSON en las solicitud
 
 
 // app.js
-if (!process.env.twitchAUTH) {
+/* if (!process.env.twitchAUTH) {
     (async () => {
         process.env["twitchAUTH"] = await twitchAuth();
 
@@ -65,7 +65,7 @@ if (!process.env.twitchAUTH) {
         console.log(process.env.twitchAUTH)
     })
     
-}
+} */
 
 const PORT = process.env.PORT || 8080
 
