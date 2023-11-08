@@ -44,11 +44,6 @@ app.use(express.static('static'));
 app.use('/codenet', routes);
 
 // Conecta a la base de datos MongoDB usando la URL definida en las variables de entorno
-/* mongoose.connect(process.env.MONGOOSE_URL)
-    .then(() => {
-        console.log("Connected to MONGODB");
-    });
- */
 // Establece EJS como el motor de plantillas (opcional, está comentado)
 // app.set('view engine', 'ejs');
 
@@ -61,20 +56,32 @@ app.use(express.json()); // Middleware para analizar datos JSON en las solicitud
 *//* app.use(morgan("tiny")); // Middleware para el registro de solicitudes HTTP */
 
 
-// app.js
-if (!process.env.twitchAUTH) {
-    (async () => {
-        process.env["twitchAUTH"] = await twitchAuth();
+(async () => {
+    // app.js
+    if (!process.env.twitchAUTH) {
+        (async () => {
+            process.env["twitchAUTH"] = await twitchAuth();
 
-    })().then( ()=> {
-        console.log(process.env.twitchAUTH)
-    })
-}
+        })().then( ()=> {
+            console.log(process.env.twitchAUTH)
+        })
+    }
 
-const PORT = process.env.PORT || 8080
+    // Conecta a la base de datos MongoDB usando la URL definida en las variables de entorno
+    await mongoose.connect(process.env.MONGOOSE_URL)
+        .then(() => {
+            console.log("Connected to MONGODB");
+        })
+
+    const PORT = process.env.PORT || 8080
 
 
-// Inicia el servidor en el puerto 8080
-app.listen(PORT, () => {
-    console.log("Server is running");
-});
+    // Inicia el servidor en el puerto 8080
+    app.listen(PORT, () => {
+        console.log("Server is running");
+    });
+})()
+
+
+
+

@@ -13,7 +13,6 @@ router.get('/login', (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
-    console.log(searchDir())
     const __dirnameAll = searchDir();
     console.log("dirnameall: " + __dirnameAll)
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'logIn.html');
@@ -26,7 +25,6 @@ router.get('/signup', auth, (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
-    console.log(searchDir())
     const __dirnameAll = searchDir();
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'singUp.html');
     res.status(200).sendFile(filePath);
@@ -44,7 +42,7 @@ router.post('/login', (req, res) => {
     /* OJO aqui se debe ahcer la validacion con la base de datos */
     if (username && password) {
         /* Se dejara la sesion con el id de la persona */
-        req.session.user = "amy";
+        req.session.user = 2;
         res.redirect(303, '/codenet/structure');
     } else 
     { 
@@ -57,7 +55,6 @@ router.get('/', (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
-    console.log(searchDir())
     const __dirnameAll = searchDir();
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'index.html');
     res.status(200).sendFile(filePath);

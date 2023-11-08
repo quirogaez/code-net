@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    /* Funcion para mostrar imagenes en pantalla */
     tecnologiaImages.forEach((img) => {
         const closeButtonDiv = document.createElement('div');
         closeButtonDiv.className = 'close-button-container';
@@ -135,7 +136,13 @@ function imageCreate(imgData, fileContainer) {
     const imgText = fileContainer.nextElementSibling;
     console.log(imgText)
     const spanImage = document.createElement("span");
+    if (!imgData) {
+        img.textContent = `<label for="addImg1" class="label_img">
+        <p>+</p>agregar img
+         </label>`;
+    } else {
     imgText.textContent = " ";
+    }
     spanImage.className = "filedata";
     spanImage.style.display = 'block';
     spanImage.innerHTML = imgData.name;

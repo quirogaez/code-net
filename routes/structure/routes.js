@@ -10,7 +10,7 @@ router.get('/structure', auth, (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
-    console.log(searchDir())
+    console.log(req.session.user)
     const __dirnameAll = searchDir();
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'structure.html');
     res.sendFile(filePath);
@@ -20,7 +20,6 @@ router.get('/search', auth, (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
-    console.log(searchDir())
     const __dirnameAll = searchDir();
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'searchproject.html');
     res.sendFile(filePath);
@@ -30,7 +29,6 @@ router.get('/streams', auth, (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
-    console.log(searchDir())
     const __dirnameAll = searchDir();
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'live.html');
     res.sendFile(filePath);
@@ -40,7 +38,6 @@ router.get('/clips', auth, (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
-    console.log(searchDir())
     const __dirnameAll = searchDir();
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'ShortClip.html');
     res.sendFile(filePath);
