@@ -377,10 +377,6 @@ input:checked+.slider:before {
     color: #272727;
 }
 
-
-
-
-
 /* ----------- shortclip ---------- */
 
 .shortClip_container {
@@ -477,6 +473,170 @@ input:checked+.slider:before {
     text-transform: uppercase;
     font-size: 12px;
     cursor: pointer;
+}
+
+
+/* ---------------------------- ventana modal "estas seguro" ---------------- */
+.sure {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #171717af;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sure--show {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.close__modalSure {
+    width: 100%;
+    text-align: right;
+
+}
+
+.close__modalSure button {
+    color: var(--second--color);
+    font-size: 25px;
+    border: none;
+    background-color: var(--white--color);
+    cursor: pointer;
+}
+
+.modal__container {
+    margin: auto;
+    width: 90%;
+    max-width: 450px;
+    max-height: 90%;
+    background-color: var(--white--color);
+    padding: 1.5em 2.5em;
+    display: grid;
+    gap: 1.5em;
+    place-items: center;
+    grid-auto-columns: 100%;
+}
+
+.modal__tittle {
+    font-size: large;
+    padding: 20px;
+}
+
+.container--buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.acceptButton {
+    background-color: var(--primary--color);
+    padding: 10px;
+    height: 40px;
+    width: 150px;
+    border: none;
+    color: var(--second--color);
+    border-radius: 10px;
+    text-align: center;
+    font-size: medium;
+}
+
+.discard {
+    background-color: var(--white--color);
+    border: solid;
+    border-color: var(--second--color);
+    border-radius: 10px;
+    padding: 10px;
+    height: 40px;
+    width: 150px;
+    color: var(--second--color);
+    text-align: center;
+    font-size: medium;
+}
+
+/* ---------------------------- ventana modal "success" ---------------- */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #171717af;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal--show {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.close__modalProject {
+    width: 100%;
+    text-align: right;
+
+}
+
+.close__modalProject button {
+    color: var(--second--color);
+    font-size: 25px;
+    background-color: var(--white--color);
+    cursor: pointer;
+}
+
+.modal__container {
+    margin: auto;
+    width: 90%;
+    max-width: 450px;
+    max-height: 90%;
+    background-color: var(--white--color);
+    padding: 1.5em 2.5em;
+    display: grid;
+    gap: 1.5em;
+    place-items: center;
+    grid-auto-columns: 100%;
+}
+
+.modal__img {
+    width: 30%;
+}
+
+.modal__tittle {
+    font-size: large;
+}
+
+.container--buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.button__feed {
+    background-color: var(--primary--color);
+    padding: 10px;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: medium;
+}
+
+.button_myprofile {
+    background-color: none;
+    border: solid;
+    border-color: var(--second--color);
+    border-radius: 10px;
+    padding: 10px;
+    height: 40px;
+    width: 150px;
+    color: var(--second--color);
+    text-align: center;
+    font-size: medium;
 }
 
 /* ------------------------------------- RESPONSIVE -----------------------------------*/

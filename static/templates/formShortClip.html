@@ -128,27 +128,53 @@
                     <div class="languageMode"> lenguaje</div>
                 </div>
             </section>
-            <div class="shortClip_project">
-                <div class="shortClip_in">
-                    <div class="img_buttonCover">
-                        <input
-                            accept="video/mp4, video/mpeg, video/ogg, video/webm, video/quicktime, video/x-msvideo, video/x-flv, video/3gpp, video/x-matroska, image/gif"
-                            type="file" id="img_button" hidden>
+            <form method="post">
+                <div class="shortClip_project">
+                    <div class="shortClip_in">
+                        <div class="img_buttonCover">
+                            <input
+                                accept="video/mp4, video/mpeg, video/ogg, video/webm, video/quicktime, video/x-msvideo, video/x-flv, video/3gpp, video/x-matroska, image/gif"
+                                type="file" id="img_button" hidden>
 
-                        <label for="img_button">
-                            <p class="add_shortClip">+</p>Agregar video o GIF
-                        </label>
+                            <label for="img_button">
+                                <p class="add_shortClip">+</p>Agregar video o GIF
+                            </label>
+                        </div>
+                        <p class="button_in_text">Ingrese un video de máximo 2 minutos</p>
                     </div>
-                    <p class="button_in_text">Ingrese un video de máximo 2 minutos</p>
+                    <div class="shortClip--short">
+                        <textarea class="description" name="message" placeholder="descripción"></textarea>
+                        <input type="url" class="url_shortClip" name="url_shortClip" placeholder="URL ">
+                    </div>
                 </div>
-                <div class="shortClip--short">
-                    <textarea class="description" name="message" placeholder="descripción"></textarea>
-                    <input type="url" class="url_shortClip" name="url_shortClip" placeholder="URL ">
+                <div class="container_buttonPost">
+                    <button class="button_post">publicar</button>
                 </div>
-            </div>
-            <div class="container_buttonPost">
-                <button class="button_post">publicar</button>
-            </div>
+            </form>
+            <!------------ modal windows --------------->
+            <section class="sureShortClip">
+                <div class="modal__container">
+                    <div class="close__modalSure">
+                        <button type="button">x</button>
+                    </div>
+                    <h2 class="modal__tittle">¿Estas seguro que deseas cargar tu shortclip?</h2>
+                    <div class="container--buttons">
+                        <button class="acceptButton">aceptar</button>
+                        <button type="button" class="discard">descartar</button>
+                    </div>
+                </div>
+            </section>
+            <!--------------------- modal success --------------------->
+            <section class="modal">
+                <div class="modal__container">
+                    <img src="../img/modal/trofeo.svg" class="modal__img">
+                    <h2 class="modal__tittle">¡has cargado tu proyecto con exito!</h2>
+                    <div class="container--buttons">
+                        <a href="structure.html" class="button__feed">inicio</a>
+                        <a href="#" class="button_myprofile">mi perfil</a>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 </body>
@@ -165,6 +191,6 @@
 <!------- carousels ------>
 <script defer src="../js/carousels.js"></script>
 <!------------ js page ---------------->
-
+<script type="module" src="../js/shortClip__form.js"></script>
 
 </html>
