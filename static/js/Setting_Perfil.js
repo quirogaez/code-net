@@ -142,18 +142,19 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("userData", JSON.stringify(userData));
 
             alert("Datos del formulario almacenados en Local Storage.");
+            
 
             // Limpia los campos del formulario
-            document.getElementById("name").value = "";
+/*             document.getElementById("name").value = "";
             document.getElementById("rol").value = "";
             document.getElementById("tecnologys").value = "";
             document.getElementById("date").value = "";
             document.getElementById("gender").value = "";
             document.getElementById("addres").value = "";
             document.getElementById("correo").value = "";
-            document.getElementById("phone").value = "";
+            document.getElementById("phone").value = ""; */
 
-            clearImageInput();  // Limpia la vista previa de la imagen
+/*             clearImageInput();  */ // Limpia la vista previa de la imagen
         } else {
             alert("Por favor, complete todos los campos del formulario.");
         }

@@ -411,7 +411,8 @@ input:checked+.slider:before {
     overflow: hidden;
     background-color: var(--white--color);
     margin: 10px 10px 10px 30px;
-    cursor: pointer
+    cursor: pointer;
+    object-fit: cover;
 }
 
 .initial-sec {
