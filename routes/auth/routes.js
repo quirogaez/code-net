@@ -2,6 +2,7 @@ import express, {Router} from 'express'
 import path from 'path'
 import {searchDir} from '../searchDir.js'
 import auth from '../../middlewares/Auth.js'
+import {signUpService, signInService} from '../../services/auth/authService.js'
 
 const router = Router()
 
@@ -21,7 +22,7 @@ router.get('/login', (req, res) => {
 });
 
 
-router.get('/signup', auth, (req, res) => {
+router.get('/signup', (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
@@ -48,6 +49,23 @@ router.post('/login', (req, res) => {
     { 
         res.header("si");
     }
+});
+
+router.post('/signup', async (req, res) => {
+    try { 
+        res.header('Access-Control-Allow-Origin', '*');
+        console.log("Signup Post")
+        const {loginData, userData} = req.body;
+        const logData = await signUpService(loginData);
+        const signUpData = await signInService(userData);
+    /* OJO aqui se debe ahcer la validacion con la base de datos */
+        /* Se dejara la sesion con el id de la persona */
+        req.session.user = userData.id;
+        res.status(200).json({data: signUpData})
+    } catch(e) {
+
+    }
+    
 });
 
 
