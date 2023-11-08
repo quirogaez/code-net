@@ -1,7 +1,6 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-
 // Definición de la función searchDir
 export function searchDir() {
     // Obtiene la ruta del archivo actual (__filename) a partir de la URL del módulo actual
@@ -23,13 +22,13 @@ export function searchDir() {
     __dirnameArray.splice(__dirnameArray.length - 1, 2);
     
     // Une las partes restantes del array en una sola ruta (__dirnameAll)
-    const __dirnameAll = __dirnameArray.join("\\");
+    const __dirnameAll =path.join(...__dirnameArray);
     
     // Imprime la ruta completa del directorio (__dirnameAll)
     console.log(__dirnameAll);
     
     // Retorna la ruta completa del directorio (__dirnameAll)
-    return __dirnameAll;
+    return __dirnameAll  /* "/var/task" */ ;
 }
 
 // Exporta la función searchDir como módulo predeterminado

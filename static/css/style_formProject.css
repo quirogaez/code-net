@@ -132,7 +132,7 @@ img {
 }
 
 .menu-item p {
-    font-size: medium;
+    font-size: 16.6px;
     margin-left: 1.5rem;
     color: #440d7e;
     font-family: 'Ralawey', sans-serif;
@@ -375,9 +375,6 @@ img {
     font-size: large;
     color: #272727;
   }
-  
-
-
 
 
 /* --------------- form project --------------- */
@@ -666,7 +663,7 @@ p {
     font-size: medium;
 }
 
-/* ---------------------------- ventana modal "estas seguro" ---------------- */
+/* ---------------------------- ventana modal "success" ---------------- */
 
 .modal {
     position: fixed;

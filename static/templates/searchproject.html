@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code|Net</title>
     <!-- css link -->
-    <link rel="stylesheet" href="../css/style_structure.css">
+    <link rel="stylesheet" href="../css/style_searchProject.css">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Ffavicon.svg?alt=media&token=5e8d39b3-3caf-4aa1-b672-d3dd48fcdda5&_gl=1*ikbwgp*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTM0NDUyOC4yOC4xLjE2OTkzNDQ5NzkuNTUuMC4w">
     <!-- Link font -->
@@ -82,7 +82,7 @@
             <div class="showPlus">
                 <ul class="showOptions">
                     <li>
-                        <a href="http://localhost:8080/codenet/profile/edit" class="optionsMore">
+                        <a href="#" class="optionsMore">
                             <p>editar perfil</p>
                         </a>
                     </li>
@@ -103,8 +103,24 @@
                 <p>Más</p>
             </a>
         </header>
-        <!-- .................. carousel projects ........................ -->
-        <div class="main-mid">
+        <!-----------------------  Search  ----------------------->
+        <div>
+            <!--------------------- settings page ----------------->
+            <section class="showSettings">
+                <div class="setting">
+                    <div class="close__modalSure">
+                        <button type="button">x</button>
+                    </div>
+                    <div class="darkMode">
+                        <p>Modo oscuro</p>
+                        <label class="switch">
+                            <input type="checkbox" id="mySwitch">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="languageMode"> lenguaje</div>
+                </div>
+            </section>
             <!--------------------- menu plus --------------------->
             <div class="showPublication">
                 <ul class="showPublication_PPS">
@@ -125,46 +141,34 @@
                     </li>
                 </ul>
             </div>
-            <a onclick="showAddOption()" class="buttonPlus" id="varProfile"><i class="fa-solid fa-plus"></i></a>
-
-
-            <!------------------------------- carousel projects ---------------------->
-            <div class="carousel-story">
-                <div class="controls_p">
-                    <button class="prev-btn button"><i class='bx bx-chevron-left'></i></button>
+            <a onclick="showAddOption()" class="buttonPlus" id="varProfile">
+                <i class="fa-solid fa-plus"></i>
+            </a>
+            <!------------------- searchf form  -->
+            <form action="#" method="post" target="_blank">
+                <div class="container__search">
+                    <input type="search" class="search__nav" name="busquedamusica" placeholder="buscar">
+                    <input type="submit" value="" style="display: none;">
                 </div>
-                <div class="carousel_profile_story"></div>
-                <div class="controls_n">
-                    <button class="next-btn button"><i class='bx bx-chevron-right'></i></button>
+                <div class="container__options">
+                    <button type="onclick" class="options--category">categoria</button>
+                    <button type="onclick" class="options">personas</button>
+                    <button type="onclick" class="options">proyectos</button>
+                    <button type="onclick" class="options">trasmisiones</button>
+                    <button type="onclick" class="options">ShortClip</button>
                 </div>
+            </form>
+
+            <div class="containerSearch">
+                <div class="categories">
+                    <div class="fullContainers"></div>
+                </div>
+                <div class="people"></div>
+                <div class="project"></div>
+                <div class="lives"></div>
+                <div class="shortclip"></div>
             </div>
-
-            <!--------------------- settings page ----------------->
-            <section class="showSettings">
-                <div class="setting">
-                    <div class="close__modalSure">
-                        <button type="button">x</button>
-                    </div>
-                    <div class="darkMode">
-                        <p>Modo oscuro</p>
-                        <label class="switch">
-                            <input type="checkbox" id="mySwitch">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    <div class="languageMode"> lenguaje</div>
-                </div>
-            </section>
-
-            <!-------------------- publicaciones -------------------->
-            <div class="main-center">
-                <div id="imageContainer"></div>
-            </div>
-            <!-- modal -->
-            <div id="modals-container"></div>
-
         </div>
-
 
         <!-----------------  live streaming carousel ------------------>
         <section class="main-right">
@@ -177,8 +181,8 @@
                 <div class="carousel_profile_life"></div>
             </div>
         </section>
-
     </main>
+
 </body>
 <!----------------------- link js ------------------------------>
 <!------------ js chatbot ------------->
@@ -194,9 +198,5 @@
 <!------- carousels ------>
 <script defer src="../js/carousels.js"></script>
 <!------------ js page ---------------->
-<script src="../js/publication_structure.js"></script>
-<!------------ sesion ----------------->
-
-
 
 </html>

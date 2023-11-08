@@ -7,7 +7,7 @@ const auth = function(req, res, next) {
       return next();
     else {
       const __dirnameAll = searchDir();
-      const filePath = path.join(__dirnameAll, 'static', 'templates', 'Index.html');
+      const filePath = path.join(__dirnameAll, 'static', 'templates', 'index.html');
       res.sendFile(filePath);
     }
 };

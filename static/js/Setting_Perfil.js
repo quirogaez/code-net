@@ -27,7 +27,7 @@ const tecnologyImagesContainer = document.getElementById("tecnology-images");
 
 tecnologyImagesContainer.style.display = "flex"; //contenedor de las imagenes
 tecnologySelect.addEventListener("change", function () {
-    if (tecnologyImagesContainer.children.length >= 2) {
+    if (tecnologyImagesContainer.children.length >= 8) {
        /*  alert("Solo se permiten ocho tecnologías"); */
     
     openSure();

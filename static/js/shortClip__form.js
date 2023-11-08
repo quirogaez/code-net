@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    /* Funcion para mostrar imagenes en pantalla */
     tecnologiaImages.forEach((img) => {
         const closeButtonDiv = document.createElement('div');
         closeButtonDiv.className = 'close-button-container';
@@ -64,13 +63,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if (Object.keys(imagesToPost).length === 0 || selectTecnologias.value === 'vacio' || urlProjectValue === '' || urlGithubValue === '') {
             alert('Por favor, complete todos los campos del formulario.');
         } else {
-            const sure = document.querySelector('.sure');
+            const sureShortClip = document.querySelector('.sureShortClip');
             const closeSure = document.querySelector('.close__modalSure');
             const discardPublication = document.querySelector('.discard');
             
             openModal.addEventListener('click', async (e)=>{
                 e.preventDefault();
-                sure.classList.add('sure--show');
+                sureShortClip.classList.add('sureShortClip--show');
                 await modalSuccesPromise()
                 .then(async () => {
                     console.log()
@@ -83,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     /* uploadImage(imagesToPost); */
         
                     // Realiza una solicitud Fetch POST al servidor para subir las imágenes
-                    let url = await fetch(window.location.search + '/codenet/project', {
+                    let url = await fetch(window.location.search + '/codenet/shortclip', {
                         method: 'POST',
                         body: formData
                     })
@@ -93,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             closeSure.addEventListener('click', (e)=>{
                 e.preventDefault();
-                sure.classList.remove('sure--show');
+                sureShortClip.classList.remove('sureShortClip--show');
             });
             discardPublication.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -136,13 +135,7 @@ function imageCreate(imgData, fileContainer) {
     const imgText = fileContainer.nextElementSibling;
     console.log(imgText)
     const spanImage = document.createElement("span");
-    if (!imgData) {
-        img.textContent = `<label for="addImg1" class="label_img">
-        <p>+</p>agregar img
-         </label>`;
-    } else {
     imgText.textContent = " ";
-    }
     spanImage.className = "filedata";
     spanImage.style.display = 'block';
     spanImage.innerHTML = imgData.name;

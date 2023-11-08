@@ -258,11 +258,13 @@ img {
     border-top: 1.5px solid #adadad;
     border-bottom: 1.5px solid #adadad;
 }
+
 /* -------------- setting options -----------------*/
 
 .showSettings {
     display: none;
 }
+
 .setting {
     margin: auto 20rem;
     position: fixed;
@@ -273,6 +275,7 @@ img {
     height: 240px;
     border-radius: 5%;
 }
+
 .modal__container {
     margin: auto;
     width: 90%;
@@ -285,10 +288,12 @@ img {
     place-items: center;
     grid-auto-columns: 100%;
 }
+
 .close__modalSure {
     width: 100%;
     text-align: right;
 }
+
 .close__modalSure button {
     color: var(--second--color);
     font-size: 25px;
@@ -296,14 +301,16 @@ img {
     background-color: var(--white--color);
     cursor: pointer;
 }
+
 .darkMode {
     margin-top: 30px;
     display: flex;
     width: 100%;
     height: 55px;
     justify-content: space-between;
-    border-bottom: solid 1px  #adadad ;
+    border-bottom: solid 1px #adadad;
 }
+
 .darkMode p {
     margin: 2px;
     padding: 5px;
@@ -317,15 +324,15 @@ img {
     display: inline-block;
     width: 60px;
     height: 34px;
-  }
-  
-  .switch input {
+}
+
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -336,9 +343,9 @@ img {
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 34px;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -349,27 +356,27 @@ img {
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 50%;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked+.slider {
     background-color: #2196F3;
-  }
-  
-  input:checked + .slider:before {
+}
+
+input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
+}
 
-  .languageMode {
+.languageMode {
     display: flex;
     margin-top: 10px;
     width: 100%;
     height: 55px;
     font-size: large;
     color: #272727;
-  }
-  
+}
+
 
 
 
@@ -380,9 +387,11 @@ img {
 .showPublication {
     display: none;
 }
+
 .showPublication li:hover {
     background-color: #d3d3d3;
 }
+
 .showPublication_PPS {
     position: fixed;
     bottom: 4rem;
@@ -394,9 +403,11 @@ img {
     margin: auto;
     border-radius: 5%;
 }
+
 .showPublication_PPS li:hover {
     background-color: #d3d3d3;
 }
+
 .optionProject {
     position: absolute;
     left: 2rem;
@@ -409,15 +420,18 @@ img {
     margin: auto;
     border-radius: 5%;
 }
+
 .optionAdd {
     text-align: center;
     cursor: pointer;
 }
+
 .optionAdd p {
     color: #272727;
     padding: 15px;
     font-size: medium;
 }
+
 .optionAdd_publication {
     border-top: 1.5px solid #adadad;
     border-bottom: 1.5px solid #adadad;
@@ -434,10 +448,12 @@ img {
     border-radius: 50%;
     background-color: var(--primary--color);
 }
+
 .buttonPlus i {
     color: #440d7e;
 
 }
+
 .buttonPlus:hover,
 .buttonPlus:active {
     transform: scale(1.1);
@@ -609,9 +625,14 @@ img {
     border-radius: 10%;
 }
 
-/* RESPONSIVE */
+/* ------------------------------------- RESPONSIVE -----------------------------------*/
 /* ----- media query for tablets ----- */
 @media screen and (max-width: 1025px) {
+
+    body {
+        max-width: 100vw;
+        min-width: 100vw;
+    }
     .main-container {
         display: grid;
         grid-template-columns: 18vw auto;
@@ -685,70 +706,35 @@ img {
         font-size: medium;
     }
 
-
     /* ----- carousel project ----- */
     .main-mid {
         width: 82vw;
         padding: 0;
     }
-
     .carousel-story {
         margin-top: 15px;
         padding: 5px;
     }
-
     .bx {
         font-size: 1.5em;
     }
-
     .carousel_profile_story {
         justify-content: space-between;
         padding: 0;
     }
 
     .profile_story img {
-        height: 90px;
+        height: 150px;
         width: 80px;
     }
 
-
-    /* -------------------------------------------------------------------- */
-    .container_shortClip {
-        padding: 20px 50px;
-    }
-    .shortclip_publication {
-        padding: 10px 50px;
+    /* --------- button publications -------------- */
+    .buttonPlus {
+        margin-left: 20px;
+        bottom: 3.5rem;
     }
 
-    .container_img {
-        width: 100%;
-        height: auto;
-    }
-
-    .shortclip {
-        border-radius: 10%;
-    }
-
-    /*  ------ hidden lives ------ */
-    .main-right {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .carousel-story {
-        max-width: 700px;
-    }
-
-    .profile_story img {
-        height: 70px;
-        width: 80px;
-    }
-
-    .bx {
-        font-size: 2em;
-    }
-
+    /* -------- Main right ----------- */
     .main-right {
         display: none;
     }
@@ -757,17 +743,22 @@ img {
 /*----- Media Query to smart phone (480px) -----*/
 @media screen and (max-width: 480px) {
 
-    /* ----- Main container ----- */
-    .main-container {
-        display: flex;
-        flex-wrap: wrap;
+    body {
+        max-width: 100vw;
+        min-width: 100vw;
     }
 
+    /* ----- Main container ----- */
+    .main-container {
+        display: inline-block;
+        width: 100vw;
+    }
     /* ----- navbar ----- */
     .main-left {
-        width: 100vw;
+        max-width: 100vw;
         min-width: 100vw;
-        height: auto;
+        width: 100vw;
+        height: 150px;
     }
 
     .container_mobile {
@@ -878,63 +869,66 @@ img {
         margin-top: 1rem;
         bottom: auto;
     }
-
     /* ----- carousel projects ------ */
     .main-mid {
         margin-top: 15px;
         width: 100vw;
         padding: 0;
     }
-
     .carousel-story {
         padding: 0;
-    }
+        width: 100%;
 
+    }
     .bx {
         font-size: 1.5em;
     }
-
     .carousel_profile_story {
         justify-content: space-between;
         padding: 0;
     }
-
     .profile_story img {
+        width: 75px;
         height: 90px;
     }
 
     /* -------------- Short Clips ------------ */
 
-.container_shortClip {
-    padding: 20px;
-    width: 100%;
-}
+    .container_shortClip {
+        padding: 20px;
+        width: 100%;
+    }
 
-.shortclip_publication {
-    padding: 10px;
-}
+    .shortclip_publication {
+        padding: 10px;
+    }
 
-.name {
-    width: 60%;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #272727;
-    font-size: 14px;
-}
+    .name {
+        width: 60%;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #272727;
+        font-size: 14px;
+    }
 
-.icon-love {
-    font-size: 18px;
-}
+    .icon-love {
+        font-size: 18px;
+    }
 
-.icon-comment {
-    font-size: 18px;
-}
+    .icon-comment {
+        font-size: 18px;
+    }
 
-.description {
-    margin-top: 10px;
-    color: var(--text--primary);
-    font-size: small;
-}
+    .description {
+        margin-top: 10px;
+        color: var(--text--primary);
+        font-size: small;
+    }
+
+    .buttonPlus {
+        margin-left: 20px;
+        bottom: 1.5rem;
+    }
 
     /*  ------ hidden lives ------ */
     .main-right {
