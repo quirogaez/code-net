@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code|Net</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="../css/style_searchProject.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Ffavicon.svg?alt=media&token=5e8d39b3-3caf-4aa1-b672-d3dd48fcdda5&_gl=1*ikbwgp*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTM0NDUyOC4yOC4xLjE2OTkzNDQ5NzkuNTUuMC4w">
+    <!-- Link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link Fontawasome -->
+    <script src="https://kit.fontawesome.com/95b2a267a8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <main class="container main-container">
+        <!-- ---------- NAVBAR ---------- -->
+        <header class="main-left">
+            <div class="container_mobile">
+                <div class="profile-photos--logo">
+                    <a href="/codenet/structure">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fcode.svg?alt=media&token=0d08591d-c180-408b-b81c-8d7a97a58b6e&_gl=1*16phkau*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTM0NDUyOC4yOC4xLjE2OTkzNDQ1NzEuMTcuMC4w" alt="" id="icon-company">
+                    </a>
+                </div>
+                <div class="profile_more">
+                    <a href="#" class="profile__mobile" id="varProfile">
+                        <div class="profile__mobile" id="aside-porfile">
+                            <img src="../img/person.png" alt="">
+                        </div>
+                    </a>
+                    <a onclick="showPlusOptions()" class="menu_mobile" id="varProfile">
+                        <i class="fa-solid fa-ellipsis-vertical icon_mobile"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- -----------SIDEBAR---------- -->
+            <aside class="side-bar">
+                <a href="/codenet/structure" class="menu-item">
+                    <div class="icon1">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fhome.svg?alt=media&token=bc8f2d2e-6ea6-4c81-87de-1008c00499d7&_gl=1*c6qu05*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTM0NDUyOC4yOC4xLjE2OTkzNDQ5OTMuNDEuMC4w" alt="">
+                    </div>
+                    <p>Inicio</p>
+                </a>
+                <a href="/codenet/search" class="menu-item ">
+                    <div class="icon1">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fsearch.svg?alt=media&token=052121ff-3382-4f02-ba81-eb0767d8d66d&_gl=1*2yomcr*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTM0NDUyOC4yOC4xLjE2OTkzNDQ2NzAuMzQuMC4w" alt="">
+                    </div>
+                    <p>Buscar</p>
+                </a>
+                <a href="/codenet/streams" class="menu-item">
+                    <div class="icon1">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Flive.svg?alt=media&token=5b428969-a51c-4cb2-a600-3b53e6fcefa3&_gl=1*1ewr91s*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTM0NDUyOC4yOC4xLjE2OTkzNDQ2ODkuMTUuMC4w" alt="">
+                    </div>
+                    <p>Live</p>
+                </a>
+                <a href="/codenet/clips" class="menu-item">
+                    <div class="icon1">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fshortclip.svg?alt=media&token=526dcb2e-938d-401d-9c1f-173fc5c5be8a&_gl=1*17p6vn5*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTM0NDUyOC4yOC4xLjE2OTkzNDQ3MjAuNDcuMC4w" alt="">
+                    </div>
+                    <p>ShortClip</p>
+                </a>
+                <a href="#" class="menu-item  message">
+                    <div class="icon1">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fmessage.svg?alt=media&token=d21bb203-c2ee-4343-b699-b8c5e16ecc73&_gl=1*xrcho6*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTM0NDUyOC4yOC4xLjE2OTkzNDQ3NTAuMTcuMC4w" alt=""><!-- <small class="count">5</small> -->
+                    </div>
+                    <p>Mensajes</p>
+                </a>
+                <a href="#" class="menu-item2" id="varProfile">
+                    <div class="profile-photos" id="aside-porfile">
+                        <img src="../img/person.png" alt="">
+                    </div>
+                    <p>Mi perfil</p>
+                </a>
+            </aside>
+            <div class="showPlus">
+                <ul class="showOptions">
+                    <li>
+                        <a href="#" class="optionsMore">
+                            <p>editar perfil</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="settingShow()" class="optionsMore">
+                            <p class="optionCenter">configuraciónes</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="optionsMore logout">
+                            <p>cerrar sesión</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a onclick="showPlusOptions()" class="menu-item3" id="varProfile">
+                <i class="fa-solid fa-bars icon2"></i>
+                <p>Más</p>
+            </a>
+        </header>
+        <!-----------------------  Search  ----------------------->
+        <div>
+            <!--------------------- settings page ----------------->
+            <section class="showSettings">
+                <div class="setting">
+                    <div class="close__modalSure">
+                        <button type="button">x</button>
+                    </div>
+                    <div class="darkMode">
+                        <p>Modo oscuro</p>
+                        <label class="switch">
+                            <input type="checkbox" id="mySwitch">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="languageMode"> lenguaje</div>
+                </div>
+            </section>
+            <!--------------------- menu plus --------------------->
+            <div class="showPublication">
+                <ul class="showPublication_PPS">
+                    <li>
+                        <a href="/codenet/post" class="optionAdd">
+                            <p>agregar publicación</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/codenet/project" class="optionAdd">
+                            <p class="optionAdd_publication">agregar proyecto</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/codenet/shortclip" class="optionAdd">
+                            <p>agregar shortclip</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a onclick="showAddOption()" class="buttonPlus" id="varProfile">
+                <i class="fa-solid fa-plus"></i>
+            </a>
+            <!------------------- searchf form  -->
+            <form action="#" method="post" target="_blank">
+                <div class="container__search">
+                    <input type="search" class="search__nav" name="busquedamusica" placeholder="buscar">
+                    <input type="submit" value="" style="display: none;">
+                </div>
+                <div class="container__options">
+                    <button type="onclick" class="options--category">categoria</button>
+                    <button type="onclick" class="options">personas</button>
+                    <button type="onclick" class="options">proyectos</button>
+                    <button type="onclick" class="options">trasmisiones</button>
+                    <button type="onclick" class="options">ShortClip</button>
+                </div>
+            </form>
+
+            <div class="containerSearch">
+                <div class="categories">
+                    <div class="fullContainers"></div>
+                </div>
+                <div class="people"></div>
+                <div class="project"></div>
+                <div class="lives"></div>
+                <div class="shortclip"></div>
+            </div>
+        </div>
+
+        <!-----------------  live streaming carousel ------------------>
+        <section class="main-right">
+            <div class="icono">
+                <a href="/codenet/streams">
+                    <img class="icono_life" src="../img/trasmisiones.png"></i>
+                </a>
+            </div>
+            <div class="carousel-life">
+                <div class="carousel_profile_life"></div>
+            </div>
+        </section>
+    </main>
+
+</body>
+<!----------------------- link js ------------------------------>
+<!------------ js chatbot ------------->
+<script src="//code.tidio.co/cjtbpljwr7yfgwu6eowmxsgon3xjuykc.js" async></script>
+<!------------ responsive logo --------->
+<script defer type="module" src="../js/responsiveLogo.js"></script>
+<!------------ js navbar -------------->
+<script src="../js/sidebarActive.js"></script>
+<script src="../js/optionMore.js"></script>
+<script src="../js/settingsPage.js"></script>
+<!------------ button plus forms -------------->
+<script src="../js/buttonPlus.js"></script>
+<!------- carousels ------>
+<script defer src="../js/carousels.js"></script>
+<!------------ js page ---------------->
+
+</html>
