@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code|Net</title>
     <!-- css link -->
-    <link rel="stylesheet" href="../css/style_formShortClip.css">
+    <link rel="stylesheet" href="../css/style_visualitation.css">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon"
         href="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Ffavicon.svg?alt=media&token=5e8d39b3-3caf-4aa1-b672-d3dd48fcdda5&_gl=1*ikbwgp*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTM0NDUyOC4yOC4xLjE2OTkzNDQ5NzkuNTUuMC4w">
@@ -110,81 +110,97 @@
                 <p>Más</p>
             </a>
         </header>
-        <!------------ form shortClip ----------->
-        <div class="shortClip_container">
-            <!--------------------- settings page ----------------->
-            <section class="showSettings">
-                <div class="setting">
-                    <div class="close__modalSure">
-                        <button type="button">x</button>
-                    </div>
-                    <div class="darkMode">
-                        <p>Modo oscuro</p>
-                        <label class="switch">
-                            <input type="checkbox" id="mySwitch">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    <div class="languageMode"> lenguaje</div>
-                </div>
-            </section>
-            <!-- <form class="shortClip_project">
 
-                <div class="shortClip_in">
-                    <div class="img_buttonCover">
-                        <input
-                            accept="video/mp4, video/mpeg, video/ogg, video/webm, video/quicktime, video/x-msvideo, video/x-flv, video/3gpp, video/x-matroska, image/gif"
-                            type="file" id="img_button" hidden>
-
-                        <label for="img_button">
-                            <p class="add_shortClip">+</p>Agregar video o GIF
-                        </label>
+        <!-------------------- MAIN MID -------------------->
+        <div class="main-central">
+            <div class="myProfile">
+                <section class="main-header">
+                    <div class="personalInfo">
+                        <div class="containerPortada">
+                            <img class="portada" src="../img/PubliNequi.jpg" id="portada-image">
+                            <a class="edit-portada" id="edit-portada-button"><i class="fa-regular fa-pen-to-square"></i>
+                                <input type="file" id="file-input" style="display: none">
+                            </a>
+                        </div>
+                        <div class="rol-perfilbutton">
+                            <div class="containerPhoto__profile">
+                                <img src="" id="profileImage" alt="Imagen de perfil">
+                            </div>
+                            <p><span id="nombre"></span></p>
+                            <p><span id="roles"></span></p>
+                            <button id="editarPerfilButton">Editar Perfil</button>
+                        </div>
                     </div>
-                    <h4 class="button_in_text">Ingrese un video que no supere los 2 minutos</h4>
-                </div>
-                <div class="shortClip--short">
-                    <textarea class="description" name="message" placeholder="descripción"></textarea>
-                    <input type="url" class="url_shortClip" name="url_shortClip" placeholder="URL ">
-                </div>
-            </form>
-            <div class="container_buttonPost">
-                <button class="button_post">publicar</button>
-            </div> -->
-
-            <form class="shortClip_project" id="videoUploadForm">
-                <div class="shortClip_in">
-                    <div class="img_buttonCover">
-                        <input accept="video/mp4, video/mpeg, video/ogg, video/webm, video/quicktime, video/x-msvideo, video/x-flv, video/3gpp, video/x-matroska, image/gif" type="file" id="img_button" hidden>
-                        <label for="img_button">
-                            <p class="add_shortClip">+</p>Agregar video o GIF
-                        </label>
+                    <div class="tecnologies-mostrar">
+                        <p> <span id="tecnologia"></span></p>
                     </div>
-                    <h4 class="button_in_text">Ingrese un video que no supere los 2 minutos</h4>
+                </section>
+                <section class="main-middle">
+                </section>
+                <section class="main-mid">
+                    <p> hola abajo</p>
+                </section>
+                <div class="main-about">
+                    <div id="userData">
+                        <p class="about-title">SOBRE MÍ</p>
+                        <a class="genero">
+                            <i class="fa-sharp fa-solid fa-user" style="color: #7f1aea;"></i>
+                            <span id="gender"></span>
+                        </a>
+                        <a class="about-date">
+                            <i class="fa-sharp fa-solid fa-cake-candles" style="color: #7f1aea;"></i>
+                            <span id="date"></span>
+                        </a>
+                        <a class="about-address">
+                            <i class="fa-sharp fa-solid fa-location-dot" style="color: #7f1aea;"></i>
+                            <span id="address"></span>
+                        </a>
+                        <a class="about-correo">
+                            <i class="fa-sharp fa-solid fa-envelope" style="color: #7f1aea;"></i>
+                            <span id="correo"></span>
+                        </a>
+                        <a class="about-phone">
+                            <i class="fa-sharp fa-solid fa-phone" style="color: #7f1aea;"></i>
+                            <span id="phone"></span>
+                        </a>
+                    </div>
                 </div>
-                <div class="shortClip--short">
-                    <textarea class="description" name="message" id="videoDescription" placeholder="Descripción" required></textarea>
-                    <input type="url" class="url_shortClip" name="url_shortClip" id="videoURL" placeholder="URL" required>
-                </div>
-            </form>
-            <div class="container_buttonPost">
-                <button class="button_post" id="submitButton">Publicar</button>
             </div>
-        </div>
-    </main>
-</body>
-<!----------------------- link js ------------------------------>
-<!------------ js chatbot ------------->
-<script src="//code.tidio.co/cjtbpljwr7yfgwu6eowmxsgon3xjuykc.js" async></script>
-<!------------ responsive logo --------->
-<script defer type="module" src="../js/responsiveLogo.js"></script>
-<!------------ js navbar -------------->
-<script src="../js/optionMore.js"></script>
-<script src="../js/settingsPage.js"></script>
-<!------------ button plus forms -------------->
-<script src="../js/buttonPlus.js"></script>
-<!------- carousels ------>
-<script defer src="../js/carousels.js"></script>
-<!------------ js page ---------------->
+            <!--------------------- menu plus --------------------->
+            <div class="showPublication">
+                <ul class="showPublication_PPS">
+                    <li>
+                        <a href="/codenet/post" class="optionAdd">
+                            <p>agregar publicación</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/codenet/project" class="optionAdd">
+                            <p class="optionAdd_publication">agregar proyecto</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/codenet/shortclip" class="optionAdd">
+                            <p>agregar shortclip</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a onclick="showAddOption()" class="buttonPlus" id="varProfile"><i class="fa-solid fa-plus"></i></a>
 
+        </div>
+
+        <!-- ---------- END MAIN RIGHT ---------- -->
+
+
+    </main>
+
+</body>
+<!-- link js -->
+
+<script src="../js/sidebar.js"></script>
+<script defer type="module" src="../js/structure.js"></script>
+<script src="../js/Visualizacion_Perfil.js"></script>
+<script src="//code.tidio.co/jyvlyxqxgpph2pmupu9kpbz1mfibcguw.js" async></script>
 
 </html>

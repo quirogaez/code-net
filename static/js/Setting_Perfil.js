@@ -35,13 +35,12 @@ tecnologySelect.addEventListener("change", function () {
 
     }
 
-    //funcion para mostrar el modal
+    /*funcion para mostrar el modal */
     function openSure(){
        
         const sure = document.querySelector('.sure');
         
-      /*   openSure().addEventListener('click', (e) => { */
-           /*  e.preventDefault(); */
+  
             sure.classList.add('sure--show');
             const closeSure = document.querySelector('.close__modalSure'); 
             closeSure.addEventListener('click', (e) => {

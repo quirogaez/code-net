@@ -18,7 +18,7 @@ router.get('/profile', auth, (req, res) => {
     //res.render('logIn',);
     /* Sin EJS */
     const __dirnameAll = searchDir();
-    const filePath = path.join(__dirnameAll, 'static', 'templates', 'visualitation.html');
+    const filePath = path.join(__dirnameAll, 'static', 'templates', 'profile.html');
     res.sendFile(filePath);
 });
 
@@ -28,7 +28,7 @@ router.get('/profile/edit', auth, (req, res) => {
     //res.render('logIn',);
     /* Sin EJS */
     const __dirnameAll = searchDir();
-    const filePath = path.join(__dirnameAll, 'static', 'templates', 'Setting_Perfil.html');
+    const filePath = path.join(__dirnameAll, 'static', 'templates', 'Edit_profile.html');
     res.status(200).sendFile(filePath);
 });
 
