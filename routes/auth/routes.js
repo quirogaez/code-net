@@ -10,10 +10,16 @@ const router = Router()
 
 router.use(express.json()); // Middleware para analizar datos JSON en las solicitudes
 
-router.get('/login', (req, res) => {
+router.get('/', (req, res) => {
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
+    const __dirnameAll = searchDir();
+    const filePath = path.join(__dirnameAll, 'static', 'templates', 'index.html');
+    res.status(200).sendFile(filePath);
+});
+
+router.get('/login', (req, res) => {
     const __dirnameAll = searchDir();
     console.log("dirnameall: " + __dirnameAll)
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'logIn.html');
@@ -23,18 +29,12 @@ router.get('/login', (req, res) => {
 
 
 router.get('/signup', (req, res) => {
-    /* Con ejs */
-    //res.render('logIn',);
-    /* Sin EJS */
     const __dirnameAll = searchDir();
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'singUp.html');
     res.status(200).sendFile(filePath);
 });
 
-router.get('/logout', (req, res) => {
-    req.session.destroy();
-    res.redirect(303, '/codenet/structure');
-});
+
 
 router.post('/login', async (req, res) => {
     res.header('Access-Control-Allow-Origin', '*');
@@ -86,16 +86,9 @@ router.post('/signup', async (req, res) => {
     
 });
 
-
-router.get('/', (req, res) => {
-    /* Con ejs */
-    //res.render('logIn',);
-    /* Sin EJS */
-    const __dirnameAll = searchDir();
-    const filePath = path.join(__dirnameAll, 'static', 'templates', 'index.html');
-    res.status(200).sendFile(filePath);
+router.get('/logout', (req, res) => {
+    req.session.destroy();
+    res.redirect(303, '/codenet/structure');
 });
-
-
 
 export default router; 
