@@ -2,7 +2,7 @@
 const signupForm = document.querySelector('#signUpForm')
 
 // Inicializamos una función que nos permitirá envíar los datos del formulario
-signupForm.addEventListener('submit', (e) => {
+signupForm.addEventListener('submit', async (e) => {
     e.preventDefault()
     const name = document.querySelector('#name').value.trim();
     const lastName = document.querySelector('#lastName').value.trim();
@@ -19,24 +19,23 @@ signupForm.addEventListener('submit', (e) => {
         confirmPassword = "";
         return;
     } else {
-        // Inicializamos una variable que recibirá los datos de los usuarios registrados, si no hay datos almacenados, se creará un arreglo vacío
-        const Users = JSON.parse(localStorage.getItem('users')) || []
-        const isUserRegistered = Users.find(user => user.email === email, user=> user.username === username)
-
-        // Si el email que desee registrar, ya existe, nos dirá que ya se encuentra registrado, sino me permitirá ingresar sin problema al sistema
-        if (isUserRegistered) {
-            return alert('El usuario ya esta registrado!')
-        }
+       
 
         // Aquí especificamos que nos agregue los datos a la lista
-        Users.push({ name: name, lastName: lastName, email: email, date: date, genero: genero, username: username ,password: inputPassword })
-
-        // Aquí especificamos que nos permita recibir los datos en formato String para podernos loguear
-        localStorage.setItem('users', JSON.stringify(Users))
+        const userData = {email: email, nickname: username , name: name, lastname: lastName,  dateBirth: date, genero: genero};
+        console.log(userData)
+        const loginData = {email: email, password: inputPassword };
+       /*  password: inputPassword */
 
         // Aquí especificamos de que si el registro fue correcto, entonces nos aparecerá un msj de alerta de que fue exitoso
         alert('Registro Exitoso!')
-
+        const response = await fetch(window.location.search + "/codenet/signup", {
+            method: "POST",
+            body: JSON.stringify({userData: userData, loginData: loginData}),
+            headers: { "Content-type": "application/json; charset=UTF-8" }
+        })
+        const responseData = await response.json();
+        console.log(responseData)
         // Si el registro fue exitoso, nos redigirá al login
         window.location.href /* = 'http://localhost:8080/codenet/structure' */
         
