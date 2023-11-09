@@ -32,7 +32,7 @@ app.use(session({
     secret: "ascunwdivundfoivndfjnvoasdimvoidfvsioafvmdoifvaipdfvPOSDVPDS",
     resave: true,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: process.env.MONGOOSE_URL }),
+    /* store: MongoStore.create({ mongoUrl: process.env.MONGOOSE_URL }), */
     cookie: { maxAge: 1000 * 60 * 60 * 24 }
 }));
 
@@ -59,7 +59,7 @@ app.use(fileUpload());
 
 
 // app.js
-if (!process.env.twitchAUTH) {
+/* if (!process.env.twitchAUTH) {
     (async () => {
         process.env["twitchAUTH"] = await twitchAuth();
 
@@ -67,7 +67,7 @@ if (!process.env.twitchAUTH) {
         console.log(process.env.twitchAUTH)
     })
     
-}
+} */
 
 /* await mongoose.connect(process.env.MONGOOSE_URL)
         .then(() => {
