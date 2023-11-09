@@ -634,6 +634,15 @@ input:checked+.slider:before {
 .fa-exclamation{
     font-size: 50px;
 }
+
+.custom-error-button {
+    background-color: var(--second--color); /* Cambia el color de fondo del botón */
+    color: #ffffff !important; /* Cambia el color del texto del botón (important para anular otros estilos) */
+}
+
+.custom-background-color {
+    background-color: var(--second--color) !important; /* Cambia el color de fondo del botón de confirmación (important para anular otros estilos) */
+}
 /* ------------------------------------- RESPONSIVE -----------------------------------*/
 /* ----- media query for tablets ----- */
 @media screen and (max-width: 1025px) {

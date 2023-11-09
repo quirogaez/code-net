@@ -522,6 +522,7 @@ img {
 }
 .fa-user-check {
     color: var(--primary--color);
+    cursor: pointer;
 }
 .editProfile {
     margin-left: 10px;
@@ -609,7 +610,9 @@ img {
     border-top: solid 0.2px #ebebeb;
 }
 
-
+.custom-background-color {
+    background-color: var(--second--color) !important; /* Cambia el color de fondo del botón de confirmación (important para anular otros estilos) */
+}
 
 /* RESPONSIVE */
 

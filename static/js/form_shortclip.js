@@ -33,7 +33,17 @@ function submitForm() {
         localStorage.setItem("video", videoDataJSON);
     } else {
         // Mostrar una alerta si algún campo no está lleno
-        alert("Por favor, complete todos los campos.");
+       /*  alert("Por favor, complete todos los campos."); */
+        Swal.fire({    
+            icon: "error",
+            title: "¡Error!",
+            text: "Por favor, complete todos los campos del formulario.",
+            customClass:{
+                confirmButton: "custom-error-button"
+            },
+            confirmButtonClass: "custom-background-color",
+            iconColor: "#801bea"    
+        });
     }
 }
 

@@ -61,7 +61,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const urlProjectValue = document.querySelector('.url__project').value.trim();
         const urlGithubValue = document.querySelector('[name="url__github"]').value.trim();
         if (Object.keys(imagesToPost).length === 0 || selectTecnologias.value === 'vacio' || urlProjectValue === '' || urlGithubValue === '') {
-            alert('Por favor, complete todos los campos del formulario.');
+           alert('Por favor, complete todos los campos del formulario.'); 
+          /*  Swal.fire({
+            title: "Sweet!",
+            text: "Modal with a custom image.",
+            imageUrl: "https://unsplash.it/400/200",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Custom image"
+          }); */
         } else {
             const sureShortClip = document.querySelector('.sureShortClip');
             const closeSure = document.querySelector('.close__modalSure');

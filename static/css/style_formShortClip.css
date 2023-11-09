@@ -693,11 +693,18 @@ input:checked+.slider:before {
     font-size: 12px;
     cursor: pointer;
 }
-    .main-right {
+.main-right {
         display: none;
-    }
+}
+}
+.custom-error-button {
+    background-color: var(--second--color); /* Cambia el color de fondo del botón */
+    color: #ffffff !important; /* Cambia el color del texto del botón (important para anular otros estilos) */
 }
 
+.custom-background-color {
+    background-color: var(--second--color) !important; /* Cambia el color de fondo del botón de confirmación (important para anular otros estilos) */
+}
 /* ---------- Media query 825px ----------*/
 
 @media screen and (max-width: 825px) {
