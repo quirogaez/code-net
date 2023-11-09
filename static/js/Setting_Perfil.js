@@ -126,6 +126,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     document.getElementById("addres").value = responseData.data.address;
     document.getElementById("correo").value = responseData.data.email;
     document.getElementById("phone").value = responseData.data.phoneNumber;
+    document.querySelector(".profilePhoto").src =responseData.data.linkFotoPerfil[0].fotoperfil ;
 
 
 
@@ -144,16 +145,18 @@ document.addEventListener("DOMContentLoaded", async function () {
         const profilePhoto = document.querySelector(".profilePhoto");
         const phone = document.getElementById("phone").value;
         const tecnologies = imagesToUploadTech;
-        let projectMedia = null;
-        let projectMediaFiles = null;
-        if (profilePhoto.src === "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fprofile.jpg?alt=media&token=03f4f8c1-14d6-44cc-a347-78e471f0d577&_gl=1*1exrphq*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3NDcxMy4zNC4xLjE2OTk0NzQ4NjMuNTcuMC4w") {
-            projectMedia = document.querySelectorAll('.file-input');
-            projectMediaFiles = {mediaProfile:projectMedia.files[0]};
-        }
+        let projectMedia;
+        let projectMediaFiles;
+
+            projectMedia = document.getElementById('file-input');
+            projectMediaFiles = projectMedia.files[0];
+            console.log("imagen de project", projectMediaFiles.name)
+
 
         /* Datos para subir en el body y actualizar */
         const formData = new FormData();
         if (projectMediaFiles) {
+            console.log("APPENDFILE")
             formData.append('imageFile', projectMediaFiles);
         }
         formData.append('nombre', nombre);
@@ -177,7 +180,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             if (result.isConfirmed) {
                 const response =  await fetch(window.location.search + "/codenet/profile/edit", {
                     method: 'POST',
-                    body: "formData",
+                    body: formData,
                 })
                 const responseData = response;
                 console.log("nueva data", responseData)

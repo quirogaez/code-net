@@ -10,7 +10,6 @@ const router = Router()
 
 /* Borrar si se usa EJS */
 router.use(express.json());
-router.use(fileUpload());
 
 const __dirnameAllStatic = searchDir();
 
@@ -62,48 +61,7 @@ router.get('/profile/data', async (req, res) => {
     }
 });
 
-/* Funicon para actualziar informacion */
-router.post('/profile/edit', async (req, res) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    try{
-        if (req.session && req.session.user) {
-            const dataPorfile = {}
-            const email = req.session.user;
-            const name = req.body.nombre;
-            const lastname = req.body.apellido;
-            const genero =  req.body.gender;           
-            const address = req.body.address;
-            const phoneNumber = req.body.phone;
 
-            /* const image = req.files.imageFile || null; */
-            const fotoperfil = null;
-            console.log("LLego antes de la iamgen")
-            /* if (image) {
-                fotoperfil = await uploadImage(image);
-                dataPorfile["fotoperfil"] = fotoperfil;
-            } */
-            dataPorfile["rol"] = req.body.roles;
-            dataPorfile["tecnologies"] = req.body.tecnologies;
-            const dateBirth = req.body.date;
-            const dataUpdated = await putUserData(
-                {
-                    email: email,
-                    name: name,
-                    lastname: lastname,
-                    genero: genero,
-                    address: address,
-                    phoneNumber: phoneNumber,
-                    dateBirth:  dateBirth,
-                    linkFotoPerfil: dataPorfile
-                }
-            );
-            
-            res.status(200).json({success: true, data: dataUpdated})
-        }
-    } catch (e) {
-        res.status(500).json({ success: false, error: e.message });
-    }
-});
 
 
 

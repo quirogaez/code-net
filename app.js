@@ -9,6 +9,7 @@ import path from 'node:path';
 import twitchAuth from './config.js';
 import session from 'express-session';
 import MongoStore from 'connect-mongo';
+import fileUpload from 'express-fileupload';
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -52,6 +53,7 @@ app.set('views', path.join(`${__dirname}`, "static", "templates"));
 
 // Aplica middlewares para procesar solicitudes y mejorar la seguridad
 app.use(express.json()); // Middleware para analizar datos JSON en las solicitudes
+app.use(fileUpload());
 /* app.use(helmet()); // Middleware para mejorar la seguridad de la aplicación
 *//* app.use(morgan("tiny")); // Middleware para el registro de solicitudes HTTP */
 
