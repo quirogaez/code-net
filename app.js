@@ -28,10 +28,10 @@ dotenv.config();
 const app = express();
 
 app.use(session({
-    secret: process.env.SECRET_SESSION,
-    resave: false,
+    secret: "ascunwdivundfoivndfjnvoasdimvoidfvsioafvmdoifvaipdfvPOSDVPDS",
+    resave: true,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: process.env.MONGOOSE_URL }),
+   /*  store: MongoStore.create({ mongoUrl: process.env.MONGOOSE_URL }), */
     cookie: { maxAge: 1000 * 60 * 60 * 24 }
 }));
  
@@ -56,32 +56,24 @@ app.use(express.json()); // Middleware para analizar datos JSON en las solicitud
 *//* app.use(morgan("tiny")); // Middleware para el registro de solicitudes HTTP */
 
 
-(async () => {
-    // app.js
-    if (!process.env.twitchAUTH) {
-        (async () => {
-            process.env["twitchAUTH"] = await twitchAuth();
+// app.js
+/* if (!process.env.twitchAUTH) {
+    (async () => {
+        process.env["twitchAUTH"] = await twitchAuth();
 
-        })().then( ()=> {
-            console.log(process.env.twitchAUTH)
-        })
-    }
+    })().then( ()=> {
+        console.log(process.env.twitchAUTH)
+    })
+    
+} */
 
-    // Conecta a la base de datos MongoDB usando la URL definida en las variables de entorno
-    await mongoose.connect(process.env.MONGOOSE_URL)
+/* await mongoose.connect(process.env.MONGOOSE_URL)
         .then(() => {
             console.log("Connected to MONGODB");
-        })
+        }) */
 
-    const PORT = process.env.PORT || 8080
-
-
-    // Inicia el servidor en el puerto 8080
-    app.listen(PORT, () => {
-        console.log("Server is running");
-    });
-})()
-
-
-
-
+// Inicia el servidor en el puerto 8080
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+    console.log("Server is running");
+});

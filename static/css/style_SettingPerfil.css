@@ -107,18 +107,6 @@ img {
             hsla(0, 0%, 92%, 0) 100%);
 }
 
-/* ----- count message ----- */
-/*  .count {
-    background: var(--second--color);
-    padding: 0.1rem 0.4rem;
-    font-size: 0.6rem;
-    height: fit-content;
-    color: white;
-    border-radius: 0.8rem;
-    position: absolute;
-    top: 1.1rem;
-    left: 2.6rem;
-} */
 .icon1 {
     width: 1.5rem;
     height: 1.5rem;
@@ -601,90 +589,51 @@ input:checked+.slider:before {
 
 /* modal */
 .sure {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #171717af;
-    display: flex;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.sure--show {
-    opacity: 1;
-    pointer-events: unset;
-}
-
-.close__modalSure {
     width: 100%;
-    text-align: center;
-    margin: 8%;
-    background-color: var(--second--color);
-    border-radius: 5px;
-    padding: 8px 12px;
-    color: #fafafa;
-}
-
-.close__modalSure button {
-    color: var(--second--color);
-    font-size: 25px;
-    border: none;
-    background-color: var(--white--color);
-    cursor: pointer;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000; /* Ajusta el valor z-index según sea necesario para superponer otros elementos */
 }
 
 .modal__container {
-    margin: auto;
-    width: 90%;
-    max-width: 450px;
-    max-height: 90%;
-    background-color: var(--white--color);
-    padding: 1.5em 2.5em;
-    display: grid;
-    gap: 1.5em;
-    place-items: center;
-    grid-auto-columns: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-.modal__img {
-    width: 30%;
-}
-
-.modal__tittle {
-    font-size: large;
+.modal__title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
 .container--buttons {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
+    margin-top: 5px;
 }
 
-.button__feed {
-    background-color: var(--primary--color);
-    padding: 10px;
-    height: 40px;
-    width: 150px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: medium;
+.close__modalSure {
+    background-color: var(--second--color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
 }
 
-.button_myprofile {
-    background-color: none;
-    border: solid;
-    border-color: var(--second--color);
-    border-radius: 10px;
-    padding: 10px;
-    height: 40px;
-    width: 150px;
-    color: var(--second--color);
-    text-align: center;
-    font-size: medium;
+.close__modalSure:hover {
+    color: rgb(162, 140, 185);
 }
-
+.fa-exclamation{
+    font-size: 50px;
+}
 /* ------------------------------------- RESPONSIVE -----------------------------------*/
 /* ----- media query for tablets ----- */
 @media screen and (max-width: 1025px) {

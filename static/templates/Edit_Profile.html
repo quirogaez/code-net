@@ -17,7 +17,12 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Link Fontawasome -->
     <script src="https://kit.fontawesome.com/95b2a267a8.js" crossorigin="anonymous"></script>
-
+    <!-- Sweet -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+<!-- Sweet -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -198,20 +203,17 @@
                 <div class="button">
                     <button id="save-button">Guardar Cambios</button>
                 </div>
-                <section class="sure">
+                <div class="sure" id="sure">
                     <div class="modal__container">
-                        <div class="">
-                            <button type="button">x</button>
-                        </div>
-                        <h2 class="modal__tittle">No puedes elegir mas de ocho tecnologias</h2>
+                        <i class="fa-solid fa-exclamation" style="color: #7f1aea;"></i>
+                        <h2 class="modal__title">No puedes elegir más de ocho tecnologías</h2>
                         <div class="container--buttons">
-                            <button class="close__modalSure">aceptar</button>
+                            <button class="close__modalSure" id="closeModalSure">Aceptar</button>
                         </div>
                     </div>
-                </section>
-
-
+                </div>
             </form>
+            
         </div>
     </main>
 
