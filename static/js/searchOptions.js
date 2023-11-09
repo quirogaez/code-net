@@ -46,7 +46,7 @@ async function mostrarContenido(contenido, elemento) {
                         </div>
                         <div class="containerText">
                             <p class="nameProfile"><span id="nombre">${user.name + " " + user.lastname}</span></p>
-                            <p class="rol" id="roles">frontend</p>
+                            <p class="rol" id="roles">${user.linkFotoPerfil[1].rol}</p>
                         </div>
                         <div class="addFriend">
                             <a href="" id="editarPerfilButton"><i class="fa-solid fa-user-plus"></i></a>
