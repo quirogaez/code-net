@@ -29,10 +29,10 @@ dotenv.config();
 const app = express();
 
 app.use(session({
-    secret: "ascunwdivundfoivndfjnvoasdimvoidfvsioafvmdoifvaipdfvPOSDVPDS",
+    secret: process.env.SECRET_SESSION,
     resave: true,
     saveUninitialized: true,
-    /* store: MongoStore.create({ mongoUrl: process.env.MONGOOSE_URL }), */
+    store: MongoStore.create({ mongoUrl: process.env.MONGOOSE_URL }), 
     cookie: { maxAge: 1000 * 60 * 60 * 24 }
 }));
 
@@ -59,7 +59,7 @@ app.use(fileUpload());
 
 
 // app.js
-/* if (!process.env.twitchAUTH) {
+if (!process.env.twitchAUTH) {
     (async () => {
         process.env["twitchAUTH"] = await twitchAuth();
 
@@ -67,7 +67,7 @@ app.use(fileUpload());
         console.log(process.env.twitchAUTH)
     })
     
-} */
+} 
 
 /* await mongoose.connect(process.env.MONGOOSE_URL)
         .then(() => {
