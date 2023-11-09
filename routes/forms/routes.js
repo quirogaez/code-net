@@ -5,6 +5,7 @@ import uploadImage from '../../services/firebase.js'
 import fileUpload from 'express-fileupload';
 import auth from '../../middlewares/Auth.js'
 import { projectService } from '../../services/forms/project.js';
+import { putUserData} from '../../services/profile/profile.js';
 
 const router = Router()
 
@@ -47,6 +48,7 @@ router.post('/project', async (req, res) => {
         const urlGitHub = req.body.urlGitHub;
         const description = req.body.description;
         const technologies = req.body.technologies;
+        const idUser = req.session.userid;
         const typeProject = "project";
         console.log(image);
         
@@ -58,7 +60,7 @@ router.post('/project', async (req, res) => {
             // Guarda la URL de la imagen en una base de datos o realiza cualquier otra acción necesaria; de ultimo queda el link de github y antepenultimo el link de el proywcto hosteado
             url.push(urlDeploy);
             url.push(urlGitHub);
-            const sendData = {idUsuario: 2, linkPublication: url, typePublication: typeProject, message: description}
+            const sendData = {idUsuario: idUser, linkPublication: url, typePublication: typeProject, message: description,tecnologias: technologies.split(",") }
             const dataResponse = await projectService(sendData);
 
             console.log("technologies", technologies)
@@ -72,6 +74,63 @@ router.post('/project', async (req, res) => {
     } else {
         // Si no se proporcionó un archivo de imagen en la solicitud, envía una respuesta de error al cliente
         res.status(400).json({ success: false, error: 'No se proporcionó una imagen' });
+    }
+});
+
+/* EDITAR---------------------- */
+/* Funicon para actualziar informacion */
+router.post('/profile/edit', async (req, res) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    try{
+        if (req.session && req.session.user) {
+            const dataPorfile = []
+            const email = req.session.user;
+            const name = req.body.nombre;
+            const lastname = req.body.apellido;
+            const genero =  req.body.gender;           
+            const address = req.body.address;
+            const phoneNumber = req.body.phone;
+            console.log("antes de iamgen")
+            const image = req.files.imageFile ;
+            console.log(image)
+            let fotoperfil = null;
+            console.log("LLego antes de la iamgen")
+            if (image) {
+                fotoperfil = await uploadImage(image);
+                dataPorfile.push({fotoperfil: fotoperfil[0]}) ;
+            }
+            dataPorfile.push({rol: req.body.roles});
+            dataPorfile.push({tecnologias: req.body.tecnologies});
+            const dateBirth = req.body.date;
+            console.log("data que vo ya mandar",
+                {
+                    email: email,
+                    name: name,
+                    lastname: lastname,
+                    genero: genero,
+                    address: address,
+                    phoneNumber: phoneNumber,
+                    dateBirth:  dateBirth,
+                    linkFotoPerfil: dataPorfile
+                }
+            )
+            const dataUpdated = await putUserData(
+                {
+                    email: email,
+                    name: name,
+                    lastname: lastname,
+                    genero: genero,
+                    address: address,
+                    phoneNumber: phoneNumber,
+                    dateBirth:  dateBirth,
+                    linkFotoPerfil: dataPorfile
+                }
+            );
+            
+            res.status(200).json({success: true, data: dataUpdated})
+        }
+    } catch (e) {
+        res.status(500).json({ success: false, error: e.message });
     }
 });
 

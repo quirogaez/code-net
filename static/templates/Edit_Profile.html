@@ -77,7 +77,7 @@
                     </div>
                     <p>ShortClip</p>
                 </a>
-                <a href="http://localhost:8080/codenet/profile" class="menu-item2" id="varProfile">
+                <a href="/codenet/profile" class="menu-item2" id="varProfile">
                     <div class="profile-photos" id="aside-porfile">
                         <img src="../img/person.png" alt="">
                     </div>
@@ -87,7 +87,7 @@
             <div class="showPlus">
                 <ul class="showOptions">
                     <li>
-                        <a href="http://localhost:8080/codenet/profile/edit" class="optionsMore">
+                        <a href="/codenet/profile/edit" class="optionsMore">
                             <p>editar perfil</p>
                         </a>
                     </li>
@@ -132,7 +132,7 @@
                 <div class="initial">
                     <div class="imgProfile">
                         <img id="image-preview" class="profilePhoto" src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fprofile.jpg?alt=media&token=03f4f8c1-14d6-44cc-a347-78e471f0d577&_gl=1*1exrphq*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3NDcxMy4zNC4xLjE2OTk0NzQ4NjMuNTcuMC4w" alt="Imagen actual">
-                        <input type="file" id="file-input" accept="image/*" style="display: none;">
+                        <input type="file" id="file-input" style="display: none;">
                     </div>
                     <div class="initial-sec">
                         <input type="text" class="full-name" id="name" placeholder="Nombre" required>
@@ -141,33 +141,34 @@
                     </div>
                     <div class="tecnology">
                         <select class="technologies" id="tecnologys">
-                            <option value="">Habilidades</option>
-                            <option value="Boostrap">Boostrap</option>
-                            <option value="JavaScript">JavaScript</option>
-                            <option value="css">CSS</option>
+                            <option value="">Selecciona tecnologias</option>
+                            <option value="bootstrap">Bootstrap</option>
+                            <option value="js">JavaScript</option>
                             <option value="html">HTML</option>
-                            <option value="react">React</option>
-                            <option value="nodejs">Node.js</option>
-                            <option value="vuejs">Vue.js</option>
+                            <option value="css">CSS</option>
+                            <option value="react">React.js</option>
+                            <option value="node">Node.js</option>
+                            <option value="vue">Vue.js</option>
                             <option value="aws">AWS</option>
-                            <option value="mongodb"> MongoDB</option>
-                            <option value="oracle">Oracle</option>
-                            <option value="cloudflare"> CloudFlare</option>
-                            <option value="filetype"> Filetype</option>
-                            <option value="firebase"> Firebase</option>
-                            <option value="github">Github </option>
-                            <option value="inertia"> Inertia</option>
-                            <option value="java"> Java</option>
-                            <option value=" jquery"> Jquery </option>
-                            <option value="maps"> Google maps</option>
-                            <option value="mysql">Mysql </option>
-                            <option value="nginx">Nginx </option>
-                            <option value="nuxt">Nuxt.js </option>
-                            <option value="php">PHP </option>
-                            <option value="rails">Rails </option>
-                            <option value="ruby">Ruby </option>
-                            <option value="underscore"> Underscore.js</option>
-                            <option value="Wordpress">Wordpress </option>
+                            <option value="mongodb">MongoDB</option>
+                            <option value="oracle">ORACLE</option>
+                            <option value="wordpress">WordPress</option>
+                            <option value="underscore">UnderScore</option>
+                            <option value="ruby">Ruby</option>
+                            <option value="rails">Rails</option>
+                            <option value="php">PHP</option>
+                            <option value="nuxt">Nuxt.js</option>
+                            <option value="nginx">Nginx</option>
+                            <option value="mysql">MySQL</option>
+                            <option value="maps">Maps</option>
+                            <option value="jquery">jQuery</option>
+                            <option value="java">Java</option>
+                            <option value="inertia">Inertia.js</option>
+                            <option value="github">GitHub</option>
+                            <option value="firebase">Firebase</option>
+                            <option value="filetype">FileType</option>
+                            <option value="cloudflare">CloudFlare</option>
+                            <option value="netlify">Netlify</option>
 
                         </select>
                         <div class="containerTechnologies" id="tecnology-images"></div>
@@ -182,12 +183,12 @@
                             </div>
                             <select class="date--gender" id="gender">
                                 <option value="Genero">Genero</option>
-                                <option value="mujer">Mujer</option>
-                                <option value="hombre">Hombre</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="masculino">Masculino</option>
                                 <option value="otro">Otro</option>
                             </select>
                         </div>
-                        <input type="text" class="address" id="addres" placeholder="Direccion" required>
+                        <input type="text" class="address" id="addres" placeholder="Direccion">
                         <input type="text" class="correo" id="correo" placeholder="Correo Electronico" required>
                     </div>
                     <div class="map-phone">
@@ -232,6 +233,9 @@
 <script defer src="../js/carousels.js"></script>
 <!------------ js page ---------------->
 <script src="../js/Setting_Perfil.js"></script>
+
+<!------------ Sweet ---------------->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
 
 
 </html>
