@@ -34,7 +34,7 @@ router.get('/profile/edit', auth, (req, res) => {
     //res.render('logIn',);
     /* Sin EJS */
     const __dirnameAll = searchDir();
-    const filePath = path.join(__dirnameAll, 'static', 'templates', 'Edit_profile.html');
+    const filePath = path.join(__dirnameAll, 'static', 'templates', 'Edit_Profile.html');
     res.status(200).sendFile(filePath);
 });
 
