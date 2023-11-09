@@ -120,15 +120,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 profileImage: getImageDataUrl()  // Obtiene la imagen en base64
             };
 
+           /*  Swal.fire({    
+                icon: "error",
+                title: "¡Error!",
+                text: "Por favor, complete todos los campos del formulario.",
+                customClass:{
+                    confirmButton: "custom-error-button"
+                },
+                confirmButtonClass: "custom-background-color",
+                iconColor: "#801bea"    
+            }); */
             // Almacenar el objeto JSON en el Local Storage
             localStorage.setItem("userData", JSON.stringify(userData));
-
-            Swal.fire({
-                icon: "success",
-                title: "¡Buena tarea!",
-                text: "Los datos se han guardado correctamente."
-            });
-           /*  alert("Datos del formulario almacenados en Local Storage."); */
+            
+            
+            alert("Datos del formulario almacenados en Local Storage.");
             
                /*  $("#kt_sweetalert_demo_1").click(function(e) {
                     Swal.fire("Good job!");
@@ -147,7 +153,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*             clearImageInput();  */ // Limpia la vista previa de la imagen
         } else {
-            Swal.fire("Por favor, complete todos los campos del formulario", "error");
+            Swal.fire({    
+                icon: "error",
+                title: "¡Error!",
+                text: "Por favor, complete todos los campos del formulario.",
+                customClass:{
+                    confirmButton: "custom-error-button"
+                },
+                confirmButtonClass: "custom-background-color",
+                iconColor: "#801bea"    
+            });
             /* alert("Por favor, complete todos los campos del formulario."); */
         }
     });

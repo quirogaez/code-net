@@ -43,3 +43,30 @@ fileInput.addEventListener("change", function() {
         portadaImage.src = objectURL; // Muestra la imagen seleccionada por el usuario
     }
 });
+
+function modalVerificated(){
+    Swal.fire({
+        title: "¡Quiero ser Premium!",
+        text: "$ 25.00 USD",
+        imageUrl: "../img/modal/verificatedazul.png",
+        imageWidth: 130,
+        imageHeight: 130,
+        showCancelButton: true,
+        confirmButtonText: "Pagar",
+        cancelButtonText: "Cancelar",
+        reverseButtons: true,
+        customClass:{
+            confirmButton: "custom-error-button"
+        },
+        confirmButtonClass: "custom-background-color",
+    }).then(function(result) {
+        if (result.value) {
+            window.location.href = "https://www.mercadopago.com.co/integrations/v1/web-payment-checkout.js" +
+            "?data-preference-id=221553980-bcf16673-f94c-4e0b-bcc6-9274cc1b66ce" +
+            "&data-source=button";
+         
+        } else if (result.dismiss === "cancel") {
+          
+        }
+    });  
+}
