@@ -28,7 +28,21 @@ async function getAllUserInfo(userEmail) {
     return response.data
 }
 
+async function putUserData(userData) {
+    const data = JSON.stringify(userData);
+    console.log("Estoy en data put", data)
+    const response = await axios({
+        method: 'PUT',
+        url: `http://ec2-13-58-44-254.us-east-2.compute.amazonaws.com:8080/ModificarDataUser`,
+        data: data,
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+
+    return response.data
+}
 
 
 
-export {profileImg, getAllUserInfo}
+export {profileImg, getAllUserInfo, putUserData}

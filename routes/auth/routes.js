@@ -75,10 +75,10 @@ router.post('/signup', async (req, res) => {
                             fotoperfil: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fprofile.jpg?alt=media&token=03f4f8c1-14d6-44cc-a347-78e471f0d577&_gl=1*1exrphq*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3NDcxMy4zNC4xLjE2OTk0NzQ4NjMuNTcuMC4w"
                         }, 
                         {
-                            rol:"null"
+                            rol: null
                         },
                         {
-                            tecnologias:"null"
+                            tecnologias: null
                         }
                     ]
                 }

@@ -1,13 +1,17 @@
-import express, {Router} from 'express'
-import path from 'path'
-import {searchDir} from '../searchDir.js'
-import auth from '../../middlewares/Auth.js'
-import {profileImg, getAllUserInfo} from '../../services/profile/profile.js'
+import express, {Router} from 'express';
+import path from 'path';
+import {searchDir} from '../searchDir.js';
+import auth from '../../middlewares/Auth.js';
+import {profileImg, getAllUserInfo, putUserData} from '../../services/profile/profile.js';
+import fileUpload from 'express-fileupload';
 
 const router = Router()
 
+
 /* Borrar si se usa EJS */
 router.use(express.json());
+router.use(fileUpload());
+
 const __dirnameAllStatic = searchDir();
 
 router.use(express.static(path.join(__dirnameAllStatic, 'static')));
@@ -30,37 +34,6 @@ router.get('/profile/edit', auth, (req, res) => {
     const __dirnameAll = searchDir();
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'Edit_profile.html');
     res.status(200).sendFile(filePath);
-});
-
-router.post('/profile/edit', async (req, res) => {
-    try { 
-        res.header('Access-Control-Allow-Origin', '*');
-        console.log("Signup Post")
-        const {loginData, userData} = req.body;
-        const logData = await signInService(loginData);
-        console.log(logData);
-            /* Validacion con la base de datos */
-        if (logData) {
-            return res.status(400).json({error: "Ya existe un usuario asignado al correo"})
-        } else {
-            const signUpData = await signUpService(
-                {...userData, linkFotoPerfil:
-                    [
-                        {
-                        fotoperfil: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fprofile.jpg?alt=media&token=03f4f8c1-14d6-44cc-a347-78e471f0d577&_gl=1*1exrphq*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3NDcxMy4zNC4xLjE2OTk0NzQ4NjMuNTcuMC4w"
-                        }
-                    ]
-                }
-            );
-            const signUpDataCreate = await createSignIn(loginData);
-            /* Se dejara la sesion con el id de la persona */
-            res.status(200).json({success: true, emailAccess: signUpDataCreate.email})
-        }
-
-    } catch(e) {
-        res.status(500).json({ success: false, error: e.message });
-    }
-    
 });
 
 router.get('/profile/img', async (req, res) => {
@@ -88,5 +61,51 @@ router.get('/profile/data', async (req, res) => {
         res.status(500).json({ success: false, error: e.message });
     }
 });
+
+/* Funicon para actualziar informacion */
+router.post('/profile/edit', async (req, res) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    try{
+        if (req.session && req.session.user) {
+            const dataPorfile = {}
+            const email = req.session.user;
+            const name = req.body.nombre;
+            const lastname = req.body.apellido;
+            const genero =  req.body.gender;           
+            const address = req.body.address;
+            const phoneNumber = req.body.phone;
+
+            /* const image = req.files.imageFile || null; */
+            const fotoperfil = null;
+            console.log("LLego antes de la iamgen")
+            /* if (image) {
+                fotoperfil = await uploadImage(image);
+                dataPorfile["fotoperfil"] = fotoperfil;
+            } */
+            dataPorfile["rol"] = req.body.roles;
+            dataPorfile["tecnologies"] = req.body.tecnologies;
+            const dateBirth = req.body.date;
+            const dataUpdated = await putUserData(
+                {
+                    email: email,
+                    name: name,
+                    lastname: lastname,
+                    genero: genero,
+                    address: address,
+                    phoneNumber: phoneNumber,
+                    dateBirth:  dateBirth,
+                    linkFotoPerfil: dataPorfile
+                }
+            );
+            
+            res.status(200).json({success: true, data: dataUpdated})
+        }
+    } catch (e) {
+        res.status(500).json({ success: false, error: e.message });
+    }
+});
+
+
+
 
 export default router; 
