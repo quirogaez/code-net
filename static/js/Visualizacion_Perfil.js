@@ -61,10 +61,9 @@ function modalVerificated(){
         confirmButtonClass: "custom-background-color",
     }).then(function(result) {
         if (result.value) {
-            window.location.href = "https://www.mercadopago.com.co/integrations/v1/web-payment-checkout.js" +
-            "?data-preference-id=221553980-bcf16673-f94c-4e0b-bcc6-9274cc1b66ce" +
-            "&data-source=button";
-         
+            /* window.location.href = "https://www.mercadopago.com.co/integrations/v1/web-payment-checkout.js";
+          */
+           window.location.href="https://www.mercadopago.com.co/checkout/v1/payment/redirect/30acec69-5db4-4d45-908e-3185c4832731/payment-option-form/?preference-id=221553980-bcf16673-f94c-4e0b-bcc6-9274cc1b66ce&source=button&router-request-id=732b06d3-b335-4b01-b1e5-3d5e20cf348b&p=aa0bb6c47f9d8108c84945bd9914f2cf#/";
         } else if (result.dismiss === "cancel") {
           
         }
