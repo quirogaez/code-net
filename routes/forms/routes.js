@@ -35,7 +35,7 @@ router.get('/shortclip', auth, (req, res) => {
 
 
 
-// Ruta para subir imágenes
+// Ruta para subir proyectos
 router.post('/project', async (req, res) => {
     res.header('Access-Control-Allow-Origin', '*');
     console.log("Sí sirve el POST");
@@ -78,7 +78,7 @@ router.post('/project', async (req, res) => {
 });
 
 /* EDITAR---------------------- */
-/* Funicon para actualziar informacion */
+/* Funcion para actualziar informacion */
 router.post('/profile/edit', async (req, res) => {
     res.header('Access-Control-Allow-Origin', '*');
     try{

@@ -69,10 +69,10 @@ if (!process.env.twitchAUTH) {
     
 } 
 
-/* await mongoose.connect(process.env.MONGOOSE_URL)
+await mongoose.connect(process.env.MONGOOSE_URL)
         .then(() => {
             console.log("Connected to MONGODB");
-        }) */
+        }) 
 
 // Inicia el servidor en el puerto 8080
 const PORT = process.env.PORT || 8080;
