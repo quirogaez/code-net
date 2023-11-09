@@ -52,6 +52,17 @@ fileInput.addEventListener("change", function () {
     }
 });
 
+function showFriends() {
+    var friendsModal = document.querySelector('.friends');
+    friendsModal.classList.add('showFriends');
+
+    // Agregar evento para cerrar la ventana modal haciendo clic en el botón 'x'
+    var closeButton = friendsModal.querySelector('.close__friends button');
+    closeButton.addEventListener('click', function() {
+        friendsModal.classList.remove('showFriends');
+    });
+}
+
 function modalVerificated() {
     Swal.fire({
         title: "¡Quiero ser Premium!",
@@ -76,7 +87,7 @@ function modalVerificated() {
 
         }
     });
-
+    
     /* Datos para subir en el body y actualizar */
 const formData = new FormData();
 if (projectMediaFiles) {
@@ -100,4 +111,7 @@ Swal.fire({
         console.log("nueva data", responseData)
     }
 });
+
+
+
 }
