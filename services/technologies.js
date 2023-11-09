@@ -15,8 +15,8 @@ async function getTechnologies (web){
     method: 'POST',
     url: `https://api.dataforseo.com/v3/domain_analytics/technologies/domain_technologies/live`,
     auth: {
-        username: 'diegoquiroga2603@gmail.com',
-        password: '608d785953b21c93'
+        username: 'mayratroyano29@gmail.com',
+        password: 'be59b0f5e51268c3'
     },
     data: post_array,
     headers: {

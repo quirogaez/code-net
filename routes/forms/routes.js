@@ -77,6 +77,45 @@ router.post('/project', async (req, res) => {
     }
 });
 
+
+// Ruta para subir proyectos
+router.post('/short', async (req, res) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    console.log("Sí sirve el POST");
+
+    // Comprueba si se proporcionó un archivo de imagen en la solicitud
+    if (req.files && req.files.imageFile) {
+        // Obtén la imagen desde la solicitud
+        const image = req.files.imageFile;
+        const linkVideo = req.body.linkPublication;
+        const description = req.body.message;
+        const typeProject = "shortclip";
+        const myArrayData = []
+        console.log(image);
+        
+        try {
+            // Llama a la función uploadImage para cargar la imagen y obtén la URL de descarga
+            const imageUrl = await uploadImage(image);
+
+            // Guarda la URL de la imagen en una base de datos o realiza cualquier otra acción necesaria; de ultimo queda el link de github y antepenultimo el link de el proywcto hosteado
+            const sendData = {linkPublication: imageUrl, message: description, typePublication: typeProject, tecnologias:  linkVideo.split()}
+            const dataResponse = await projectService(sendData);
+
+            console.log("dataresponse: ", dataResponse)
+            // Envía una respuesta al cliente con éxito y la URL de la imagen cargada
+            res.json({ success: true, url: dataResponse });
+        } catch (error) {
+            // En caso de un error al cargar la imagen, registra el error y envía una respuesta de error al cliente
+            console.error('Error al subir la imagen:', error);
+            res.status(500).json({ success: false, error: 'Error al subir la imagen' });
+        }
+    } else {
+        // Si no se proporcionó un archivo de imagen en la solicitud, envía una respuesta de error al cliente
+        res.status(400).json({ success: false, error: 'No se proporcionó una imagen' });
+    }
+});
+
+
 /* EDITAR---------------------- */
 /* Funcion para actualziar informacion */
 router.post('/profile/edit', async (req, res) => {
