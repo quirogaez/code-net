@@ -40,7 +40,6 @@ projectMedia.addEventListener('change', function () {
 
 
 // Escucha los cambios en los elementos de entrada de imágenes
-
     projectMedia.addEventListener('change', function (e)  {
         console.log(e.target.files[0]);
         const fileContainer = e.target;
@@ -52,9 +51,7 @@ projectMedia.addEventListener('change', function () {
             // Verifica si ya hay una imagen asociada a ese elemento y elimínala
             if (fileToPost[inputElement]) {
                 delete fileToPost[inputElement];
-               
             }
-            
             // Asigna la nueva imagen al objeto imagesToPost con el contexto actual
             fileToPost[inputElement] = file;        }
         /* imageCreate(file, fileContainer); */
