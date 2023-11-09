@@ -6,7 +6,7 @@ const verifyButton = document.getElementById('verify');
 verifyButton.addEventListener ('click', async (e)=> {
     e.preventDefault();
     const url = document.querySelector(".url__project").value;
-    alert ("verificacion en proceso");
+    Swal.fire("Verificación en proceso");
     let cleanUrl = new URL(url);
 
     console.log(cleanUrl.hostname)

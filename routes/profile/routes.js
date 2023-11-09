@@ -21,7 +21,7 @@ router.get('/profile', auth, (req, res) => {
     //res.render('logIn',);
     /* Sin EJS */
     const __dirnameAll = searchDir();
-    const filePath = path.join(__dirnameAll, 'static', 'templates', 'profile.html');
+    const filePath = path.join(__dirnameAll, 'static', 'templates', 'Profile.html');
     res.sendFile(filePath);
 });
 
