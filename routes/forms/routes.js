@@ -48,6 +48,7 @@ router.post('/project', async (req, res) => {
         const urlGitHub = req.body.urlGitHub;
         const description = req.body.description;
         const technologies = req.body.technologies;
+        const idUser = req.session.userid;
         const typeProject = "project";
         console.log(image);
         
@@ -59,7 +60,7 @@ router.post('/project', async (req, res) => {
             // Guarda la URL de la imagen en una base de datos o realiza cualquier otra acción necesaria; de ultimo queda el link de github y antepenultimo el link de el proywcto hosteado
             url.push(urlDeploy);
             url.push(urlGitHub);
-            const sendData = {idUsuario: 2, linkPublication: url, typePublication: typeProject, message: description}
+            const sendData = {idUsuario: idUser, linkPublication: url, typePublication: typeProject, message: description,tecnologias: technologies.split(",") }
             const dataResponse = await projectService(sendData);
 
             console.log("technologies", technologies)

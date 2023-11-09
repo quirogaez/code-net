@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         formData.append('roles', roles);
         formData.append('address', address);
         formData.append('phone', phone);
-        formData.append('tecnologies', tecnologies);
+        formData.append('tecnologies', JSON.stringify(tecnologies));
         formData.append('date', date);
 
 

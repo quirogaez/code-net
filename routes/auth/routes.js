@@ -46,6 +46,7 @@ router.post('/login', async (req, res) => {
         if (loginBdd.email === loginData.email && loginBdd.password === loginData.password){
             /* Se dejara la sesion con el id de la persona */
             req.session.user = loginBdd.email;
+            req.session.userid = loginBdd.id;
             res.status(303).json({redirected: '/codenet/structure'});
         } else if (loginBdd.password === loginData.password) {
             return res.status(400).json({error: "Contraseña incorrecta"})
