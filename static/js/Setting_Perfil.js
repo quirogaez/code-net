@@ -130,6 +130,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     saveButton.addEventListener("click", function () {
         const nombre = document.getElementById("name").value;
+        const apellido = document.getElementById("lastName").value;
         const roles = document.getElementById("rol").value;
         const date = document.getElementById("date").value;
         const gender = document.getElementById("gender").value;
@@ -146,6 +147,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             // Crear un objeto JSON con todos los datos del formulario
             const userData = {
                 nombre: nombre,
+                apellido: apellido,
                 roles: roles,
                 tecnologias: tecnologies,
                 date: date,
