@@ -489,9 +489,6 @@ img {
     border: solid 3px var(--primary--color);
 
 }
-.edit-portada i {
-    color: var(--primary--color);
-}
 
 .rol-perfilbutton {
     display: flex;
