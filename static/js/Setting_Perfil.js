@@ -109,7 +109,22 @@ function loadMap() {
 document.addEventListener('DOMContentLoaded', function () {
     loadMap();
 }); */
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
+    const response = await fetch(window.location.search + "/codenet/profile/data", {
+        method: 'GET'
+    })
+    const responseData = await response.json()
+    document.getElementById("name").value = responseData.data.name;
+    document.getElementById("rol").value  = responseData.data.linkFotoPerfil[1].rol;
+    document.getElementById("date").value = responseData.data.dateBirth;
+    document.getElementById("gender").value = responseData.data.genero;
+    document.getElementById("addres").value = responseData.data.address;
+    document.getElementById("correo").value = responseData.data.email;
+    document.getElementById("phone").value = responseData.data.phoneNumber;
+
+
+
+
     const saveButton = document.getElementById("save-button");
     const fileInput = document.getElementById("file-input");
 
@@ -123,6 +138,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const phone = document.getElementById("phone").value;
         const tecnologiesSelect = document.querySelectorAll("#tecnologys option:checked");
         const tecnologies = Array.from(tecnologiesSelect).map((option) => option.value);
+        const projectMedia = document.querySelectorAll('.file-input');
+        const projectMediaFiles = {mediaProfile:projectMedia.files[0]};
+        const formData = new FormData(imageFile, projectMediaFiles);
 
         if (nombre && roles) {
             // Crear un objeto JSON con todos los datos del formulario
@@ -138,10 +156,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 profileImage: getImageDataUrl()  // Obtiene la imagen en base64
             };
 
+            console.log("imagen", userData.profileImage)
             // Almacenar el objeto JSON en el Local Storage
             localStorage.setItem("userData", JSON.stringify(userData));
 
-            alert("Datos del formulario almacenados en Local Storage.");
+            alert("Datos del formulario almacenados en Local Storage." + userData.profileImage);
             
 
             // Limpia los campos del formulario
