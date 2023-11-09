@@ -17,6 +17,7 @@ router.use(express.static(path.join(__dirnameAllStatic, 'static')));
 
 
 router.get('/profile', auth, (req, res) => {
+    /* Ruta que me lleva al perfil */
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
@@ -27,6 +28,7 @@ router.get('/profile', auth, (req, res) => {
 
 
 router.get('/profile/edit', auth, (req, res) => {
+    /* Rutra que me llevaal html de editar perfil */
     /* Con ejs */
     //res.render('logIn',);
     /* Sin EJS */
@@ -36,6 +38,7 @@ router.get('/profile/edit', auth, (req, res) => {
 });
 
 router.get('/profile/img', async (req, res) => {
+    /* Solicitar imagen de perfil para el navbar */
     try{
         if (req.session && req.session.user) {
             const email = req.session.user;
@@ -49,6 +52,7 @@ router.get('/profile/img', async (req, res) => {
 });
 
 router.get('/profile/data', async (req, res) => {
+    /*  Extraer informacion del perfil */
     try{
         if (req.session && req.session.user) {
             const email = req.session.user;

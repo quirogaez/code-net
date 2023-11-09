@@ -37,6 +37,7 @@ router.get('/signup', (req, res) => {
 
 
 router.post('/login', async (req, res) => {
+    /* Ruta que permite valdiar el inicio de sesion */
     res.header('Access-Control-Allow-Origin', '*');
     console.log("sirve loginf")
     const {loginData} = req.body;
@@ -59,6 +60,7 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/signup', async (req, res) => {
+    /* ruta que permite validar la creacion de usuario */
     try { 
         res.header('Access-Control-Allow-Origin', '*');
         console.log("Signup Post")

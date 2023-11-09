@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         method: 'GET'
     })
     const responseData = await response.json()
+    document.getElementById("portada-image").src = responseData.data.linkPortada ??  "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/images%2F0191eb0a-5949-434f-867a-52b0ef2d2910?alt=media&token=60bae283-fa6d-4a26-8d8c-c2fe6b377a0c&_gl=1*1v31yz0*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTUyNDcwOS4zOS4xLjE2OTk1MjQ3MTUuNTQuMC4w";
     document.getElementById("nombre").textContent = responseData.data.name + " ";
     document.getElementById("nombre").textContent += responseData.data.lastname;
     document.getElementById("roles").textContent  = responseData.data.linkFotoPerfil[1].rol;
@@ -27,14 +28,42 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     }
 
+    const addFriendButton = document.getElementById("editarPerfilButton");
+    addFriendButton.addEventListener("click", async (e) => {
+        e.preventDefault();
+        const responseFriend = await fetch(window.location.search + "/codenet/addfriend", {
+            method: 'POST',
+            body: JSON.stringify({userId: responseData.user, friendId: responseData.idFriend}),
+            headers: { "Content-type": "application/json; charset=UTF-8" }
+        })
+        const responseDataFriend = await responseFriend.json();
+        console.log("la amistad es: ", responseDataFriend.data)
+        if (responseDataFriend?.error) {
+            Swal.fire({
+                title: responseDataFriend.error,
+                icon: "warning",
+                iconColor: "#801bea",
+                confirmButtonText: "Reintentar",
+                confirmButtonColor: "#801bea",
+            })
+        } else if (responseDataFriend.success) {
+            Swal.fire({
+                title: `Tu y ${responseData.data.name} ahora son amigos.`,
+                icon: "success",
+                iconColor: "#801bea",
+                confirmButtonText: "Continuar",
+                confirmButtonColor: "#801bea",
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    /* window.location.href = window.location.search + "/codenet/login" */
+                }
+            })
+        }
+    })
 });
 
-const editarPerfilButton = document.getElementById("editarPerfilButton");
 
-editarPerfilButton.addEventListener("click", function() {
-    // Redirige a la página HTML deseada
-    window.location.href = "../templates/Setting_Perfil.html";
-});
 
 const editPortadaButton = document.getElementById("edit-portada-button");
 const portadaImage = document.getElementById("portada-image");

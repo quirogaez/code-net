@@ -50,7 +50,7 @@ signupForm.addEventListener('submit', async (e) => {
                 text: `Su correo de acceso es: ${responseData.emailAccess}`,
                 icon: "success",
                 iconColor: "#801bea",
-                confirmButtonText: "Iniciar Sesión!",
+                confirmButtonText: "Iniciar Sesión",
                 confirmButtonColor: "#801bea",
             }).then((result) => {
                 /* Read more about isConfirmed, isDenied below */
