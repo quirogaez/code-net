@@ -43,10 +43,12 @@ router.post('/login', async (req, res) => {
     const loginBdd = await signInService(loginData);
     /* OJO aqui se debe ahcer la validacion con la base de datos */
     if (loginBdd) {
-        if(loginBdd.email === loginData.email && loginBdd.password === loginData.password){
+        if (loginBdd.email === loginData.email && loginBdd.password === loginData.password){
             /* Se dejara la sesion con el id de la persona */
             req.session.user = loginBdd.email;
-            res.redirect(303, '/codenet/structure');
+            res.status(303).json({redirected: '/codenet/structure'});
+        } else if (loginBdd.password === loginData.password) {
+            return res.status(400).json({error: "Contraseña incorrecta"})
         }
         
     } else 

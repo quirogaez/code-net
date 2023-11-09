@@ -30,7 +30,6 @@ async function createSignIn(loginData) {
         }
     })
 
-
     return response.data
 }
 /* ------------ Fin servicios SIGNUP ------------*/
@@ -48,8 +47,7 @@ async function signInService(loginData) {
             'content-type': 'application/json'
         }
     })
-
-
+    
     return response.data
 }
 

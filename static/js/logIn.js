@@ -25,19 +25,39 @@ submitButton.addEventListener("click", async (e) => {
     }
 
     /* Se hace el objeto para enviar a la peticion */
-   const loginData = { username: emailInput, password: passwordInput };
-   await fetch(window.location.search + "/codenet/login", {
-        method: 'POST',
-        body: JSON.stringify({loginData: loginData}),
-        headers: { "Content-type": "application/json; charset=UTF-8" }
-    }).then(response => {
-        if (response.redirected) {
-            // Si la respuesta es una redirección, navega a la nueva URL
-            window.location.href = response.url;
-        } else {
-            return response.json();
-        }
-    })
+   const loginData = { email: emailInput, password: passwordInput };
+ 
+    const response =  await fetch(window.location.search + "/codenet/login", {
+            method: 'POST',
+            body: JSON.stringify({loginData: loginData}),
+            headers: { "Content-type": "application/json; charset=UTF-8" }
+        })
+    const responseData =  await response.json()
+            if (responseData.redirected) {
+                Swal.fire({
+                    imageUrl: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Ffavicon.svg?alt=media&token=5e8d39b3-3caf-4aa1-b672-d3dd48fcdda5&_gl=1*p55fvn*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3ODAxNC4zNS4wLjE2OTk0NzgwMTQuNjAuMC4w",
+                    imageWidth: 400,
+                    imageHeight: 200,
+                    title: "Bienvenido A Code|Net",
+                    timer: 5000,
+                    onOpen: function() {
+                        Swal.showLoading()
+                    }
+                }).then(function(result) {
+                    // Si la respuesta es una redirección, navega a la nueva URL
+                    window.location.href = responseData.redirected;
+                })
+            }  else if(responseData.error) {
+                Swal.fire({
+                    title: responseData.error,
+                    icon: "warning",
+                    iconColor: "#801bea",
+                    confirmButtonText: "Reintentar",
+                    confirmButtonColor: "#801bea",
+                })
+            }
+
+
     /* let respose = await res.json();
     console.log(respose) */
 })

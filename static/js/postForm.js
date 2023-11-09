@@ -23,21 +23,6 @@ form.addEventListener('submit', async function(event) {
         });
         return
 
-        Swal.fire({
-            title: "Are you sure?",
-            text: "You wont be able to revert this!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonText: "Yes, delete it!"
-        }).then(function(result) {
-            if (result.value) {
-                Swal.fire(
-                    "Deleted!",
-                    "Your file has been deleted.",
-                    "success"
-                )
-            }
-        });
         
         
     } else {

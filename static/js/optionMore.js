@@ -1,3 +1,19 @@
+addEventListener("DOMContentLoaded", async (e) => {
+    const imgProfileMobile = document.querySelector(".profile-photos").childNodes[1];
+    const imgProfile = document.querySelector(".profile-photos").childNodes[1];
+    const response = await fetch(window.location.search + "/codenet/profile/img", {
+        method: 'GET'
+    })
+   const responseData = await response.json();
+   console.log("Response imagen: ", responseData )
+   console.log(imgProfileMobile);
+   imgProfileMobile.src = "";
+   imgProfile.src = "";
+   imgProfileMobile.src = responseData.imgUrl;
+   imgProfile.src = responseData.imgUrl;
+})
+
+
 let masOpcionesVisibles = false;
 
 function showPlusOptions() {
