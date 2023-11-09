@@ -65,10 +65,12 @@ body {
 }
 /* buttons homepage */
 .buttons--home {
+    
     display: flex;
     margin-bottom: 10px;
     width: auto;
     justify-content: space-between;
+    align-items: center; /* Centra verticalmente los elementos */
 }
 .button__logIn {
     padding: 15px 25px;
@@ -161,13 +163,15 @@ body {
     margin-bottom: 20px;
 }
 .button--login button {
+    width: 12rem;
+    height: 60px;
     padding: 10px 30px;
     background-color: var(--second--color);
     border-radius: 6px;
     border: none;
     color: var(--white--color);
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
 }
 .link--singup {
     font-size: 15;
