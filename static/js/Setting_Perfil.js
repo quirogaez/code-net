@@ -22,48 +22,42 @@ fileInput.addEventListener("change", function (event) {
 });
 /* Tecnologias*/
 
-const tecnologySelect = document.getElementById("tecnologys"); //contenedor de la barra
-const tecnologyImagesContainer = document.getElementById("tecnology-images");
+const tecnologySelect = document.getElementById("tecnologys");
+        const tecnologyImagesContainer = document.getElementById("tecnology-images");
+        const sureModal = document.getElementById("sure");
+        const closeModalButton = document.getElementById("closeModalSure");
 
-tecnologyImagesContainer.style.display = "flex"; //contenedor de las imagenes
-tecnologySelect.addEventListener("change", function () {
-    if (tecnologyImagesContainer.children.length >= 8) {
-       /*  alert("Solo se permiten ocho tecnologías"); */
-    
-    openSure();
-    breack;
+        tecnologyImagesContainer.style.display = "flex";
 
-    }
+        tecnologySelect.addEventListener("change", function () {
+            if (tecnologyImagesContainer.children.length >= 8) {
+                openSure();
+               breack;
+            } 
 
-    /*funcion para mostrar el modal */
-    function openSure(){
-       
-        const sure = document.querySelector('.sure');
-        
-  
-            sure.classList.add('sure--show');
-            const closeSure = document.querySelector('.close__modalSure'); 
-            closeSure.addEventListener('click', (e) => {
-                e.preventDefault();
-                sure.classList.remove('sure--show');
-            }); 
+            function openSure() {
+                sureModal.style.display = "block";
+            }
 
-        };  
-    const selectedTecnology = tecnologySelect.value;
+            closeModalButton.addEventListener("click", function () {
+                sureModal.style.display = "none";
+            });
 
-    if (imageSources[selectedTecnology]) {
-        const newImage = document.createElement("img");
-        newImage.src = imageSources[selectedTecnology];
-        newImage.alt = "Tecnologia";
-        newImage.style.maxWidth = "3.8rem";
-        newImage.style.maxHeight = "3.8rem";
-        newImage.style.margin = "2px";
-        const container = document.createElement("div");
-        container.appendChild(newImage);
-        tecnologyImagesContainer.appendChild(container);
-        tecnologySelect.options[tecnologySelect.selectedIndex].disabled = true;
-    }
-});
+            const selectedTecnology = tecnologySelect.value;
+
+            if (imageSources[selectedTecnology]) {
+                const newImage = document.createElement("img");
+                newImage.src = imageSources[selectedTecnology];
+                newImage.alt = "Tecnología";
+                newImage.style.maxWidth = "3.8rem";
+                newImage.style.maxHeight = "3.8rem";
+                newImage.style.margin = "2px";
+                const container = document.createElement("div");
+                container.appendChild(newImage);
+                tecnologyImagesContainer.appendChild(container);
+                tecnologySelect.options[tecnologySelect.selectedIndex].disabled = true;
+            }
+        });
 
 const imageSources = {
     Boostrap: "https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/tecnologias%2FBoostrap.svg?alt=media&token=98cc90b4-5ae7-4e0b-a21c-79e75f1f64fa&_gl=1*fvudtu*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTA2NTg1Mi4yMi4xLjE2OTkwNjYxOTYuMTQuMC4w",
@@ -95,20 +89,6 @@ const imageSources = {
 };
 
 
-
-/* tecnologySelect.dispatchEvent(new Event("change"));
-
-function loadMap() {
-    const initialCoordinates = { lat: 0, lng: 0 };
-    const mapOptions = {
-        center: initialCoordinates,
-        zoom: 2,
-    };
-    const map = new google.maps.Map(document.getElementById('map'), mapOptions);
-}
-document.addEventListener('DOMContentLoaded', function () {
-    loadMap();
-}); */
 document.addEventListener("DOMContentLoaded", function () {
     const saveButton = document.getElementById("save-button");
     const fileInput = document.getElementById("file-input");
@@ -141,8 +121,17 @@ document.addEventListener("DOMContentLoaded", function () {
             // Almacenar el objeto JSON en el Local Storage
             localStorage.setItem("userData", JSON.stringify(userData));
 
-            alert("Datos del formulario almacenados en Local Storage.");
+            Swal.fire({
+                icon: "success",
+                title: "¡Buena tarea!",
+                text: "Los datos se han guardado correctamente."
+            });
+           /*  alert("Datos del formulario almacenados en Local Storage."); */
             
+               /*  $("#kt_sweetalert_demo_1").click(function(e) {
+                    Swal.fire("Good job!");
+                }); */
+                
 
             // Limpia los campos del formulario
 /*             document.getElementById("name").value = "";
@@ -156,7 +145,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*             clearImageInput();  */ // Limpia la vista previa de la imagen
         } else {
-            alert("Por favor, complete todos los campos del formulario.");
+            Swal.fire("Por favor, complete todos los campos del formulario", "error");
+            /* alert("Por favor, complete todos los campos del formulario."); */
         }
     });
 
