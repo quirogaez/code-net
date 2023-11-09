@@ -183,7 +183,6 @@ document.addEventListener("DOMContentLoaded", async function () {
                     body: formData,
                 })
                 const responseData = response;
-                console.log("nueva data", responseData)
             }
         })
 

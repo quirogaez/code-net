@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", async function () {
     // Obtener los datos del Local Storage
-    const response = await fetch(window.location.search + "/codenet/profile/data", {
+    console.log(window.location.href + "/data")
+    const response = await fetch(window.location.href + "/data", {
         method: 'GET'
     })
     const responseData = await response.json()
-    document.getElementById("nombre").textContent = responseData.data.name;
+    document.getElementById("nombre").textContent = responseData.data.name + " ";
     document.getElementById("nombre").textContent += responseData.data.lastname;
     document.getElementById("roles").textContent  = responseData.data.linkFotoPerfil[1].rol;
     document.getElementById("date").textContent = new Date(responseData.data.dateBirth).toISOString().split('T')[0];

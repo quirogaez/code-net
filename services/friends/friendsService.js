@@ -10,11 +10,26 @@ async function getFriends() {
             'content-type': 'application/json'
         }
     })
+    
+
+    return response.data
+}
+
+
+async function getUserData(email) {
+
+    const response = await axios({
+        method: 'GET',
+        url: `http://ec2-13-58-44-254.us-east-2.compute.amazonaws.com:8080/BuscarDataUser/${email}`,
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+    
 
     return response.data
 }
 
 
 
-
-export {getFriends}
+export {getFriends, getUserData}

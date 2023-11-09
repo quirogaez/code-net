@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         method: 'GET'
     })
     const responseData = await response.json()
-    document.getElementById("nombre").textContent = responseData.data.name;
+    document.getElementById("nombre").textContent = responseData.data.name + " ";
     document.getElementById("nombre").textContent += responseData.data.lastname;
     document.getElementById("roles").textContent  = responseData.data.linkFotoPerfil[1].rol;
     document.getElementById("date").textContent = new Date(responseData.data.dateBirth).toISOString().split('T')[0];

@@ -49,12 +49,11 @@ async function mostrarContenido(contenido, elemento) {
                             <p class="rol" id="roles">${user.linkFotoPerfil[1].rol}</p>
                         </div>
                         <div class="addFriend">
-                            <a href="" id="editarPerfilButton"><i class="fa-solid fa-user-plus"></i></a>
+                            <a href="/codenet/friend/${user.email}" id="editarPerfilButton"><i class="fa-solid fa-user-plus"></i></a>
                         </div>
                     </div>
                 </div>
-                `;
-                
+                `;   
             }
         }
         myFetch.push("people");
