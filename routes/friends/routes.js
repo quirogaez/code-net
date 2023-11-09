@@ -2,6 +2,7 @@ import express, {Router} from 'express'
 import path from 'path'
 import {searchDir} from '../searchDir.js'
 import auth from '../../middlewares/Auth.js'
+import { getFriends } from '../../services/friends/friendsService.js'
 
 const router = Router()
 
@@ -19,6 +20,18 @@ router.get('/friends', auth, (req, res) => {
     const __dirnameAll = searchDir();
     const filePath = path.join(__dirnameAll, 'static', 'templates', 'friend.html');
     res.sendFile(filePath);
+});
+
+router.get('/friends/users', auth, async (req, res) => {
+    try{
+        if (req.session && req.session.user) {
+            const dataUsers = await getFriends();
+            console.log(dataUsers)
+            res.status(200).json({success: true, data: dataUsers, user: req.session.user})
+        }
+    } catch (e) {
+        res.status(500).json({ success: false, error: e.message });
+    };
 });
 
 export default router;

@@ -53,7 +53,6 @@ app.set('views', path.join(`${__dirname}`, "static", "templates"));
 
 // Aplica middlewares para procesar solicitudes y mejorar la seguridad
 app.use(express.json()); // Middleware para analizar datos JSON en las solicitudes
-app.use(fileUpload());
 /* app.use(helmet()); // Middleware para mejorar la seguridad de la aplicación
 *//* app.use(morgan("tiny")); // Middleware para el registro de solicitudes HTTP */
 
