@@ -1,6 +1,6 @@
 // Importa los módulos necesarios
 import express from 'express';
-import mongoose from 'mongoose';  
+import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
 /* import morgan from 'morgan'; */
@@ -31,10 +31,10 @@ app.use(session({
     secret: "ascunwdivundfoivndfjnvoasdimvoidfvsioafvmdoifvaipdfvPOSDVPDS",
     resave: true,
     saveUninitialized: true,
-   /*  store: MongoStore.create({ mongoUrl: process.env.MONGOOSE_URL }), */
+    store: MongoStore.create({ mongoUrl: process.env.MONGOOSE_URL }),
     cookie: { maxAge: 1000 * 60 * 60 * 24 }
 }));
- 
+
 
 
 // Configura Express para servir archivos estáticos desde la carpeta "static"
@@ -57,7 +57,7 @@ app.use(express.json()); // Middleware para analizar datos JSON en las solicitud
 
 
 // app.js
-/* if (!process.env.twitchAUTH) {
+if (!process.env.twitchAUTH) {
     (async () => {
         process.env["twitchAUTH"] = await twitchAuth();
 
@@ -65,7 +65,7 @@ app.use(express.json()); // Middleware para analizar datos JSON en las solicitud
         console.log(process.env.twitchAUTH)
     })
     
-} */
+}
 
 /* await mongoose.connect(process.env.MONGOOSE_URL)
         .then(() => {

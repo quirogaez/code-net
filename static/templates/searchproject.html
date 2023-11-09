@@ -151,39 +151,143 @@
                     <input type="submit" value="" style="display: none;">
                 </div>
                 <div class="container__options">
-                    <a id="btnCategorias"class="options--category" onclick="mostrarContenido('categories')">Categorías</a>
-                    <a class="options" onclick="mostrarContenido('people')">Personas</a>
-                    <a class="options" onclick="mostrarContenido('projects')">Proyectos</a>
-                    <a class="options" onclick="mostrarContenido('lives')">Trasmisiones</a>
-                    <a class="options" onclick="mostrarContenido('shortclips')">ShortClip</a>
+                    <a id="btnCategorias" class="options" onclick="mostrarContenido('categories', this)">Categorías</a>
+                    <a class="options" onclick="mostrarContenido('people', this)">Personas</a>
+                    <a class="options" onclick="mostrarContenido('projects', this)">Proyectos</a>
+                    <a class="options" onclick="mostrarContenido('shortclips', this)">ShortClip</a>
                 </div>
             </form>
             <div class="containerSearch">
                 <div class="containGeneral" id="categories">
-                    <div class="fullContainers">
-                        <div class="container__profile">
-                            <div class="coverProfile">
-                                <img class="portada" src="../img/perfilGeneration.jpeg" id="coverProfile">
+                    <!------------------- profile ----------------->
+                    <div class="container__objects">
+                        <div class="coverProfile">
+                            <img class="portada" src="../img/perfilGeneration.jpeg" id="coverProfile">
+                        </div>
+                        <div class="infoProfile">
+                            <div class="containerPhoto__profile">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fprofile.jpg?alt=media&token=03f4f8c1-14d6-44cc-a347-78e471f0d577&_gl=1*1exrphq*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3NDcxMy4zNC4xLjE2OTk0NzQ4NjMuNTcuMC4w"
+                                    id="profilePhoto">
                             </div>
-                            <div class="infoProfile">
-                                <div class="containerPhoto__profile">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fprofile.jpg?alt=media&token=03f4f8c1-14d6-44cc-a347-78e471f0d577&_gl=1*1exrphq*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3NDcxMy4zNC4xLjE2OTk0NzQ4NjMuNTcuMC4w"
-                                        id="profilePhoto">
-                                </div>
-                                <div class="containerText">
-                                    <p class="nameProfile"><span id="nombre">mayra alejandra troyano caicedo</span></p>
-                                    <p class="rol" id="roles">frontend</p>
-                                </div>
-                                <div class="addFriend">
-                                    <a href="" id="editarPerfilButton"><i class="fa-solid fa-user-plus"></i></a>
-                                </div>
+                            <div class="containerText">
+                                <p class="nameProfile"><span id="nombre">mayra alejandra troyano caicedo</span></p>
+                                <p class="rol" id="roles">frontend</p>
+                            </div>
+                            <div class="addFriend">
+                                <a href="" id="editarPerfilButton"><i class="fa-solid fa-user-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------------- project ----------------->
+                    <div class="container__objects">
+                        <div class="imgProject">
+                            <img class="projectImage" src="../img/perfilGeneration.jpeg" id="coverProfile">
+                        </div>
+                        <div class="infoProfile_Project">
+                            <div class="containerPhoto__project">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fprofile.jpg?alt=media&token=03f4f8c1-14d6-44cc-a347-78e471f0d577&_gl=1*1exrphq*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3NDcxMy4zNC4xLjE2OTk0NzQ4NjMuNTcuMC4w"
+                                    id="profilePhoto">
+                            </div>
+                            <div class="containerText_project">
+                                <p class="nameProfile_project"><span id="nombre">mayra alejandra troyano caicedo</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------- shortclip ----------------->
+                    <div class="container__objects">
+                        <div class="imgProject">
+                            <img class="projectImage" src="../img/perfilGeneration.jpeg" id="coverProfile">
+                        </div>
+                        <div class="infoProfile_Project">
+                            <div class="containerPhoto__project">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fprofile.jpg?alt=media&token=03f4f8c1-14d6-44cc-a347-78e471f0d577&_gl=1*1exrphq*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3NDcxMy4zNC4xLjE2OTk0NzQ4NjMuNTcuMC4w"
+                                    id="profilePhoto">
+                            </div>
+                            <div class="containerText_project">
+                                <p class="nameProfile_project"><span id="nombre">mayra alejandra troyano caicedo</span>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <!-- Contenido de la sección de personas -->
                 <div class="containGeneral" id="people">
-                    <div class="container__profile">
+                    <div class="container__objects">
+                        <div class="coverProfile">
+                            <img class="portada" src="../img/perfilGeneration.jpeg" id="coverProfile">
+                        </div>
+                        <div class="infoProfile">
+                            <div class="containerPhoto__profile">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fprofile.jpg?alt=media&token=03f4f8c1-14d6-44cc-a347-78e471f0d577&_gl=1*1exrphq*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3NDcxMy4zNC4xLjE2OTk0NzQ4NjMuNTcuMC4w"
+                                    id="profilePhoto">
+                            </div>
+                            <div class="containerText">
+                                <p class="nameProfile"><span id="nombre">mayra alejandra troyano caicedo</span></p>
+                                <p class="rol" id="roles">frontend</p>
+                            </div>
+                            <div class="addFriend">
+                                <a href="" id="editarPerfilButton"><i class="fa-solid fa-user-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__objects">
+                        <div class="coverProfile">
+                            <img class="portada" src="../img/perfilGeneration.jpeg" id="coverProfile">
+                        </div>
+                        <div class="infoProfile">
+                            <div class="containerPhoto__profile">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fprofile.jpg?alt=media&token=03f4f8c1-14d6-44cc-a347-78e471f0d577&_gl=1*1exrphq*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3NDcxMy4zNC4xLjE2OTk0NzQ4NjMuNTcuMC4w"
+                                    id="profilePhoto">
+                            </div>
+                            <div class="containerText">
+                                <p class="nameProfile"><span id="nombre">mayra alejandra troyano caicedo</span></p>
+                                <p class="rol" id="roles">frontend</p>
+                            </div>
+                            <div class="addFriend">
+                                <a href="" id="editarPerfilButton"><i class="fa-solid fa-user-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__objects">
+                        <div class="coverProfile">
+                            <img class="portada" src="../img/perfilGeneration.jpeg" id="coverProfile">
+                        </div>
+                        <div class="infoProfile">
+                            <div class="containerPhoto__profile">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fprofile.jpg?alt=media&token=03f4f8c1-14d6-44cc-a347-78e471f0d577&_gl=1*1exrphq*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3NDcxMy4zNC4xLjE2OTk0NzQ4NjMuNTcuMC4w"
+                                    id="profilePhoto">
+                            </div>
+                            <div class="containerText">
+                                <p class="nameProfile"><span id="nombre">mayra alejandra troyano caicedo</span></p>
+                                <p class="rol" id="roles">frontend</p>
+                            </div>
+                            <div class="addFriend">
+                                <a href="" id="editarPerfilButton"><i class="fa-solid fa-user-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__objects">
+                        <div class="coverProfile">
+                            <img class="portada" src="../img/perfilGeneration.jpeg" id="coverProfile">
+                        </div>
+                        <div class="infoProfile">
+                            <div class="containerPhoto__profile">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fprofile.jpg?alt=media&token=03f4f8c1-14d6-44cc-a347-78e471f0d577&_gl=1*1exrphq*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3NDcxMy4zNC4xLjE2OTk0NzQ4NjMuNTcuMC4w"
+                                    id="profilePhoto">
+                            </div>
+                            <div class="containerText">
+                                <p class="nameProfile"><span id="nombre">mayra alejandra troyano caicedo</span></p>
+                                <p class="rol" id="roles">frontend</p>
+                            </div>
+                            <div class="addFriend">
+                                <a href="" id="editarPerfilButton"><i class="fa-solid fa-user-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__objects">
                         <div class="coverProfile">
                             <img class="portada" src="../img/perfilGeneration.jpeg" id="coverProfile">
                         </div>
@@ -204,28 +308,40 @@
                 </div>
                 <!-- Contenido de la sección de proyectos -->
                 <div class="containGeneral" id="projects">
-                    <div class="container__project">
-                        <div class="">
-                            <img class="portada" src="../img/perfilGeneration.jpeg" id="coverProfile">
+                    <div class="container__objects">
+                        <div class="imgProject">
+                            <img class="projectImage" src="../img/perfilGeneration.jpeg" id="coverProfile">
                         </div>
-                        <div class="infoProfile">
-                            <div class="containerPhoto__profile">
+                        <div class="infoProfile_Project">
+                            <div class="containerPhoto__project">
                                 <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fprofile.jpg?alt=media&token=03f4f8c1-14d6-44cc-a347-78e471f0d577&_gl=1*1exrphq*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3NDcxMy4zNC4xLjE2OTk0NzQ4NjMuNTcuMC4w"
                                     id="profilePhoto">
                             </div>
-                            <div class="containerText">
-                                <p class="nameProfile"><span id="nombre">mayra alejandra troyano caicedo</span></p>
+                            <div class="containerText_project">
+                                <p class="nameProfile_project"><span id="nombre">mayra alejandra troyano caicedo</span>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Contenido de la sección de trasmisiones -->
-                <div class="containGeneral" id="lives">
-                    
-                </div>
+
                 <!-- Contenido de la sección de ShortClip -->
                 <div class="containGeneral" id="shortclips">
-                    
+                    <div class="container__objects">
+                        <div class="imgProject">
+                            <img class="projectImage" src="../img/perfilGeneration.jpeg" id="coverProfile">
+                        </div>
+                        <div class="infoProfile_Project">
+                            <div class="containerPhoto__project">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/code-net-7a600.appspot.com/o/static%2Fprofile.jpg?alt=media&token=03f4f8c1-14d6-44cc-a347-78e471f0d577&_gl=1*1exrphq*_ga*MTkzMjc3ODczMC4xNjk4MTE1OTM1*_ga_CW55HF8NVT*MTY5OTQ3NDcxMy4zNC4xLjE2OTk0NzQ4NjMuNTcuMC4w"
+                                    id="profilePhoto">
+                            </div>
+                            <div class="containerText_project">
+                                <p class="nameProfile_project"><span id="nombre">mayra alejandra troyano caicedo</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

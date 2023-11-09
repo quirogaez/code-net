@@ -521,7 +521,8 @@ img {
     margin: auto;
 }
 .fa-user-check {
-    color: var(--primary--color);
+    color: var(--second--color);
+    font-size: 22px;
     cursor: pointer;
 }
 .editProfile {
