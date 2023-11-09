@@ -49,7 +49,7 @@ router.post('/login', async (req, res) => {
             req.session.user = loginBdd.email;
             req.session.userid = loginBdd.id;
             res.status(303).json({redirected: '/codenet/structure'});
-        } else if (loginBdd.password === loginData.password) {
+        } else if (loginBdd.password !== loginData.password) {
             return res.status(400).json({error: "Contraseña incorrecta"})
         }
         

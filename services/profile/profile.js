@@ -28,6 +28,20 @@ async function getAllUserInfo(userEmail) {
     return response.data
 }
 
+async function getAllFriends(userId) {
+    const data = userId;
+    const response = await axios({
+        method: 'GET',
+        url: `http://ec2-13-58-44-254.us-east-2.compute.amazonaws.com:8080/BuscarAmigosByIdUsuario/${data}`,
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+
+
+    return response.data
+}
+
 async function putUserData(userData) {
     const data = JSON.stringify(userData);
     console.log("Estoy en data put", data)
@@ -45,4 +59,4 @@ async function putUserData(userData) {
 
 
 
-export {profileImg, getAllUserInfo, putUserData}
+export {profileImg, getAllUserInfo, putUserData, getAllFriends}

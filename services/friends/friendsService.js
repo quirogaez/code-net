@@ -28,6 +28,31 @@ async function getUserData(email) {
     return response.data
 }
 
+async function getUserById(idUser) {
+
+    const response = await axios({
+        method: 'GET',
+        url: `http://ec2-13-58-44-254.us-east-2.compute.amazonaws.com:8080/BuscarUsuario/${idUser}`,
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+    return response.data
+}
+
+async function getImgByEmail(email) {
+
+    const response = await axios({
+        method: 'GET',
+        url: `http://ec2-13-58-44-254.us-east-2.compute.amazonaws.com:8080/BuscarDataUser/${email}`,
+        headers: {
+            'content-type': 'application/json'
+        }
+    })
+    return response.data
+}
+
+
 async function createFriend(dataFriends)  {
     /* Funcion encargada de crear una relacion de amistad */
 
@@ -58,4 +83,4 @@ async function createFriend(dataFriends)  {
     return response.data}
 }
 
-export {getPeople, getUserData, createFriend}
+export {getPeople, getUserData, createFriend, getUserById, getImgByEmail}

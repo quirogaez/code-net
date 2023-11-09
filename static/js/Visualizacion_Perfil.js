@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 });
 
 const editarPerfilButton = document.getElementById("editarPerfilButton");
-
+let listFriends = false;
 editarPerfilButton.addEventListener("click", function () {
     // Redirige a la página HTML deseada
     window.location.href = "../templates/Setting_Perfil.html";
@@ -52,9 +52,28 @@ fileInput.addEventListener("change", function () {
     }
 });
 
-function showFriends() {
+async function showFriends() {
+    const friendsContainer = document.querySelector(".friendList")
     var friendsModal = document.querySelector('.friends');
     friendsModal.classList.add('showFriends');
+    if(!listFriends) {
+        const responseFriends = await fetch(window.location.search + "/codenet/profile/myfriends", {
+            method: 'GET'
+        })
+        const responseFriendsData =  await responseFriends.json();
+        const friendsData = responseFriendsData.data;
+        console.log(responseFriendsData);
+        for (let friend of friendsData) {
+            friendsContainer.innerHTML += 
+            `
+            <div class="userFriend">
+                <img class="" src="${friend.profilePicture}">
+                <p class="nameContain">${friend.nombre}</p>
+            </div>
+            `;
+        }
+    }
+    listFriends = true
 
     // Agregar evento para cerrar la ventana modal haciendo clic en el botón 'x'
     var closeButton = friendsModal.querySelector('.close__friends button');

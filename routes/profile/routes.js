@@ -2,8 +2,9 @@ import express, {Router} from 'express';
 import path from 'path';
 import {searchDir} from '../searchDir.js';
 import auth from '../../middlewares/Auth.js';
-import {profileImg, getAllUserInfo, putUserData} from '../../services/profile/profile.js';
+import {profileImg, getAllUserInfo, putUserData, getAllFriends} from '../../services/profile/profile.js';
 import fileUpload from 'express-fileupload';
+import {getUserById, getImgByEmail} from'../../services/friends/friendsService.js'
 
 const router = Router()
 
@@ -50,6 +51,44 @@ router.get('/profile/img', async (req, res) => {
         res.status(500).json({ success: false, error: e.message });
     }
 });
+
+/* Obtener amigos */
+router.get('/profile/myfriends', async (req, res) => {
+   
+    try{
+        if (req.session && req.session.user) {
+            const userId =  req.session.userid;
+            const dataFriends = await getAllFriends(userId)
+            const dataEmails = [];
+            const dataInfo = []
+
+
+            for (const element of dataFriends) {
+                const content = await getUserById(element.idAmigo);
+                console.log(content);
+                dataEmails.push(content["email"])
+            }
+
+            for (const email of dataEmails) {
+                const content = await getImgByEmail(email);
+                console.log(content);
+                dataInfo.push({nombre: content.name + " " + content.lastname, profilePicture: content.linkFotoPerfil[0].fotoperfil})
+            }
+
+
+            
+            
+            res.status(200).json({success: true, data: dataInfo})
+        }
+    } catch (e) {
+        res.status(500).json({ success: false, error: e.message });
+    }
+    
+
+
+});
+
+
 
 router.get('/profile/data', async (req, res) => {
     /*  Extraer informacion del perfil */

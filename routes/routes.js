@@ -6,6 +6,7 @@ import twitchRoutes from './twitch/routes.js'; // Rutas relacionadas con la API 
 import profileRoutes from './profile/routes.js'; // Rutas relacionadas con el perfil de usuario
 import technologiesRoutes from './technologies/routes.js'; // Rutas relacionadas con extraer tecnologias 
 import friendsRoutes from './friends/routes.js'; // Rutas relacionadas con extraer amigos 
+import projectsrOutes from './projects/routes.js'; // Rutas relacionadas con extraer amigos 
 
 import { Router } from 'express';
 
@@ -20,7 +21,7 @@ router.use('', twitchRoutes);     // Monta las rutas de la API de twitch
 router.use('', profileRoutes);     // Monta las rutas de perfil de usuario
 router.use('', technologiesRoutes);     // Monta las rutas de extraer tecnologias 
 router.use('', friendsRoutes);     // Monta las rutas de extraer amigos
-
+router.use('', projectsrOutes);     // Monta las rutas de extraer amigos
 
 // Exporta el enrutador principal que contiene todas las rutas
 export default router;
