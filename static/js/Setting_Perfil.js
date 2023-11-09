@@ -33,7 +33,6 @@ const tecnologySelect = document.getElementById("tecnologys");
         tecnologySelect.addEventListener("change", function () {
             if (tecnologyImagesContainer.children.length >= 8) {
                 openSure();
-               breack;
             } 
 
     /*funcion para mostrar el modal */
