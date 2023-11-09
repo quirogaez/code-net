@@ -17,8 +17,8 @@ console.log(projectMedia)
 document.addEventListener('DOMContentLoaded', function () {
     const selectTecnologias = document.querySelector('select[name="tecnologias"]');
     const tecnologiaImages = document.querySelectorAll('.img__tecnology');
-    const openModal = document.querySelector ('.button_post');
-    const technologies =  new Set(); 
+    const openModal = document.querySelector('.button_post');
+    const technologies = new Set();
 
 
     selectTecnologias.addEventListener('change', (event) => {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const optionToDisable = selectTecnologias.querySelector(`option[value="${selectedOption}"]`);
             optionToDisable.disabled = true;
         }
-        
+
         const selectedImage = document.getElementById(selectedOption);
 
         if (selectedImage) {
@@ -37,15 +37,49 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(technologies)
         }
     });
+    
+// Obtener todas las opciones dentro del select
+const select = document.getElementById('technology');
+const options = select.querySelectorAll('option');
+
+/* Funcion para mostrar imagenes en pantalla */
+tecnologiaImages.forEach((img) => {
+    const closeButtonDiv = document.createElement('div');
+    closeButtonDiv.className = 'close-button-container';
+
+    const closeButtonSpan = document.createElement('span');
+    closeButtonSpan.textContent = 'X';
+    closeButtonSpan.className = 'close-button';
+
+    closeButtonDiv.appendChild(closeButtonSpan);
+    img.appendChild(closeButtonDiv);
+
+    closeButtonSpan.addEventListener('click', () => {
+        img.style.display = 'none';
+        technologies.delete(img);
+
+        // Buscar la opción relacionada con la imagen cerrada y habilitarla
+        options.forEach(option => {
+            if (option.value === img.id) {
+                option.disabled = false; // Habilitar la opción
+            }
+        });
+    });
+});
+
+
+
+
+
 
     /* Funcion para mostrar imagenes en pantalla */
-    tecnologiaImages.forEach((img) => {
+/*     tecnologiaImages.forEach((img) => {
         const closeButtonDiv = document.createElement('div');
         closeButtonDiv.className = 'close-button-container';
 
         const closeButtonSpan = document.createElement('span');
         closeButtonSpan.textContent = 'X';
-        closeButtonSpan.className = 'close-button'; 
+        closeButtonSpan.className = 'close-button';
 
         closeButtonDiv.appendChild(closeButtonSpan);
         img.appendChild(closeButtonDiv);
@@ -54,10 +88,10 @@ document.addEventListener('DOMContentLoaded', function () {
             img.style.display = 'none';
             technologies.delete(img);
         });
-    });
+    }); */
 
     const form = document.querySelector('form');
-    form.addEventListener('submit', async function(event) {
+    form.addEventListener('submit', async function (event) {
         event.preventDefault();
 
         const urlProjectValue = document.querySelector('.url__project').value.trim();
@@ -69,16 +103,30 @@ document.addEventListener('DOMContentLoaded', function () {
                 title: "Oops...",
                 text: "Por favor, complete todos los campos del formulario.",
             });
-            return
+            return;
         } else {
-            const sure = document.querySelector('.sure');
-            const closeSure = document.querySelector('.close__modalSure');
-            const discardPublication = document.querySelector('.discard');
-            
-            openModal.addEventListener('click', async (e)=>{
-                e.preventDefault();
-                sure.classList.add('sure--show');
-                await modalSuccesPromise()
+            Swal.fire({
+                title: "¿Desea cargar este proyecto?",
+                /*             text: "¿Cargar esta publicación?", */
+                icon: "warning",
+                iconColor: "#801bea",
+                showCancelButton: true,
+                confirmButtonText: "Aceptar",
+                confirmButtonColor: "#801bea",
+            }).then(function (result) {
+                if (result.value) {
+                    Swal.fire(
+                        {
+                            title: "¡Publicación cargada con exito!",
+                            icon: "success",
+                            iconColor: "#801bea",
+                            confirmButtonColor: "#801bea",
+                        }
+                    )
+                }
+            });
+
+            await modalSuccesPromise()
                 .then(async () => {
                     console.log()
                     // Crea un objeto FormData para enviar las imágenes al servidor
@@ -89,19 +137,18 @@ document.addEventListener('DOMContentLoaded', function () {
                     formData.append('urlProjectDeploy', urlProjectValue);
                     formData.append('urlGitHub', urlGithubValue);
                     formData.append('description', descriptionValue);
-                    formData.append('technologies',  Array.from(technologies));
+                    formData.append('technologies', Array.from(technologies));
                     /* uploadImage(imagesToPost); */
-        
+
                     // Realiza una solicitud Fetch POST al servidor para subir las imágenes
                     let url = await fetch(window.location.search + '/codenet/project', {
                         method: 'POST',
                         body: formData
                     })
-                   
+
                     console.log(await url.json())
                 })
-            });
-            closeSure.addEventListener('click', (e)=>{
+            closeSure.addEventListener('click', (e) => {
                 e.preventDefault();
                 sure.classList.remove('sure--show');
             });
@@ -109,8 +156,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 e.preventDefault();
                 location.href = window.location.search + "/codenet/project"
             })
-
-            
         }
     });
 });
@@ -118,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function () {
 const MAX_FILE_SIZE_MB = 10; // aceptamos 10mb para imagenes
 // Escucha los cambios en los elementos de entrada de imágenes
 projectMedia.forEach((image) => {
-    image.addEventListener('change', function (e)  {
+    image.addEventListener('change', function (e) {
         const fileContainer = e.target;
         const file = e.target.files[0];
 
@@ -154,7 +199,7 @@ function imageCreate(imgData, fileContainer) {
         <p>+</p>agregar img
          </label>`;
     } else {
-    imgText.textContent = " ";
+        imgText.textContent = " ";
     }
     spanImage.className = "filedata";
     spanImage.style.display = 'block';
@@ -165,12 +210,12 @@ function imageCreate(imgData, fileContainer) {
 
 
 
-function modalSuccesPromise (){
+function modalSuccesPromise() {
     return new Promise((resolve, reject) => {
-        const openSuccessModal = document.querySelector ('.acceptButton');
+        const openSuccessModal = document.querySelector('.acceptButton');
         const modal = document.querySelector('.modal');
 
-        openSuccessModal.addEventListener('click', (e)=>{
+        openSuccessModal.addEventListener('click', (e) => {
             e.preventDefault();
             modal.classList.add('modal--show');
             resolve();
