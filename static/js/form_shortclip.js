@@ -25,3 +25,5 @@ document.addEventListener('DOMContentLoaded', function () {
         videoUploadForm.reset(); // Restablecer el formulario
     });
 });
+
+

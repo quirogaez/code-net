@@ -110,31 +110,34 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+const MAX_FILE_SIZE_MB = 10; // aceptamos 10mb para imagenes
 // Escucha los cambios en los elementos de entrada de imágenes
 projectMedia.forEach((image) => {
     image.addEventListener('change', function (e)  {
-        console.log(e.target.files[0]);
         const fileContainer = e.target;
         const file = e.target.files[0];
+
         if (file) {
-            // Obtiene una referencia al elemento que disparó el evento `change`
+            const fileSizeInMB = file.size / (1024 * 1024); // Tamaño del archivo en MB
+            if (fileSizeInMB > MAX_FILE_SIZE_MB) {
+                alert(`El archivo es demasiado grande. El tamaño máximo permitido es ${MAX_FILE_SIZE_MB} MB.`);
+                return;
+            }
+            // Obtiene una referencia al elemento que disparó el evento change
             const inputElement = e.target.id;
-            
             // Verifica si ya hay una imagen asociada a ese elemento y elimínala
             if (imagesToPost[inputElement]) {
                 delete imagesToPost[inputElement];
-                /* console.log(`Imagen en ${inputElement} eliminada.`); */
             }
-            
-            // Asigna la nueva imagen al objeto imagesToPost con el contexto actual
+            // Verifica si ya hay una imagen asociada a ese elemento y elimínala
             imagesToPost[inputElement] = file;
-            /* console.log(`Imagen en ${inputElement} actualizada.`); */
         }
+
         imageCreate(file, fileContainer);
     });
 });
 
-//*  */
+
 
 // Función para mostrar el nombre de la imagen seleccionada
 function imageCreate(imgData, fileContainer) {
